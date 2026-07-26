@@ -72,6 +72,9 @@ a { color: var(--accent); }
 }
 
 .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--serif);
   font-size: 1.2rem;
   font-weight: 400;
@@ -79,6 +82,14 @@ a { color: var(--accent); }
   color: var(--ink);
   text-decoration: none;
 }
+
+.mark {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+}
+
+.mark-span { stroke: var(--accent); }
 
 .nav {
   display: flex;

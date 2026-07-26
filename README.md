@@ -9,11 +9,32 @@ Google Fonts stylesheet (Newsreader, IBM Plex Sans, IBM Plex Mono).
 ```
 index.html     the whole site
 styles.css     tokens + layout
-favicon.svg
+logo.svg       the mark, standalone (fixed colors)
+favicon.svg    the mark on a paper tile, weights bumped for 16px
 CNAME          custom domain for GitHub Pages
 robots.txt
 sitemap.xml
 ```
+
+## The mark
+
+A line of text with a bracket marking a span beneath it — the same gesture as
+Fig. 1, and the notation NLP uses to mark constituents. Ink for the text, accent
+blue for the bracket.
+
+Three versions, deliberately not one file:
+
+- **Masthead** — inlined in `index.html` so the text stroke inherits
+  `currentColor` and the bracket picks up `--accent`.
+- **`logo.svg`** — same geometry with fixed hex values, for anywhere the page's
+  CSS can't reach (email signatures, slide decks, a README).
+- **`favicon.svg`** — heavier strokes and a longer bracket. The masthead weights
+  turn to mush at 16px; this is optically corrected, not scaled.
+
+Keep at least 8px of clear space around the mark, and don't set it below 16px —
+the bracket arms close up. On dark backgrounds, use paper for the text stroke and
+lighten the bracket to about `#6ea8c8`; the 
+`#1d5c7f` blue goes muddy against `#16181a`.
 
 ## Local preview
 

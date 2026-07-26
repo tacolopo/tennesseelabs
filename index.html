@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tennessee Labs — Applied AI studies and implementation</title>
+<meta name="description" content="Tennessee Labs runs applied AI feasibility studies for small companies and builds the systems those studies justify. Medical devices and natural language processing.">
+<link rel="canonical" href="https://tennesseelabs.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tennesseelabs.com/">
+<meta property="og:title" content="Tennessee Labs — Applied AI studies and implementation">
+<meta property="og:description" content="Applied AI feasibility studies and implementation for small companies working on medical devices and clinical language.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <a class="wordmark" href="#top">Tennessee&nbsp;Labs</a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#scope">Scope</a>
+    <a href="#domains">Domains</a>
+    <a href="#method">Method</a>
+    <a href="#fit">Fit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="band band--hero">
+    <div class="rail">
+      <p class="label">Applied AI studies<br>&amp; implementation</p>
+      <p class="rail-note">Tennessee, United States</p>
+    </div>
+    <div class="col">
+      <h1 class="display">Evidence before&nbsp;deployment.</h1>
+      <p class="deck">We run applied AI studies for small companies, then build the systems those studies justify. Two domains: medical devices and natural language.</p>
+      <p class="qualifier">A study ends in a written recommendation. Sometimes the recommendation is not to build.</p>
+    </div>
+  </section>
+
+  <figure class="specimen">
+    <div class="specimen-head">
+      <span class="label">Fig. 1</span>
+      <span class="specimen-title">Span annotation over a synthetic discharge summary</span>
+    </div>
+
+    <p class="note">
+      Pt is a 63 y/o M, s/p implantation of a
+      <span class="ann ann--device" style="--i:1">dual-chamber pacemaker<span class="tag">device</span></span>
+      six weeks ago. Interrogation today shows
+      <span class="ann ann--finding" style="--i:2">atrial lead impedance 480&nbsp;&#937;<span class="tag">finding</span></span>,
+      within the expected range. No evidence of
+      <span class="ann ann--negated" style="--i:3">lead dislodgement<span class="tag">negated</span></span>.
+      Continued on
+      <span class="ann ann--drug" style="--i:4">apixaban 5&nbsp;mg BID<span class="tag">drug</span></span>;
+      <span class="ann ann--drug" style="--i:5">amiodarone<span class="tag">drug</span></span>
+      was discontinued prior to discharge. Pt denies
+      <span class="ann ann--negated" style="--i:6">chest pain<span class="tag">negated</span></span>
+      or
+      <span class="ann ann--negated" style="--i:7">syncope<span class="tag">negated</span></span>.
+    </p>
+
+    <ul class="legend">
+      <li class="legend-item"><span class="swatch swatch--device"></span>Device — implants, instruments, accessories</li>
+      <li class="legend-item"><span class="swatch swatch--drug"></span>Drug — agent, dose, frequency</li>
+      <li class="legend-item"><span class="swatch swatch--finding"></span>Finding — observation, measurement, diagnosis</li>
+      <li class="legend-item"><span class="swatch swatch--negated"></span>Negated — asserted absent, not present</li>
+    </ul>
+
+    <figcaption class="caption">Negation is drawn dashed because a negated span is not an extraction — it is the model recording what the clinician ruled out. Systems that miss this read the note backwards. Text is synthetic and contains no patient information.</figcaption>
+  </figure>
+
+  <section class="band" id="scope">
+    <div class="rail">
+      <h2 class="label label--section">Scope</h2>
+      <p class="rail-note">Three ways an engagement starts. Most begin at the first.</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title">Feasibility study</h3>
+        <p>Four to six weeks against your data, not a demo set, answering one question: does the approach hold up? You receive a written report — data assessment, baseline results, failure modes, what it costs to run in production, and a recommendation you can act on either way.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">Implementation</h3>
+        <p>Design, build, and hand over the working system, together with the evaluation harness that proves it still behaves after we leave. Your engineers own the code and the tests. We document what we did and why.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">Validation support</h3>
+        <p>Test protocols, model documentation, and traceable evaluation records that fit the quality system you already maintain. We support your regulatory and quality teams with engineering evidence. We do not replace them, and we do not make submissions on your behalf.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="domains">
+    <div class="rail">
+      <h2 class="label label--section">Domains</h2>
+      <p class="rail-note">We stay narrow on purpose. Depth in two fields beats a menu.</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title">Medical devices</h3>
+        <p>Software in and around regulated products: on-device signal and image processing, algorithm performance testing, retrospective evaluation against labeled data, drift monitoring after release, and the documentation that has to survive review. We work alongside manufacturers' engineering and quality teams, most often at companies small enough that the algorithm team is one or two people.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title">Natural language processing</h3>
+        <p>Clinical and technical documents: information extraction, span annotation and annotation-guideline design, de-identification, retrieval over internal corpora, and evaluation of language-model output where a wrong answer is expensive. The work is usually less about the model than about defining the label — which is where we start.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="method">
+    <div class="rail">
+      <h2 class="label label--section">Method</h2>
+      <p class="rail-note">In order. Each step is a gate, not a formality.</p>
+    </div>
+    <div class="col">
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3 class="entry-title">Intake</h3>
+            <p>One conversation, a look at what data exists, and a question narrow enough to answer. No cost, no deck.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3 class="entry-title">Study</h3>
+            <p>Four to six weeks of hands-on work with weekly written notes, so nothing in the final report is a surprise.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3 class="entry-title">Report</h3>
+            <p>Specific, reproducible, and yours to keep — including the case against building, stated as plainly as the case for it.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3 class="entry-title">Build</h3>
+            <p>Only when the report supports it. Scoped from the study's findings rather than from an estimate made before the data was seen.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="fit">
+    <div class="rail">
+      <h2 class="label label--section">Fit</h2>
+      <p class="rail-note">Said early to save both sides a month.</p>
+    </div>
+    <div class="col">
+      <div class="fit-grid">
+        <div class="fit-col">
+          <h3 class="label">A good fit</h3>
+          <ul class="list">
+            <li>Companies of roughly five to two hundred people</li>
+            <li>Data already collected, even if it is messy or unlabeled</li>
+            <li>Regulated products, where being wrong has a cost you can name</li>
+            <li>A technical person on your side who will read the report</li>
+          </ul>
+        </div>
+        <div class="fit-col">
+          <h3 class="label">Not a fit</h3>
+          <ul class="list list--muted">
+            <li>General-purpose chatbots and assistant features</li>
+            <li>Strategy decks with no implementation behind them</li>
+            <li>Projects that need a vendor to say yes</li>
+            <li>Work that depends on data you do not have permission to use</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--contact" id="contact">
+    <div class="rail">
+      <h2 class="label label--section">Contact</h2>
+      <p class="rail-note">Replies come from a person, usually within a day.</p>
+    </div>
+    <div class="col">
+      <p class="contact-lead">Tell us what data you have and what decision it needs to support.</p>
+      <a class="email" href="mailto:hello@tennesseelabs.com">hello@tennesseelabs.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Tennessee Labs &middot; Tennessee, United States</p>
+  <p class="disclaimer">Tennessee Labs is an engineering consultancy. We are not a healthcare provider and do not give medical advice. The text in Fig. 1 is synthetic and illustrative.</p>
+  <p class="disclaimer">&copy; 2026 Tennessee Labs</p>
+</footer>
+
+</body>
+</html>

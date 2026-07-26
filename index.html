@@ -54,33 +54,66 @@
   <figure class="specimen">
     <div class="specimen-head">
       <span class="label">Fig. 1</span>
-      <span class="specimen-title">Span annotation over a synthetic discharge summary</span>
+      <span class="specimen-title">Catheter tip position estimated from intracavitary ECG during a simulated advance</span>
     </div>
 
-    <p class="note">
-      Pt is a 63 y/o M, s/p implantation of a
-      <span class="ann ann--device" style="--i:1">dual-chamber pacemaker<span class="tag">device</span></span>
-      six weeks ago. Interrogation today shows
-      <span class="ann ann--finding" style="--i:2">atrial lead impedance 480&nbsp;&#937;<span class="tag">finding</span></span>,
-      within the expected range. No evidence of
-      <span class="ann ann--negated" style="--i:3">lead dislodgement<span class="tag">negated</span></span>.
-      Continued on
-      <span class="ann ann--drug" style="--i:4">apixaban 5&nbsp;mg BID<span class="tag">drug</span></span>;
-      <span class="ann ann--drug" style="--i:5">amiodarone<span class="tag">drug</span></span>
-      was discontinued prior to discharge. Pt denies
-      <span class="ann ann--negated" style="--i:6">chest pain<span class="tag">negated</span></span>
-      or
-      <span class="ann ann--negated" style="--i:7">syncope<span class="tag">negated</span></span>.
-    </p>
+    <div class="signals">
+      <div class="panel" style="--i:1">
+        <svg class="trace" viewBox="0 0 120 40" aria-hidden="true" focusable="false">
+          <path class="trace-line" pathLength="1" d="M2,30 L6,30 Q12,25 18,30 L22,30 L23.5,32 L25.5,8 L27.5,33 L29,30 L33,30 Q39,22 45,30 L60,30 L64,30 Q70,25 76,30 L80,30 L81.5,32 L83.5,8 L85.5,33 L87,30 L91,30 Q97,22 103,30 L118,30"/>
+          <path class="trace-mark" d="M6,30 Q12,25 18,30 M64,30 Q70,25 76,30"/>
+        </svg>
+        <div class="panel-body">
+          <p class="label">20% advanced</p>
+          <p class="panel-read">Proximal</p>
+          <div class="conf"><span class="conf-num">0.41</span><span class="conf-bar"><i style="width:41%"></i></span></div>
+        </div>
+      </div>
+
+      <div class="panel" style="--i:2">
+        <svg class="trace" viewBox="0 0 120 40" aria-hidden="true" focusable="false">
+          <path class="trace-line" pathLength="1" d="M2,30 L6,30 Q12,18 18,30 L22,30 L23.5,32 L25.5,8 L27.5,33 L29,30 L33,30 Q39,22 45,30 L60,30 L64,30 Q70,18 76,30 L80,30 L81.5,32 L83.5,8 L85.5,33 L87,30 L91,30 Q97,22 103,30 L118,30"/>
+          <path class="trace-mark" d="M6,30 Q12,18 18,30 M64,30 Q70,18 76,30"/>
+        </svg>
+        <div class="panel-body">
+          <p class="label">60% advanced</p>
+          <p class="panel-read">Approaching</p>
+          <div class="conf"><span class="conf-num">0.68</span><span class="conf-bar"><i style="width:68%"></i></span></div>
+        </div>
+      </div>
+
+      <div class="panel" style="--i:3">
+        <svg class="trace" viewBox="0 0 120 40" aria-hidden="true" focusable="false">
+          <path class="trace-line" pathLength="1" d="M2,30 L6,30 Q12,12 18,30 L22,30 L23.5,32 L25.5,8 L27.5,33 L29,30 L33,30 Q39,22 45,30 L60,30 L64,30 Q70,12 76,30 L80,30 L81.5,32 L83.5,8 L85.5,33 L87,30 L91,30 Q97,22 103,30 L118,30"/>
+          <path class="trace-mark" d="M6,30 Q12,12 18,30 M64,30 Q70,12 76,30"/>
+        </svg>
+        <div class="panel-body">
+          <p class="label">85% advanced</p>
+          <p class="panel-read">Cavoatrial junction</p>
+          <div class="conf"><span class="conf-num">0.94</span><span class="conf-bar"><i style="width:94%"></i></span></div>
+        </div>
+      </div>
+
+      <div class="panel" style="--i:4">
+        <svg class="trace" viewBox="0 0 120 40" aria-hidden="true" focusable="false">
+          <path class="trace-line" pathLength="1" d="M2,30 L5,26 L8,33 L11,27 L14,32 L17,25 L20,31 L23,34 L25.5,9 L28,33 L31,26 L34,32 L37,27 L40,33 L43,26 L46,31 L49,28 L52,34 L55,27 L58,31 L61,26 L64,33 L67,27 L70,32 L73,25 L76,31 L79,34 L83.5,9 L86,33 L89,26 L92,32 L95,27 L98,33 L101,26 L104,31 L107,28 L110,34 L113,27 L116,31 L118,29"/>
+          <path class="trace-mark trace-mark--none" d="M5,21 V13 H19 V21 M63,21 V13 H77 V21"/>
+        </svg>
+        <div class="panel-body">
+          <p class="label">Motion artifact</p>
+          <p class="panel-read panel-read--none">No call</p>
+          <div class="conf conf--none"><span class="conf-num">&mdash;</span><span class="conf-bar"></span></div>
+        </div>
+      </div>
+    </div>
 
     <ul class="legend">
-      <li class="legend-item"><span class="swatch swatch--device"></span>Device — implants, instruments, accessories</li>
-      <li class="legend-item"><span class="swatch swatch--drug"></span>Drug — agent, dose, frequency</li>
-      <li class="legend-item"><span class="swatch swatch--finding"></span>Finding — observation, measurement, diagnosis</li>
-      <li class="legend-item"><span class="swatch swatch--negated"></span>Negated — asserted absent, not present</li>
+      <li class="legend-item"><span class="swatch swatch--signal"></span>Recorded signal</li>
+      <li class="legend-item"><span class="swatch swatch--pwave"></span>P wave — the feature the estimate reads</li>
+      <li class="legend-item"><span class="swatch swatch--none"></span>Window searched, nothing resolvable — no estimate offered</li>
     </ul>
 
-    <figcaption class="caption">Negation is drawn dashed because a negated span is not an extraction — it is the model recording what the clinician ruled out. Systems that miss this read the note backwards. Text is synthetic and contains no patient information.</figcaption>
+    <figcaption class="caption">P-wave amplitude rises as the tip nears the cavoatrial junction, and the estimate reads that feature. Confidence is calibrated against held-out recordings rather than reported raw, so 0.94 has to mean what it says. In the fourth panel motion artifact leaves the P wave unresolvable and the model declines to call it — the behavior that matters most once a device is in someone's hands. Signals are synthetic and illustrative; this is not the output of a validated system.</figcaption>
   </figure>
 
   <section class="band" id="scope">
@@ -117,6 +150,19 @@
       <article class="entry">
         <h3 class="entry-title">Natural language processing</h3>
         <p>Clinical and technical documents: information extraction, span annotation and annotation-guideline design, de-identification, retrieval over internal corpora, and evaluation of language-model output where a wrong answer is expensive. The work is usually less about the model than about defining the label — which is where we start.</p>
+
+        <figure class="inline-fig">
+          <p class="note note--inline">
+            <span class="ann ann--device">PICC<span class="tag">device</span></span>
+            tip confirmed at the
+            <span class="ann ann--finding">cavoatrial junction<span class="tag">finding</span></span>;
+            no evidence of
+            <span class="ann ann--negated">pneumothorax<span class="tag">negated</span></span>
+            on post-procedure film. Continued on
+            <span class="ann ann--drug">apixaban 5&nbsp;mg BID<span class="tag">drug</span></span>.
+          </p>
+          <figcaption class="caption"><span class="label">Fig. 2</span> The note written after the procedure in Fig. 1. Negation is drawn dashed because a negated span is not an extraction — it records what was ruled out, and a system that misses it reads the note backwards. Synthetic text.</figcaption>
+        </figure>
       </article>
     </div>
   </section>

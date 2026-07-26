@@ -62,10 +62,17 @@ DNS records at the registrar:
 
 - Contact address `hello@tennesseelabs.com` appears in `index.html` once, in the
   contact section.
-- The annotated note in Fig. 1 is synthetic. If it is ever replaced, the
-  replacement must also be synthetic — never real patient text, de-identified or
-  otherwise.
-- Entity colors are defined once in `:root` and reused by both the annotation
-  underlines and the legend swatches. Changing a color in one place changes both.
-- Color is reserved for things that carry meaning (entity types, the accent rule
-  on section labels). Adding decorative color breaks the premise.
+- **Both figures are synthetic and must stay that way.** Fig. 1's traces are
+  hand-drawn SVG paths, not recordings; Fig. 2's note is invented. Never swap in
+  real patient signals or text, de-identified or otherwise. The figures also must
+  not be presented as output from a validated system — the caption says so, and
+  it needs to keep saying so.
+- The two figures are one clinical episode seen from each domain: Fig. 1 is the
+  signal during the line placement, Fig. 2 is the note written after it. If you
+  replace one, keep the link or drop it deliberately.
+- Fig. 1's confidence values are illustrative. Don't quote them as performance.
+- Colors live once in `:root`. The accent doubles as the P-wave stroke and the
+  entity color for drugs; `--negated` grey plus a dashed stroke is the site's
+  notation for *asserted absent or not resolvable*, used in both figures.
+- Color is reserved for things that carry meaning. Adding decorative color breaks
+  the premise.

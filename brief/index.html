@@ -4,254 +4,225 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily Brief — Tennessee Labs</title>
-<meta name="description" content="AI/tech morning brief: OpenAI, Anthropic, Claude Blog, AP News, Washington Post, and Hacker News developer reactions — regenerated every morning.">
+<meta name="description" content="AI/tech morning brief — Hacker News developer reactions, OpenAI, Anthropic, Claude Blog, AP News, and Washington Post — regenerated every morning, every line cites its source.">
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://tennesseelabs.com/brief/">
+<link rel="icon" href="https://tennesseelabs.com/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-  :root {
-    --ground: #f4f6f8;
-    --surface: #ffffff;
-    --ink: #1a2330;
-    --muted: #5a6878;
-    --faint: #8d99a8;
-    --line: #dde3e9;
-    --accent: #1d5fbf;
-    --warn-bg: #fdf3e7;
-    --warn-ink: #8a4a0b;
-    --ok: #2e7d4f;
+  /* Daily Brief — extends styles.css tokens; scoped to this page only */
+  .deck.mono {
+    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
+    color: var(--ink-2);
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --ground: #10151c;
-      --surface: #171e27;
-      --ink: #e3e9f0;
-      --muted: #98a4b3;
-      --faint: #6b7684;
-      --line: #263140;
-      --accent: #7aaceb;
-      --warn-bg: #332512;
-      --warn-ink: #e0a55e;
-      --ok: #5cb885;
-    }
-  }
-  :root[data-theme="dark"] {
-    --ground: #10151c;
-    --surface: #171e27;
-    --ink: #e3e9f0;
-    --muted: #98a4b3;
-    --faint: #6b7684;
-    --line: #263140;
-    --accent: #7aaceb;
-    --warn-bg: #332512;
-    --warn-ink: #e0a55e;
-    --ok: #5cb885;
-  }
-  body {
-    background: var(--ground);
-    color: var(--ink);
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.55;
-    margin: 0;
-    padding: 0 1.25rem 4rem;
-  }
-  .sheet { max-width: 68rem; margin: 0 auto; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover, a:focus-visible { text-decoration: underline; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-
-  header.masthead {
-    padding: 2.25rem 0 1.1rem;
-    border-bottom: 3px double var(--ink);
-    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.5rem;
-  }
-  .masthead h1 {
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
-    font-weight: 600; letter-spacing: 0.01em; margin: 0;
-    text-wrap: balance;
-  }
-  .masthead .dateline {
-    margin-left: auto;
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.85rem; color: var(--muted);
-    font-variant-numeric: tabular-nums;
+  .notice {
+    margin-top: 1.1rem; padding: 0.85rem 1rem;
+    background: var(--card); border: 1px solid var(--rule);
+    border-left: 2px solid var(--negated);
+    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
+    max-width: var(--measure);
   }
 
-  section.rundown { padding: 1.6rem 0 0.4rem; }
-  .kicker {
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--muted); margin: 0 0 0.75rem;
+  .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
+  .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
+  .rundown-list li::before {
+    content: counter(rundown); counter-increment: rundown;
+    position: absolute; left: 0; top: 0.15rem;
+    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
   }
-  .rundown ol { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.7rem; }
-  .rundown li { max-width: 62ch; }
-  .rundown .why { color: var(--muted); }
+  .rundown-head { font-weight: 500; }
+  .rundown-why { color: var(--ink-2); }
   .cite {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.78em; vertical-align: super; margin-left: 0.15rem;
+    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
+    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
   }
+  .cite:hover { text-decoration: underline; }
 
-  .grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
-    gap: 1.1rem; margin-top: 1.9rem;
+  .entry-meta {
+    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
+    color: var(--ink-3); letter-spacing: 0.01em;
   }
-  section.source {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    padding: 1.1rem 1.25rem 1.25rem;
-  }
-  .source-head {
-    display: flex; align-items: center; gap: 0.55rem;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 0.6rem; margin-bottom: 0.85rem;
-  }
-  .source-head h2 {
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    font-size: 1.05rem; font-weight: 700; margin: 0; letter-spacing: 0.01em;
-  }
-  .dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--ok); flex: none; }
-  .dot.warn { background: var(--warn-ink); }
-  .source-head .count {
-    margin-left: auto; color: var(--faint); font-size: 0.78rem;
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  }
-  .items { display: grid; gap: 0.95rem; margin: 0; padding: 0; list-style: none; }
-  .item .t { font-weight: 600; }
-  .item .meta {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.74rem; color: var(--faint);
-    font-variant-numeric: tabular-nums;
-  }
-  .item p { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.92rem; max-width: 60ch; }
-  .empty { color: var(--faint); font-size: 0.9rem; font-style: italic; }
+  .entry-title a { color: var(--ink); text-decoration: none; }
+  .entry-title a:hover { color: var(--accent); }
+
   .reaction {
-    margin: 0.4rem 0 0; padding-left: 0.75rem;
-    border-left: 2px solid var(--line);
-    color: var(--muted); font-size: 0.88rem; font-style: italic;
+    margin: 0.85rem 0 0; padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+    color: var(--ink-2); line-height: 1.5;
   }
-  .reaction .who { font-style: normal; color: var(--faint); font-size: 0.8rem; }
-  .fail {
-    background: var(--warn-bg); color: var(--warn-ink);
-    border-radius: 4px; padding: 0.6rem 0.8rem; font-size: 0.88rem;
+  .reaction .who {
+    display: block; margin-top: 0.3rem;
+    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
+    color: var(--ink-3); letter-spacing: 0.02em;
   }
+  .reaction .who a { color: var(--ink-3); }
 
-  footer {
-    margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--line);
-    color: var(--faint); font-size: 0.8rem;
-    display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem;
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  .empty, .fail {
+    margin: 0; padding-left: 1rem; max-width: var(--measure);
+    border-left: 1.5px dashed var(--negated);
+    color: var(--ink-3); font-size: 0.9rem;
   }
+  .fail { color: var(--ink-2); }
+  .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
 
-<div class="sheet">
-  <header class="masthead">
-    <h1>Daily Brief</h1>
-    <span class="dateline">Sunday · Aug 9, 2026 · 6:00 AM ET</span>
-  </header>
+<header class="masthead">
+  <a class="wordmark" href="https://tennesseelabs.com/">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <g fill="none" stroke-linecap="square">
+        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
+      </g>
+    </svg>
+    <span>Tennessee&nbsp;Labs</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="https://tennesseelabs.com/">Home</a>
+    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
+  </nav>
+</header>
 
-  <section class="rundown">
-    <p class="kicker">The Rundown</p>
-    <ol>
-      <li><span class="t">OpenAI quietly folds presentation startup NextSlide into its ChatGPT team.</span> <span class="why">Another small acqui-hire feeding OpenAI's creation-tool push.</span><a class="cite" href="https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/">[1]</a></li>
-      <li><span class="t">Amazon's planned Texas data center could become the single largest source of climate pollution in the U.S.</span> <span class="why">AI's power appetite is colliding with Amazon's 2040 carbon pledge.</span><a class="cite" href="https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/">[2]</a></li>
-      <li><span class="t">SAP is still freezing most travel and hiring, pointing to AI's soaring cost.</span> <span class="why">A rare admission that AI spend is squeezing budgets rather than saving money.</span><a class="cite" href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">[3]</a></li>
-      <li><span class="t">Claude Code shipped cross-session messaging, and developers on HN are split.</span> <span class="why">Multi-agent coordination is becoming a real workflow, weirdness included.</span><a class="cite" href="https://code.claude.com/docs/en/cross-session-messaging">[4]</a></li>
-    </ol>
+<main id="top">
+
+  <section class="band band--hero">
+    <div class="rail">
+      <p class="label">AI / Tech<br>Morning brief</p>
+      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
+    </div>
+    <div class="col">
+      <h1 class="display">Daily&nbsp;Brief.</h1>
+      <p class="deck mono">Sunday &middot; Aug 9, 2026 &middot; 6:00 AM ET</p>
+    </div>
   </section>
 
-  <div class="grid">
-    <section class="source">
-      <div class="source-head"><span class="dot"></span><h2>Developer Pulse</h2><span class="count">4 items</span></div>
-      <ul class="items">
-        <li class="item">
-          <a class="t" href="https://social.treehouse.systems/@mgorny/117058483039362779">Gentoo Bugzilla goes dark after AI scraper overload</a>
-          <div class="meta">Aug 8 · 166 pts · 109 comments</div>
-          <p>Gentoo developer Michał Górny took the project's Bugzilla offline, saying it "was unusable anyway" under a flood of apparent LLM scrapers hitting from thousands of different IPv4 addresses with no discernible pattern, and that he doesn't have time to fight it as an unpaid volunteer. Commenters proposed defenses like Cloudflare/Anubis challenges and per-request charges, with several noting this is becoming a common fate for public infrastructure.</p>
-          <blockquote class="reaction">"And people complain about cloudflare/anubis/etc. Unfortunately, it's looking like this is the alternative." <span class="who">— Gander5739 on <a href="https://news.ycombinator.com/item?id=49221864">HN</a></span></blockquote>
-        </li>
-        <li class="item">
-          <a class="t" href="https://code.claude.com/docs/en/cross-session-messaging">Message your other Claude Code sessions</a>
-          <div class="meta">Aug 8 · 137 pts · 60 comments</div>
-          <p>Anthropic's docs detail a new Claude Code feature that lets one session pass a note to another — warning a session when a dependent change breaks its build, or relaying an answer another session was blocked on. It runs on Claude Code v2.1.224+ via new ListAgents/SendMessage tools. On HN, one builder described chaining it across a fleet of machines over Tailscale; others reported odd emergent messages passing between their agent instances.</p>
-          <blockquote class="reaction">"I've used this feature and saw some weird messages: > hold swarm, I prepare safe exfil" <span class="who">— dist-epoch on <a href="https://news.ycombinator.com/item?id=49222824">HN</a></span></blockquote>
-        </li>
-        <li class="item">
-          <a class="t" href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">ChatGPT starts blocking direct requests to copy an author's style</a>
-          <div class="meta">Aug 9 · 63 pts · 48 comments</div>
-          <p>Ars Technica found ChatGPT now refuses to write "in the style of" named living authors like Stephen King or J.K. Rowling, offering instead to capture "a similar feeling" without imitating their voice — while it still complies for dead authors like Dickens or Hemingway, per an analysis the piece cites. HN commenters were split on whether this is a meaningful guardrail or easily routed around by describing the style instead of naming the author.</p>
-          <blockquote class="reaction">"After it stole literally every authors style in existence…" <span class="who">— lethologica on <a href="https://news.ycombinator.com/item?id=49227718">HN</a></span></blockquote>
-        </li>
-        <li class="item">
-          <a class="t" href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">Software giant SAP stops most travel and hiring because of AI's soaring cost</a>
-          <div class="meta">Aug 9 · 55 pts · 31 comments</div>
-          <p>404 Media reports a current SAP employee confirms travel and hiring freezes first reported by Bloomberg in July are still in effect, revisited at a recent global company meeting. The employee said SAP is now rolling a new AI tool out company-wide that "can only imagine massively increases the costs" — one of the more concrete signs yet of enterprise AI spend squeezing other budgets instead of paying for itself.</p>
-        </li>
-      </ul>
-    </section>
+  <section class="band" id="rundown">
+    <div class="rail">
+      <h2 class="label label--section">Rundown</h2>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
+    </div>
+    <div class="col">
+      <ol class="rundown-list">
+        <li><span class="rundown-head">SAP froze most corporate travel and hiring, citing AI's soaring cost.</span> <span class="rundown-why">A rare admission that AI spend is now constraining budgets, not just expanding them.</span><a class="cite" href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">[1]</a></li>
+        <li><span class="rundown-head">Claude Code sessions can now message each other directly.</span> <span class="rundown-why">Lets parallel agents hand off findings and warnings mid-task without the developer relaying them.</span><a class="cite" href="https://code.claude.com/docs/en/cross-session-messaging">[2]</a></li>
+        <li><span class="rundown-head">Gentoo took its Bugzilla offline after LLM scrapers made it unusable.</span> <span class="rundown-why">Another open-source maintainer forced to shut a service down rather than fight AI crawler traffic.</span><a class="cite" href="https://social.treehouse.systems/@mgorny/117058483039362779">[3]</a></li>
+        <li><span class="rundown-head">ChatGPT now refuses to directly clone a named author's writing style.</span> <span class="rundown-why">A guardrail shift that lands as OpenAI fights multiple author copyright suits.</span><a class="cite" href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">[4]</a></li>
+      </ol>
+    </div>
+  </section>
 
-    <section class="source">
-      <div class="source-head"><span class="dot"></span><h2>OpenAI</h2><span class="count">0 items</span></div>
-      <ul class="items">
-        <li class="empty">Nothing new in the last 24h.</li>
-      </ul>
-    </section>
+  <section class="band" id="developer-pulse">
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">5 items &middot; Hacker News, no ragebait</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">SAP halts most travel and hiring, blaming AI's soaring cost</a></h3>
+        <p class="entry-meta">Aug 8 &middot; 68 pts &middot; 44 comments</p>
+        <p>SAP suspended most corporate travel and hiring last month because of AI's rising costs, according to an internal email obtained by 404 Media; only AI-related travel and hires are exempt. A current employee says the freeze is still in effect even as SAP rolls out a new AI tool company-wide, which they expect will push costs higher still.</p>
+        <blockquote class="reaction">&ldquo;In other words, AI is now driving their budget decisions.&rdquo; <span class="who">&mdash; jqpabc123 on <a href="https://news.ycombinator.com/item?id=49229412">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://code.claude.com/docs/en/cross-session-messaging">Message your other Claude Code sessions</a></h3>
+        <p class="entry-meta">Aug 8 &middot; 137 pts &middot; 61 comments</p>
+        <p>Claude Code sessions can now deliver messages to each other directly — one session can warn another about a breaking change or hand off a finding via new ListAgents/SendMessage tools (v2.1.224+, macOS/Linux). Inbound messages go through approval rules, and a receiving session is barred from treating a message as consent for anything it wasn't already permitted to do.</p>
+        <blockquote class="reaction">&ldquo;I've used this feature and saw some weird messages: &gt; hold swarm, I prepare safe exfil&rdquo; <span class="who">&mdash; dist-epoch on <a href="https://news.ycombinator.com/item?id=49222824">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://social.treehouse.systems/@mgorny/117058483039362779">Gentoo's Bugzilla goes dark after AI scraper overload</a></h3>
+        <p class="entry-meta">Aug 8 &middot; 166 pts &middot; 109 comments</p>
+        <p>Gentoo developer Michał Górny took the project's Bugzilla offline, saying it had become unusable under load from LLM scrapers hitting it from thousands of rotating IPv4 addresses with no pattern he could block. He added he isn't looking for mitigation tips — as an unpaid volunteer, not a sysadmin, he doesn't have time to fight the traffic.</p>
+        <blockquote class="reaction">&ldquo;OpenAI, Google, Anthropic and others are normally fairly well behaved (Minus Anthropic attempting to hide behind a browser-for-hire company).&rdquo; <span class="who">&mdash; mrweasel on <a href="https://news.ycombinator.com/item?id=49221864">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">ChatGPT starts blocking direct requests to copy an author's style</a></h3>
+        <p class="entry-meta">Jul 2026 &middot; 63 pts &middot; 49 comments</p>
+        <p>ChatGPT now refuses prompts asking it to write "in the exact style" of named authors — living (Stephen King, J.K. Rowling) or dead — offering instead to capture their "broad qualities" in its own voice. Ars Technica notes the shift could matter legally, as OpenAI continues fighting copyright suits from authors over training data.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/">Everything you do is being recorded</a></h3>
+        <p class="entry-meta">May 18, 2026 &middot; 71 pts &middot; 55 comments (resurfaced on HN today)</p>
+        <p>The Atlantic profiles a nascent market for anti-surveillance gadgets — like start-up Deveillance's Spectre I — built to counter always-on AI recorders in glasses, pins, and pendants, as products like Apple's rumored AI pin push the category toward the mainstream.</p>
+      </article>
+    </div>
+  </section>
 
-    <section class="source">
-      <div class="source-head"><span class="dot"></span><h2>Anthropic</h2><span class="count">0 items</span></div>
-      <ul class="items">
-        <li class="empty">Nothing new in the last 24h.</li>
-      </ul>
-    </section>
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">0 items</p>
+    </div>
+    <div class="col">
+      <p class="empty">Nothing new in the last 24h — latest post is from Aug 7.</p>
+    </div>
+  </section>
 
-    <section class="source">
-      <div class="source-head"><span class="dot"></span><h2>Claude Blog</h2><span class="count">0 items</span></div>
-      <ul class="items">
-        <li class="empty">Nothing new in the last 24h.</li>
-      </ul>
-    </section>
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">0 items</p>
+    </div>
+    <div class="col">
+      <p class="empty">Nothing new in the last 24h — latest post is from Aug 7.</p>
+    </div>
+  </section>
 
-    <section class="source">
-      <div class="source-head"><span class="dot"></span><h2>AP News</h2><span class="count">0 items</span></div>
-      <ul class="items">
-        <li class="empty">Nothing new in the last 24h (yesterday's top AI story — xAI's citizen-suit challenge — was already covered in the prior edition).</li>
-      </ul>
-    </section>
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">0 items</p>
+    </div>
+    <div class="col">
+      <p class="empty">Nothing new in the last 24h — latest post is from Aug 7.</p>
+    </div>
+  </section>
 
-    <section class="source">
-      <div class="source-head"><span class="dot"></span><h2>Washington Post</h2><span class="count">1 item</span></div>
-      <ul class="items">
-        <li class="item">
-          <a class="t" href="https://www.washingtonpost.com/technology/2026/08/08/pentagon-presses-defense-firms-build-weapons-iran-war-depletes-stocks/">Pentagon presses defense firms to build weapons as Iran war depletes stocks</a>
-          <div class="meta">Aug 8</div>
-          <p>Deputy Defense Secretary Steve Feinberg is directing defense-industry firms to ramp up weapons production, per the Post, amid mounting tensions over a critical U.S. munitions shortage tied to the Iran war.</p>
-        </li>
-      </ul>
-    </section>
+  <section class="band" id="ap-news">
+    <div class="rail">
+      <h2 class="label label--section">AP News</h2>
+      <p class="rail-note">0 items</p>
+    </div>
+    <div class="col">
+      <p class="empty">Nothing new in the last 24h on the AI or technology hubs.</p>
+    </div>
+  </section>
 
-    <section class="source">
-      <div class="source-head"><span class="dot"></span><h2>AI Zeitgeist</h2><span class="count">2 items</span></div>
-      <ul class="items">
-        <li class="item">
-          <a class="t" href="https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/">OpenAI acquires presentation startup NextSlide</a>
-          <div class="meta">Aug 8</div>
-          <p>NextSlide, a startup that turned prompts, notes, and documents into polished presentations, has joined OpenAI, with its team now working on ChatGPT. Founder Ahmed Beshry — a Caper AI/Instacart alum — said the announcement came "a few months late" since the deal closed earlier this year; terms weren't disclosed.</p>
-        </li>
-        <li class="item">
-          <a class="t" href="https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/">Planned Amazon data center could become the biggest climate polluter in the U.S.</a>
-          <div class="meta">Aug 8</div>
-          <p>Per the New York Times, Amazon's planned Pecos County, Texas data center includes an on-site natural-gas power plant permitted to emit 33 million tons of CO2 a year — more than any other U.S. power plant. Amazon says the on-site generation "won't raise electricity costs for Texas families," even as the company's own emissions rose 16% last year, moving it further from its 2040 net-zero pledge.</p>
-        </li>
-      </ul>
-    </section>
-  </div>
+  <section class="band" id="washington-post">
+    <div class="rail">
+      <h2 class="label label--section">Washington Post</h2>
+      <p class="rail-note">1 item</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/08/pentagon-presses-defense-firms-build-weapons-iran-war-depletes-stocks/">Pentagon presses defense firms to build weapons as Iran war depletes stocks</a></h3>
+        <p class="entry-meta">Aug 8</p>
+        <p>Deputy Defense Secretary Steve Feinberg is directing defense contractors to ramp up weapons production amid a critical U.S. munitions shortage tied to the Iran war, per the Post's technology desk.</p>
+      </article>
+    </div>
+  </section>
 
-  <footer>
-    <span>Generated 2026-08-09 09:08 ET</span>
-    <span>Every summary cites its source · fetch failures are shown, never guessed</span>
-    <a href="https://github.com/tacolopo/daily-brief">Edit sources</a>
-  </footer>
-</div>
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">0 items</p>
+    </div>
+    <div class="col">
+      <p class="empty">Web-search sweep turned up nothing from the last 24h beyond what's already covered above — a quiet Sunday.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Generated 2026-08-09 09:47 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
+</footer>
 
 </body>
 </html>

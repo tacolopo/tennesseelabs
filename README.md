@@ -7,34 +7,37 @@ Static HTML and CSS. No build step, no JavaScript, no dependencies beyond the
 Google Fonts stylesheet (Newsreader, IBM Plex Sans, IBM Plex Mono).
 
 ```
-index.html     the whole site
-styles.css     tokens + layout
-logo.svg       the mark, standalone (fixed colors)
-favicon.svg    the mark on a paper tile, weights bumped for 16px
-CNAME          custom domain for GitHub Pages
+index.html               the whole site
+styles.css                tokens + layout
+tennessee-labs-logo.svg   full lockup: mark + wordmark + tagline (fixed colors)
+logo.svg                  the mark alone, standalone (fixed colors)
+favicon.svg                the mark alone, on a paper tile, for 16px
+CNAME                      custom domain for GitHub Pages
 robots.txt
 sitemap.xml
 ```
 
 ## The mark
 
-A line of text with a bracket marking a span beneath it — the same gesture as
-Fig. 1, and the notation NLP uses to mark constituents. Ink for the text, accent
-blue for the bracket.
+A "T" built from a Tennessee state flag and a US flag set into its negative
+space — ink black for the letterform, flag colors for the insets. Set beside a
+rule and the "TENNESSEE LABS" wordmark plus the "AI FOR SMALL BUSINESSES"
+tagline, it forms the full lockup in `tennessee-labs-logo.svg`.
 
 Three versions, deliberately not one file:
 
-- **Masthead** — inlined in `index.html` so the text stroke inherits
-  `currentColor` and the bracket picks up `--accent`.
-- **`logo.svg`** — same geometry with fixed hex values, for anywhere the page's
-  CSS can't reach (email signatures, slide decks, a README).
-- **`favicon.svg`** — heavier strokes and a longer bracket. The masthead weights
-  turn to mush at 16px; this is optically corrected, not scaled.
+- **Masthead** — the full lockup inlined in `index.html` (and `brief/index.html`),
+  so it renders crisp at any size with no extra request.
+- **`tennessee-labs-logo.svg`** — the full lockup as a standalone file, for
+  anywhere the page can't be inlined (email signatures, slide decks, a README).
+- **`logo.svg`** / **`favicon.svg`** — the mark alone, cropped tight, for square
+  contexts (favicon, app icon, avatar). `favicon.svg` sits on a paper tile.
 
-Keep at least 8px of clear space around the mark, and don't set it below 16px —
-the bracket arms close up. On dark backgrounds, use paper for the text stroke and
-lighten the bracket to about `#6ea8c8`; the 
-`#1d5c7f` blue goes muddy against `#16181a`.
+Colors are fixed hex values (flag red `#C8102E`/`#B22234`, flag blue
+`#00205B`/`#3C3B6E`, ink `#201e1d`), not page tokens — the mark should look the
+same wherever it's placed. Keep at least 8px of clear space around it, and
+don't set the full lockup below about 120px wide — the tagline disappears
+first, then the wordmark.
 
 ## Local preview
 

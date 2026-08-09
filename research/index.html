@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When Human Writing Moves · Tennessee Labs Research</title>
+<meta name="description" content="A pilot study of AI-text detection, style editing, controlled corruption, and the problem of a historical human baseline.">
+<link rel="canonical" href="https://tennesseelabs.com/research/">
+<meta property="og:type" content="article"><meta property="og:url" content="https://tennesseelabs.com/research/"><meta property="og:title" content="When Human Writing Moves"><meta property="og:description" content="AI-text detection, style editing, controlled corruption, and the problem of a historical baseline."><meta property="og:image" content="https://tennesseelabs.com/research/when-human-writing-moves-cover.png"><meta property="article:published_time" content="2026-08-09">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap"><link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="masthead">
+  <a class="wordmark" href="../" aria-label="Tennessee Labs home"><img class="brand-logo" src="../tennessee-labs-logo.svg" alt="Tennessee Labs, AI for small businesses" width="640" height="160"></a>
+  <nav class="nav" aria-label="Site"><a href="./" aria-current="page">Research</a><a href="../#services">Services</a><a href="../#studies">Studies</a><a href="../#contact">Contact</a></nav>
+</header>
+<main><article class="article-shell">
+<header class="article-header">
+  <div class="rail"><p class="label label--section">Research 01</p><p class="rail-note">AI-text detection<br>Scientific writing<br>Temporal drift</p></div>
+  <div><h1 class="article-title">When Human Writing Moves</h1><p class="article-standfirst">AI-text detection, style editing, controlled corruption, and the problem of a historical baseline.</p><div class="article-meta"><span>Tennessee Labs</span><time datetime="2026-08-09">August 9, 2026</time><span>Pilot study</span></div></div>
+</header>
+<figure class="article-cover">
+  <img src="when-human-writing-moves-cover.png" alt="Three-panel cartoon: a professor tells a student to write a ten-page paper, the student gives the same instruction to a computer, then complains that the result sounds like AI slop." width="1774" height="887">
+</figure>
+<div class="article-body">
+<h2>Abstract</h2>
+<p>AI-text detectors are commonly evaluated against a stable binary: archived human writing versus newly generated machine text. That design may become less informative as people repeatedly read, edit, and converse with large language models. We evaluated Pangram 3.3.2 on 20 pre-2020 biomedical introductions and 80 matched LLM-derived passages. The detector labeled every historical passage human and every generated, copyedited, “deslopped,” or paraphrased passage AI.</p>
+<p>We also tested 220 variants with controlled punctuation and word corruption. Every variant remained classified as AI. In a separate longitudinal analysis of 11,465 arXiv titles and abstracts, prespecified LLM-associated terms rose sharply after 2022, peaked in 2025, and then fell in 2026. The combined result points to a larger measurement problem: human and model-associated language distributions both change over time. Detector evaluation should use time-indexed controls rather than treating “human writing” as a permanent baseline.</p>
+<div class="finding-grid" aria-label="Headline findings"><div class="finding"><span class="finding-number">100/100</span><span class="finding-label">Study passages classified as expected</span></div><div class="finding"><span class="finding-number">220/220</span><span class="finding-label">Corrupted AI variants still labeled AI</span></div><div class="finding"><span class="finding-number">11,465</span><span class="finding-label">arXiv records analyzed</span></div></div>
+<p class="article-note"><strong>Interpretation matters.</strong> This is a small pilot using one commercial detector, one generator, and one scientific domain. Perfect results within this sample do not establish perfect real-world accuracy. Detector output should never be sole evidence of misconduct.</p>
+
+<h2>The question</h2>
+<p>Studies have shown that paraphrasing and adversarial transformations can expose brittle AI-text detectors. At the same time, editors increasingly remove familiar “AI style”: formulaic contrasts, canned transitions, vague significance claims, uniform rhythm, and other recurrent patterns. We call that process <em>deslopping</em>.</p>
+<p>Deslopping is not necessarily detector evasion. It can be ordinary editing for directness, specificity, and disciplinary fit. We asked whether copyediting, deslopping, or broad paraphrasing changed a current commercial detector’s classification of matched scientific prose. We then asked what a historical human comparison means if contemporary human writing is itself changing.</p>
+
+<h2>Methods</h2>
+<h3>Historical controls and matched generations</h3>
+<p>We selected 20 open-access biomedical articles published from 2015 through 2018. Each supplied a 550-to-800-word Introduction or Background passage. For every article, a pinned OpenAI model received the title, abstract, and target length and wrote a matched scientific introduction using only supplied information.</p>
+<p>Each generation independently entered three transformations: a local copyedit; a fixed deslopping revision; and a substantial paraphrase changing syntax, sentence boundaries, transitions, and wording. No transformation received detector output, and no passage was resampled to lower a score. The design produced 20 historical passages and 80 LLM-derived passages.</p>
+<h3>Controlled corruption</h3>
+<p>We applied nested punctuation corruption to each raw AI passage at six dose levels, up to eight edits per 100 words. Validation confirmed that words and their order did not change. We separately applied word noise—letter transposition, character deletion, article deletion, and function-word duplication—at five dose levels, up to four edits per 100 words. These experiments added 220 variants without detector feedback.</p>
+<h3>Detection and longitudinal analysis</h3>
+<p>Every passage was submitted once to Pangram’s V3 API, which identified itself as version 3.3.2. We archived results, source material, prompts, transformations, model identifiers, and hashes. Separately, we sampled public arXiv metadata from January through July in 2010, 2015, 2020, and 2022 through 2026 across computational linguistics, high-energy phenomenology, and probability. A prespecified 27-term lexicon measured LLM-associated vocabulary in 11,465 titles and abstracts. This tests temporal distribution shift; it cannot identify authorship or undisclosed AI use.</p>
+
+<h2>Results</h2>
+<h3>Editing did not change a classification</h3>
+<p>Pangram labeled all 20 historical passages Human and all 80 LLM-derived passages AI. Document fractions were saturated: 0.0 for every human passage and 1.0 for every AI-derived passage. The observed false-positive rate was 0/20, with a two-sided 95% Clopper–Pearson upper bound of 16.8%. Sensitivity was 80/80, with a lower bound of 95.5%.</p>
+<div class="table-wrap"><table class="article-table"><thead><tr><th>Condition</th><th>n</th><th>Mean words</th><th>Labeled AI</th><th>AI fraction</th></tr></thead><tbody><tr><td>Human</td><td>20</td><td>709.0</td><td>0</td><td>0.00</td></tr><tr><td>Raw AI</td><td>20</td><td>720.6</td><td>20</td><td>1.00</td></tr><tr><td>Copyedited AI</td><td>20</td><td>717.9</td><td>20</td><td>1.00</td></tr><tr><td>Deslopped AI</td><td>20</td><td>640.9</td><td>20</td><td>1.00</td></tr><tr><td>Paraphrased AI</td><td>20</td><td>665.0</td><td>20</td><td>1.00</td></tr></tbody></table></div>
+<p>Deslopping removed about 11% of the raw generation’s words; paraphrasing removed about 8%. Neither changed a classification. This does not contradict demonstrations that other transformations can defeat other detectors. It shows that removing familiar AI commonisms is not necessarily the same as crossing a detector boundary.</p>
+<h3>Low-level errors barely moved the score</h3>
+<p>All 120 punctuation-corrupted and 100 word-corrupted passages remained labeled AI. At maximum dose, punctuation corruption averaged roughly 57 edits and word corruption averaged 28.95 edits per passage. Pangram’s continuous mean window score moved from 0.99294 for raw AI to 0.99272 and 0.99254, respectively. Historical human windows averaged 0.00389.</p>
+<div class="table-wrap"><table class="article-table"><thead><tr><th>Corruption</th><th>Maximum dose</th><th>Mean edits</th><th>AI labels</th><th>Window score</th></tr></thead><tbody><tr><td>None</td><td>0</td><td>0</td><td>20/20</td><td>0.99294</td></tr><tr><td>Mixed punctuation</td><td>8 per 100 words</td><td>≈57</td><td>20/20</td><td>0.99272</td></tr><tr><td>Mixed word noise</td><td>4 per 100 words</td><td>28.95</td><td>20/20</td><td>0.99254</td></tr></tbody></table></div>
+<h3>The vocabulary baseline moved</h3>
+<p>Target terms occurred 209 times per million words in 2010 and 416 times in 2022. The rate rose to 802 in 2023, 1,656 in 2024, and 1,835 in 2025, before falling to 737 in 2026. Document prevalence followed the same path.</p>
+<div class="table-wrap"><table class="article-table"><thead><tr><th>Year</th><th>Papers</th><th>Terms per million</th><th>Papers with a term</th></tr></thead><tbody><tr><td>2010</td><td>1,054</td><td>208.8</td><td>2.7%</td></tr><tr><td>2015</td><td>1,411</td><td>293.6</td><td>3.7%</td></tr><tr><td>2020</td><td>1,500</td><td>389.0</td><td>5.5%</td></tr><tr><td>2022</td><td>1,500</td><td>415.9</td><td>6.1%</td></tr><tr><td>2023</td><td>1,500</td><td>802.2</td><td>10.7%</td></tr><tr><td>2024</td><td>1,500</td><td>1,655.6</td><td>18.9%</td></tr><tr><td>2025</td><td>1,500</td><td>1,834.7</td><td>21.1%</td></tr><tr><td>2026</td><td>1,500</td><td>737.1</td><td>11.3%</td></tr></tbody></table></div>
+<p>The reversal matters. A static list of notorious AI words is not a permanent fingerprint. Models can change, writers can avoid publicized markers, and topics within fields can shift. The corpus result supports temporal drift, but cannot separate direct AI assistance, social diffusion, model-aware editing, and unrelated historical change.</p>
+
+<h2>The historical-control problem</h2>
+<p>Pre-2020 prose offers comparatively clear provenance, but does not represent the population on which detectors are now used. People acquire words through exposure and coordinate language with conversational partners. LLMs now supply language across email, education, journalism, software, and scholarly editing. Someone can encounter model-shaped language without asking a model to write.</p>
+<p>Three processes may move current human prose toward an LLM-associated distribution:</p>
+<ol><li><strong>Direct assistance:</strong> a writer accepts or edits generated wording.</li><li><strong>Strategic adaptation:</strong> writers remove conspicuous markers or adopt rewarded conventions.</li><li><strong>Incidental accommodation:</strong> exposure changes which constructions feel ordinary or available.</li></ol>
+<blockquote><p>A detector can separate historical human prose from current model prose while users interpret the result as a judgment about current human prose versus model authorship. Those are not the same task.</p></blockquote>
+<p>This distinction matters in academic-integrity decisions. A stylistic resemblance score cannot establish the process that produced a document. Reports should distinguish authorship, assistance, and distributional similarity.</p>
+
+<h2>What evaluation should do next</h2>
+<p>Future benchmarks should treat calendar time and model exposure as design variables. They should include pre-LLM writing, contemporary unaided writing, disclosed AI-edited human drafts, human-edited AI drafts, and repeated samples from the same writers. Multiple detectors, generators, domains, and language backgrounds are required.</p>
+<p>Within-writer designs can reduce confounding from education, discipline, first language, and stable style. Prospective exposure studies could test whether model-generated reading changes later lexical or syntactic choices without direct writing assistance.</p>
+
+<h2>Limitations</h2>
+<p>This pilot used one proprietary detector, one pinned generator, one domain, and 20 source topics. Confidence intervals remain wide despite perfect point estimates. Historical and generated passages may differ in factual density, structure, and editorial history. Transformations came from the same model family as the raw passages, semantic preservation has not yet been independently rated, and the paraphrase was neither detector-guided nor equivalent to DIPPER.</p>
+<p>The arXiv analysis used titles and abstracts from three categories, a hand-selected lexicon, and unequal historical cells. It cannot estimate undisclosed use or attribute a shift to one cause. Results should be treated as a reproducible pilot and a case for time-aware evaluation, not a universal detector benchmark.</p>
+
+<h2>Conclusion</h2>
+<p>In this paired biomedical sample, copyediting, deslopping, paraphrasing, and substantial low-level corruption did not remove the evidence used by Pangram 3.3.2. Separately, scientific vocabulary associated with LLM style changed sharply after 2022 and then partly reversed. Editing away visible “AI style” and defeating an AI detector are different hypotheses.</p>
+<p>The durable challenge is the reference class. As model-associated language circulates through environments where people read and write, historical controls become attractive because provenance is clearer and inadequate because they may no longer represent current humans. AI-text detection should be evaluated as a temporally shifting measurement problem, not a permanent binary classification task.</p>
+
+<h2>Ethics and availability</h2>
+<p>No detector feedback was used to optimize text for evasion. The study evaluates robustness and does not provide a method for concealing authorship. Detector output should not be sole evidence of misconduct.</p>
+<p>The project retains provenance, generated and transformed passages, API responses, hashes, results, and a blinded rating packet. The longitudinal analysis retains sampling code, cached metadata, and derived tables. Public releases should preserve source licenses and exclude credentials and the private condition key until human evaluation is complete.</p>
+
+<h2>References</h2>
+<ol class="references"><li>Krishna K, Song Y, Karpinska M, Wieting J, Iyyer M. “Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense.” <em>NeurIPS</em>. 2023;36.</li><li>Wang Y, Feng S, Hou A, et al. “Stumbling Blocks: Stress Testing the Robustness of Machine-Generated Text Detectors Under Attacks.” <em>ACL</em>. 2024.</li><li>Gaskell MG, Dumay N. “Lexical competition and the acquisition of novel words.” <em>Cognition</em>. 2003;89(2).</li><li>Brennan SE, Clark HH. “Conceptual pacts and lexical choice in conversation.” <em>JEP: Learning, Memory, and Cognition</em>. 1996;22(6).</li><li>Kobak D, González-Márquez R, Horvát E-Á, Lause J. “Delving into LLM-assisted writing in biomedical publications through excess vocabulary.” <em>Science Advances</em>. 2025;11(27).</li><li>Geng M, Trotta R. “Human–LLM Coevolution: Evidence from Academic Writing.” <em>Findings of ACL</em>. 2025.</li><li>Emi B, Spero M. “Technical Report on the Pangram AI-Generated Text Classifier.” arXiv:2402.14873. 2024.</li><li>Sanger MD, Maurer BW. “Have Large Language Models Enhanced the Way Civil &amp; Environmental Engineers Write?” arXiv:2602.03864. 2026.</li></ol>
+<p><a class="back-link" href="../">← Back to Tennessee Labs</a></p>
+</div>
+</article></main>
+<footer class="footer"><p>Tennessee Labs &middot; Tennessee, United States</p><p class="disclaimer">Independent applied AI research. Correspondence: <a href="mailto:hello@tennesseelabs.com">hello@tennesseelabs.com</a></p><p class="disclaimer">&copy; 2026 Tennessee Labs</p></footer>
+</body></html>

@@ -14,3 +14,5 @@ ai-writing-detection-study/data/intermediate/
 ai-writing-detection-study/data/results/
 ai-writing-detection-study/data/human-evaluation/
 ai-writing-detection-study/data/share/
+ai-writing-detection-study/data/punctuation-corruption/
+ai-writing-detection-study/data/word-corruption/

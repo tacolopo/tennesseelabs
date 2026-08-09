@@ -1,4 +1,4 @@
-# When Human Writing Moves: AI-Text Detection, Style Editing, and the Problem of a Historical Baseline
+# When Human Writing Moves: AI-Text Detection, Style Editing, Controlled Corruption, and the Problem of a Historical Baseline
 
 **Author:** [Author name]
 **Affiliation:** Tennessee Labs, Tennessee, USA
@@ -6,7 +6,7 @@
 
 ## Abstract
 
-AI-text detectors are commonly evaluated against a stable binary: archived human writing versus newly generated machine text. That design may become less informative as people repeatedly read, edit, and converse with large language models (LLMs). We report a paired pilot evaluation of Pangram 3.3.2 on 20 pre-2020 open-access biomedical introductions and 80 matched LLM-derived passages. For each source topic, a pinned OpenAI model produced an introduction that was left unchanged, copyedited, revised with a rule-based “deslopping” prompt, or substantially paraphrased without detector feedback. Pangram classified all 20 historical passages as human and all 80 LLM-derived passages as AI (document-level AI fractions 0.0 and 1.0, respectively). Deslopping shortened passages but did not alter any classification; neither did the stronger paraphrase. These results do not contradict prior demonstrations that paraphrasing can defeat other detectors. They show that removal of familiar AI commonisms is not necessarily equivalent to crossing a contemporary detector’s decision boundary. We argue that the larger measurement problem is temporal. Human linguistic distributions respond to exposure and coordination, while LLM-associated vocabulary is already changing scientific writing. A detector validated mainly against pre-LLM prose may therefore estimate distance from a historical human distribution rather than machine authorship. Future evaluations should use time-indexed controls, longitudinal within-author samples, disclosed AI-assisted writing, and unaided contemporary writing.
+AI-text detectors are commonly evaluated against a stable binary: archived human writing versus newly generated machine text. That design may become less informative as people repeatedly read, edit, and converse with large language models (LLMs). We report a paired pilot evaluation of Pangram 3.3.2 on 20 pre-2020 open-access biomedical introductions and 80 matched LLM-derived passages. For each source topic, a pinned OpenAI model produced an introduction that was left unchanged, copyedited, revised with a rule-based “deslopping” prompt, or substantially paraphrased without detector feedback. Pangram classified all 20 historical passages as human and all 80 LLM-derived passages as AI (document-level AI fractions 0.0 and 1.0, respectively). Deslopping shortened passages but did not alter any classification; neither did the stronger paraphrase. We then generated 220 additional variants along nested punctuation- and word-corruption dose curves. Every variant remained classified as AI, including passages with an average of 29 word-level errors or approximately 57 punctuation edits. Continuous segment scores changed only slightly. These results do not contradict prior demonstrations that paraphrasing can defeat other detectors. They show that removal of familiar AI commonisms is not necessarily equivalent to crossing a contemporary detector’s decision boundary. We argue that the larger measurement problem is temporal. Human linguistic distributions respond to exposure and coordination, while LLM-associated vocabulary is already changing scientific writing. A detector validated mainly against pre-LLM prose may therefore estimate distance from a historical human distribution rather than machine authorship. Future evaluations should use time-indexed controls, longitudinal within-author samples, disclosed AI-assisted writing, and unaided contemporary writing.
 
 **Keywords:** AI-text detection; scientific writing; paraphrasing; stylometry; lexical entrainment; human–LLM coevolution
 
@@ -44,7 +44,13 @@ Each raw generation independently entered three transformations:
 
 No transformation received detector output. No passage was resampled or iteratively revised to lower a detector score. Natural length changes were retained as part of the interventions. This produced five conditions per source and 100 passages: 20 historical human and 80 LLM-derived.
 
-### 2.4 Detection and reproducibility
+### 2.4 Controlled corruption
+
+We conducted two nested dose-response experiments on each raw AI passage. Punctuation corruption changed commas, colons, and semicolons through deterministic insertion, deletion, and substitution at 0.25, 0.5, 1, 2, 4, and 8 edits per 100 words. A validation step confirmed that the words and their order remained identical. Word noise combined internal-letter transposition, single-character deletion, article deletion, and duplication of function words at 0.25, 0.5, 1, 2, and 4 edits per 100 words. Every variant retained an exact edit log and was generated without detector feedback. The doses were nested, so each higher dose included the edits at lower doses.
+
+The punctuation experiment produced 120 additional passages and the word-noise experiment produced 100. These interventions were designed to preserve topic and broad intelligibility, but semantic fidelity and readability at the highest word-noise doses await blinded human assessment.
+
+### 2.5 Detection and reproducibility
 
 We submitted each passage once to Pangram’s V3 API with public dashboard links disabled. The detector identified itself as version 3.3.2. We archived complete responses, including document-level fractions and segment windows. AI-derived text was the positive class. Pangram was selected because it offered a current programmatic interface within budget. Its developers describe a transformer classifier trained with hard-negative mining and synthetic mirrors [7]. Originality.ai was excluded before data collection because API access required an enterprise subscription beyond the project budget.
 
@@ -66,6 +72,16 @@ The observed false-positive rate was 0/20 (0%; two-sided 95% Clopper–Pearson u
 
 Deslopping removed about 11% of the raw generation’s words on average; paraphrasing removed about 8%. We do not treat these changes as protocol violations. Editing changes a passage’s realized distribution, including length and redundancy. Neither intervention changed a Pangram classification despite those changes.
 
+Controlled corruption also produced no label changes. All 120 punctuation-corrupted and 100 word-corrupted passages were labeled AI with an AI fraction of 1.0. Pangram’s document-level fractions are proportions of labeled windows and were saturated in this sample, but each window also carried a continuous AI-assistance score. Table 2 reports the dose-response results.
+
+| Corruption | Maximum dose | Mean edits at maximum | AI labels at maximum | Mean window score at maximum |
+|---|---:|---:|---:|---:|
+| None (raw AI) | 0 | 0 | 20/20 | 0.99294 |
+| Mixed punctuation | 8 per 100 words | approximately 57 | 20/20 | 0.99272 |
+| Mixed word noise | 4 per 100 words | 28.95 | 20/20 | 0.99254 |
+
+At intermediate doses, every passage was also labeled AI. The highest punctuation dose changed the mean score by about 0.00021 relative to raw AI; the highest word-noise dose changed it by about 0.00040. These shifts were small relative to the separation from historical human windows, whose mean score was 0.00389 and maximum was 0.03337. No corruption threshold was observed within the tested range.
+
 ## 4. Discussion
 
 ### 4.1 Deslopping was not detector evasion
@@ -74,7 +90,11 @@ The direct result is negative: removing recognizable AI commonisms did not make 
 
 This should not be generalized to all detectors, generators, domains, or attacks. Prior studies evaluated different architectures and stronger or detector-targeted transformations [1,2]. DIPPER explicitly controls lexical diversity and content reordering, and adversarial studies may search over candidates or exploit model-specific weaknesses. Our transformations were single-pass, meaning-preserving edits without detector feedback. The contrast is informative. “Sounds less like stereotypical AI prose” and “crosses a detector boundary” are different hypotheses.
 
-The saturated response also limits interpretation. We can conclude that these 80 passages remained on Pangram’s AI side of the boundary. We cannot infer their distance from that boundary from aggregate fractions alone. Segment-level analysis and additional detectors are needed.
+The saturated document response initially obscured a continuous output. Pangram supplies an AI-assistance score for each window, while its document fractions summarize the proportions of windows assigned categorical labels. Window scores showed that the texts occupied opposite extremes: historical human windows averaged 0.00389 and raw AI windows averaged 0.99294.
+
+Punctuation noise barely moved the continuous score, even though the highest dose inserted or altered punctuation often enough to make the prose visibly irregular. Word-level errors produced a somewhat larger but still negligible change. This suggests that Pangram 3.3.2 did not rely primarily on punctuation cleanliness, spelling regularity, function-word perfection, or the rhetorical templates targeted by deslopping in this corpus. It also cautions against equating a detector with a grammar checker.
+
+No threshold was found before the interventions approached a level at which readability could become a competing explanation. More severe corruption could eventually cross a boundary, but a threshold obtained only after destroying communicative quality would have little relevance to ordinary editing. The blinded human evaluation should therefore measure both perceived authorship and intelligibility.
 
 ### 4.2 The historical-control problem
 
@@ -112,11 +132,11 @@ Detector reports should distinguish authorship, assistance, and distributional s
 
 This pilot used one commercial detector, one pinned generator, one scientific domain, and 20 source topics selected from highly cited open-access biomedical literature. Confidence intervals remain wide despite perfect point estimates. Historical passages may differ from generated passages in structure, factual density, citation history, and editorial review.
 
-The transformations came from the same model family that produced the raw passages, and semantic preservation has not yet been independently rated. The paraphrase was not DIPPER and was not optimized against Pangram. “Deslopping” operationalizes one fixed instruction set, not a standardized intervention. Pangram is proprietary and its version may change. Finally, the moving-baseline account is a hypothesis supported by linguistic theory and corpus trends, not a causal finding from this detector experiment.
+The transformations came from the same model family that produced the raw passages, and semantic preservation has not yet been independently rated. Punctuation-only variants preserved the exact word sequence, but the intelligibility and perceived quality of high-dose punctuation and word-noise variants require human validation. The paraphrase was not DIPPER and was not optimized against Pangram. “Deslopping” operationalizes one fixed instruction set, not a standardized intervention. Pangram is proprietary and its version may change. Finally, the moving-baseline account is a hypothesis supported by linguistic theory and corpus trends, not a causal finding from this detector experiment.
 
 ## 6. Conclusion
 
-In this paired biomedical pilot, Pangram distinguished 20 historical human introductions from 80 matched LLM-derived passages without error. Copyediting, removal of common AI stylistic patterns, and single-pass paraphrasing did not change any classification. Editing away visible “AI style” did not remove the evidence used by this detector.
+In this paired biomedical pilot, Pangram distinguished 20 historical human introductions from 80 matched LLM-derived passages without error. Copyediting, removal of common AI stylistic patterns, single-pass paraphrasing, 120 punctuation-corrupted variants, and 100 word-corrupted variants did not change any classification. Editing away visible “AI style” and adding substantial low-level noise did not remove the evidence used by this detector. No practical corruption threshold was observed within the tested range.
 
 The more durable challenge may be the reference class. As LLM-associated language circulates through the environments in which people read, think, and write, human prose may move toward model-associated distributions. Historical controls then become simultaneously attractive and outdated: attractive because provenance is clearer, outdated because they may not represent the humans on whom detectors are used. AI-text detection should be evaluated as a temporally shifting measurement problem, not a permanent binary classification task.
 

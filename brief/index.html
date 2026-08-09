@@ -108,10 +108,10 @@
     </div>
     <div class="col">
       <ol class="rundown-list">
-        <li><span class="rundown-head">SAP froze most corporate travel and hiring, citing AI's soaring cost.</span> <span class="rundown-why">A rare admission that AI spend is now constraining budgets, not just expanding them.</span><a class="cite" href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">[1]</a></li>
-        <li><span class="rundown-head">Claude Code sessions can now message each other directly.</span> <span class="rundown-why">Lets parallel agents hand off findings and warnings mid-task without the developer relaying them.</span><a class="cite" href="https://code.claude.com/docs/en/cross-session-messaging">[2]</a></li>
-        <li><span class="rundown-head">Gentoo took its Bugzilla offline after LLM scrapers made it unusable.</span> <span class="rundown-why">Another open-source maintainer forced to shut a service down rather than fight AI crawler traffic.</span><a class="cite" href="https://social.treehouse.systems/@mgorny/117058483039362779">[3]</a></li>
-        <li><span class="rundown-head">ChatGPT now refuses to directly clone a named author's writing style.</span> <span class="rundown-why">A guardrail shift that lands as OpenAI fights multiple author copyright suits.</span><a class="cite" href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">[4]</a></li>
+        <li><span class="rundown-head">OpenAI quietly folds presentation startup NextSlide into its ChatGPT team.</span> <span class="rundown-why">Another small acqui-hire feeding OpenAI's creation-tool push.</span><a class="cite" href="https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/">[1]</a></li>
+        <li><span class="rundown-head">Amazon's planned Texas data center could become the single largest source of climate pollution in the U.S.</span> <span class="rundown-why">AI's power appetite is colliding with Amazon's 2040 carbon pledge.</span><a class="cite" href="https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/">[2]</a></li>
+        <li><span class="rundown-head">SAP is still freezing most travel and hiring, pointing to AI's soaring cost.</span> <span class="rundown-why">A rare admission that AI spend is squeezing budgets rather than saving money.</span><a class="cite" href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">[3]</a></li>
+        <li><span class="rundown-head">Claude Code shipped cross-session messaging, and developers on HN are split.</span> <span class="rundown-why">Multi-agent coordination is becoming a real workflow, weirdness included.</span><a class="cite" href="https://code.claude.com/docs/en/cross-session-messaging">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -119,36 +119,31 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">5 items &middot; Hacker News, no ragebait</p>
+      <p class="rail-note">4 items &middot; Hacker News, no ragebait</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">SAP halts most travel and hiring, blaming AI's soaring cost</a></h3>
-        <p class="entry-meta">Aug 8 &middot; 68 pts &middot; 44 comments</p>
-        <p>SAP suspended most corporate travel and hiring last month because of AI's rising costs, according to an internal email obtained by 404 Media; only AI-related travel and hires are exempt. A current employee says the freeze is still in effect even as SAP rolls out a new AI tool company-wide, which they expect will push costs higher still.</p>
-        <blockquote class="reaction">&ldquo;In other words, AI is now driving their budget decisions.&rdquo; <span class="who">&mdash; jqpabc123 on <a href="https://news.ycombinator.com/item?id=49229412">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://social.treehouse.systems/@mgorny/117058483039362779">Gentoo Bugzilla goes dark after AI scraper overload</a></h3>
+        <p class="entry-meta">Aug 8 &middot; 166 pts &middot; 109 comments</p>
+        <p>Gentoo developer Micha&#322; G&oacute;rny took the project's Bugzilla offline, saying it "was unusable anyway" under a flood of apparent LLM scrapers hitting from thousands of different IPv4 addresses with no discernible pattern, and that he doesn't have time to fight it as an unpaid volunteer. Commenters proposed defenses like Cloudflare/Anubis challenges and per-request charges, with several noting this is becoming a common fate for public infrastructure.</p>
+        <blockquote class="reaction">&ldquo;And people complain about cloudflare/anubis/etc. Unfortunately, it's looking like this is the alternative.&rdquo; <span class="who">&mdash; Gander5739 on <a href="https://news.ycombinator.com/item?id=49221864">HN</a></span></blockquote>
       </article>
       <article class="entry">
         <h3 class="entry-title"><a href="https://code.claude.com/docs/en/cross-session-messaging">Message your other Claude Code sessions</a></h3>
-        <p class="entry-meta">Aug 8 &middot; 137 pts &middot; 61 comments</p>
-        <p>Claude Code sessions can now deliver messages to each other directly — one session can warn another about a breaking change or hand off a finding via new ListAgents/SendMessage tools (v2.1.224+, macOS/Linux). Inbound messages go through approval rules, and a receiving session is barred from treating a message as consent for anything it wasn't already permitted to do.</p>
+        <p class="entry-meta">Aug 8 &middot; 137 pts &middot; 60 comments</p>
+        <p>Anthropic's docs detail a new Claude Code feature that lets one session pass a note to another &mdash; warning a session when a dependent change breaks its build, or relaying an answer another session was blocked on. It runs on Claude Code v2.1.224+ via new ListAgents/SendMessage tools. On HN, one builder described chaining it across a fleet of machines over Tailscale; others reported odd emergent messages passing between their agent instances.</p>
         <blockquote class="reaction">&ldquo;I've used this feature and saw some weird messages: &gt; hold swarm, I prepare safe exfil&rdquo; <span class="who">&mdash; dist-epoch on <a href="https://news.ycombinator.com/item?id=49222824">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://social.treehouse.systems/@mgorny/117058483039362779">Gentoo's Bugzilla goes dark after AI scraper overload</a></h3>
-        <p class="entry-meta">Aug 8 &middot; 166 pts &middot; 109 comments</p>
-        <p>Gentoo developer Michał Górny took the project's Bugzilla offline, saying it had become unusable under load from LLM scrapers hitting it from thousands of rotating IPv4 addresses with no pattern he could block. He added he isn't looking for mitigation tips — as an unpaid volunteer, not a sysadmin, he doesn't have time to fight the traffic.</p>
-        <blockquote class="reaction">&ldquo;OpenAI, Google, Anthropic and others are normally fairly well behaved (Minus Anthropic attempting to hide behind a browser-for-hire company).&rdquo; <span class="who">&mdash; mrweasel on <a href="https://news.ycombinator.com/item?id=49221864">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
         <h3 class="entry-title"><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">ChatGPT starts blocking direct requests to copy an author's style</a></h3>
-        <p class="entry-meta">Jul 2026 &middot; 63 pts &middot; 49 comments</p>
-        <p>ChatGPT now refuses prompts asking it to write "in the exact style" of named authors — living (Stephen King, J.K. Rowling) or dead — offering instead to capture their "broad qualities" in its own voice. Ars Technica notes the shift could matter legally, as OpenAI continues fighting copyright suits from authors over training data.</p>
+        <p class="entry-meta">Aug 9 &middot; 63 pts &middot; 48 comments</p>
+        <p>Ars Technica found ChatGPT now refuses to write "in the style of" named living authors like Stephen King or J.K. Rowling, offering instead to capture "a similar feeling" without imitating their voice &mdash; while it still complies for dead authors like Dickens or Hemingway, per an analysis the piece cites. HN commenters were split on whether this is a meaningful guardrail or easily routed around by describing the style instead of naming the author.</p>
+        <blockquote class="reaction">&ldquo;After it stole literally every authors style in existence&hellip;&rdquo; <span class="who">&mdash; lethologica on <a href="https://news.ycombinator.com/item?id=49227718">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/">Everything you do is being recorded</a></h3>
-        <p class="entry-meta">May 18, 2026 &middot; 71 pts &middot; 55 comments (resurfaced on HN today)</p>
-        <p>The Atlantic profiles a nascent market for anti-surveillance gadgets — like start-up Deveillance's Spectre I — built to counter always-on AI recorders in glasses, pins, and pendants, as products like Apple's rumored AI pin push the category toward the mainstream.</p>
+        <h3 class="entry-title"><a href="https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/">Software giant SAP stops most travel and hiring because of AI's soaring cost</a></h3>
+        <p class="entry-meta">Aug 9 &middot; 55 pts &middot; 31 comments</p>
+        <p>404 Media reports a current SAP employee confirms travel and hiring freezes first reported by Bloomberg in July are still in effect, revisited at a recent global company meeting. The employee said SAP is now rolling a new AI tool out company-wide that "can only imagine massively increases the costs" &mdash; one of the more concrete signs yet of enterprise AI spend squeezing other budgets instead of paying for itself.</p>
       </article>
     </div>
   </section>
@@ -159,7 +154,7 @@
       <p class="rail-note">0 items</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h — latest post is from Aug 7.</p>
+      <p class="empty">Nothing new in the last 24h.</p>
     </div>
   </section>
 
@@ -169,7 +164,7 @@
       <p class="rail-note">0 items</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h — latest post is from Aug 7.</p>
+      <p class="empty">Nothing new in the last 24h.</p>
     </div>
   </section>
 
@@ -179,7 +174,7 @@
       <p class="rail-note">0 items</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h — latest post is from Aug 7.</p>
+      <p class="empty">Nothing new in the last 24h.</p>
     </div>
   </section>
 
@@ -189,7 +184,7 @@
       <p class="rail-note">0 items</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h on the AI or technology hubs.</p>
+      <p class="empty">Nothing new in the last 24h (yesterday's top AI story &mdash; xAI's citizen-suit challenge &mdash; was already covered in the prior edition).</p>
     </div>
   </section>
 
@@ -202,7 +197,7 @@
       <article class="entry">
         <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/08/pentagon-presses-defense-firms-build-weapons-iran-war-depletes-stocks/">Pentagon presses defense firms to build weapons as Iran war depletes stocks</a></h3>
         <p class="entry-meta">Aug 8</p>
-        <p>Deputy Defense Secretary Steve Feinberg is directing defense contractors to ramp up weapons production amid a critical U.S. munitions shortage tied to the Iran war, per the Post's technology desk.</p>
+        <p>Deputy Defense Secretary Steve Feinberg is directing defense-industry firms to ramp up weapons production, per the Post, amid mounting tensions over a critical U.S. munitions shortage tied to the Iran war.</p>
       </article>
     </div>
   </section>
@@ -210,10 +205,19 @@
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">0 items</p>
+      <p class="rail-note">2 items</p>
     </div>
     <div class="col">
-      <p class="empty">Web-search sweep turned up nothing from the last 24h beyond what's already covered above — a quiet Sunday.</p>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/">OpenAI acquires presentation startup NextSlide</a></h3>
+        <p class="entry-meta">Aug 8</p>
+        <p>NextSlide, a startup that turned prompts, notes, and documents into polished presentations, has joined OpenAI, with its team now working on ChatGPT. Founder Ahmed Beshry &mdash; a Caper AI/Instacart alum &mdash; said the announcement came "a few months late" since the deal closed earlier this year; terms weren't disclosed.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/">Planned Amazon data center could become the biggest climate polluter in the U.S.</a></h3>
+        <p class="entry-meta">Aug 8</p>
+        <p>Per the New York Times, Amazon's planned Pecos County, Texas data center includes an on-site natural-gas power plant permitted to emit 33 million tons of CO2 a year &mdash; more than any other U.S. power plant. Amazon says the on-site generation "won't raise electricity costs for Texas families," even as the company's own emissions rose 16% last year, moving it further from its 2040 net-zero pledge.</p>
+      </article>
     </div>
   </section>
 

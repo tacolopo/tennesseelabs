@@ -3,3 +3,14 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+.env
+.env.*
+!.env.example
+
+# Study artifacts (contain generated and licensed source text)
+ai-writing-detection-study/data/raw/
+ai-writing-detection-study/data/intermediate/
+ai-writing-detection-study/data/results/
+ai-writing-detection-study/data/human-evaluation/
+ai-writing-detection-study/data/share/

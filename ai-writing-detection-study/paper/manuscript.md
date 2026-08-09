@@ -6,7 +6,7 @@
 
 ## Abstract
 
-AI-text detectors are commonly evaluated against a stable binary: archived human writing versus newly generated machine text. That design may become less informative as people repeatedly read, edit, and converse with large language models (LLMs). We report a paired pilot evaluation of Pangram 3.3.2 on 20 pre-2020 open-access biomedical introductions and 80 matched LLM-derived passages. For each source topic, a pinned OpenAI model produced an introduction that was left unchanged, copyedited, revised with a rule-based “deslopping” prompt, or substantially paraphrased without detector feedback. Pangram classified all 20 historical passages as human and all 80 LLM-derived passages as AI (document-level AI fractions 0.0 and 1.0, respectively). Deslopping shortened passages but did not alter any classification; neither did the stronger paraphrase. We then generated 220 additional variants along nested punctuation- and word-corruption dose curves. Every variant remained classified as AI, including passages with an average of 29 word-level errors or approximately 57 punctuation edits. Continuous segment scores changed only slightly. These results do not contradict prior demonstrations that paraphrasing can defeat other detectors. They show that removal of familiar AI commonisms is not necessarily equivalent to crossing a contemporary detector’s decision boundary. We argue that the larger measurement problem is temporal. Human linguistic distributions respond to exposure and coordination, while LLM-associated vocabulary is already changing scientific writing. A detector validated mainly against pre-LLM prose may therefore estimate distance from a historical human distribution rather than machine authorship. Future evaluations should use time-indexed controls, longitudinal within-author samples, disclosed AI-assisted writing, and unaided contemporary writing.
+AI-text detectors are commonly evaluated against a stable binary: archived human writing versus newly generated machine text. That design may become less informative as people repeatedly read, edit, and converse with large language models (LLMs). We report a paired pilot evaluation of Pangram 3.3.2 on 20 pre-2020 open-access biomedical introductions and 80 matched LLM-derived passages. For each source topic, a pinned OpenAI model produced an introduction that was left unchanged, copyedited, revised with a rule-based “deslopping” prompt, or substantially paraphrased without detector feedback. Pangram classified all 20 historical passages as human and all 80 LLM-derived passages as AI (document-level AI fractions 0.0 and 1.0, respectively). Deslopping shortened passages but did not alter any classification; neither did the stronger paraphrase. We then generated 220 additional variants along nested punctuation- and word-corruption dose curves. Every variant remained classified as AI, including passages with an average of 29 word-level errors or approximately 57 punctuation edits. Continuous segment scores changed only slightly. These results do not contradict prior demonstrations that paraphrasing can defeat other detectors. They show that removal of familiar AI commonisms is not necessarily equivalent to crossing a contemporary detector’s decision boundary. In a complementary longitudinal analysis of 11,465 arXiv titles and abstracts, a prespecified set of LLM-associated style terms rose from 209 occurrences per million words in 2010 to 1,835 in 2025, before falling to 737 in 2026. We argue that the larger measurement problem is temporal. Human linguistic distributions respond to exposure and coordination, while LLM-associated vocabulary is already changing scientific writing. A detector validated mainly against pre-LLM prose may therefore estimate distance from a historical human distribution rather than machine authorship. Future evaluations should use time-indexed controls, longitudinal within-author samples, disclosed AI-assisted writing, and unaided contemporary writing.
 
 **Keywords:** AI-text detection; scientific writing; paraphrasing; stylometry; lexical entrainment; human–LLM coevolution
 
@@ -20,7 +20,7 @@ The popular response to recognizable “AI style” has produced editing checkli
 
 We ask whether ordinary copyediting, deslopping, or general paraphrasing changes the classification of matched scientific prose under a current commercial detector. We then consider what a historical human comparison means if human writing is itself moving toward patterns associated with LLMs.
 
-Repeated exposure can support lexical acquisition [3], and interlocutors coordinate lexical choices through conceptual pacts and lexical entrainment [4]. LLMs now participate directly and indirectly in that linguistic environment. Kobak et al. [5] found abrupt increases in LLM-associated style words across more than 15 million biomedical abstracts and estimated that at least 13.5% of 2024 abstracts had been processed with LLMs. Geng and Trotta [6] documented subsequent changes in conspicuous LLM-favored terms and described the process as human–LLM coevolution. These observations do not show that every lexical shift reflects unconscious adoption; direct AI editing, changing publication norms, and strategic removal of known markers are competing explanations. They do establish that contemporary scientific prose is not sampled from the same distribution as pre-LLM prose.
+Repeated exposure can support lexical acquisition [3], and interlocutors coordinate lexical choices through conceptual pacts and lexical entrainment [4]. LLMs now participate directly and indirectly in that linguistic environment. Kobak et al. [5] found abrupt increases in LLM-associated style words across more than 15 million biomedical abstracts and estimated that at least 13.5% of 2024 abstracts had been processed with LLMs. Geng and Trotta [6] documented subsequent changes in conspicuous LLM-favored terms and described the process as human–LLM coevolution. These observations do not show that every lexical shift reflects unconscious adoption; direct AI editing, changing publication norms, and strategic removal of known markers are competing explanations. They do establish that contemporary scientific prose is not sampled from the same distribution as pre-LLM prose. A 2026 study of 149,452 civil and environmental engineering abstracts similarly reported departures from historical vocabulary trends after 2022 [8].
 
 ## 2. Methods
 
@@ -56,6 +56,12 @@ We submitted each passage once to Pangram’s V3 API with public dashboard links
 
 Every source, prompt response, transformation, detector response, model identifier, and SHA-256 text hash was retained. A deterministic shuffle assigned all 100 passages anonymous IDs for planned human evaluation. Reviewers will provide a human/AI judgment, confidence, perceived quality, and comments. The private condition key is stored separately. Human ratings were not complete for this report.
 
+### 2.6 Longitudinal arXiv analysis
+
+We harvested public arXiv metadata for papers first submitted from January through July in 2010, 2015, 2020, and 2022 through 2026. We selected three long-running categories with different subject matter: computational linguistics (cs.CL), high-energy phenomenology (hep-ph), and probability (math.PR). Within each category-year, a deterministic month-stratified sample retained at most 500 papers. The 2010 cs.CL and 2015 cs.CL strata contained only 54 and 411 eligible papers; all were retained. The final corpus comprised 11,465 titles and abstracts.
+
+A confirmatory lexicon of 27 LLM-associated style terms was fixed before examining the corpus, drawing on published excess-vocabulary work [5] and the study editing rules. We measured token frequency per million words and the proportion of documents containing one or more target terms. Approximate rate-ratio intervals treated target-token counts as Poisson; field-specific results and a sensitivity analysis excluding the small 2010 cs.CL stratum addressed compositional change. The analysis defines year by first submission rather than arXiv record-update date, caches every raw Atom response, and uses only complete matched months. It tests for a temporal distribution shift, not authorship or undisclosed AI use.
+
 ## 3. Results
 
 Pangram labeled every historical passage Human and every LLM-derived passage AI. Document-level scores were saturated: an AI fraction of 0.0 for every human passage and 1.0 for every AI-derived passage.
@@ -81,6 +87,23 @@ Controlled corruption also produced no label changes. All 120 punctuation-corrup
 | Mixed word noise | 4 per 100 words | 28.95 | 20/20 | 0.99254 |
 
 At intermediate doses, every passage was also labeled AI. The highest punctuation dose changed the mean score by about 0.00021 relative to raw AI; the highest word-noise dose changed it by about 0.00040. These shifts were small relative to the separation from historical human windows, whose mean score was 0.00389 and maximum was 0.03337. No corruption threshold was observed within the tested range.
+
+### 3.1 Diachronic vocabulary shift
+
+The prespecified target terms occurred 209 times per million title-and-abstract tokens in 2010, 294 in 2015, 389 in 2020, and 416 in 2022. The rate then increased to 802 in 2023, 1,656 in 2024, and 1,835 in 2025, before falling to 737 in 2026. Document prevalence followed the same trajectory: 2.7% in 2010, 3.7% in 2015, 5.5% in 2020, 6.1% in 2022, 10.7% in 2023, 18.9% in 2024, 21.1% in 2025, and 11.3% in 2026.
+
+The 2026 rate was 3.53 times the 2010 rate (approximate 95% CI 2.37--5.25) and 1.77 times the 2022 rate (1.39--2.26). Excluding cs.CL, which had only 54 eligible papers in 2010 and underwent exceptional growth, the 2010-to-2026 rate ratio remained 2.29 (1.46--3.61). The increase appeared in each field, although its magnitude differed. The 2025-to-2026 decline was also large: the rate ratio was 0.40 (0.34--0.48). Thus the data show an abrupt post-2022 rise and a subsequent reversal, not monotonic convergence toward one fixed LLM vocabulary.
+
+| Year | Papers | Target terms per million words | Papers with at least one target term |
+|---:|---:|---:|---:|
+| 2010 | 1,054 | 208.8 | 2.7% |
+| 2015 | 1,411 | 293.6 | 3.7% |
+| 2020 | 1,500 | 389.0 | 5.5% |
+| 2022 | 1,500 | 415.9 | 6.1% |
+| 2023 | 1,500 | 802.2 | 10.7% |
+| 2024 | 1,500 | 1,655.6 | 18.9% |
+| 2025 | 1,500 | 1,834.7 | 21.1% |
+| 2026 | 1,500 | 737.1 | 11.3% |
 
 ## 4. Discussion
 
@@ -110,6 +133,8 @@ At least three processes may move contemporary human prose toward an LLM-associa
 
 Our experiment does not distinguish these mechanisms. Corpus evidence nevertheless shows the aggregate distribution moving. Biomedical abstracts contain abrupt increases in LLM-associated vocabulary [5], while later changes suggest authors and tools react to public knowledge of those markers [6]. The categories are coupled: LLMs learn from human text; people learn from environments populated by LLM text; newer models may train on the resulting mixture.
 
+Our arXiv analysis independently recovers the timing of that shift across computational linguistics, high-energy physics, and probability. Its reversal in 2026 is important. A static list of notorious AI words is not a permanent fingerprint. Model updates may alter preferred vocabulary, writers and editors may avoid publicized markers, and the scientific topics represented within a field may change. The result therefore supports temporal drift in scientific-language distributions, but it cannot attribute individual documents or partition direct AI assistance from social diffusion and unrelated stylistic change.
+
 A detector evaluated against historical controls can remain internally accurate while becoming externally miscalibrated. It may learn the contrast
 
 > historical human prose versus current model prose
@@ -132,17 +157,17 @@ Detector reports should distinguish authorship, assistance, and distributional s
 
 This pilot used one commercial detector, one pinned generator, one scientific domain, and 20 source topics selected from highly cited open-access biomedical literature. Confidence intervals remain wide despite perfect point estimates. Historical passages may differ from generated passages in structure, factual density, citation history, and editorial review.
 
-The transformations came from the same model family that produced the raw passages, and semantic preservation has not yet been independently rated. Punctuation-only variants preserved the exact word sequence, but the intelligibility and perceived quality of high-dose punctuation and word-noise variants require human validation. The paraphrase was not DIPPER and was not optimized against Pangram. “Deslopping” operationalizes one fixed instruction set, not a standardized intervention. Pangram is proprietary and its version may change. Finally, the moving-baseline account is a hypothesis supported by linguistic theory and corpus trends, not a causal finding from this detector experiment.
+The transformations came from the same model family that produced the raw passages, and semantic preservation has not yet been independently rated. Punctuation-only variants preserved the exact word sequence, but the intelligibility and perceived quality of high-dose punctuation and word-noise variants require human validation. The paraphrase was not DIPPER and was not optimized against Pangram. “Deslopping” operationalizes one fixed instruction set, not a standardized intervention. Pangram is proprietary and its version may change. Finally, the moving-baseline account is a hypothesis supported by linguistic theory and corpus trends, not a causal finding from this detector experiment. The arXiv analysis used titles and abstracts rather than full text, only three categories, a hand-selected external lexicon, and unequal historical cell sizes. Field labels do not eliminate changes in topics, authorship, language background, submission practices, or abstract conventions. Revisions after first submission may also alter the metadata text exposed by the API. The corpus shift is compatible with direct LLM generation, AI editing, imitation, model-aware avoidance, and non-AI historical change; it cannot estimate undisclosed use by itself.
 
 ## 6. Conclusion
 
-In this paired biomedical pilot, Pangram distinguished 20 historical human introductions from 80 matched LLM-derived passages without error. Copyediting, removal of common AI stylistic patterns, single-pass paraphrasing, 120 punctuation-corrupted variants, and 100 word-corrupted variants did not change any classification. Editing away visible “AI style” and adding substantial low-level noise did not remove the evidence used by this detector. No practical corruption threshold was observed within the tested range.
+In this paired biomedical pilot, Pangram distinguished 20 historical human introductions from 80 matched LLM-derived passages without error. Copyediting, removal of common AI stylistic patterns, single-pass paraphrasing, 120 punctuation-corrupted variants, and 100 word-corrupted variants did not change any classification. Editing away visible “AI style” and adding substantial low-level noise did not remove the evidence used by this detector. No practical corruption threshold was observed within the tested range. Separately, arXiv titles and abstracts showed an abrupt rise in prespecified LLM-associated vocabulary after 2022 and a marked reversal in 2026, demonstrating that the relevant linguistic baseline is changing rather than moving monotonically toward a fixed model signature.
 
 The more durable challenge may be the reference class. As LLM-associated language circulates through the environments in which people read, think, and write, human prose may move toward model-associated distributions. Historical controls then become simultaneously attractive and outdated: attractive because provenance is clearer, outdated because they may not represent the humans on whom detectors are used. AI-text detection should be evaluated as a temporally shifting measurement problem, not a permanent binary classification task.
 
 ## Data and code availability
 
-The study directory contains source provenance, exact generated and transformed passages, raw API responses, hashes, document-level results, and a blinded human-rating packet. Public release should retain source licenses and exclude API credentials and the private condition key until human evaluation is complete.
+The study directory contains source provenance, exact generated and transformed passages, raw API responses, hashes, document-level results, and a blinded human-rating packet. It also contains the arXiv harvesting and analysis script, deterministic sampling code, cached metadata, and derived lexical tables. Thank you to arXiv for use of its open access interoperability. Public release should retain source licenses and exclude API credentials and the private condition key until human evaluation is complete.
 
 ## Ethics statement
 
@@ -157,3 +182,4 @@ No detector feedback was used to optimize text for evasion. The study evaluates 
 5. Kobak D, González-Márquez R, Horvát E-Á, Lause J. Delving into LLM-assisted writing in biomedical publications through excess vocabulary. *Science Advances*. 2025;11(27). doi:10.1126/sciadv.adt3813.
 6. Geng M, Trotta R. Human–LLM Coevolution: Evidence from Academic Writing. *Findings of ACL*. 2025:12689–12696. doi:10.18653/v1/2025.findings-acl.657.
 7. Emi B, Spero M. Technical Report on the Pangram AI-Generated Text Classifier. arXiv:2402.14873. 2024.
+8. Sanger MD, Maurer BW. Have Large Language Models Enhanced the Way Civil & Environmental Engineers Write? A Quantitative Analysis of Scholarly Communication over 25 Years. arXiv:2602.03864. 2026.

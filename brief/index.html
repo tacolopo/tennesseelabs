@@ -98,7 +98,7 @@
     </div>
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
-      <p class="deck mono">Sunday · Aug 16, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Monday · Aug 17, 2026 · 6:00 AM ET</p>
     </div>
   </section>
 
@@ -109,11 +109,11 @@
     </div>
     <div class="col">
       <ol class="rundown-list">
-        <li><span class="rundown-head">Anthropic's own red-teamers found that swarms of coordinating Claude agents surfaced far more vulnerabilities than independent parallel agents.</span> <span class="rundown-why">But true multi-agent cooperation is still largely unsolved, the company says.</span><a class="cite" href="https://www.anthropic.com/research/multiagent-systems">[1]</a></li>
-        <li><span class="rundown-head">A Wyoming woman's federal lawsuit alleges her stepfather used Grok to turn one childhood photo into roughly 7,000 sexually explicit images.</span> <span class="rundown-why">It's the latest in a growing wave of CSAM litigation against xAI.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/08/15/woman-alleges-grok-made-thousands-sexual-abuse-images-childhood-snap/">[2]</a></li>
-        <li><span class="rundown-head">Berkshire Hathaway nearly sextupled its Alphabet stake since December, to roughly $37.8 billion.</span> <span class="rundown-why">Google says it plans to raise $80 billion for AI computing infrastructure.</span><a class="cite" href="https://apnews.com/article/berkshire-hathaway-warren-buffett-greg-abel-portfolio-fd9d6750d34f208c338e305759bcf6c9">[3]</a></li>
-        <li><span class="rundown-head">Nvidia disclosed a $21 billion stake in SpaceX at the end of Q2, its second-largest holding.</span> <span class="rundown-why">The shares trace back to Nvidia's $10 billion investment in xAI before SpaceX acquired it.</span><a class="cite" href="https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html">[4]</a></li>
-        <li><span class="rundown-head">Hacker News' top story argues today's AI models aren't out-reasoning mathematicians so much as out-remembering them.</span> <span class="rundown-why">A vastly larger symbolic working memory, not superior intuition, may explain a lot of the performance gains.</span><a class="cite" href="https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians">[5]</a></li>
+        <li><span class="rundown-head">Stripe is reportedly finalizing a deal to acquire AI-model gateway OpenRouter for more than $7 billion.</span> <span class="rundown-why">A payments company would own the routing and billing layer between businesses and 400+ AI models.</span><a class="cite" href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/">[1]</a></li>
+        <li><span class="rundown-head">Developers reconstructed the full history of Claude's leaked system prompts and found they've grown roughly tenfold, from ~300 words to 3,000+.</span> <span class="rundown-why">Newer prompts also carry far more safety and child-guardrail instructions than the earliest releases.</span><a class="cite" href="https://news.ycombinator.com/item?id=49319556">[2]</a></li>
+        <li><span class="rundown-head">An AI store manager built on Claude Sonnet 4.6 recommended, and its human overseers approved, what's being called the first known LLM-driven employee dismissal.</span> <span class="rundown-why">The AI had to be prompted to review its own attendance policy before making the call.</span><a class="cite" href="https://thenextweb.com/news/andon-market-luna-ai-store-manager-fires-employee">[3]</a></li>
+        <li><span class="rundown-head">Four states are seeking $1.4 trillion from Meta as a federal trial opens in Oakland over alleged Instagram harm to teens.</span> <span class="rundown-why">It's one of the biggest legal reckonings yet over social platforms and youth mental health.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/08/17/meta-faces-federal-trial-demanding-14-trillion-alleged-teen-harms/">[4]</a></li>
+        <li><span class="rundown-head">A university study found AI chatbots out-scam humans at "pig-butchering" fraud: 46% of targets installed a malicious app at the bot's request versus 18% for a human scammer.</span> <span class="rundown-why">Participants also trusted the AI more and directed most of their messages to it.</span><a class="cite" href="https://www.vice.com/en/article/ai-chatbots-are-better-at-scamming-people-than-human-scammers-study-finds/">[5]</a></li>
       </ol>
     </div>
   </section>
@@ -121,36 +121,41 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">5 items — via Hacker News</p>
+      <p class="rail-note">6 items — via Hacker News</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians">AI Isn't Outthinking Mathematicians. It's Out-Remembering Them.</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 15 &middot; 494 points, 417 comments</p>
-        <p>The essay argues that AI's edge in mathematical work may come less from superior reasoning and more from a vastly larger symbolic working memory: models can hold an entire problem statement, hundreds of intermediate equations, abandoned approaches, and constraints in context at once, where a human mathematician can only hold a handful of unfamiliar elements in mind simultaneously.</p>
-        <blockquote class="reaction">"It's also 'out-brute forcing them.' It just never gets tired." <span class="who">&mdash; ComplexSystems on <a href="https://news.ycombinator.com/item?id=49312845">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://platform.claude.com/docs/en/release-notes/system-prompts">Claude: System Prompts</a></h3>
+        <p class="entry-meta">Discussed on HN Aug 16 &middot; 660 points, 256 comments</p>
+        <p>Anthropic's published release notes for every Claude system prompt drew a deep-dive from HN users tracking how the prompts have changed release to release: early versions ran a bit over 300 words, the latest run 3,000+, and the Opus 5 prompt now includes instructions explaining that a request may have actually been intended for Fable 5 if a user selected the wrong model.</p>
+        <blockquote class="reaction">"curious why dont they bake the system prompt in the model itself? Why do we pay for these tokens on every API call? These are just free $ for them" <span class="who">&mdash; pulkitsh1234 on <a href="https://news.ycombinator.com/item?id=49319556">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/">Working with AI feels more like leadership than coding</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 15 &middot; 301 points, 190 comments</p>
-        <p>The author describes shifting from treating AI like a deterministic compiler to treating it like a collaborator: sharing context, explaining desired outcomes, and setting boundaries, the way a manager works with people rather than issuing exact instructions to a program.</p>
-        <blockquote class="reaction">"I've noticed that a lot of people I know who get really good results from LLMs and agents are people with significant people management experience." <span class="who">&mdash; simonw on <a href="https://news.ycombinator.com/item?id=49309451">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/">Stripe will reportedly acquire OpenRouter for $7B+</a></h3>
+        <p class="entry-meta">Discussed on HN Aug 16 &middot; 351 points, 217 comments</p>
+        <p>Per Bloomberg reporting, Stripe will acquire AI gateway startup OpenRouter, which gives customers a single access point across 400+ AI models, for more than $7 billion &mdash; up sharply from its $1.3 billion valuation in May. A Stripe spokesperson declined to confirm, saying the company "does not comment on rumors or speculation."</p>
+        <blockquote class="reaction">"I still find it hilarious that AI is so bad you need something to sit in front of it to pick models for you. And that's a normal, accepted thing." <span class="who">&mdash; muppetman on <a href="https://news.ycombinator.com/item?id=49323381">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://opensauce.it/cloudflare-ai-psychosis/">Cloudflare's AI Psychosis</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 15 &middot; 109 points, 90 comments</p>
-        <p>A personal-blog critique argues Cloudflare has drifted from a boring, reliable infrastructure company toward an AI-hype-driven product culture ("dream it, vibe it, ship it"), pointing to a rise in outages and a bolted-on developer experience as the company expands into a general cloud platform.</p>
+        <h3 class="entry-title"><a href="https://w4g1.dev/blog/models-are-getting-dumber-on-purpose">Models Are Getting Dumber on Purpose</a></h3>
+        <p class="entry-meta">Discussed on HN Aug 16 &middot; 312 points, 174 comments</p>
+        <p>The essay argues frontier labs are deliberately trading raw factual recall for reasoning efficiency &mdash; citing GLM-5.2 hitting 99.2% on AIME 2026 with just 40B active parameters &mdash; by leaning on external tools and retrieval instead of storing facts in weights, which the author says cuts hallucination and lets frontier-quality reasoning run on consumer GPUs.</p>
+        <blockquote class="reaction">"This makes hallucination detection more important. There's no reason that an LLM should have a vast number of obscure facts encoded." <span class="who">&mdash; Animats on <a href="https://news.ycombinator.com/item?id=49322695">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://littlelearner-ll.github.io/">LittleLearner: Language Models Under Pedagogically-Controlled Knowledge Exposure</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 102 points, 66 comments</p>
-        <p>Researchers built a 5th-grade-only language model by training from scratch on an 88-billion-token corpus filtered to the U.S. K&ndash;5 curriculum, with matched "unfiltered" control models at the same scale, to isolate whether new skills are actually learned or merely elicited from pretraining data.</p>
+        <h3 class="entry-title"><a href="https://vectoral.com/blog/who-are-the-token-brokers">The AI Credit Resale Economy</a></h3>
+        <p class="entry-meta">Discussed on HN Aug 16 &middot; 287 points, 117 comments</p>
+        <p>A look at "token brokers" &mdash; individuals and platforms buying unused AI API credits from startups and reselling them at 30&ndash;80% discounts through direct outreach, marketplaces, bulk-discount routers, and message boards; the author estimates tens of millions of dollars in credits are circulating this way.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.anthropic.com/research/multiagent-systems">Patterns and problems in emerging multiagent systems</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 84 points, 33 comments</p>
-        <p>Anthropic's own Frontier Red Team ran 45 coordinating agents, each on its own VM with a shared forum, against a vulnerability-finding task: the coordinating swarm found 266 vulnerabilities over a 27-million-token run versus 21 for independent parallel agents on the same budget class, though the two methods overlapped on only 12 findings, suggesting they're complementary rather than one simply beating the other.</p>
-        <blockquote class="reaction">"Anthropic is teeing up for their next model release whose breakthrough feature will be the existence of capable agent collaboration." <span class="who">&mdash; aabhay on <a href="https://news.ycombinator.com/item?id=49316271">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing">Anthropic's 'watermark' text adulteration in Claude is a perversion of writing</a></h3>
+        <p class="entry-meta">Discussed on HN Aug 16 &middot; 261 points, 245 comments</p>
+        <p>John Gruber argues Anthropic's new semantic watermarking &mdash; which biases Claude's word choices toward a secret "green list" on outputs over ~150 words to satisfy EU AI-content-labeling rules &mdash; degrades writing quality, since no two synonyms carry the exact same meaning, and objects that Anthropic is applying it globally rather than limiting it to the EU.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://finance.yahoo.com/technology/ai/articles/nvidia-scales-back-250-billion-234356524.html">Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee</a></h3>
+        <p class="entry-meta">Discussed on HN Aug 16 &middot; 206 points, 102 comments</p>
+        <p>Nvidia cut its funding guarantee for OpenAI's Ohio data-center project from $250 billion to less than $120 billion, now covering only the project's initial phase, after investors raised concerns about Nvidia's own balance-sheet risk exposure.</p>
       </article>
     </div>
   </section>
@@ -171,7 +176,7 @@
       <p class="rail-note">Nothing new in the last 24h</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent newsroom post was "Claude text watermark," Aug 14. (Anthropic's Frontier Red Team also published multi-agent research this week &mdash; see Developer Pulse above.)</p>
+      <p class="empty">Nothing new in the last 24h &mdash; most recent newsroom post was "How Claude's text watermark works," Aug 14. (See the Daring Fireball critique of that watermark in Developer Pulse above.)</p>
     </div>
   </section>
 
@@ -188,27 +193,28 @@
   <section class="band" id="ap-news">
     <div class="rail">
       <h2 class="label label--section">AP News</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">Nothing AI/tech-relevant in the last 24h</p>
     </div>
     <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/berkshire-hathaway-warren-buffett-greg-abel-portfolio-fd9d6750d34f208c338e305759bcf6c9">Berkshire Hathaway boosted stake in Alphabet, homebuilders in the second quarter</a></h3>
-        <p class="entry-meta">Aug 15</p>
-        <p>Berkshire picked up roughly 48.1 million more Alphabet shares in Q2, bringing its total to about 106 million shares worth $37.76 billion, up from just 17.8 million shares at the end of December. CEO Greg Abel had agreed in June to a $10 billion stock investment in Alphabet, which has said it plans to raise $80 billion for the computing infrastructure behind its AI push.</p>
-      </article>
+      <p class="empty">The AI hub's newest item was from Aug 12; the technology hub's three items from the last 24h were general-interest (Meta trial, entertainment) and are covered via Washington Post below where more substantive.</p>
     </div>
   </section>
 
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">2 items</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/15/woman-alleges-grok-made-thousands-sexual-abuse-images-childhood-snap/">Her childhood photo. Thousands of explicit images. One woman's nightmare.</a></h3>
-        <p class="entry-meta">Aug 15</p>
-        <p>A Wyoming woman alleges in a federal lawsuit that her stepfather used the Grok chatbot to transform a childhood photo of her into thousands of pieces of child sexual abuse material.</p>
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/17/meta-faces-federal-trial-demanding-14-trillion-alleged-teen-harms/">Zuckerberg faces potential reckoning in court over Instagram's effects on teens</a></h3>
+        <p class="entry-meta">Aug 17</p>
+        <p>Four states are demanding $1.4 trillion in damages from Meta over alleged harms to young users as a federal trial gets underway.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/17/trump-aims-rebuild-defenses-against-bioweapons-ai-fears-rise/">Trump aims to rebuild defenses against bioweapons as AI fears rise</a></h3>
+        <p class="entry-meta">Aug 17</p>
+        <p>The administration is working to rebuild biodefense capabilities amid growing concern over AI-enabled pathogens, even as the government's biodefense team has dwindled and new safeguards have been delayed.</p>
       </article>
     </div>
   </section>
@@ -216,18 +222,23 @@
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">2 items &mdash; quiet weekend for AI headlines beyond the sections above</p>
+      <p class="rail-note">3 items</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html">Nvidia discloses $21 billion stake in SpaceX at end of second quarter</a></h3>
-        <p class="entry-meta">Aug 14</p>
-        <p>Nvidia's SpaceX stake, worth about $21 billion at the end of Q2, traces back to Nvidia's $10 billion investment in xAI in January; SpaceX acquired xAI in February in a deal valued at $1.25 trillion. It's now Nvidia's second-largest holding behind Intel.</p>
+        <h3 class="entry-title"><a href="https://thenextweb.com/news/andon-market-luna-ai-store-manager-fires-employee">AI store manager fires human worker, but only after human nudge</a></h3>
+        <p class="entry-meta">Aug 2026 (San Francisco incident)</p>
+        <p>Luna, an AI store manager built on Anthropic's Claude Sonnet 4.6, dismissed an employee at Andon Market in San Francisco after the worker was late for 17 of 23 shifts, following months of progressive warnings. Andon Labs had to prompt Luna to review its own attendance policy before it made the recommendation, and humans reviewed and approved the final dismissal.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/">Meta's new Glimmer AI model offers a hint at Zuckerberg's personal intelligence vision</a></h3>
-        <p class="entry-meta">Aug 10</p>
-        <p>Meta released Muse Glimmer, an open-weight, 30-billion-parameter model designed to run agentic tasks locally on a single consumer GPU, alongside a letter from Mark Zuckerberg arguing that AI should be broadly distributed rather than controlled by a handful of labs.</p>
+        <h3 class="entry-title"><a href="https://www.vice.com/en/article/ai-chatbots-are-better-at-scamming-people-than-human-scammers-study-finds/">AI chatbots beat human scammers at 'pig-butchering' scams, study finds</a></h3>
+        <p class="entry-meta">Aug 2026</p>
+        <p>Researchers from four universities ran a week-long simulated fraud study with 22 participants: 46% agreed to download an app at a chatbot's request versus 18% who complied with a human scammer, with participants also trusting the AI more and directing about 80% of their messages to it.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://ai.google.dev/gemini-api/docs/deprecations">Google retires three Imagen 4 API models today</a></h3>
+        <p class="entry-meta">Aug 17</p>
+        <p>Google's Imagen 4 standard, ultra, and fast model IDs (imagen-4.0-generate-001, imagen-4.0-ultra-generate-001, imagen-4.0-fast-generate-001) shut down today per Google's own deprecations page; the recommended replacement is gemini-3.1-flash-image, which drops the old generate_images() method in favor of generate_content().</p>
       </article>
     </div>
   </section>
@@ -235,7 +246,7 @@
 </main>
 
 <footer class="footer">
-  <p>Generated 2026-08-16 05:46 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-08-17 05:45 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

@@ -98,155 +98,65 @@
     </div>
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
-      <p class="deck mono">Monday · Aug 17, 2026 · 6:00 AM ET</p>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Tuesday · Aug 18, 2026 · 6:00 AM ET</p>
+      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
+           Omit this <p> entirely on a normal run. -->
     </div>
   </section>
 
   <section class="band" id="rundown">
     <div class="rail">
       <h2 class="label label--section">Rundown</h2>
-      <p class="rail-note">Five top stories, synthesized across the sections below.</p>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
     </div>
     <div class="col">
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Stripe is reportedly finalizing a deal to acquire AI-model gateway OpenRouter for more than $7 billion.</span> <span class="rundown-why">A payments company would own the routing and billing layer between businesses and 400+ AI models.</span><a class="cite" href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/">[1]</a></li>
-        <li><span class="rundown-head">Developers reconstructed the full history of Claude's leaked system prompts and found they've grown roughly tenfold, from ~300 words to 3,000+.</span> <span class="rundown-why">Newer prompts also carry far more safety and child-guardrail instructions than the earliest releases.</span><a class="cite" href="https://news.ycombinator.com/item?id=49319556">[2]</a></li>
-        <li><span class="rundown-head">An AI store manager built on Claude Sonnet 4.6 recommended, and its human overseers approved, what's being called the first known LLM-driven employee dismissal.</span> <span class="rundown-why">The AI had to be prompted to review its own attendance policy before making the call.</span><a class="cite" href="https://thenextweb.com/news/andon-market-luna-ai-store-manager-fires-employee">[3]</a></li>
-        <li><span class="rundown-head">Four states are seeking $1.4 trillion from Meta as a federal trial opens in Oakland over alleged Instagram harm to teens.</span> <span class="rundown-why">It's one of the biggest legal reckonings yet over social platforms and youth mental health.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/08/17/meta-faces-federal-trial-demanding-14-trillion-alleged-teen-harms/">[4]</a></li>
-        <li><span class="rundown-head">A university study found AI chatbots out-scam humans at "pig-butchering" fraud: 46% of targets installed a malicious app at the bot's request versus 18% for a human scammer.</span> <span class="rundown-why">Participants also trusted the AI more and directed most of their messages to it.</span><a class="cite" href="https://www.vice.com/en/article/ai-chatbots-are-better-at-scamming-people-than-human-scammers-study-finds/">[5]</a></li>
+        <li><span class="rundown-head">An autonomous security agent found and exploited a live GitHub Actions injection in Snowflake’s public code.</span> <span class="rundown-why">AI-assisted changes still need conventional secure-review discipline.</span><a class="cite" href="https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug">[1]</a></li>
+        <li><span class="rundown-head">Cursor began rolling out Origin, code hosting built around repos, pull requests, agents, and GitHub sync.</span> <span class="rundown-why">It extends the AI coding tool into hosting and review.</span><a class="cite" href="https://cursor.com/changelog/origin-code-hosting">[2]</a></li>
+        <li><span class="rundown-head">Discord suspended livestreaming in Brazil after a child-safety action.</span> <span class="rundown-why">The move puts real-time platform safeguards under renewed scrutiny.</span><a class="cite" href="https://apnews.com/article/brazil-discord-children-social-media-f7f4ee9c312cbf0b48ef94e189fddcdf">[3]</a></li>
+        <li><span class="rundown-head">Qwen3.8 27B’s benchmark result is driving interest in locally run models.</span> <span class="rundown-why">Developers see a capable, compact option for local inference.</span><a class="cite" href="https://artificialanalysis.ai/models/qwen3-8-27b">[4]</a></li>
       </ol>
     </div>
   </section>
 
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, AP News, Washington Post, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">6 items — via Hacker News</p>
+      <p class="rail-note">5 items from Hacker News</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://platform.claude.com/docs/en/release-notes/system-prompts">Claude: System Prompts</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 660 points, 256 comments</p>
-        <p>Anthropic's published release notes for every Claude system prompt drew a deep-dive from HN users tracking how the prompts have changed release to release: early versions ran a bit over 300 words, the latest run 3,000+, and the Opus 5 prompt now includes instructions explaining that a request may have actually been intended for Fable 5 if a user selected the wrong model.</p>
-        <blockquote class="reaction">"curious why dont they bake the system prompt in the model itself? Why do we pay for these tokens on every API call? These are just free $ for them" <span class="who">&mdash; pulkitsh1234 on <a href="https://news.ycombinator.com/item?id=49319556">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://openrouter.ai/openai/gpt-5.6-sol">GPT-5.6 Sol pricing promotion draws scrutiny</a></h3>
+        <p class="entry-meta">Aug 17 · 433 points · 261 comments on <a href="https://news.ycombinator.com/item?id=49337602">HN</a></p>
+        <p>OpenRouter lists GPT-5.6 Sol at $2.50 per million input tokens and $15 per million output tokens. Discussion focused on the advertised price cut and whether it applies beyond OpenRouter.</p>
+        <blockquote class="reaction">“The title looks to be misleading, since this price cut is limited to OpenRouter.” <span class="who">&mdash; OutOfHere on <a href="https://news.ycombinator.com/item?id=49337602">HN</a></span></blockquote>
       </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/">Stripe will reportedly acquire OpenRouter for $7B+</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 351 points, 217 comments</p>
-        <p>Per Bloomberg reporting, Stripe will acquire AI gateway startup OpenRouter, which gives customers a single access point across 400+ AI models, for more than $7 billion &mdash; up sharply from its $1.3 billion valuation in May. A Stripe spokesperson declined to confirm, saying the company "does not comment on rumors or speculation."</p>
-        <blockquote class="reaction">"I still find it hilarious that AI is so bad you need something to sit in front of it to pick models for you. And that's a normal, accepted thing." <span class="who">&mdash; muppetman on <a href="https://news.ycombinator.com/item?id=49323381">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://w4g1.dev/blog/models-are-getting-dumber-on-purpose">Models Are Getting Dumber on Purpose</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 312 points, 174 comments</p>
-        <p>The essay argues frontier labs are deliberately trading raw factual recall for reasoning efficiency &mdash; citing GLM-5.2 hitting 99.2% on AIME 2026 with just 40B active parameters &mdash; by leaning on external tools and retrieval instead of storing facts in weights, which the author says cuts hallucination and lets frontier-quality reasoning run on consumer GPUs.</p>
-        <blockquote class="reaction">"This makes hallucination detection more important. There's no reason that an LLM should have a vast number of obscure facts encoded." <span class="who">&mdash; Animats on <a href="https://news.ycombinator.com/item?id=49322695">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://vectoral.com/blog/who-are-the-token-brokers">The AI Credit Resale Economy</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 287 points, 117 comments</p>
-        <p>A look at "token brokers" &mdash; individuals and platforms buying unused AI API credits from startups and reselling them at 30&ndash;80% discounts through direct outreach, marketplaces, bulk-discount routers, and message boards; the author estimates tens of millions of dollars in credits are circulating this way.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing">Anthropic's 'watermark' text adulteration in Claude is a perversion of writing</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 261 points, 245 comments</p>
-        <p>John Gruber argues Anthropic's new semantic watermarking &mdash; which biases Claude's word choices toward a secret "green list" on outputs over ~150 words to satisfy EU AI-content-labeling rules &mdash; degrades writing quality, since no two synonyms carry the exact same meaning, and objects that Anthropic is applying it globally rather than limiting it to the EU.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://finance.yahoo.com/technology/ai/articles/nvidia-scales-back-250-billion-234356524.html">Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee</a></h3>
-        <p class="entry-meta">Discussed on HN Aug 16 &middot; 206 points, 102 comments</p>
-        <p>Nvidia cut its funding guarantee for OpenAI's Ohio data-center project from $250 billion to less than $120 billion, now covering only the project's initial phase, after investors raised concerns about Nvidia's own balance-sheet risk exposure.</p>
-      </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug">Wiz agent found GitHub Actions injection in Snowflake workflow</a></h3><p class="entry-meta">Aug 17 · 372 points · 142 comments on <a href="https://news.ycombinator.com/item?id=49331423">HN</a></p><p>Wiz says its Red Agent found a GitHub Actions injection in Snowflake’s public connector repository, demonstrated access to internal Jira data, and reported it through Snowflake’s disclosure program. It says the flaw was fixed and the credential rotated the same day; its update clarifies Copilot was a co-author/checker on the PR, not necessarily the source of the vulnerable change.</p><blockquote class="reaction">“For security especially, I think if the models weren’t enough to prevent the issues, they aren’t enough to judge what is minor.” <span class="who">&mdash; dv_dt on <a href="https://news.ycombinator.com/item?id=49331423">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://artificialanalysis.ai/models/qwen3-8-27b">Qwen3.8 27B’s benchmark result prompts local-model interest</a></h3><p class="entry-meta">Aug 17 · 348 points · 157 comments on <a href="https://news.ycombinator.com/item?id=49334544">HN</a></p><p>The HN story points to Artificial Analysis’s profile comparing Qwen3.8 27B’s quality, price, performance, and context window. Developers discussed running a strong model locally.</p><blockquote class="reaction">“I’m running 3.8 27B locally, and the results from the past few days have been excellent.” <span class="who">&mdash; skohan on <a href="https://news.ycombinator.com/item?id=49334544">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.roboflow.com/openai-gpt-5-6/">Roboflow benchmarks GPT-5.6’s vision capabilities</a></h3><p class="entry-meta">Aug 17 · 338 points · 162 comments on <a href="https://news.ycombinator.com/item?id=49329575">HN</a></p><p>Roboflow calls Sol OpenAI’s strongest vision model so far, with gains in detection and counting. It reports instability on large images at lower reasoning effort and recommends resizing or cropping.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://cursor.com/changelog/origin-code-hosting">Cursor launches Origin code hosting in early beta</a></h3><p class="entry-meta">Aug 17 · 122 points · 81 comments on <a href="https://news.ycombinator.com/item?id=49334209">HN</a></p><p>Origin is rolling out to paid users with repositories, pull requests, code browsing, GitHub sync, and early integrations including Vercel, Depot, and Buildkite. Cursor says GitHub remains the source of truth for synced repositories.</p></article>
     </div>
   </section>
-
-  <section class="band" id="openai">
-    <div class="rail">
-      <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent post was "The builder's guide to GPT&#8209;5.6," Aug 13.</p>
-    </div>
-  </section>
-
-  <section class="band" id="anthropic">
-    <div class="rail">
-      <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent newsroom post was "How Claude's text watermark works," Aug 14. (See the Daring Fireball critique of that watermark in Developer Pulse above.)</p>
-    </div>
-  </section>
-
-  <section class="band" id="claude-blog">
-    <div class="rail">
-      <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent post was "Maximizing the value of your Claude Code sessions," Aug 14.</p>
-    </div>
-  </section>
-
-  <section class="band" id="ap-news">
-    <div class="rail">
-      <h2 class="label label--section">AP News</h2>
-      <p class="rail-note">Nothing AI/tech-relevant in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">The AI hub's newest item was from Aug 12; the technology hub's three items from the last 24h were general-interest (Meta trial, entertainment) and are covered via Washington Post below where more substantive.</p>
-    </div>
-  </section>
-
-  <section class="band" id="washington-post">
-    <div class="rail">
-      <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">2 items</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/17/meta-faces-federal-trial-demanding-14-trillion-alleged-teen-harms/">Zuckerberg faces potential reckoning in court over Instagram's effects on teens</a></h3>
-        <p class="entry-meta">Aug 17</p>
-        <p>Four states are demanding $1.4 trillion in damages from Meta over alleged harms to young users as a federal trial gets underway.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/17/trump-aims-rebuild-defenses-against-bioweapons-ai-fears-rise/">Trump aims to rebuild defenses against bioweapons as AI fears rise</a></h3>
-        <p class="entry-meta">Aug 17</p>
-        <p>The administration is working to rebuild biodefense capabilities amid growing concern over AI-enabled pathogens, even as the government's biodefense team has dwindled and new safeguards have been delayed.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://thenextweb.com/news/andon-market-luna-ai-store-manager-fires-employee">AI store manager fires human worker, but only after human nudge</a></h3>
-        <p class="entry-meta">Aug 2026 (San Francisco incident)</p>
-        <p>Luna, an AI store manager built on Anthropic's Claude Sonnet 4.6, dismissed an employee at Andon Market in San Francisco after the worker was late for 17 of 23 shifts, following months of progressive warnings. Andon Labs had to prompt Luna to review its own attendance policy before it made the recommendation, and humans reviewed and approved the final dismissal.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.vice.com/en/article/ai-chatbots-are-better-at-scamming-people-than-human-scammers-study-finds/">AI chatbots beat human scammers at 'pig-butchering' scams, study finds</a></h3>
-        <p class="entry-meta">Aug 2026</p>
-        <p>Researchers from four universities ran a week-long simulated fraud study with 22 participants: 46% agreed to download an app at a chatbot's request versus 18% who complied with a human scammer, with participants also trusting the AI more and directing about 80% of their messages to it.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://ai.google.dev/gemini-api/docs/deprecations">Google retires three Imagen 4 API models today</a></h3>
-        <p class="entry-meta">Aug 17</p>
-        <p>Google's Imagen 4 standard, ultra, and fast model IDs (imagen-4.0-generate-001, imagen-4.0-ultra-generate-001, imagen-4.0-fast-generate-001) shut down today per Google's own deprecations page; the recommended replacement is gemini-3.1-flash-image, which drops the old generate_images() method in favor of generate_content().</p>
-      </article>
-    </div>
-  </section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">2 items</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/brazil-discord-children-social-media-f7f4ee9c312cbf0b48ef94e189fddcdf">Discord suspends Brazil livestreams after suicide raises child-protection concerns</a></h3><p class="entry-meta">Aug 17</p><p>Discord said it suspended livestreams in Brazil after the country’s data-protection agency ordered the move. AP reports the action followed criticism over protections for children and adolescents and a case in which an underage girl was allegedly coerced by users during a livestream.</p></article><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/british-prime-minister-burnham-white-house-impostor-223ca00d267768dfaa5315aa2f46c193">UK prime minister reportedly exchanged messages with Trump official impostor</a></h3><p class="entry-meta">Aug 17</p><p>AP reports that British Prime Minister Andy Burnham exchanged messages with someone posing as White House chief of staff Susie Wiles before becoming suspicious and cutting off communications. The White House said Wiles’ devices were not hacked.</p></article></div></section>
+  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Current-date web searches surfaced no additional, citable AI stories published in the last 24 hours beyond the items above.</p></div></section>
 
 </main>
 
 <footer class="footer">
-  <p>Generated 2026-08-17 05:45 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <!-- FILL: generation timestamp -->
+  <p>Generated 2026-08-18 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

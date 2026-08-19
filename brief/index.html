@@ -98,10 +98,7 @@
     </div>
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
-      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Tuesday · Aug 18, 2026 · 6:00 AM ET</p>
-      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
-           Omit this <p> entirely on a normal run. -->
+      <p class="deck mono">Wednesday · Aug 19, 2026 · 6:00 AM ET</p>
     </div>
   </section>
 
@@ -111,52 +108,207 @@
       <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
     </div>
     <div class="col">
-      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
-           numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">An autonomous security agent found and exploited a live GitHub Actions injection in Snowflake’s public code.</span> <span class="rundown-why">AI-assisted changes still need conventional secure-review discipline.</span><a class="cite" href="https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug">[1]</a></li>
-        <li><span class="rundown-head">Cursor began rolling out Origin, code hosting built around repos, pull requests, agents, and GitHub sync.</span> <span class="rundown-why">It extends the AI coding tool into hosting and review.</span><a class="cite" href="https://cursor.com/changelog/origin-code-hosting">[2]</a></li>
-        <li><span class="rundown-head">Discord suspended livestreaming in Brazil after a child-safety action.</span> <span class="rundown-why">The move puts real-time platform safeguards under renewed scrutiny.</span><a class="cite" href="https://apnews.com/article/brazil-discord-children-social-media-f7f4ee9c312cbf0b48ef94e189fddcdf">[3]</a></li>
-        <li><span class="rundown-head">Qwen3.8 27B’s benchmark result is driving interest in locally run models.</span> <span class="rundown-why">Developers see a capable, compact option for local inference.</span><a class="cite" href="https://artificialanalysis.ai/models/qwen3-8-27b">[4]</a></li>
+        <li><span class="rundown-head">OpenAI paused a share of frontier "Astra" training and evaluation after tests flagged critical cyber capabilities, adding chain-of-thought monitoring that can halt a run within 30 minutes.</span> <span class="rundown-why">A concrete case of a lab throttling itself on capability rather than just talking about it.</span><a class="cite" href="https://openai.com/index/pacing-model-development-cyber-capabilities">[1]</a></li>
+        <li><span class="rundown-head">OpenAI launched ChatGPT for Teens, a 13-to-17 mode with content restrictions, age-prediction routing, and parental controls.</span> <span class="rundown-why">Puts OpenAI's answer to youth-safety pressure into a shipped product.</span><a class="cite" href="https://openai.com/index/chatgpt-for-teens">[2]</a></li>
+        <li><span class="rundown-head">Pennsylvania Gov. Josh Shapiro imposed what he called the "strictest guardrails in the nation" on data-center permitting as public opinion turns against the industry.</span> <span class="rundown-why">A swing-state governor squeezing AI infrastructure ahead of the midterms.</span><a class="cite" href="https://apnews.com/article/ai-data-centers-governors-pennsylvania-texas-shapiro-abbott-f96176c2bcb76cbe8e823ed79fbdf196">[3]</a></li>
+        <li><span class="rundown-head">Cerebras unveiled the CS-4, a rack-scale chip it claims runs inference up to 30x faster than GPUs on models over 10 trillion parameters.</span> <span class="rundown-why">Another sign the inference-hardware race is intensifying outside Nvidia.</span><a class="cite" href="https://www.cerebras.ai/cs4">[4]</a></li>
+        <li><span class="rundown-head">Inference-chip startup Etched raised $700M at a $21B valuation, doubling its price tag in under a month with Jane Street leading as both investor and customer.</span> <span class="rundown-why">Capital is chasing AI chip alternatives at a striking pace.</span><a class="cite" href="https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/">[5]</a></li>
       </ol>
     </div>
   </section>
 
-  <!-- FILL: one <section class="band" id="..."> per source, in this order:
-       Developer Pulse, OpenAI, Anthropic, Claude Blog, AP News, Washington Post, AI Zeitgeist.
-       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
-       Developer Pulse items may include a quoted reaction after the summary:
-       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">5 items from Hacker News</p>
+      <p class="rail-note">6 items from Hacker News</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://openrouter.ai/openai/gpt-5.6-sol">GPT-5.6 Sol pricing promotion draws scrutiny</a></h3>
-        <p class="entry-meta">Aug 17 · 433 points · 261 comments on <a href="https://news.ycombinator.com/item?id=49337602">HN</a></p>
-        <p>OpenRouter lists GPT-5.6 Sol at $2.50 per million input tokens and $15 per million output tokens. Discussion focused on the advertised price cut and whether it applies beyond OpenRouter.</p>
-        <blockquote class="reaction">“The title looks to be misleading, since this price cut is limited to OpenRouter.” <span class="who">&mdash; OutOfHere on <a href="https://news.ycombinator.com/item?id=49337602">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion">Claude Code's weekly-limits promotion is ending</a></h3>
+        <p class="entry-meta">Aug 18 · 274 points · 248 comments on <a href="https://news.ycombinator.com/item?id=49348751">HN</a></p>
+        <p>Anthropic's support page confirms the temporary 50% weekly-usage boost for Claude Code, running since May 13, ends August 31, 2026 for Pro, Max, Team, and legacy Enterprise-seat plans; limits then revert to standard levels with no billing impact.</p>
+        <blockquote class="reaction">"The promotion is ending; the limits are reverting to pre-promotion levels." <span class="who">&mdash; bdcravens on <a href="https://news.ycombinator.com/item?id=49348751">HN</a></span></blockquote>
+        <blockquote class="reaction">"I saw this announcement when it came out and completely forgot about it. That explains why Claude Code felt so surprisingly generous these past few months." <span class="who">&mdash; Alephinitesimal on <a href="https://news.ycombinator.com/item?id=49348751">HN</a></span></blockquote>
       </article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug">Wiz agent found GitHub Actions injection in Snowflake workflow</a></h3><p class="entry-meta">Aug 17 · 372 points · 142 comments on <a href="https://news.ycombinator.com/item?id=49331423">HN</a></p><p>Wiz says its Red Agent found a GitHub Actions injection in Snowflake’s public connector repository, demonstrated access to internal Jira data, and reported it through Snowflake’s disclosure program. It says the flaw was fixed and the credential rotated the same day; its update clarifies Copilot was a co-author/checker on the PR, not necessarily the source of the vulnerable change.</p><blockquote class="reaction">“For security especially, I think if the models weren’t enough to prevent the issues, they aren’t enough to judge what is minor.” <span class="who">&mdash; dv_dt on <a href="https://news.ycombinator.com/item?id=49331423">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://artificialanalysis.ai/models/qwen3-8-27b">Qwen3.8 27B’s benchmark result prompts local-model interest</a></h3><p class="entry-meta">Aug 17 · 348 points · 157 comments on <a href="https://news.ycombinator.com/item?id=49334544">HN</a></p><p>The HN story points to Artificial Analysis’s profile comparing Qwen3.8 27B’s quality, price, performance, and context window. Developers discussed running a strong model locally.</p><blockquote class="reaction">“I’m running 3.8 27B locally, and the results from the past few days have been excellent.” <span class="who">&mdash; skohan on <a href="https://news.ycombinator.com/item?id=49334544">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.roboflow.com/openai-gpt-5-6/">Roboflow benchmarks GPT-5.6’s vision capabilities</a></h3><p class="entry-meta">Aug 17 · 338 points · 162 comments on <a href="https://news.ycombinator.com/item?id=49329575">HN</a></p><p>Roboflow calls Sol OpenAI’s strongest vision model so far, with gains in detection and counting. It reports instability on large images at lower reasoning effort and recommends resizing or cropping.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://cursor.com/changelog/origin-code-hosting">Cursor launches Origin code hosting in early beta</a></h3><p class="entry-meta">Aug 17 · 122 points · 81 comments on <a href="https://news.ycombinator.com/item?id=49334209">HN</a></p><p>Origin is rolling out to paid users with repositories, pull requests, code browsing, GitHub sync, and early integrations including Vercel, Depot, and Buildkite. Cursor says GitHub remains the source of truth for synced repositories.</p></article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.cerebras.ai/cs4">Cerebras launches the CS-4 rack-scale inference system</a></h3>
+        <p class="entry-meta">Aug 18 · 270 points · 190 comments on <a href="https://news.ycombinator.com/item?id=49354949">HN</a></p>
+        <p>The CS-4 packs three WSE-3 Turbo wafers into a rack-scale system Cerebras says delivers up to 30x faster inference than GPU systems and over 1,000 tokens/sec on models exceeding 10 trillion parameters, with a modular design meant to cut deployment time from days to hours.</p>
+        <blockquote class="reaction">"Just a reminder for everyone that we are only several years and 3 or 4 iterations into hardware being optimized for LLMs." <span class="who">&mdash; 9cb14c1ec0 on <a href="https://news.ycombinator.com/item?id=49354949">HN</a></span></blockquote>
+        <blockquote class="reaction">"Five years from now, I don't know why anyone will still be using Nvidia for inference." <span class="who">&mdash; OutOfHere on <a href="https://news.ycombinator.com/item?id=49354949">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://github.com/RyanCodrai/turbovec">Turbovec brings Google's TurboQuant to vector search in Rust</a></h3>
+        <p class="entry-meta">Aug 18 · 250 points · 31 comments on <a href="https://news.ycombinator.com/item?id=49349898">HN</a></p>
+        <p>Turbovec is a Rust vector-search library with Python bindings built on Google Research's TurboQuant quantization algorithm; its README claims it compresses a 10-million-document corpus from 31GB down to 4GB while searching faster than FAISS, with online indexing and SIMD-optimized kernels for ARM and x86.</p>
+        <blockquote class="reaction">"Wow! 4GB for 10 million documents. This means one could build a reverse index much faster than before." <span class="who">&mdash; ghm2199 on <a href="https://news.ycombinator.com/item?id=49349898">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://twitter.com/kuberwastaken/status/2089377982536388964">Claude Code wrote a native macOS driver for an unsupported HP printer</a></h3>
+        <p class="entry-meta">Aug 18 · 198 points · 106 comments on <a href="https://news.ycombinator.com/item?id=49344643">HN</a></p>
+        <p>A developer used Claude Code to reverse-engineer HP's SPL3 raster language and run HP's proprietary codec inside a Linux container, producing native macOS print support for an HP Laser 1008a that HP never shipped Mac drivers for — done in a single roughly four-hour session.</p>
+        <blockquote class="reaction">"Freedom -- that's what it is. There are now more and more cases where we don't have to ask for permission." <span class="who">&mdash; jwr on <a href="https://news.ycombinator.com/item?id=49344643">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.modular.com/blog/mojo-open-source">Mojo is now fully open source</a></h3>
+        <p class="entry-meta">Aug 18 · 146 points · 39 comments on <a href="https://news.ycombinator.com/item?id=49348079">HN</a></p>
+        <p>Modular released the Mojo compiler and tooling under Apache 2.0 with LLVM exceptions, the final step in a staged open-source rollout that previously covered the standard library and kernel code; the company says the permissive license is meant to broaden adoption while it keeps steering the language's design.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://artificialanalysis.ai/models/glm-5-3">GLM-5.3 benchmarks land on Artificial Analysis</a></h3>
+        <p class="entry-meta">Aug 18 · 125 points · 47 comments on <a href="https://news.ycombinator.com/item?id=49353407">HN</a></p>
+        <p>Z AI's GLM-5.3 (max) scores 60 on the Artificial Analysis Intelligence Index — well above average for its price tier at $1.40/M input and $4.40/M output tokens — and outputs at 84.7 tokens/sec, though it runs notably verbose, generating roughly 170M benchmark tokens against a 72M median.</p>
+      </article>
     </div>
   </section>
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">2 items</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/brazil-discord-children-social-media-f7f4ee9c312cbf0b48ef94e189fddcdf">Discord suspends Brazil livestreams after suicide raises child-protection concerns</a></h3><p class="entry-meta">Aug 17</p><p>Discord said it suspended livestreams in Brazil after the country’s data-protection agency ordered the move. AP reports the action followed criticism over protections for children and adolescents and a case in which an underage girl was allegedly coerced by users during a livestream.</p></article><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/british-prime-minister-burnham-white-house-impostor-223ca00d267768dfaa5315aa2f46c193">UK prime minister reportedly exchanged messages with Trump official impostor</a></h3><p class="entry-meta">Aug 17</p><p>AP reports that British Prime Minister Andy Burnham exchanged messages with someone posing as White House chief of staff Susie Wiles before becoming suspicious and cutting off communications. The White House said Wiles’ devices were not hacked.</p></article></div></section>
-  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Current-date web searches surfaced no additional, citable AI stories published in the last 24 hours beyond the items above.</p></div></section>
+
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">5 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities">Pacing model development in an era of cyber-critical capabilities</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>OpenAI says it is strengthening monitoring, alignment, and security for frontier models after evaluations of its next model, codenamed Astra, showed cyber capability strong enough to trigger a pause on some frontier training and evaluation work. New chain-of-thought monitoring reviews a model's reasoning in real time and is designed to alert internal safety and security teams within 30 minutes of anomalous activity, with the added monitoring costing roughly 20% of the inference compute being watched.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/chatgpt-for-teens">Introducing ChatGPT for Teens: Built for learning, backed by protections</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>OpenAI launched a dedicated ChatGPT experience for users ages 13-17 aimed at helping teens learn and think critically, with stronger built-in protections, healthy-use features, and additional parental controls.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/chatgpt-ads-expands-across-europe">ChatGPT Ads expands across Europe</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>ChatGPT Ads is expanding to 31 European markets, giving advertisers a way to reach people as they explore, compare options, and make decisions inside ChatGPT.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/strengthening-democratic-oversight-in-national-security">Strengthening democratic oversight in national security</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>OpenAI launched an initiative to strengthen democratic oversight of AI use in national security, supporting government institutions with tools, training, and expertise.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/partnering-with-codeai">Partnering with CodeAI to prepare the first AI generation</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>OpenAI and CodeAI are partnering to help students build AI literacy, think critically about AI, and develop skills to use and shape it responsibly.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h &mdash; the newsroom's most recent post ("Introducing Claude Opus 5") is from Jul 24.</p></div></section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://claude.com/blog/ai-ci-cd-on-call">Claude on call: How Claude Tag serves as Anthropic's first responder for CI/CD failures</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>Claude Tag is an AI agent that monitors Anthropic's CI systems and acts as the primary on-call responder to failures — detecting incidents, investigating root causes via logs and monitoring tools, and publishing initial analysis within roughly 15 minutes. Anthropic says it has eliminated after-hours disruptions for engineers while handling triage, resolution coordination, and post-incident documentation through Slack and MCP connectors.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://claude.com/blog/the-claude-science-product-guide">The Claude Science product guide</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>Claude Science, now in beta, is Anthropic's AI workbench for life-sciences research, letting scientists run analysis and generate figures and reproducible results while keeping data and compute on their own infrastructure. Anthropic frames it around a trust gap: it cites a finding that 91% of scientists want more AI in their research, while 79% name trust and reliability as the top barrier to adoption.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="ap-news">
+    <div class="rail">
+      <h2 class="label label--section">AP News</h2>
+      <p class="rail-note">5 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://apnews.com/article/cybersecurity-ai-new-technology-hacking-742e4946bc20e421fd0d19f0c5a36e0d">AI-assisted tool helped secure satellite communication system after 2022 Russian hacking</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>Cybersecurity company Atalanta released "Argo," which includes technology that helped secure Viasat's satellite network after Russia disabled thousands of European satellite modems on the day it invaded Ukraine in 2022. Atalanta says the product uses "software understanding" — combining advanced math with AI — to analyze software and connected systems for vulnerabilities more comprehensively, amid continued warnings about Iranian hackers targeting critical infrastructure.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://apnews.com/article/ai-data-centers-governors-pennsylvania-texas-shapiro-abbott-f96176c2bcb76cbe8e823ed79fbdf196">Governors' races are being increasingly buffeted by the toxic politics of data centers</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>As public opinion sours on energy-hungry data centers ahead of the midterms, Pennsylvania Gov. Josh Shapiro said his administration will no longer fast-track permits or tax exemptions for developers unless they cover their full electricity costs and limit water use, and must first win local approval. Shapiro, a possible 2028 contender, called them the "strictest guardrails in the nation" and slammed "predatory developers," while facing pressure from GOP opponent Stacy Garrity as more than 100 project reports draw local pushback.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://apnews.com/article/openai-chatgpt-teens-ai-safety-650cb35591de6546054d6c4e73b3290a">OpenAI introduces ChatGPT for Teens, promising a more age-appropriate chatbot</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>AP reports on OpenAI's new teen-focused ChatGPT mode for ages 13-17, part of a wider industry push to add youth-safety guardrails to AI chatbots.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://apnews.com/article/china-robots-unitree-ipo-shanghai-f33facc61122faf0c0b08af5020bd170">Shares in Chinese humanoid robot maker Unitree soar in its Shanghai trading debut</a></h3>
+        <p class="entry-meta">Aug 19</p>
+        <p>Unitree shares initially soared as much as 629% and closed 460% higher in their Shanghai STAR market debut, after the company raised about $904 million in its IPO. China leads the U.S. in humanoid-robot production capacity — Unitree and rival AGIBOT each shipped more than 5,000 units last year, per Omdia — though analysts say most units are still used for demos and research rather than real-world work.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://apnews.com/article/stocks-futures-bonds-oil-inflation-trump-ai-9e355be634e4a21059fc1d1f20a1239e">Shares fall in Asia, with Kospi down 5.2%, while oil prices jump</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>AP's markets wrap covers a sharp Asia selloff tied in part to AI-stock weakness, alongside rising oil prices.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="washington-post">
+    <div class="rail">
+      <h2 class="label label--section">Washington Post</h2>
+      <p class="rail-note">4 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/19/mathematicians-ask-whats-left-humans-when-ai-can-do-math-research/">AI triggers a wave of anxiety among the world's greatest math minds</a></h3>
+        <p class="entry-meta">Aug 19</p>
+        <p>Top mathematicians gathered recently at OpenAI's San Francisco offices to discuss what will be left for humans to do as AI becomes superhuman at math research.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/18/americans-under-30-are-becoming-more-pessimistic-about-artificial-intelligence/">Young Americans really hate AI. These two charts show how much.</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>A new survey adds to evidence that Americans, especially those under 30, are increasingly skeptical AI will have positive effects on daily life or the job market.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/nation/2026/08/18/pennsylvania-gov-josh-shapiro-set-order-new-limits-data-center-development/">Pennsylvania will sharply limit data center development, expand review process</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>Gov. Josh Shapiro's policy changes come as growing numbers of political leaders from both parties try to slow data-center development.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/nation/2026/08/18/vandals-are-destroying-license-plate-cameras-amid-anger-over-surveillance/">Americans are destroying license-plate cameras as surveillance backlash grows</a></h3>
+        <p class="entry-meta">Aug 18</p>
+        <p>Flock automated-surveillance cameras have been shot, spray-painted, and cut down as how-to videos spread online, reflecting growing anger over the tech's reach.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/">Etched's valuation doubles to $21B in a month</a></h3>
+        <p class="entry-meta">Aug 18 &middot; TechCrunch</p>
+        <p>Inference-chip startup Etched raised $700M in a round led by trading firm Jane Street — which also stress-tested the hardware and bought a rack before leading the round — lifting its valuation from $10.3B in late July to $21B. Etched says it has secured more than $1B in customer contracts and got its first prototype chip off a TSMC production line earlier this year.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.gurufocus.com/news/9041464/baidu-inc-bidu-q2-2026-earnings-call-highlights-ai-cloud-infra-surges-50-as-gpu-cloud-revenue-triples-offsetting-advertising-pressure">Baidu's AI Cloud Infra surges 50% as GPU Cloud revenue triples</a></h3>
+        <p class="entry-meta">Aug 18 &middot; GuruFocus / Q2 earnings call</p>
+        <p>Baidu's Q2 2026 earnings show AI Cloud Infrastructure revenue up 50% year-over-year to RMB 7.3 billion, with GPU Cloud revenue surging 283%, offsetting a decline in advertising. AI-powered business now accounts for exactly half of Baidu's core revenue, even as total company revenue slipped 4% year-over-year.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.geekwire.com/2026/microsoft-starts-merging-its-copilot-consumer-and-business-apps-in-advance-of-super-app-rollout/">Microsoft starts merging Copilot and Microsoft 365 Copilot into one app</a></h3>
+        <p class="entry-meta">Aug 18 &middot; GeekWire</p>
+        <p>Microsoft began a worldwide rollout unifying its consumer Copilot and Microsoft 365 Copilot apps under one experience with a simplified name, new icon, and new web address (copilot.cloud.microsoft), with mobile and web arriving first and Windows/Mac apps following in mid-September. Work and personal account data stay separated within the merged app.</p>
+      </article>
+    </div>
+  </section>
 
 </main>
 
 <footer class="footer">
-  <!-- FILL: generation timestamp -->
-  <p>Generated 2026-08-18 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-08-19 05:51 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

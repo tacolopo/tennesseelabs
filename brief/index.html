@@ -98,7 +98,7 @@
     </div>
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
-      <p class="deck mono">Saturday · Aug 22, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Sunday · Aug 23, 2026 · 6:00 AM ET</p>
     </div>
   </section>
 
@@ -109,53 +109,54 @@
     </div>
     <div class="col">
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI cut GPT-5.6 Sol's API price 20% on input, 33% on output.</span> <span class="rundown-why">The promotional rate is guaranteed through Nov 21.</span><a class="cite" href="https://developers.openai.com/api/docs/models/gpt-5.6-sol">[1]</a></li>
-        <li><span class="rundown-head">Anthropic's revenue run-rate has topped $65B pre-IPO.</span> <span class="rundown-why">Investors are eyeing an October IPO near a $2 trillion valuation.</span><a class="cite" href="https://www.axios.com/2026/08/17/anthropic-revenue-run-rate-ipo-openai">[2]</a></li>
-        <li><span class="rundown-head">Dutch regulators fined Uber roughly $964 million.</span> <span class="rundown-why">For using fully-automated software, with no human review, to suspend driver accounts.</span><a class="cite" href="https://apnews.com/article/uber-fine-automated-suspensions-netherlands-e64385dc72fd2da440a68babd1ae2fb1">[3]</a></li>
-        <li><span class="rundown-head">Google secured rights to buy up to $12.2B of Marvell stock.</span> <span class="rundown-why">Tied to a custom AI chip deal covering inference accelerators and memory controllers for Google's TPU ecosystem.</span><a class="cite" href="https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html">[4]</a></li>
-        <li><span class="rundown-head">Nearly 200 MAHA activists urged Trump against coal-fired AI data centers.</span> <span class="rundown-why">First major MAHA mobilization over fossil fuels, asking for renewables instead.</span><a class="cite" href="https://apnews.com/article/maha-trump-ai-data-centers-rfk-coal-78e057313386bada1326b5c0ae03f2a0">[5]</a></li>
+        <li><span class="rundown-head">Nevada clears up to 8,000 robotaxis for Tesla, Uber, and Waymo in Las Vegas.</span> <span class="rundown-why">The largest single autonomous-vehicle permit yet, even as companies admit real fleets will land far below the cap.</span><a class="cite" href="https://techcrunch.com/2026/08/20/tesla-uber-and-waymo-all-get-the-ok-to-operate-thousands-of-robotaxis-in-nevada/">[1]</a></li>
+        <li><span class="rundown-head">OpenAI cuts GPT-5.6 Sol API prices by more than 20%.</span> <span class="rundown-why">A three-month discount OpenAI ties directly to competition from Anthropic and Chinese model makers.</span><a class="cite" href="https://www.investing.com/news/stock-market-news/openai-cuts-developer-pricing-for-frontier-gpt56-sol-model-by-more-than-20-4872186">[2]</a></li>
+        <li><span class="rundown-head">Chinese humanoid robots broke Usain Bolt's 100m record at Beijing's robot games.</span> <span class="rundown-why">Over 2,000 humanoid robots are competing across 51 events, a showcase of China's robotics push.</span><a class="cite" href="https://apnews.com/article/china-humanoid-robot-games-us-86cb8e310843151a77057e4cb764b4e2">[3]</a></li>
+        <li><span class="rundown-head">HN pushes back on a viral claim that Claude Code is A/B-testing lower "effort" levels.</span> <span class="rundown-why">Top commenters doubt a model can reliably report its own hidden settings, but the thread exposes real distrust over silent routing/quality changes.</span><a class="cite" href="https://news.ycombinator.com/item?id=49401549">[4]</a></li>
+        <li><span class="rundown-head">A 346-point HN thread argues "dumb" local LLMs are usually a quantization/config problem, not the model.</span> <span class="rundown-why">Pushes back on the narrative that local models are inherently worse than hosted ones.</span><a class="cite" href="https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917">[5]</a></li>
       </ol>
     </div>
   </section>
 
   <section class="band" id="developer-pulse">
     <div class="rail">
-      <h2 class="label label--section">Developer Pulse (Hacker News)</h2>
+      <h2 class="label label--section">Developer Pulse</h2>
       <p class="rail-note">6 items</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://danluu.com/perf-opt/">There's no reason for software to be slow anymore</a></h3>
-        <p class="entry-meta">Aug 22 · 400 pts · 288 comments · <a href="https://news.ycombinator.com/item?id=49395628">HN thread</a></p>
-        <p>The author argues AI coding agents have made specialized performance work cheap enough to bother with — building a native regex compiler and other workload-specific optimizations as examples — so developers can now afford to tune code for a particular workload instead of settling for slow, generic-by-default software.</p>
-        <blockquote class="reaction">"But software seems to be getting slower and less user friendly by the hour." <span class="who">&mdash; ungreased0675 on <a href="https://news.ycombinator.com/item?id=49395628">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917">Why your local LLM feels dumber than it is</a></h3>
+        <p class="entry-meta">Aug 22 &middot; 346 pts &middot; 122 comments</p>
+        <p>A forum post argues that most complaints about local LLMs being "dumb" trace back to bad quantization, wrong sampling settings, or missing system prompts rather than the base model itself.</p>
+        <blockquote class="reaction">"Even a 4-bit quant of Qwen3.8 27b is indistinguishable from Gemini 3.7 flash in our internal tests. With an RTX5090 card and ninfer, you can get ~800 TPS token generation." <span class="who">&mdash; a11r on <a href="https://news.ycombinator.com/item?id=49402232">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://github.com/adnanakil/nobuzz/blob/main/README.md">Claudette: Make Claude stop talking like a BuzzFeed article</a></h3>
-        <p class="entry-meta">Aug 21 · 269 pts · 179 comments · <a href="https://news.ycombinator.com/item?id=49388752">HN thread</a></p>
-        <p>A Claude Code skill (<code>/debuzz</code>) that routes Claude's answers through Google's Antigravity CLI to strip the "theatrics" and convert responses into plainer technical language, with colleague, manager, and director modes trading verbosity for directness.</p>
-        <blockquote class="reaction">"I wish I didn't need it, but the way Claude talks can get pretty tiresome. I've often wondered why it talks like that. Was it really trained on Buzzfeed?" <span class="who">&mdash; mcv on <a href="https://news.ycombinator.com/item?id=49388752">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://munderdiffl.in/">Munder Difflin — Agent harness to run an office of your clones</a></h3>
+        <p class="entry-meta">Aug 22 &middot; 277 pts &middot; 119 comments</p>
+        <p>A new agent harness spins up a virtual "office" staffed by clones of a single AI agent to run business-style workflows autonomously. The thread splits between people calling it a fun demo and others finding the framing off-putting.</p>
+        <blockquote class="reaction">"An office of your clones. Next they'll add a clone HR department to handle the clone performance reviews, and a clone IT guy who's also a clone and keeps filing tickets against himself." <span class="who">&mdash; luciana1u on <a href="https://news.ycombinator.com/item?id=49398152">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/">How we made a text-to-speech model respond in sub-50 ms</a></h3>
-        <p class="entry-meta">Aug 21 · 145 pts · 34 comments · <a href="https://news.ycombinator.com/item?id=49389952">HN thread</a></p>
-        <p>Nari Labs got Qwen3-TTS to a sub-50ms p95 time-to-first-audio by scheduling its three components (Talker, Code Predictor, Codec) as independently schedulable tasks instead of a fixed pipeline, plus dynamic silence trimming and cached codec state to skip reprocessing audio history.</p>
-        <blockquote class="reaction">"We got a rtx 4090 handling around 10 concurrent requests at 50 ms TTFA after some config changes... this 50 ms TTFA thing is very much possible on consumer hardware." <span class="who">&mdash; toebee on <a href="https://news.ycombinator.com/item?id=49389952">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/">New MCP Roadmap</a></h3>
+        <p class="entry-meta">Aug 22 &middot; 207 pts &middot; 132 comments</p>
+        <p>The Model Context Protocol team published a roadmap post, including a plan to make remote MCP servers behave like ordinary HTTP workloads rather than requiring bespoke stateful infrastructure.</p>
+        <blockquote class="reaction">"With the 2026-07-28 release, a remote MCP server is now no different from any other HTTP workload. Good. Introducing a bespoke new protocol was one of the more bone-headed things MCP did on initial release." <span class="who">&mdash; rco8786 on <a href="https://news.ycombinator.com/item?id=49399591">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/">Building an (almost) fully self-hosted, sandboxed, agentic software factory</a></h3>
-        <p class="entry-meta">Aug 21 · 101 pts · 54 comments · <a href="https://news.ycombinator.com/item?id=49390463">HN thread</a></p>
-        <p>The author built a self-hosted, network-isolated setup where a single prompt lets an AI agent run its own dev lifecycle — creating repos, writing code and tests, running CI/CD, and deploying with HTTPS on a home server — orchestrated with Coolify, Forgejo, and Hermes.</p>
+        <h3 class="entry-title"><a href="https://twitter.com/argofowl/status/2091150597374537729">Anthropic appears to be A/B testing reduced effort levels in Claude Code</a></h3>
+        <p class="entry-meta">Aug 22 &middot; 189 pts &middot; 172 comments</p>
+        <p>A viral tweet claims Claude Code is silently testing lower "effort" settings for some users. The HN thread is largely skeptical of the methodology while agreeing the underlying worry — silent quality/routing changes — is real.</p>
+        <blockquote class="reaction">"The evidence, as best I can tell from the tweet, is that they asked Claude what effort level it was set to. But how would the model even know that? Not convinced here." <span class="who">&mdash; Wowfunhappy on <a href="https://news.ycombinator.com/item?id=49401549">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/">Quick impressions: A week of using Codex more than Claude</a></h3>
-        <p class="entry-meta">Aug 21 · 91 pts · 98 comments · <a href="https://news.ycombinator.com/item?id=49393051">HN thread</a></p>
-        <p>The author found Codex writes simpler, less-commented code and executes instructions more literally than Claude, which tends to over-engineer and add unrequested abstractions; Codex moved faster initially but needed more testing afterward, while Claude was preferred for complex tasks like branch management.</p>
+        <h3 class="entry-title"><a href="https://www.primeintellect.ai/research/nanogpt-speedrun">NanoGPT Speedrun Frontier</a></h3>
+        <p class="entry-meta">Aug 22 &middot; 98 pts &middot; 26 comments</p>
+        <p>Prime Intellect published a leaderboard tracking the fastest reproducible nanoGPT training runs, in the style of the long-running speedrun community around minimal GPT training.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://developers.openai.com/api/docs/models/gpt-5.6-sol">GPT 5.6 Sol 20% price reduction</a></h3>
-        <p class="entry-meta">Aug 22 · 69 pts · 55 comments · <a href="https://news.ycombinator.com/item?id=49396590">HN thread</a></p>
-        <p>OpenAI's docs show GPT-5.6 Sol input pricing cut 20% to $4 per million tokens and output cut 33% to $20 per million tokens, with the promotional rate guaranteed through November 21, 2026.</p>
+        <h3 class="entry-title"><a href="https://programasweights.com/claudish">English ↔ Claudish Translator</a></h3>
+        <p class="entry-meta">Aug 22 &middot; 53 pts &middot; 28 comments</p>
+        <p>A small tool translates between plain English and "Claudish" — the verbose, hedge-heavy phrasing patterns developers associate with Claude's default writing style.</p>
       </article>
     </div>
   </section>
@@ -166,7 +167,7 @@
       <p class="rail-note">Nothing new in the last 24h</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h. Most recent post remains Aug 20 ("Introducing AI Futures").</p>
+      <p class="empty">Nothing new in the last 24h &mdash; most recent post was "Introducing AI Futures," Aug 20.</p>
     </div>
   </section>
 
@@ -176,7 +177,7 @@
       <p class="rail-note">Nothing new in the last 24h</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h. Most recent newsroom post remains Aug 14.</p>
+      <p class="empty">Nothing new in the last 24h &mdash; most recent post was "How Claude's text watermark works," Aug 14.</p>
     </div>
   </section>
 
@@ -186,30 +187,20 @@
       <p class="rail-note">Nothing new in the last 24h</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h. Most recent post remains Aug 20.</p>
+      <p class="empty">Nothing new in the last 24h &mdash; most recent posts were dated Aug 21.</p>
     </div>
   </section>
 
   <section class="band" id="ap-news">
     <div class="rail">
       <h2 class="label label--section">AP News</h2>
-      <p class="rail-note">3 items</p>
+      <p class="rail-note">1 item</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/tiktok-doj-settlement-children-privacy-coppa-7d92b65fa23968b8ce13ea3b5c52e7a4">TikTok reaches $400 million settlement with US Justice Department over children's privacy</a></h3>
+        <h3 class="entry-title"><a href="https://apnews.com/article/china-humanoid-robot-games-us-86cb8e310843151a77057e4cb764b4e2">Chinese humanoid robots smash human records in 100m sprint and high jump at Beijing robot games</a></h3>
         <p class="entry-meta">Aug 22</p>
-        <p>TikTok will pay $300 million immediately and another $100 million once an order vacates an earlier consent decree against predecessor company Musical.ly, ending a 2024 DOJ lawsuit alleging violations of federal children's privacy law.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/uber-fine-automated-suspensions-netherlands-e64385dc72fd2da440a68babd1ae2fb1">Dutch regulators fine Uber nearly $1 billion over automated suspensions of driver accounts</a></h3>
-        <p class="entry-meta">Aug 21</p>
-        <p>The Dutch Data Protection Authority imposed a &euro;825 million ($964 million) fine, saying Uber used fully automated software &mdash; with no human review &mdash; to suspend driver accounts, sometimes permanently, violating the EU's ban on fully automated decision-making under GDPR. The violations ran from 2018 to 2022.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/maha-trump-ai-data-centers-rfk-coal-78e057313386bada1326b5c0ae03f2a0">MAHA activists urge Trump against promoting coal to power energy-hungry AI data centers</a></h3>
-        <p class="entry-meta">Aug 21</p>
-        <p>Nearly 200 activists tied to RFK Jr.'s "Make America Healthy Again" movement sent a letter, first obtained by AP, criticizing Trump's 2025 executive order boosting coal to power AI data centers and asking the administration to consider renewables like solar and geothermal instead.</p>
+        <p>Humanoid robots broke records set by humans, including Usain Bolt's 100-meter sprint world record, on the opening day of the World Humanoid Robot Games in Beijing. More than 2,000 humanoid robots are competing across 51 events and over 1,000 competitions, including running, table tennis, and soccer, in what AP calls a showcase of China's rapid progress in robotics amid an intensifying tech race with the U.S.</p>
       </article>
     </div>
   </section>
@@ -221,9 +212,9 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/nation/2026/08/21/california-set-pass-strict-social-media-restrictions-protect-teens/">Why this U.S. state is trying to ban 'addictive' social media features to protect teens</a></h3>
-        <p class="entry-meta">Aug 21</p>
-        <p>California legislation would restrict "addictive" social media design features aimed at young users; advocates say it would carry outsized weight nationally given the state is the country's most populous and home to many of the platforms being regulated.</p>
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/23/most-gop-politicians-now-talk-negatively-about-data-centers-data-shows/">See the moment when Republican politicians turned against data centers</a></h3>
+        <p class="entry-meta">Aug 23</p>
+        <p>A Washington Post analysis finds that Republican politicians' public statements about data centers have turned sharply negative over the past six months, reversing what had been broadly favorable rhetoric toward the AI-driven data-center buildout.</p>
       </article>
     </div>
   </section>
@@ -231,23 +222,18 @@
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items</p>
+      <p class="rail-note">2 items</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/2026/08/17/anthropic-revenue-run-rate-ipo-openai">Anthropic's revenue run-rate reportedly surpasses $65 billion pre-IPO</a></h3>
-        <p class="entry-meta">Aug 17</p>
-        <p>Anthropic's annualized revenue run-rate has reportedly topped $65 billion, up sharply from the end of 2025, with investors targeting an IPO as soon as October at a valuation that could rival or exceed $2 trillion.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html">Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares</a></h3>
-        <p class="entry-meta">Aug 19</p>
-        <p>Marvell granted Google the right to buy up to $12.2 billion of its shares tied to a custom-chip supply agreement covering AI inference accelerators, storage and network interface controllers, and memory controllers for Google's TPU ecosystem &mdash; a deal Marvell says could be worth roughly $120 billion in revenue through fiscal 2033.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.fool.com/coverage/stock-market-today/2026/08/21/stock-market-today-aug-21-tesla-gains-on-nevada-robotaxi-permit-approval/">Stock Market Today, Aug. 21: Tesla Gains on Nevada Robotaxi Permit Approval</a></h3>
+        <h3 class="entry-title"><a href="https://www.investing.com/news/stock-market-news/openai-cuts-developer-pricing-for-frontier-gpt56-sol-model-by-more-than-20-4872186">OpenAI cuts developer pricing for frontier GPT-5.6 Sol model by more than 20%</a></h3>
         <p class="entry-meta">Aug 21</p>
-        <p>Nevada regulators approved permits letting Tesla deploy as many as 5,000 robotaxis in the Las Vegas area over the next year, with Waymo and Uber each authorized for fleets of up to 1,000 vehicles &mdash; turning Las Vegas into one of the most closely watched autonomous-vehicle markets in the country.</p>
+        <p>OpenAI is cutting GPT-5.6 Sol API prices to $4 per million input tokens and $20 per million output tokens (from $5 and $30) for three months, through at least Nov. 21, citing growing competition from Anthropic and Chinese AI models. The cuts apply to the API and eligible ChatGPT Work/Codex credit plans; Pro, Plus, and Business subscription pricing is unchanged.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/20/tesla-uber-and-waymo-all-get-the-ok-to-operate-thousands-of-robotaxis-in-nevada/">Tesla, Uber, and Waymo all get the OK to operate thousands of robotaxis in Nevada</a></h3>
+        <p class="entry-meta">Aug 20</p>
+        <p>The Nevada Transportation Authority unanimously approved permits letting Tesla, Uber, and Waymo run paid robotaxi service in Clark County (Las Vegas), authorizing up to 8,000 vehicles combined over the next year — 5,000 for Tesla, 1,000 for Waymo, and 1,000 for Uber (via Motional and Zoox). Company reps said actual fleets will likely land well below the caps; local taxi and livery groups opposed the approvals over oversaturation concerns.</p>
       </article>
     </div>
   </section>
@@ -255,7 +241,7 @@
 </main>
 
 <footer class="footer">
-  <p>Generated 2026-08-22 05:47 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-08-23 05:50 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

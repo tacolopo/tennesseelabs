@@ -98,7 +98,8 @@
     </div>
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
-      <p class="deck mono">Sunday · Aug 30, 2026 · 6:00 AM ET</p>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Monday · Aug 31, 2026 · 6:00 AM ET</p>
     </div>
   </section>
 
@@ -108,12 +109,14 @@
       <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
     </div>
     <div class="col">
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Sony Music Publishing and Warner Chappell sue Anthropic.</span> <span class="rundown-why">Publishers allege a "brazen campaign" of illegal torrenting and scraping to train Claude, with statutory damages that could reach billions.</span><a class="cite" href="https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/">[1]</a></li>
-        <li><span class="rundown-head">OpenAI is cutting off Cursor after its acquisition by SpaceX.</span> <span class="rundown-why">OpenAI says it can't trust an Elon Musk-owned company to honor contract terms and will end model access November 12.</span><a class="cite" href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex">[2]</a></li>
-        <li><span class="rundown-head">Claude Code now appends a session URL to every commit and PR by default.</span> <span class="rundown-why">Developers are split between calling it a debugging lifesaver and unwanted AI attribution.</span><a class="cite" href="https://github.com/anthropics/claude-code/issues/66504">[3]</a></li>
-        <li><span class="rundown-head">"No AI Fridays" hit the Hacker News front page.</span> <span class="rundown-why">A one-page pitch for a weekly AI-free workday drew hundreds of comments about engineer burnout and skill atrophy.</span><a class="cite" href="https://noaifridays.com/">[4]</a></li>
-        <li><span class="rundown-head">Sen. Ed Markey's vague answer on which AI tools he uses became a primary flashpoint.</span> <span class="rundown-why">Rival Rep. Seth Moulton's campaign is using it as evidence the 80-year-old is out of touch ahead of Tuesday's Massachusetts primary.</span><a class="cite" href="https://apnews.com/article/markey-moulton-election-massachusetts-2281949ec2b785f62667d328b8a88f70">[5]</a></li>
+        <li><span class="rundown-head">Anthropic is signing out and refunding Claude users hit by an infostealer wave.</span> <span class="rundown-why">Malware on victims' PCs hijacked live login sessions to quietly drain usage limits.</span><a class="cite" href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">[1]</a></li>
+        <li><span class="rundown-head">DeepSeek is closing in on a $7.4B round at a $74B valuation.</span> <span class="rundown-why">The raise, backed by Tencent and CATL, sets up a possible 2027 Shanghai IPO.</span><a class="cite" href="https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo">[2]</a></li>
+        <li><span class="rundown-head">The Claude Code commit-attribution fight is still boiling on Hacker News.</span> <span class="rundown-why">Default-on session-URL tagging in every commit pushed one developer to cancel his subscription.</span><a class="cite" href="https://github.com/anthropics/claude-code/issues/66504">[3]</a></li>
+        <li><span class="rundown-head">Japan's next defense budget leans harder on AI-directed drones and missiles.</span> <span class="rundown-why">Tokyo is adapting its strategy to Ukraine-style drone warfare as it counters China.</span><a class="cite" href="https://apnews.com/article/japan-defense-budget-drones-ai-bdda63e2831ff47a214d786bd4e45907">[4]</a></li>
+        <li><span class="rundown-head">AI chatbots mostly resisted state-backed disinformation in an NPR/NewsGuard test.</span> <span class="rundown-why">Claude, ChatGPT and peers beat search-engine AI summaries at pushing back on false narratives.</span><a class="cite" href="https://www.npr.org/2026/08/30/nx-s1-5876436/chatbots-search-propaganda">[5]</a></li>
       </ol>
     </div>
   </section>
@@ -126,25 +129,26 @@
     <div class="col">
       <article class="entry">
         <h3 class="entry-title"><a href="https://github.com/anthropics/claude-code/issues/66504">Claude Session URL appended to commit messages and PR descriptions by default</a></h3>
-        <p class="entry-meta">Aug 30 &middot; 186 pts &middot; 206 comments</p>
-        <p>A GitHub issue on anthropics/claude-code notes that Claude Code now appends a link to the originating chat session to every commit message and PR description by default. The thread splits between developers who find it useful for tracing which session wrote a given change and others who object to automatic AI-attribution being added without an easy opt-out.</p>
-        <blockquote class="reaction">"It's a lifesaver when you are trying to debug an old commit to pull up the chat session that actually wrote it." <span class="who">&mdash; jlawrence6809 on <a href="https://news.ycombinator.com/item?id=49498201">HN</a></span></blockquote>
+        <p class="entry-meta">Aug 30 &middot; 200 pts &middot; 222 comments</p>
+        <p>A GitHub issue on anthropics/claude-code confirms Claude Code now appends a link to its originating chat session to every commit message and PR description by default. The thread splits between developers who find it useful for tracing which session wrote a change and others angry about automatic AI-attribution being added without an easy, durable opt-out.</p>
+        <blockquote class="reaction">"I cancelled my subscription over this." <span class="who">&mdash; mherrmann on <a href="https://news.ycombinator.com/item?id=49498201">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://noaifridays.com/">No AI Fridays</a></h3>
-        <p class="entry-meta">Aug 30 &middot; 263 pts &middot; 185 comments</p>
-        <p>A one-page site pitching a weekly day without AI coding tools, meant to preserve manual skills and give engineers a mental break, drew one of the day's biggest Hacker News threads, with replies ranging from enthusiastic adoption to skepticism that it will stick.</p>
-        <blockquote class="reaction">"I made the site to convince my boss to let me not use AI on Fridays. Hoping to get some noise around it to make him believe it's real." <span class="who">&mdash; xendo (site creator) on <a href="https://news.ycombinator.com/item?id=49498095">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://sander.ai/2026/08/24/continuous-dlms.html">Continuous Diffusion Language Models (CDLM's)</a></h3>
+        <p class="entry-meta">Aug 30 &middot; 105 pts &middot; 35 comments</p>
+        <p>A technical write-up surveys the resurgence of continuous diffusion approaches to language generation as an alternative to token-by-token autoregressive decoding, and argues the technique deserves more attention than it currently gets.</p>
+        <blockquote class="reaction">"'Attention is all you need' should be renamed into 'Attention is sufficient but not necessary.'" <span class="who">&mdash; amelius on <a href="https://news.ycombinator.com/item?id=49502611">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.abc.net.au/news/2026-08-29/fair-work-commission-condemns-ai-legal-advice/107089766">Fair Work Commission condemns 'plain wrong' AI legal advice</a></h3>
-        <p class="entry-meta">Aug 30 &middot; 58 pts &middot; 31 comments</p>
-        <p>Australia's Fair Work Commission ordered a sacked ALDI worker to pay AU$1,230 toward his former employer's legal costs after he used AI as a "quasi-legal advisor" in a failed unfair-dismissal case despite repeated warnings it had no real chance of success. The commission says AI-informed litigation has driven a 40% rise in its caseload, and from October 20 applicants must disclose AI use.</p>
+        <h3 class="entry-title"><a href="https://openclaw.ai/blog/openclaw-2-accidentally">OpenClaw 2.0, Accidentally</a></h3>
+        <p class="entry-meta">Aug 31 &middot; 95 pts &middot; 93 comments</p>
+        <p>The OpenClaw team's blog post describes how a push for simpler setup and a first-class in-browser experience grew, without quite intending to, into a full OpenClaw 2.0 release.</p>
+        <blockquote class="reaction">"Obligatory question: who is still using OpenClaw? ... the Google Trends graph is funny." <span class="who">&mdash; minimaxir on <a href="https://news.ycombinator.com/item?id=49505310">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://sander.ai/2026/08/24/continuous-dlms.html">Continuous Diffusion Language Models (CDLMs)</a></h3>
-        <p class="entry-meta">Aug 30 &middot; 53 pts &middot; 16 comments</p>
-        <p>A technical write-up surveys a recent resurgence of continuous (as opposed to discrete) diffusion approaches to language generation, an alternative to token-by-token autoregressive generation that had been largely sidelined by discrete diffusion methods until a wave of new research this year.</p>
+        <h3 class="entry-title"><a href="https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/">How to build a diffusion language model</a></h3>
+        <p class="entry-meta">Aug 30 &middot; 91 pts &middot; 8 comments</p>
+        <p>An engineering-focused walkthrough of building a diffusion language model, discussed alongside today's other diffusion-LM thread on Hacker News.</p>
       </article>
     </div>
   </section>
@@ -175,30 +179,35 @@
       <p class="rail-note">Nothing new in the last 24h</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent posts ("How Anthropic employees use Claude Tag" and "Claude for Teachers, now available for U.S. K-12 schools and districts") published Aug 28.</p>
+      <p class="empty">Nothing new in the last 24h &mdash; most recent posts ("Claude in Chrome is generally available" and "Claude gets its own browser in Cowork") published Aug 26.</p>
     </div>
   </section>
 
   <section class="band" id="ap-news">
     <div class="rail">
       <h2 class="label label--section">AP News</h2>
-      <p class="rail-note">3 items</p>
+      <p class="rail-note">4 items</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/markey-moulton-election-massachusetts-2281949ec2b785f62667d328b8a88f70">Moulton says Sen. Markey, 80, is too old for another term. Young Massachusetts Democrats are divided</a></h3>
-        <p class="entry-meta">Aug 30</p>
-        <p>Asked in a recent debate whether he uses AI platforms like Claude or ChatGPT, Sen. Ed Markey said he uses "whatever is inside of my iPhone or my iPad — whatever comes up" and that he doesn't know "what companies my iPad may be using." The answer has become a central talking point for rival Rep. Seth Moulton's campaign to unseat the 80-year-old incumbent in Tuesday's Democratic primary.</p>
+        <h3 class="entry-title"><a href="https://apnews.com/article/japan-defense-budget-drones-ai-bdda63e2831ff47a214d786bd4e45907">Japan to beef up its defense with drones, AI and missiles, defense budget plans show</a></h3>
+        <p class="entry-meta">Aug 31</p>
+        <p>Japan's Defense Ministry disclosed details of an 8.9 trillion yen ($55.6 billion) budget request, only slightly above this year's, ahead of a fuller security strategy update later in the year. The ministry says it wants to "drastically strengthen" deterrence by adapting to new warfare like Ukraine's drone deployment, building domestic low-cost uncrewed systems.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/lake-trump-ontario-america-7c5c9776d72cb8e8d782e05ec6e7332b">Google renames Lake Ontario "Lake America" on Maps for US users</a></h3>
-        <p class="entry-meta">Aug 30</p>
-        <p>Google updated Google Maps to display Lake Ontario as "Lake America" for U.S. users, reflecting a recent Trump executive order, the company said in a blog post. It's the same practice Google followed in 2025 when it renamed the Gulf of Mexico as the "Gulf of America" on the U.S. version of Maps, and comes as an escalating U.S.-Canada tariff war continues.</p>
+        <h3 class="entry-title"><a href="https://apnews.com/article/china-ipo-shares-ai-robotics-shein-7246cca5174e9b9f4cb305adda287395">AI and robotics drive an IPO boom in China as Shein lists in Hong Kong</a></h3>
+        <p class="entry-meta">Aug 31</p>
+        <p>Shein's $1.7 billion Hong Kong IPO debut Tuesday is the latest in a wave of China-linked listings fueled by investor appetite for AI and robotics &mdash; following memory chipmaker CXMT's Shanghai debut (shares up 466% on day one) and humanoid-robot maker Unitree's August listing (up 460%).</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://apnews.com/article/nissan-honda-automakers-japan-software-collaboration-521bc44069a8d73fbd672e0cfd32a5bf">Japanese automakers Nissan and Honda agree to work together on software for cars</a></h3>
+        <p class="entry-meta">Aug 31</p>
+        <p>Nissan and Honda signed a deal to jointly develop standardized electronic control units and software for "software-defined vehicles" reaching market in fiscal 2029, building on talks the two rivals began in 2024 on EVs and auto-intelligence technology.</p>
       </article>
       <article class="entry">
         <h3 class="entry-title"><a href="https://apnews.com/article/nasa-nancy-grace-roman-space-telescope-2a8e59d0b4e4884966a3b50a159ab8c9">NASA's newest space telescope launches on a quest to explore the hidden universe</a></h3>
         <p class="entry-meta">Aug 30</p>
-        <p>SpaceX launched the $4.3 billion Nancy Grace Roman Space Telescope aboard a Falcon Heavy rocket from Cape Canaveral. The bus-sized telescope, named for NASA's first chief astronomer, will take more than three months to reach an observation point near the Webb Space Telescope, where it will survey dark energy and search for exoplanets.</p>
+        <p>SpaceX launched the $4.3 billion Nancy Grace Roman Space Telescope aboard a Falcon Heavy rocket from Cape Canaveral, bound for an observation point near the Webb telescope. NASA says it should eventually find "thousands of supernovae, tens of thousands of planets, billions of galaxies and tens of billions of stars."</p>
       </article>
     </div>
   </section>
@@ -209,25 +218,30 @@
       <p class="rail-note">Nothing new in the last 24h</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; the tech feed's most recent item ("The Fed confronts a powerful new economic force," on AI's effect on the economy) published Aug 29, and no AI/tech-relevant items appeared in the national feed within the window.</p>
+      <p class="empty">Nothing new in the last 24h &mdash; the technology feed returned no items today, and no AI/tech-relevant items appeared in the national feed within the window.</p>
     </div>
   </section>
 
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">2 items</p>
+      <p class="rail-note">3 items</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/">Sony Music, Warner sue Anthropic over "brazen campaign" of IP theft</a></h3>
-        <p class="entry-meta">Aug 29</p>
-        <p>Sony Music Publishing, Warner Chappell, and other music publishers sued Anthropic and co-founders Dario Amodei and Benjamin Mann in the Northern District of California, accusing the company of "illegally torrenting, scraping, and downloading copyrighted works" to train Claude. Statutory damages could reach billions of dollars; an Anthropic spokesperson said the company will "defend ourselves robustly in court."</p>
+        <h3 class="entry-title"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">Anthropic warns infostealer malware is hijacking Claude sessions to drain usage</a></h3>
+        <p class="entry-meta">Aug 30</p>
+        <p>Anthropic is emailing affected users that common infostealer malware (Vidar, LummaC2, StealC, RedLine, and others) on their own PCs stole already-authenticated Claude session cookies, letting attackers replay the session and burn through usage limits without a password or 2FA. Anthropic is signing out affected accounts, removing saved payment methods, and refunding unauthorized charges, and stresses the malware isn't related to Claude itself.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex">OpenAI cuts off Cursor after its acquisition by SpaceX</a></h3>
-        <p class="entry-meta">Aug 28</p>
-        <p>OpenAI announced it will terminate its contract supplying AI models to coding tool Cursor, effective November 12 — the maximum notice period its contract allows. OpenAI says it's acting because it cannot be confident SpaceX will use its technology within the terms of service, citing what it describes as a history of Elon Musk-owned companies violating contracts, including after Musk's acquisition of Twitter.</p>
+        <h3 class="entry-title"><a href="https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo">DeepSeek nears $7.4 billion funding round at $74 billion valuation ahead of 2027 IPO</a></h3>
+        <p class="entry-meta">Aug 29</p>
+        <p>DeepSeek is close to a roughly 50 billion yuan ($7.4B) round at a 500 billion yuan ($74B) pre-money valuation, per the Wall Street Journal and SCMP, positioning it for a Shanghai Star Market listing as soon as 2027. Backers reportedly include CATL, with Tencent, CPE, and Legend Capital in talks; proceeds would fund roughly 1 gigawatt of additional compute as founder Liang Wenfeng shifts the lab from hedge-fund-backed to externally capitalized.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.npr.org/2026/08/30/nx-s1-5876436/chatbots-search-propaganda">We tested how AI chatbots would handle foreign propaganda. They did surprisingly well</a></h3>
+        <p class="entry-meta">Aug 30</p>
+        <p>NPR and NewsGuard posed 30 questions built on false narratives spread by China, Iran, and Russia to ChatGPT, Gemini, Copilot, Meta AI, Grok, and Claude. The chatbots mostly pushed back on the falsehoods and outperformed traditional search engines, though AI-generated summaries at the top of search results fared worse than the chatbots did.</p>
       </article>
     </div>
   </section>
@@ -235,7 +249,8 @@
 </main>
 
 <footer class="footer">
-  <p>Generated 2026-08-30 21:51 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <!-- FILL: generation timestamp -->
+  <p>Generated 2026-08-31 05:47 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

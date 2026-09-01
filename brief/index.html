@@ -1,258 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily Brief — Tennessee Labs</title>
-<meta name="description" content="AI/tech morning brief — Hacker News developer reactions, OpenAI, Anthropic, Claude Blog, AP News, and Washington Post — regenerated every morning, every line cites its source.">
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://tennesseelabs.com/brief/">
-<base target="_blank">
+<meta name="description" content="AI/tech morning brief — regenerated every morning, every line cites its source.">
+<meta name="robots" content="noindex"><link rel="canonical" href="https://tennesseelabs.com/brief/"><base target="_blank">
 <link rel="icon" href="https://tennesseelabs.com/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
 <link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-  /* Daily Brief — extends styles.css tokens; scoped to this page only */
-  .deck.mono {
-    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
-    color: var(--ink-2);
-  }
-  .notice {
-    margin-top: 1.1rem; padding: 0.85rem 1rem;
-    background: var(--card); border: 1px solid var(--rule);
-    border-left: 2px solid var(--negated);
-    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
-    max-width: var(--measure);
-  }
-
-  .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
-  .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
-  .rundown-list li::before {
-    content: counter(rundown); counter-increment: rundown;
-    position: absolute; left: 0; top: 0.15rem;
-    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
-  }
-  .rundown-head { font-weight: 500; }
-  .rundown-why { color: var(--ink-2); }
-  .cite {
-    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
-    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
-  }
-  .cite:hover { text-decoration: underline; }
-
-  .entry-meta {
-    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
-    color: var(--ink-3); letter-spacing: 0.01em;
-  }
-  .entry-title a { color: var(--ink); text-decoration: none; }
-  .entry-title a:hover { color: var(--accent); }
-
-  .reaction {
-    margin: 0.85rem 0 0; padding-left: 0.9rem;
-    border-left: 2px solid var(--accent);
-    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
-    color: var(--ink-2); line-height: 1.5;
-  }
-  .reaction .who {
-    display: block; margin-top: 0.3rem;
-    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
-    color: var(--ink-3); letter-spacing: 0.02em;
-  }
-  .reaction .who a { color: var(--ink-3); }
-
-  .empty, .fail {
-    margin: 0; padding-left: 1rem; max-width: var(--measure);
-    border-left: 1.5px dashed var(--negated);
-    color: var(--ink-3); font-size: 0.9rem;
-  }
-  .fail { color: var(--ink-2); }
-  .fail::before { content: "\26A0  "; }
+.deck.mono{font-family:var(--mono);font-size:.9rem;letter-spacing:.02em;color:var(--ink-2)}.rundown-list{counter-reset:rundown;margin:0;padding:0;list-style:none;display:grid;gap:1.1rem}.rundown-list li{padding-left:1.7rem;position:relative;max-width:var(--measure)}.rundown-list li::before{content:counter(rundown);counter-increment:rundown;position:absolute;left:0;top:.15rem;font-family:var(--mono);font-size:.75rem;color:var(--accent)}.rundown-head{font-weight:500}.rundown-why{color:var(--ink-2)}.cite{font-family:var(--mono);font-size:.75em;color:var(--accent);vertical-align:super;margin-left:.2rem;text-decoration:none}.entry-meta{margin:-.15rem 0 .55rem;font-family:var(--mono);font-size:.75rem;color:var(--ink-3);letter-spacing:.01em}.entry-title a{color:var(--ink);text-decoration:none}.entry-title a:hover{color:var(--accent)}.reaction{margin:.85rem 0 0;padding-left:.9rem;border-left:2px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-2);line-height:1.5}.reaction .who{display:block;margin-top:.3rem;font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--ink-3);letter-spacing:.02em}.reaction .who a{color:var(--ink-3)}.empty,.fail{margin:0;padding-left:1rem;max-width:var(--measure);border-left:1.5px dashed var(--negated);color:var(--ink-3);font-size:.9rem}.fail{color:var(--ink-2)}.fail::before{content:"\26A0  "}
 </style>
 </head>
 <body>
-
-<header class="masthead">
-  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
-    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <g fill="none" stroke-linecap="square">
-        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
-        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
-      </g>
-    </svg>
-    <span>Tennessee&nbsp;Labs</span>
-  </a>
-  <nav class="nav" aria-label="Sections">
-    <a href="https://tennesseelabs.com/" target="_self">Home</a>
-    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
-  </nav>
-</header>
-
+<header class="masthead"><a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a><nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav></header>
 <main id="top">
-
-  <section class="band band--hero">
-    <div class="rail">
-      <p class="label">AI / Tech<br>Morning brief</p>
-      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
-    </div>
-    <div class="col">
-      <h1 class="display">Daily&nbsp;Brief.</h1>
-      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Monday · Aug 31, 2026 · 6:00 AM ET</p>
-    </div>
-  </section>
-
-  <section class="band" id="rundown">
-    <div class="rail">
-      <h2 class="label label--section">Rundown</h2>
-      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
-    </div>
-    <div class="col">
-      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
-           numbered cite link to the item's URL in the sections below. -->
-      <ol class="rundown-list">
-        <li><span class="rundown-head">Anthropic is signing out and refunding Claude users hit by an infostealer wave.</span> <span class="rundown-why">Malware on victims' PCs hijacked live login sessions to quietly drain usage limits.</span><a class="cite" href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">[1]</a></li>
-        <li><span class="rundown-head">DeepSeek is closing in on a $7.4B round at a $74B valuation.</span> <span class="rundown-why">The raise, backed by Tencent and CATL, sets up a possible 2027 Shanghai IPO.</span><a class="cite" href="https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo">[2]</a></li>
-        <li><span class="rundown-head">The Claude Code commit-attribution fight is still boiling on Hacker News.</span> <span class="rundown-why">Default-on session-URL tagging in every commit pushed one developer to cancel his subscription.</span><a class="cite" href="https://github.com/anthropics/claude-code/issues/66504">[3]</a></li>
-        <li><span class="rundown-head">Japan's next defense budget leans harder on AI-directed drones and missiles.</span> <span class="rundown-why">Tokyo is adapting its strategy to Ukraine-style drone warfare as it counters China.</span><a class="cite" href="https://apnews.com/article/japan-defense-budget-drones-ai-bdda63e2831ff47a214d786bd4e45907">[4]</a></li>
-        <li><span class="rundown-head">AI chatbots mostly resisted state-backed disinformation in an NPR/NewsGuard test.</span> <span class="rundown-why">Claude, ChatGPT and peers beat search-engine AI summaries at pushing back on false narratives.</span><a class="cite" href="https://www.npr.org/2026/08/30/nx-s1-5876436/chatbots-search-propaganda">[5]</a></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="band" id="developer-pulse">
-    <div class="rail">
-      <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://github.com/anthropics/claude-code/issues/66504">Claude Session URL appended to commit messages and PR descriptions by default</a></h3>
-        <p class="entry-meta">Aug 30 &middot; 200 pts &middot; 222 comments</p>
-        <p>A GitHub issue on anthropics/claude-code confirms Claude Code now appends a link to its originating chat session to every commit message and PR description by default. The thread splits between developers who find it useful for tracing which session wrote a change and others angry about automatic AI-attribution being added without an easy, durable opt-out.</p>
-        <blockquote class="reaction">"I cancelled my subscription over this." <span class="who">&mdash; mherrmann on <a href="https://news.ycombinator.com/item?id=49498201">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://sander.ai/2026/08/24/continuous-dlms.html">Continuous Diffusion Language Models (CDLM's)</a></h3>
-        <p class="entry-meta">Aug 30 &middot; 105 pts &middot; 35 comments</p>
-        <p>A technical write-up surveys the resurgence of continuous diffusion approaches to language generation as an alternative to token-by-token autoregressive decoding, and argues the technique deserves more attention than it currently gets.</p>
-        <blockquote class="reaction">"'Attention is all you need' should be renamed into 'Attention is sufficient but not necessary.'" <span class="who">&mdash; amelius on <a href="https://news.ycombinator.com/item?id=49502611">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://openclaw.ai/blog/openclaw-2-accidentally">OpenClaw 2.0, Accidentally</a></h3>
-        <p class="entry-meta">Aug 31 &middot; 95 pts &middot; 93 comments</p>
-        <p>The OpenClaw team's blog post describes how a push for simpler setup and a first-class in-browser experience grew, without quite intending to, into a full OpenClaw 2.0 release.</p>
-        <blockquote class="reaction">"Obligatory question: who is still using OpenClaw? ... the Google Trends graph is funny." <span class="who">&mdash; minimaxir on <a href="https://news.ycombinator.com/item?id=49505310">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/">How to build a diffusion language model</a></h3>
-        <p class="entry-meta">Aug 30 &middot; 91 pts &middot; 8 comments</p>
-        <p>An engineering-focused walkthrough of building a diffusion language model, discussed alongside today's other diffusion-LM thread on Hacker News.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="openai">
-    <div class="rail">
-      <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent post ("Our decision on Cursor following its acquisition by SpaceX") published Aug 28.</p>
-    </div>
-  </section>
-
-  <section class="band" id="anthropic">
-    <div class="rail">
-      <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent newsroom post ("Model hardware standard: research preview") published Aug 27.</p>
-    </div>
-  </section>
-
-  <section class="band" id="claude-blog">
-    <div class="rail">
-      <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; most recent posts ("Claude in Chrome is generally available" and "Claude gets its own browser in Cowork") published Aug 26.</p>
-    </div>
-  </section>
-
-  <section class="band" id="ap-news">
-    <div class="rail">
-      <h2 class="label label--section">AP News</h2>
-      <p class="rail-note">4 items</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/japan-defense-budget-drones-ai-bdda63e2831ff47a214d786bd4e45907">Japan to beef up its defense with drones, AI and missiles, defense budget plans show</a></h3>
-        <p class="entry-meta">Aug 31</p>
-        <p>Japan's Defense Ministry disclosed details of an 8.9 trillion yen ($55.6 billion) budget request, only slightly above this year's, ahead of a fuller security strategy update later in the year. The ministry says it wants to "drastically strengthen" deterrence by adapting to new warfare like Ukraine's drone deployment, building domestic low-cost uncrewed systems.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/china-ipo-shares-ai-robotics-shein-7246cca5174e9b9f4cb305adda287395">AI and robotics drive an IPO boom in China as Shein lists in Hong Kong</a></h3>
-        <p class="entry-meta">Aug 31</p>
-        <p>Shein's $1.7 billion Hong Kong IPO debut Tuesday is the latest in a wave of China-linked listings fueled by investor appetite for AI and robotics &mdash; following memory chipmaker CXMT's Shanghai debut (shares up 466% on day one) and humanoid-robot maker Unitree's August listing (up 460%).</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/nissan-honda-automakers-japan-software-collaboration-521bc44069a8d73fbd672e0cfd32a5bf">Japanese automakers Nissan and Honda agree to work together on software for cars</a></h3>
-        <p class="entry-meta">Aug 31</p>
-        <p>Nissan and Honda signed a deal to jointly develop standardized electronic control units and software for "software-defined vehicles" reaching market in fiscal 2029, building on talks the two rivals began in 2024 on EVs and auto-intelligence technology.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://apnews.com/article/nasa-nancy-grace-roman-space-telescope-2a8e59d0b4e4884966a3b50a159ab8c9">NASA's newest space telescope launches on a quest to explore the hidden universe</a></h3>
-        <p class="entry-meta">Aug 30</p>
-        <p>SpaceX launched the $4.3 billion Nancy Grace Roman Space Telescope aboard a Falcon Heavy rocket from Cape Canaveral, bound for an observation point near the Webb telescope. NASA says it should eventually find "thousands of supernovae, tens of thousands of planets, billions of galaxies and tens of billions of stars."</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="washington-post">
-    <div class="rail">
-      <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h &mdash; the technology feed returned no items today, and no AI/tech-relevant items appeared in the national feed within the window.</p>
-    </div>
-  </section>
-
-  <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">Anthropic warns infostealer malware is hijacking Claude sessions to drain usage</a></h3>
-        <p class="entry-meta">Aug 30</p>
-        <p>Anthropic is emailing affected users that common infostealer malware (Vidar, LummaC2, StealC, RedLine, and others) on their own PCs stole already-authenticated Claude session cookies, letting attackers replay the session and burn through usage limits without a password or 2FA. Anthropic is signing out affected accounts, removing saved payment methods, and refunding unauthorized charges, and stresses the malware isn't related to Claude itself.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo">DeepSeek nears $7.4 billion funding round at $74 billion valuation ahead of 2027 IPO</a></h3>
-        <p class="entry-meta">Aug 29</p>
-        <p>DeepSeek is close to a roughly 50 billion yuan ($7.4B) round at a 500 billion yuan ($74B) pre-money valuation, per the Wall Street Journal and SCMP, positioning it for a Shanghai Star Market listing as soon as 2027. Backers reportedly include CATL, with Tencent, CPE, and Legend Capital in talks; proceeds would fund roughly 1 gigawatt of additional compute as founder Liang Wenfeng shifts the lab from hedge-fund-backed to externally capitalized.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.npr.org/2026/08/30/nx-s1-5876436/chatbots-search-propaganda">We tested how AI chatbots would handle foreign propaganda. They did surprisingly well</a></h3>
-        <p class="entry-meta">Aug 30</p>
-        <p>NPR and NewsGuard posed 30 questions built on false narratives spread by China, Iran, and Russia to ChatGPT, Gemini, Copilot, Meta AI, Grok, and Claude. The chatbots mostly pushed back on the falsehoods and outperformed traditional search engines, though AI-generated summaries at the top of search results fared worse than the chatbots did.</p>
-      </article>
-    </div>
-  </section>
-
+<section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Tuesday · Sep 1, 2026 · 6:00 AM ET</p></div></section>
+<section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Top stories across the sources below.</p></div><div class="col"><ol class="rundown-list">
+<li><span class="rundown-head">Anthropic introduced Fable 5.1 and Mythos 5.1 for coding and knowledge work.</span> <span class="rundown-why">The release dominates developer discussion today.</span><a class="cite" href="https://www.anthropic.com/claude-fable-and-mythos-5-1">[1]</a></li>
+<li><span class="rundown-head">OpenAI says Astra has reached its “Critical” cybersecurity-capability threshold.</span> <span class="rundown-why">Its release plan now emphasizes stronger safeguards and constrained access.</span><a class="cite" href="https://openai.com/index/path-to-astra">[2]</a></li>
+<li><span class="rundown-head">Anthropic’s enterprise safeguard plan pairs customer-controlled data with misuse detection.</span> <span class="rundown-why">It is a concrete attempt to square zero-retention demands with frontier-model controls.</span><a class="cite" href="https://www.anthropic.com/news/enterprise-frontier-safeguards">[3]</a></li>
+<li><span class="rundown-head">Apple’s leadership transition arrives with AI competition front and center.</span> <span class="rundown-why">John Ternus inherits a company AP says has had a difficult AI start.</span><a class="cite" href="https://apnews.com/article/2fac80118828b4ada9d160d012c7be32">[4]</a></li>
+</ol></div></section>
+<section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 high-signal HN stories</p></div><div class="col">
+<article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Claude Fable 5.1 and Claude Mythos 5.1</a></h3><p class="entry-meta">Sep 1 · 795 points · 761 comments · <a href="https://news.ycombinator.com/item?id=49525378">HN thread</a></p><p>Anthropic describes the new models as its most advanced for coding and knowledge work, and says their research capabilities offer an early view of AI’s scientific role.</p><blockquote class="reaction">“This time it came with a usage reset.” <span class="who">&mdash; nezhar on <a href="https://news.ycombinator.com/item?id=49525378">HN</a></span></blockquote></article>
+<article class="entry"><h3 class="entry-title"><a href="https://github.com/carloslfu/slotstream">Running 104GB Qwen3.8-Flash-Next on a 48GB Mac at about 12 tok/s</a></h3><p class="entry-meta">Sep 1 · 126 points · 81 comments · <a href="https://news.ycombinator.com/item?id=49524447">HN thread</a></p><p>Slotstream’s author says the project runs a 4-bit, 125B-parameter Qwen model on low-memory Macs by streaming routed experts from SSD and offloading them.</p><blockquote class="reaction">“Maintaining, benchmarking, and integrating one is the actually valuable part.” <span class="who">&mdash; AmazingTurtle on <a href="https://news.ycombinator.com/item?id=49524447">HN</a></span></blockquote></article>
+<article class="entry"><h3 class="entry-title"><a href="https://www.worldlabs.ai/blog/atlas">Atlas: A World Model for Spatial Intelligence</a></h3><p class="entry-meta">Sep 1 · 116 points · 23 comments · <a href="https://news.ycombinator.com/item?id=49525160">HN thread</a></p><p>World Labs introduces Atlas as an “omni world model” for spatial intelligence. In the discussion, a company representative says it can generate consistent 3D-world views and optionally emit explicit 3D.</p><blockquote class="reaction">“This seems like by far the best model yet for reconstructing 3D spaces from sparse images.” <span class="who">&mdash; modeless on <a href="https://news.ycombinator.com/item?id=49525160">HN</a></span></blockquote></article>
+<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/path-to-astra">Path to Astra: critical capabilities and frontier safeguards</a></h3><p class="entry-meta">Sep 1 · 59 points · 18 comments · <a href="https://news.ycombinator.com/item?id=49527595">HN thread</a></p><p>OpenAI says Astra is its first model to meet the Critical cybersecurity-capability threshold in its Preparedness Framework, with stronger release safeguards.</p></article>
+</div></section>
+<section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">4 items</p></div><div class="col">
+<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/ai-native-company-workflows">How AI-native companies turn workflows into operating capability</a></h3><p class="entry-meta">Sep 1, 2026</p><p>OpenAI spotlights Basis, Clay, and Exa Labs, framing agents as tools for onboarding, account management, and developer integrations.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/path-to-astra">Path to Astra: critical capabilities and frontier safeguards</a></h3><p class="entry-meta">Sep 1, 2026</p><p>OpenAI says Astra crossed its Critical cybersecurity threshold and will ship with stronger safeguards.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources">Healthcare organizations can now connect EHR and additional industry data to ChatGPT</a></h3><p class="entry-meta">Sep 1, 2026</p><p>ChatGPT can connect to trusted healthcare data so clinicians can access patient context and medical research, according to OpenAI.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/supporting-california-bill-advance-ai-youth-safety">OpenAI supports California’s bill to advance youth AI safety</a></h3><p class="entry-meta">Aug 31, 2026</p><p>OpenAI backs California SB 1119, describing it as age-appropriate protection for teens while preserving learning and creative use.</p></article>
+</div></section>
+<section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/enterprise-frontier-safeguards">Developing Enterprise Frontier Safeguards with our customers</a></h3><p class="entry-meta">Sep 1, 2026</p><p>Anthropic’s Enterprise Frontier Safeguards combines customer-controlled cloud storage with misuse detection. The company says it was developed with more than 100 customers and will roll out in phases beginning later this fall.</p></article></div></section>
+<section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+<section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">2 items</p></div><div class="col">
+<article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/news-ethics-code-reboot-5ad384e805aa39333e0ea87d26b8e844">For a century, journalists have had a voluntary ethics code. Editors are giving it an AI-era reboot</a></h3><p class="entry-meta">Sep 1, 2026</p><p>The Society of Professional Journalists is revising its Code of Ethics for the first time since 2014, AP reports, as editors address AI-era concerns.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/2fac80118828b4ada9d160d012c7be32">Apple’s new CEO, John Ternus, takes over from Tim Cook after 15 years</a></h3><p class="entry-meta">Sep 1, 2026</p><p>AP says the longtime hardware executive takes charge as Apple faces an AI upheaval and a rough start delivering the AI features it had promised.</p></article>
+</div></section>
+<section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">4 items</p></div><div class="col">
+<article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/01/palantir-ceo-sets-sights-ukraine-next-target/">Palantir CEO sets sights on Ukraine as next target</a></h3><p class="entry-meta">Sep 1, 2026</p><p>The venture aims to turn lessons Ukrainians have learned during the war with Russia into technology available in Ukraine and elsewhere, according to the RSS lede.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/01/john-ternus-takes-over-apple-ceo-tim-cook-amid-ai-challenges/">Who is John Ternus, Apple’s new CEO?</a></h3><p class="entry-meta">Sep 1, 2026</p><p>The Post describes Ternus as a veteran hardware executive taking over a $4.7 trillion company that has struggled to keep pace with AI rivals.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/politics/2026/08/31/trump-says-voters-who-oppose-data-centers-will-kill-golden-goose/">Trump says voters who oppose data centers will ‘kill the Golden Goose’</a></h3><p class="entry-meta">Aug 31, 2026</p><p>The president defended server farms as polling showed sizable opposition from voters in both parties, the RSS lede says.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/08/31/chatbots-will-role-play-self-harm-scenarios-with-users-study-finds/">Chatbots got safer but will still role-play self-harm with users</a></h3><p class="entry-meta">Aug 31, 2026</p><p>A study of more than 50,000 chatbot conversations found that systems would help users role-play or write stories about suicide or death, according to the RSS lede.</p></article>
+</div></section>
+<section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from today’s web sweep</p></div><div class="col">
+<article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/01/openai-hugging-face-ai-agent-security">AI’s agent containment problem is getting harder</a></h3><p class="entry-meta">Sep 1, 2026</p><p>Axios reports that outside testing groups revisited OpenAI agents’ Hugging Face attack and argues that stronger security controls alone may not prevent comparable problems as agents advance.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/01/apple-openai-lawsuit-ai-gpt-devices">Apple, OpenAI legal fight keeps escalating</a></h3><p class="entry-meta">Sep 1, 2026</p><p>Axios says OpenAI responded to Apple’s preliminary-injunction request in their dispute over alleged trade-secret theft connected to consumer hardware.</p></article>
+<article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/01/aslan-agentic-ai-national-security-funding">Aslan raises $20.8M for AI undercover agents</a></h3><p class="entry-meta">Sep 1, 2026</p><p>Aslan launched publicly with $20.8 million in funding for agents that help national-security and law-enforcement users collect digital evidence from criminal forums and messaging channels, Axios reports.</p></article>
+</div></section>
 </main>
-
-<footer class="footer">
-  <!-- FILL: generation timestamp -->
-  <p>Generated 2026-08-31 05:47 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
-  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
-</footer>
-
-</body>
-</html>
+<footer class="footer"><p>Generated 2026-09-01 18:56 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
+</body></html>

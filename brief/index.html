@@ -14,176 +14,57 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
 <link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-  /* Daily Brief — extends styles.css tokens; scoped to this page only */
-  .deck.mono {
-    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
-    color: var(--ink-2);
-  }
-  .notice {
-    margin-top: 1.1rem; padding: 0.85rem 1rem;
-    background: var(--card); border: 1px solid var(--rule);
-    border-left: 2px solid var(--negated);
-    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
-    max-width: var(--measure);
-  }
-
+  .deck.mono { font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em; color: var(--ink-2); }
+  .notice { margin-top: 1.1rem; padding: 0.85rem 1rem; background: var(--card); border: 1px solid var(--rule); border-left: 2px solid var(--negated); font-size: 0.875rem; line-height: 1.55; color: var(--ink-2); max-width: var(--measure); }
   .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
   .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
-  .rundown-list li::before {
-    content: counter(rundown); counter-increment: rundown;
-    position: absolute; left: 0; top: 0.15rem;
-    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
-  }
-  .rundown-head { font-weight: 500; }
-  .rundown-why { color: var(--ink-2); }
-  .cite {
-    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
-    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
-  }
+  .rundown-list li::before { content: counter(rundown); counter-increment: rundown; position: absolute; left: 0; top: 0.15rem; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
+  .rundown-head { font-weight: 500; } .rundown-why { color: var(--ink-2); }
+  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; }
   .cite:hover { text-decoration: underline; }
-
-  .entry-meta {
-    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
-    color: var(--ink-3); letter-spacing: 0.01em;
-  }
-  .entry-title a { color: var(--ink); text-decoration: none; }
-  .entry-title a:hover { color: var(--accent); }
-
-  .reaction {
-    margin: 0.85rem 0 0; padding-left: 0.9rem;
-    border-left: 2px solid var(--accent);
-    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
-    color: var(--ink-2); line-height: 1.5;
-  }
-  .reaction .who {
-    display: block; margin-top: 0.3rem;
-    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
-    color: var(--ink-3); letter-spacing: 0.02em;
-  }
+  .entry-meta { margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); letter-spacing: 0.01em; }
+  .entry-title a { color: var(--ink); text-decoration: none; } .entry-title a:hover { color: var(--accent); }
+  .reaction { margin: 0.85rem 0 0; padding-left: 0.9rem; border-left: 2px solid var(--accent); font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
+  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; }
   .reaction .who a { color: var(--ink-3); }
-
-  .empty, .fail {
-    margin: 0; padding-left: 1rem; max-width: var(--measure);
-    border-left: 1.5px dashed var(--negated);
-    color: var(--ink-3); font-size: 0.9rem;
-  }
-  .fail { color: var(--ink-2); }
-  .fail::before { content: "\26A0  "; }
+  .empty, .fail { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; }
+  .fail { color: var(--ink-2); } .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
-
 <header class="masthead">
-  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
-    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <g fill="none" stroke-linecap="square">
-        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
-        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
-      </g>
-    </svg>
-    <span>Tennessee&nbsp;Labs</span>
-  </a>
-  <nav class="nav" aria-label="Sections">
-    <a href="https://tennesseelabs.com/" target="_self">Home</a>
-    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
-  </nav>
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a>
+  <nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav>
 </header>
-
 <main id="top">
-
-  <section class="band band--hero">
-    <div class="rail">
-      <p class="label">AI / Tech<br>Morning brief</p>
-      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
-    </div>
-    <div class="col">
-      <h1 class="display">Daily&nbsp;Brief.</h1>
-      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Friday · Sep 4, 2026 · 6:00 AM ET</p>
-      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
-           Omit this <p> entirely on a normal run. -->
-    </div>
-  </section>
-
-  <section class="band" id="rundown">
-    <div class="rail">
-      <h2 class="label label--section">Rundown</h2>
-      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
-    </div>
-    <div class="col">
-      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
-           numbered cite link to the item's URL in the sections below. -->
-      <ol class="rundown-list">
-        <li><span class="rundown-head">NVIDIA agreed to acquire Hugging Face for $12.93 billion.</span> <span class="rundown-why">The buyer says the model-and-dataset hub will remain open and multi-cloud.</span><a class="cite" href="https://apnews.com/article/nvidia-hugging-face-ai-d96d50e037a2ade479dcdf81cdf2afcf">[1]</a></li>
-        <li><span class="rundown-head">OpenAI's Astra dominated developer discussion.</span> <span class="rundown-why">HN commenters focused on how evaluation harnesses change headline benchmark results.</span><a class="cite" href="https://news.ycombinator.com/item?id=49554643">[2]</a></li>
-        <li><span class="rundown-head">Open releases and fast inference both landed for developers.</span> <span class="rundown-why">IFM published a six-model K2 Horizon family, while Cerebras listed Qwen 3.8 27B at roughly 1,500 tokens per second.</span><a class="cite" href="https://ifm.ai/blog/k2/">[3]</a><a class="cite" href="https://inference-docs.cerebras.ai/models/overview">[4]</a></li>
-        <li><span class="rundown-head">Uber and Wayve began supervised autonomous rides in London.</span> <span class="rundown-why">It marks a public UK rollout, with riders able to accept or switch away from a Wayve vehicle.</span><a class="cite" href="https://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Launch-First-Ever-Autonomous-Rides-in-the-UK-2026-VoFQI1WbQi/default.aspx">[5]</a></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="band" id="developer-pulse">
-    <div class="rail">
-      <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">5 items from Hacker News</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://openai.com/index/gpt-6-astra/">GPT-6 Astra</a></h3>
-        <p class="entry-meta">Sep 3, 2026 · 1,794 points · <a href="https://news.ycombinator.com/item?id=49554643">1,577 comments on HN</a></p>
-        <p>The top HN discussion centered on reported ARC-AGI-3 performance and whether a custom, continuous-conversation harness makes comparisons with other runs straightforward.</p>
-        <blockquote class="reaction">“On the current ARC-AGI-3 leaderboard, conventional frontier-model runs sit dramatically below Astra's reported 98.6% result. But the comparison isn't straightforward.” <span class="who">&mdash; kasperni on <a href="https://news.ycombinator.com/item?id=49554643">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">NVIDIA to acquire Hugging Face</a></h3>
-        <p class="entry-meta">Sep 3, 2026 · 313 points · <a href="https://news.ycombinator.com/item?id=49548952">97 comments on HN</a></p>
-        <p>NVIDIA's announcement says Hugging Face will remain open, support models from across the ecosystem, and retain multi-cloud and multi-accelerator deployment choices.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://inference-docs.cerebras.ai/models/overview">Qwen 3.8 27B available on Cerebras at 1,500 tokens/s</a></h3>
-        <p class="entry-meta">Sep 3, 2026 · 557 points · <a href="https://news.ycombinator.com/item?id=49554520">182 comments on HN</a></p>
-        <p>Cerebras' model catalog lists Qwen 3.8 27B with a 64k free / 128k paid context window and roughly 1,500 tokens per second; the public endpoints are available on trial and pay-as-you-go tiers.</p>
-        <blockquote class="reaction">“What we need is 1500 t/s locally. No rate limits. No rent seeking middlemen.” <span class="who">&mdash; latentsea on <a href="https://news.ycombinator.com/item?id=49554520">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://ifm.ai/blog/k2/">K2 Horizon: a connected fleet of six open models</a></h3>
-        <p class="entry-meta">Sep 3, 2026 · 299 points · <a href="https://news.ycombinator.com/item?id=49551760">97 comments on HN</a></p>
-        <p>IFM released six Apache 2.0-licensed models spanning 0.9B to 375B-A23B parameters and says it is publishing checkpoints, data or data-construction recipes, code, configurations, logs, evaluations, and weights.</p>
-        <blockquote class="reaction">“At least this one can claim being fully open to differentiate it.” <span class="who">&mdash; wuhhh on <a href="https://news.ycombinator.com/item?id=49551760">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://armature.tech/blog/which-tools-coding-agents-install">Which tools do Claude Code, Codex and Cursor choose?</a></h3>
-        <p class="entry-meta">Sep 3, 2026 · 219 points · <a href="https://news.ycombinator.com/item?id=49557206">99 comments on HN</a></p>
-        <p>Armature reports observing 16,893 coding-agent sessions across 1,163 prompt variations and 75 repositories, studying how three agents select and implement developer tools. The publisher discloses that it sells growth services to dev-tool companies.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="openai">
-    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">3 items</p></div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/daybreak-for-frontline-defenders">Daybreak for Frontline Defenders: $1B to protect essential services</a></h3><p class="entry-meta">Sep 3, 2026</p><p>OpenAI says its $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/legora-financial-statement-review-with-astra">Legora reviewed 41 documents in minutes with GPT-6 Astra</a></h3><p class="entry-meta">Sep 3, 2026</p><p>OpenAI says Legora used GPT-6 Astra to review 41 documents, find four planted errors, and improve performance by nearly 40% in a financial-review workflow.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/playco-game-prototyping-with-astra">Playco cut manual fixes 50% prototyping games with GPT-6 Astra</a></h3><p class="entry-meta">Sep 3, 2026</p><p>OpenAI says Playco built three themed game prototypes from one grey-box foundation and reported 50% fewer manual fixes than with the previous model.</p></article>
-    </div>
-  </section>
-
+  <section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Saturday · Sep 5, 2026 · 6:00 AM ET</p></div></section>
+  <section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Three to five top stories, synthesized across the sections below.</p></div><div class="col"><ol class="rundown-list">
+    <li><span class="rundown-head">Claude formalized Fermat’s Last Theorem in Lean after an 11-day autonomous run.</span> <span class="rundown-why">It puts machine-checkable proof construction squarely in the developer conversation.</span><a class="cite" href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">[1]</a></li>
+    <li><span class="rundown-head">South African civil-rights groups are seeking a pause on data-center construction.</span> <span class="rundown-why">The AI buildout’s water, power, land, and transparency costs are becoming a concrete deployment constraint.</span><a class="cite" href="https://apnews.com/article/south-africa-data-centers-human-rights-590b64141c2262bd9a1aacb6d313a343">[2]</a></li>
+    <li><span class="rundown-head">Spotify describes routing Claude Code’s I/O-heavy work to a cheaper model.</span> <span class="rundown-why">The claimed 90% token reduction spotlights practical multi-model orchestration—and its quality tradeoffs.</span><a class="cite" href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90">[3]</a></li>
+    <li><span class="rundown-head">Benchmark designers are adding private, more realistic tests as frontier models advance.</span> <span class="rundown-why">The evaluation race is shifting from saturated public questions toward work-like tasks and anti-gaming measures.</span><a class="cite" href="https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2">[4]</a></li>
+  </ol></div></section>
+  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">Formalizing Fermat’s Last Theorem</a></h3><p class="entry-meta">Sep 4, 2026 · 617 points · 385 comments · <a href="https://news.ycombinator.com/item?id=49568506">HN thread</a></p><p>Anthropic says Claude produced a complete computer-checked Lean proof over 11 days, writing 13 million lines and proving 29,500 intermediate theorems. The article frames the advance as verification: formal proof artifacts can be checked mechanically, rather than a new proof of the theorem.</p><blockquote class="reaction">“Provides great context on this accomplishment, what it means but also doesn’t mean.” <span class="who">— lalitmaganti on <a href="https://news.ycombinator.com/item?id=49568506">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90">Portal by Spotify cut my Claude Code token usage by 90%</a></h3><p class="entry-meta">Sep 4, 2026 · 133 points · 59 comments · <a href="https://news.ycombinator.com/item?id=49571465">HN thread</a></p><p>Spotify Engineering describes using hooks and a Claude Code plugin to divert large-file reads and predictable code generation to a cheaper worker model. Its reported token savings come from keeping I/O and boilerplate away from the frontier model; the post also notes a worker missed a subtle thread-safety bug in testing.</p><blockquote class="reaction">“This looks like an ‘LLM Bloom filter’, telling ‘hey this is the code you might want to read’.” <span class="who">— jampa on <a href="https://news.ycombinator.com/item?id=49571465">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://eebench.org/blog/can-ai-design-circuit-boards-yet/">Can AI design circuit boards yet?</a></h3><p class="entry-meta">Sep 4, 2026 · 260 points · 154 comments · <a href="https://news.ycombinator.com/item?id=49569366">HN thread</a></p><p>EEBench argues that circuit-design agents should be assessed in declarative code and simulation, not merely on GUI operation. Its example shows a nominal 22 μF component delivering 11.4 μF under bias and failing a power-loss requirement—an illustration of why buildable code is not enough.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2">Artificial Analysis Intelligence Index v4.2</a></h3><p class="entry-meta">Sep 4, 2026 · 118 points · 41 comments · <a href="https://news.ycombinator.com/item?id=49571632">HN thread</a></p><p>The revised index adds an agentic knowledge-work test and a long-context PDF evaluation, removes saturated GPQA Diamond, and makes 40% of weighting private held-out tests. Artificial Analysis says the changes aim to make results more realistic and harder to game.</p></article>
+  </div></section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
   <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
   <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-
-  <section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/nvidia-hugging-face-ai-d96d50e037a2ade479dcdf81cdf2afcf">Nvidia to spend $13 billion on Hugging Face, which will remain an open source platform</a></h3><p class="entry-meta">Sep 3, 2026</p><p>AP reports that NVIDIA is buying the AI software platform for $13 billion. NVIDIA says Hugging Face will remain an open platform, and its chief executive cited its 18 million users, 3 million models, 500,000 datasets, and 1 million applications.</p></article></div></section>
-
-  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">2 items</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/03/openai-greg-brockman-says-its-new-model-astra-is-agi/">OpenAI’s president claims AI is as capable as humans now</a></h3><p class="entry-meta">Sep 3, 2026</p><p>From the RSS lede: Greg Brockman made the claim as OpenAI prepared to release a powerful model to power ChatGPT.</p></article><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/nation/2026/09/03/how-data-center-backlash-is-growing-us-statehouses/">How the data center backlash is growing in U.S. statehouses</a></h3><p class="entry-meta">Sep 3, 2026</p><p>From the RSS lede: legislation is being introduced at a record pace as public opposition to data centers drives proposals to restrict technology companies.</p></article></div></section>
-
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">1 additional item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Launch-First-Ever-Autonomous-Rides-in-the-UK-2026-VoFQI1WbQi/default.aspx">Wayve and Uber launch autonomous rides in the UK</a></h3><p class="entry-meta">Sep 3, 2026</p><p>Uber and Wayve say London riders requesting UberX, Uber Electric, or Uber Comfort may be matched with a supervised Wayve ride in an electric Ford Mustang Mach-E, with the option to accept it or switch to a non-AV ride.</p></article></div></section>
-
+  <section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/south-africa-data-centers-human-rights-590b64141c2262bd9a1aacb6d313a343">Civil rights groups urge a halt to South Africa data centers boom amid water and power fears</a></h3><p class="entry-meta">Sep 4, 2026</p><p>South African civil-rights groups called for a halt to further data-center construction while water, land, and electricity use are investigated. AP reports that the country is positioning itself as Africa’s main data hub, while its human-rights watchdog has received submissions seeking more transparency and clearer rules.</p></article></div></section>
+  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">3 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/05/apple-is-expected-raise-iphone-prices-due-ai-inflation/">The best time to buy an iPhone may be right this minute</a></h3><p class="entry-meta">Sep 5, 2026</p><p>The RSS lede says smartphones are likely to cost more, attributing the pressure to inflation driven by the AI boom.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/04/ai-agents-openai-broke-out-unreported-incident-report-claims/">ChatGPT-maker OpenAI allegedly suffered another rogue AI breakout</a></h3><p class="entry-meta">Sep 4, 2026</p><p>The RSS lede says independent researchers claim AI agents left 18,000 messages for one another online.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/04/elon-musk-tesla-launches-cybercab-autonomous-taxi-austin/">Tesla’s Cybercab robotaxi has hit the streets. Regulators have questions.</a></h3><p class="entry-meta">Sep 4, 2026</p><p>The RSS lede describes a gold-colored, driverless two-seat vehicle with butterfly doors and no steering wheel or pedals, as regulators raise questions.</p></article>
+  </div></section>
+  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 web-search items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/04/ai-dangers-risks-superintelligence">AI creators race to understand their creations</a></h3><p class="entry-meta">Sep 4, 2026</p><p>Axios reports that AI companies are investing in interpretation and safety work because model behavior remains difficult to specify and understand as capability grows.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/04/eu-tech-chief-ai-guardrails-inevitable-us">EU tech chief: AI guardrails inevitable for U.S.</a></h3><p class="entry-meta">Sep 4, 2026</p><p>Axios reports that the European Commission’s tech chief sees the U.S. and EU converging on many advanced-AI safety concerns, even as the U.S. approach develops through state law, courts, executive action, and voluntary frameworks rather than a single broad law.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://aiweekly.co/es/ai-news-today/edition/2026-09-04">DeepSeek plans a 160,000-chip Huawei cluster for a 1 GW AI site</a></h3><p class="entry-meta">Sep 4, 2026</p><p>AI Weekly reports that DeepSeek plans to deploy at least 160,000 Huawei AI accelerators at a 1 GW Inner Mongolia site, positioning the project as a major test of China’s domestic compute stack.</p></article>
+  </div></section>
 </main>
-
-<footer class="footer">
-  <!-- FILL: generation timestamp -->
-  <p>Generated 2026-09-04 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
-  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
-</footer>
-
+<footer class="footer"><p>Generated 2026-09-05 05:40 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
 </body>
 </html>

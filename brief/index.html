@@ -20,44 +20,80 @@
   .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
   .rundown-list li::before { content: counter(rundown); counter-increment: rundown; position: absolute; left: 0; top: 0.15rem; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
   .rundown-head { font-weight: 500; } .rundown-why { color: var(--ink-2); }
-  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; } .cite:hover { text-decoration: underline; }
+  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; }
+  .cite:hover { text-decoration: underline; }
   .entry-meta { margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); letter-spacing: 0.01em; }
   .entry-title a { color: var(--ink); text-decoration: none; } .entry-title a:hover { color: var(--accent); }
   .reaction { margin: 0.85rem 0 0; padding-left: 0.9rem; border-left: 2px solid var(--accent); font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
-  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; } .reaction .who a { color: var(--ink-3); }
-  .empty, .fail { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; } .fail { color: var(--ink-2); } .fail::before { content: "\26A0  "; }
+  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; }
+  .reaction .who a { color: var(--ink-3); }
+  .empty, .fail { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; }
+  .fail { color: var(--ink-2); } .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
 <header class="masthead">
-  <a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a>
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg>
+    <span>Tennessee&nbsp;Labs</span>
+  </a>
   <nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav>
 </header>
 <main id="top">
-  <section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Sunday · Sep 6, 2026 · 6:00 AM ET</p></div></section>
-  <section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Four top stories, synthesized across the sections below.</p></div><div class="col"><ol class="rundown-list">
-    <li><span class="rundown-head">A small robot-arm comparison put GPT-6 Astra at 19/20 on a block-placement task.</span> <span class="rundown-why">The reported gains did not carry over to a precision-insertion task.</span><a class="cite" href="https://openai.robocurve.org/gpt-6-astra/">[1]</a></li>
-    <li><span class="rundown-head">OpenAI is expanding its state-policy team with three hires.</span> <span class="rundown-why">The move follows growing state-level AI regulation and cyber-policy pressure.</span><a class="cite" href="https://www.axios.com/2026/09/05/openai-state-policy-team">[2]</a></li>
-    <li><span class="rundown-head">Campaign disclosures point to widening use of AI tools in the U.S. midterms.</span> <span class="rundown-why">The reported use includes advertising despite providers’ election-use restrictions.</span><a class="cite" href="https://www.washingtonpost.com/politics/2026/09/05/chatgpt-bans-campaigns-using-ai-make-ads-theyre-doing-it-anyway/">[3]</a></li>
-    <li><span class="rundown-head">The AI boom is being cited as a source of smartphone-price pressure.</span> <span class="rundown-why">A Washington Post RSS lede flags AI-driven inflation ahead of the next iPhone cycle.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/09/05/apple-is-expected-raise-iphone-prices-due-ai-inflation/">[4]</a></li>
-  </ol></div></section>
-  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.robocurve.org/gpt-6-astra/">GPT-6 Astra on robot arms</a></h3><p class="entry-meta">Sep 4 · <a href="https://news.ycombinator.com/item?id=49582582">HN: 180 points, 13 comments</a></p><p>Robocurve reports that, under its shared policy and two-task setup, Astra completed a block-into-bowl task in 19 of 20 trials, versus 8 of 20 for Fable 5.1. On the puzzle insertion task, both models completed 2 of 20 trials; the report also estimates lower cost and runtime for Astra.</p><blockquote class="reaction">“The costs will need to go way way down … $2 to put away a block is very expensive labor.” <span class="who">&mdash; gamerDude on <a href="https://news.ycombinator.com/item?id=49582582">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://github.com/okf-memory/okf-agent-memory">OKF Agent Memory — Git-native persistent memory for AI coding agents</a></h3><p class="entry-meta">Sep 5 · <a href="https://news.ycombinator.com/item?id=49581240">HN: 66 points, 12 comments</a></p><p>This new Go project stores agent knowledge as version-controlled Markdown with YAML front matter, adding local BM25 search, validation, progressive disclosure, and an MCP server. Its README claims sub-300µs in-memory search and no external database dependencies.</p><blockquote class="reaction">“How well does the model adhere to using this in a harness like Codex …?” <span class="who">&mdash; triyambakam on <a href="https://news.ycombinator.com/item?id=49581240">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2609.03344">Large-Language Models as a Cognitive Virus</a></h3><p class="entry-meta">Sep 3 · <a href="https://news.ycombinator.com/item?id=49580164">HN: 270 points, 198 comments</a></p><p>An arXiv paper models LLM adoption using a viral analogy, describing possible tipping points toward persistent dependence and proposing conditions for “cognitive immunization.” It is a theoretical model, not an empirical finding about users.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/">Claude’s new system prompt really doesn’t want to reproduce song lyrics</a></h3><p class="entry-meta">Sep 2 · <a href="https://news.ycombinator.com/item?id=49575143">HN: 68 points, 91 comments</a></p><p>Simon Willison’s diff-based review highlights new Claude prompt language on declining requests for lyrics, poems, and passages from books or articles, including repeated or narrowed requests in the same conversation.</p></article>
-  </div></section>
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div></section>
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div></section>
-  <section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div></section>
-  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/05/apple-is-expected-raise-iphone-prices-due-ai-inflation/">The best time to buy an iPhone may be right this minute</a></h3><p class="entry-meta">Sep 5</p><p>RSS lede: Whatever the reader’s preferred smartphone, it is likely to cost more; the article attributes that pressure to inflation driven by the AI boom.</p></article></div></section>
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/05/openai-state-policy-team">OpenAI expands policy team amid legislative headwinds</a></h3><p class="entry-meta">Sep 5</p><p>Axios reports three hires for OpenAI’s state-policy and partnerships work: Jessica Schumer in the Northeast, Caulder Harvill-Childs in the Southeast, and Thomas MacLellan on state cyber-defense policy.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/politics/2026/09/05/chatgpt-bans-campaigns-using-ai-make-ads-theyre-doing-it-anyway/">ChatGPT bans campaigns from using AI to make ads. They’re doing it anyway.</a></h3><p class="entry-meta">Sep 5</p><p>The Washington Post found 39 congressional candidates disclosing payments for OpenAI subscriptions; two reported advertising uses despite the company’s policy against using its tools to generate campaign ads. The report says filings likely understate overall campaign use.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/politics/2026/09/05/mystery-behind-an-audio-clip-that-helped-upend-senate-race/">The mystery behind an audio clip that helped upend a Senate race</a></h3><p class="entry-meta">Sep 5</p><p>The Washington Post reports that forensic specialists found no evidence an audio clip in a Michigan political dispute was AI-generated or manipulated, but could not authenticate it. The case illustrates how AI’s existence can also make it easier to dismiss authentic material as fake.</p></article>
-  </div></section>
+  <section class="band band--hero">
+    <div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div>
+    <div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Monday · Sep 7, 2026 · 6:00 AM ET</p></div>
+  </section>
+  <section class="band" id="rundown">
+    <div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Five top stories, synthesized across the sections below.</p></div>
+    <div class="col"><ol class="rundown-list">
+      <li><span class="rundown-head">OpenAI’s chief scientist argues that stronger safeguards and international coordination are needed as AI capability rises.</span> <span class="rundown-why">The company’s latest public framing puts alignment at the center of scaling.</span><a class="cite" href="https://openai.com/index/an-alien-mind">[1]</a></li>
+      <li><span class="rundown-head">OpenAI says coding agents are changing how its researchers code, run experiments, and take on more complex work.</span> <span class="rundown-why">It is a concrete signal of AI being used to accelerate AI research itself.</span><a class="cite" href="https://openai.com/index/research-acceleration-view-inside-openai">[2]</a></li>
+      <li><span class="rundown-head">OpenAI, AIRPPU, and WAN-IFRA launched an AI program for Ukrainian news organizations.</span> <span class="rundown-why">The effort explicitly pairs newsroom innovation with resilience and independent journalism.</span><a class="cite" href="https://openai.com/index/supporting-independent-journalism-in-ukraine">[3]</a></li>
+      <li><span class="rundown-head">Google DeepMind selected 16 Asia-Pacific organizations for an AI-for-the-Planet accelerator.</span> <span class="rundown-why">The cohort targets biodiversity, sustainable agriculture, and carbon work.</span><a class="cite" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/">[4]</a></li>
+      <li><span class="rundown-head">Authors are contesting publisher and agent claims on payments from Anthropic’s copyright settlement.</span> <span class="rundown-why">The dispute has shifted attention from the settlement total to how individual payouts are allocated.</span><a class="cite" href="https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/">[5]</a></li>
+    </ol></div>
+  </section>
+  <section class="band" id="developer-pulse">
+    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">2 high-signal HN discussions</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/an-alien-mind">An Alien Mind</a></h3><p class="entry-meta">Sep 6 · <a href="https://news.ycombinator.com/item?id=49588080">HN: 411 points, 359 comments</a></p><p>OpenAI’s Jakub Pachocki reflects on increasingly capable AI, alignment, and the case for stronger safeguards and international coordination. The HN discussion focused on the essay’s safety claims and how they square with competitive incentives.</p><blockquote class="reaction">“This is a good essay, and makes me hopeful.” <span class="who">&mdash; vessenes on <a href="https://news.ycombinator.com/item?id=49588080">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/research-acceleration-view-inside-openai">Research acceleration: The view inside OpenAI</a></h3><p class="entry-meta">Sep 6 · <a href="https://news.ycombinator.com/item?id=49587217">HN: 173 points, 121 comments</a></p><p>OpenAI reports that coding agents are reshaping internal research, including code work, experiment velocity, task complexity, and research acceleration. Commenters concentrated on the report’s claimed mechanisms and terminology.</p><blockquote class="reaction">“Once you get to the meat of the article about how OpenAI's own researchers are using their tools it gets a lot more interesting.” <span class="who">&mdash; simonw on <a href="https://news.ycombinator.com/item?id=49587217">HN</a></span></blockquote></article>
+    </div>
+  </section>
+  <section class="band" id="openai">
+    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">3 items</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/supporting-independent-journalism-in-ukraine">Supporting independent journalism in Ukraine</a></h3><p class="entry-meta">Sep 7</p><p>OpenAI, AIRPPU, and WAN-IFRA launched an AI program intended to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/an-alien-mind">An Alien Mind</a></h3><p class="entry-meta">Sep 6</p><p>Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned, calling for stronger safeguards and international coordination.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/research-acceleration-view-inside-openai">Research acceleration: The view inside OpenAI</a></h3><p class="entry-meta">Sep 6</p><p>OpenAI says coding agents are reshaping AI research, with early internal data on usage, experiment velocity, task complexity, and research acceleration.</p></article>
+    </div>
+  </section>
+  <section class="band" id="anthropic">
+    <div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24 hours</p></div>
+    <div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div>
+  </section>
+  <section class="band" id="claude-blog">
+    <div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24 hours</p></div>
+    <div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div>
+  </section>
+  <section class="band" id="ap-news">
+    <div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">1 item</p></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/elon-musk-documentary-venice-film-festival-e4e9c5eca6e2656b54f1c639d339109f">Documentarian Alex Gibney on the power and influence of Elon Musk</a></h3><p class="entry-meta">Sep 7</p><p>Alex Gibney’s documentary <em>Musk</em> premieres at the Venice Film Festival. AP describes the nearly four-hour film as an examination of Musk’s power and influence.</p></article></div>
+  </section>
+  <section class="band" id="washington-post">
+    <div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24 hours</p></div>
+    <div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div>
+  </section>
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from today’s web sweep</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/">Backing 16 green AI projects in Asia-Pacific</a></h3><p class="entry-meta">Sep 7</p><p>Google DeepMind selected 16 organizations for its inaugural AI for the Planet APAC cohort, offering mentorship and tailored support for AI-powered biodiversity, agriculture, and carbon projects.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/">Authors push back as publishers and agents make claims on Anthropic settlement</a></h3><p class="entry-meta">Sep 6</p><p>Authors told TechCrunch that others were asserting claims on their settlement payments. The report says covered works pay $3,000 each, with the allocation depending on publication and rights status.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/5fed4e21cb3f80eef06087217dbbd9f7">Global shares are mixed as chipmaker shares rally in Tokyo and Seoul</a></h3><p class="entry-meta">Sep 7</p><p>AP reports that Tokyo and Seoul benchmarks rose with chipmakers, including Samsung Electronics and SK Hynix, among the gainers; one market commentator described the AI complex as a dependable local growth driver.</p></article>
+    </div>
+  </section>
 </main>
-<footer class="footer"><p>Generated 2026-09-06 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
+<footer class="footer"><p>Generated 2026-09-07 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
 </body>
 </html>

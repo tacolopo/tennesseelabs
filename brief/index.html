@@ -20,80 +20,44 @@
   .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
   .rundown-list li::before { content: counter(rundown); counter-increment: rundown; position: absolute; left: 0; top: 0.15rem; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
   .rundown-head { font-weight: 500; } .rundown-why { color: var(--ink-2); }
-  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; }
-  .cite:hover { text-decoration: underline; }
+  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; } .cite:hover { text-decoration: underline; }
   .entry-meta { margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); letter-spacing: 0.01em; }
   .entry-title a { color: var(--ink); text-decoration: none; } .entry-title a:hover { color: var(--accent); }
   .reaction { margin: 0.85rem 0 0; padding-left: 0.9rem; border-left: 2px solid var(--accent); font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
-  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; }
-  .reaction .who a { color: var(--ink-3); }
-  .empty, .fail { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; }
-  .fail { color: var(--ink-2); } .fail::before { content: "\26A0  "; }
+  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; } .reaction .who a { color: var(--ink-3); }
+  .empty, .fail { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; } .fail { color: var(--ink-2); } .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
-<header class="masthead">
-  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
-    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg>
-    <span>Tennessee&nbsp;Labs</span>
-  </a>
-  <nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav>
-</header>
+<header class="masthead"><a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a><nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav></header>
 <main id="top">
-  <section class="band band--hero">
-    <div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div>
-    <div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Monday · Sep 7, 2026 · 6:00 AM ET</p></div>
-  </section>
-  <section class="band" id="rundown">
-    <div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Five top stories, synthesized across the sections below.</p></div>
-    <div class="col"><ol class="rundown-list">
-      <li><span class="rundown-head">OpenAI’s chief scientist argues that stronger safeguards and international coordination are needed as AI capability rises.</span> <span class="rundown-why">The company’s latest public framing puts alignment at the center of scaling.</span><a class="cite" href="https://openai.com/index/an-alien-mind">[1]</a></li>
-      <li><span class="rundown-head">OpenAI says coding agents are changing how its researchers code, run experiments, and take on more complex work.</span> <span class="rundown-why">It is a concrete signal of AI being used to accelerate AI research itself.</span><a class="cite" href="https://openai.com/index/research-acceleration-view-inside-openai">[2]</a></li>
-      <li><span class="rundown-head">OpenAI, AIRPPU, and WAN-IFRA launched an AI program for Ukrainian news organizations.</span> <span class="rundown-why">The effort explicitly pairs newsroom innovation with resilience and independent journalism.</span><a class="cite" href="https://openai.com/index/supporting-independent-journalism-in-ukraine">[3]</a></li>
-      <li><span class="rundown-head">Google DeepMind selected 16 Asia-Pacific organizations for an AI-for-the-Planet accelerator.</span> <span class="rundown-why">The cohort targets biodiversity, sustainable agriculture, and carbon work.</span><a class="cite" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/">[4]</a></li>
-      <li><span class="rundown-head">Authors are contesting publisher and agent claims on payments from Anthropic’s copyright settlement.</span> <span class="rundown-why">The dispute has shifted attention from the settlement total to how individual payouts are allocated.</span><a class="cite" href="https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/">[5]</a></li>
-    </ol></div>
-  </section>
-  <section class="band" id="developer-pulse">
-    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">2 high-signal HN discussions</p></div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/an-alien-mind">An Alien Mind</a></h3><p class="entry-meta">Sep 6 · <a href="https://news.ycombinator.com/item?id=49588080">HN: 411 points, 359 comments</a></p><p>OpenAI’s Jakub Pachocki reflects on increasingly capable AI, alignment, and the case for stronger safeguards and international coordination. The HN discussion focused on the essay’s safety claims and how they square with competitive incentives.</p><blockquote class="reaction">“This is a good essay, and makes me hopeful.” <span class="who">&mdash; vessenes on <a href="https://news.ycombinator.com/item?id=49588080">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/research-acceleration-view-inside-openai">Research acceleration: The view inside OpenAI</a></h3><p class="entry-meta">Sep 6 · <a href="https://news.ycombinator.com/item?id=49587217">HN: 173 points, 121 comments</a></p><p>OpenAI reports that coding agents are reshaping internal research, including code work, experiment velocity, task complexity, and research acceleration. Commenters concentrated on the report’s claimed mechanisms and terminology.</p><blockquote class="reaction">“Once you get to the meat of the article about how OpenAI's own researchers are using their tools it gets a lot more interesting.” <span class="who">&mdash; simonw on <a href="https://news.ycombinator.com/item?id=49587217">HN</a></span></blockquote></article>
-    </div>
-  </section>
-  <section class="band" id="openai">
-    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">3 items</p></div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/supporting-independent-journalism-in-ukraine">Supporting independent journalism in Ukraine</a></h3><p class="entry-meta">Sep 7</p><p>OpenAI, AIRPPU, and WAN-IFRA launched an AI program intended to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/an-alien-mind">An Alien Mind</a></h3><p class="entry-meta">Sep 6</p><p>Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned, calling for stronger safeguards and international coordination.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/research-acceleration-view-inside-openai">Research acceleration: The view inside OpenAI</a></h3><p class="entry-meta">Sep 6</p><p>OpenAI says coding agents are reshaping AI research, with early internal data on usage, experiment velocity, task complexity, and research acceleration.</p></article>
-    </div>
-  </section>
-  <section class="band" id="anthropic">
-    <div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24 hours</p></div>
-    <div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div>
-  </section>
-  <section class="band" id="claude-blog">
-    <div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24 hours</p></div>
-    <div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div>
-  </section>
-  <section class="band" id="ap-news">
-    <div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">1 item</p></div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/elon-musk-documentary-venice-film-festival-e4e9c5eca6e2656b54f1c639d339109f">Documentarian Alex Gibney on the power and influence of Elon Musk</a></h3><p class="entry-meta">Sep 7</p><p>Alex Gibney’s documentary <em>Musk</em> premieres at the Venice Film Festival. AP describes the nearly four-hour film as an examination of Musk’s power and influence.</p></article></div>
-  </section>
-  <section class="band" id="washington-post">
-    <div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24 hours</p></div>
-    <div class="col"><p class="empty">Nothing new in the last 24 hours.</p></div>
-  </section>
-  <section class="band" id="ai-zeitgeist">
-    <div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from today’s web sweep</p></div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/">Backing 16 green AI projects in Asia-Pacific</a></h3><p class="entry-meta">Sep 7</p><p>Google DeepMind selected 16 organizations for its inaugural AI for the Planet APAC cohort, offering mentorship and tailored support for AI-powered biodiversity, agriculture, and carbon projects.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/">Authors push back as publishers and agents make claims on Anthropic settlement</a></h3><p class="entry-meta">Sep 6</p><p>Authors told TechCrunch that others were asserting claims on their settlement payments. The report says covered works pay $3,000 each, with the allocation depending on publication and rights status.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/5fed4e21cb3f80eef06087217dbbd9f7">Global shares are mixed as chipmaker shares rally in Tokyo and Seoul</a></h3><p class="entry-meta">Sep 7</p><p>AP reports that Tokyo and Seoul benchmarks rose with chipmakers, including Samsung Electronics and SK Hynix, among the gainers; one market commentator described the AI complex as a dependable local growth driver.</p></article>
-    </div>
-  </section>
+  <section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Tuesday · Sep 8, 2026 · 6:00 AM ET</p></div></section>
+  <section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Top stories synthesized from the sections below.</p></div><div class="col"><ol class="rundown-list">
+    <li><span class="rundown-head">Mistral raised €3 billion in a Series D.</span> <span class="rundown-why">The company says the record European tech round will expand frontier research, compute, and international growth.</span><a class="cite" href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/">[1]</a></li>
+    <li><span class="rundown-head">Australia proposed a user opt-out from social-feed algorithms.</span> <span class="rundown-why">The Digital Duty of Care proposal combines feed controls with child-safety duties and substantial potential penalties.</span><a class="cite" href="https://apnews.com/article/australia-social-media-algorithms-digital-duty-care-1eee351b39f22b340ef289c792f7993b">[2]</a></li>
+    <li><span class="rundown-head">Developer discussion focused on testing the agent harness, not only the model.</span> <span class="rundown-why">A 26-condition Rust evaluation tested whether prompting techniques and testing tools improve coding-agent correctness.</span><a class="cite" href="https://danluu.com/agentic-testing/">[3]</a></li>
+    <li><span class="rundown-head">AI-assisted mathematics remains a major discussion thread.</span> <span class="rundown-why">Axios reports OpenAI says Astra made progress on longstanding math and theoretical-CS problems, alongside work at other labs.</span><a class="cite" href="https://www.axios.com/2026/09/08/ai-math-anthropic-openai-google">[4]</a></li>
+  </ol></div></section>
+  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items · Hacker News</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/">Mistral raises €3B</a></h3><p class="entry-meta">Sep 8, 2026 · <a href="https://news.ycombinator.com/item?id=49605767">440 points · 307 comments on HN</a></p><p>Mistral says its Series D values it above €21 billion post-money and will fund frontier research, training compute, infrastructure, and commercial expansion. Samsung led the round alongside Scaleup Europe Fund and existing investor PSG Equity.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://github.com/iczelia/bzip3">bzip3</a></h3><p class="entry-meta">Sep 7, 2026 · <a href="https://news.ycombinator.com/item?id=49598291">407 points · 117 comments on HN</a></p><p>The project presents itself as a BZip2 successor, combining an order-0 context-mixing entropy coder, a suffix-array-based Burrows-Wheeler transform, and an LZ77/PPM-inspired RLE pass to target both stronger compression and speed.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://danluu.com/agentic-testing/">How well do agents use test/verification techniques?</a></h3><p class="entry-meta">Sep 8, 2026 · <a href="https://news.ycombinator.com/item?id=49605246">82 points · 25 comments on HN</a></p><p>An evaluation reused a Rust Zstd task across 26 prompt conditions—from TDD and fuzzing to formal methods—and four skills, measuring hidden-test pass rates and cost across 80 runs per condition and effort level.</p><blockquote class="reaction">“Models are one part of the system. Harnesses are more than models and need tuning too.” <span class="who">&mdash; tomrod on <a href="https://news.ycombinator.com/item?id=49605246">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://alvins82.github.io/hangar-harness-model-tests/">I tested 10 model/harness combinations on the same Three.js task</a></h3><p class="entry-meta">Sep 8, 2026 · <a href="https://news.ycombinator.com/item?id=49605433">79 points · 46 comments on HN</a></p><p>A one-page Three.js hangar prompt was run through different models and harnesses. The comparison records generated-token counts, duration, and tool errors, with a self-contained HTML output requested for each run.</p><blockquote class="reaction">“What I’m missing in all of those one-shot tests: How different are the results between multiple runs of the same setup?” <span class="who">&mdash; karlkloss on <a href="https://news.ycombinator.com/item?id=49605433">HN</a></span></blockquote></article>
+  </div></section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">2 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/australia-social-media-algorithms-digital-duty-care-1eee351b39f22b340ef289c792f7993b">Australian social media users to be offered choice to opt out of algorithms</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Australia’s government announced proposed legislation requiring social platforms to offer people over 16 lasting choices over what appears in their feeds. The proposal also addresses harmful content for children; AP reports potential penalties up to A$109.2 million.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/china-huawei-trial-trade-secrets-ed66f29aa8539941aa8fad311d511cc2">China’s Huawei Technologies faces racketeering trial in New York</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Huawei faces a criminal trial over allegations including trade-secret theft, wire and bank fraud, and sanctions-related conduct. AP notes the company has also expanded into chipmaking amid AI-driven processor demand.</p></article>
+  </div></section>
+  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items · web-search sweep</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/08/ai-math-anthropic-openai-google">AI is changing math</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Axios reports that OpenAI says GPT-6 Astra resolved or made substantial progress on longstanding mathematics and theoretical-computer-science problems. It places that work alongside reported mathematical advances from Anthropic and Google.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://news.bloomberglaw.com/insurance/anthropic-said-to-walk-away-from-6-billion-decart-acquisition">Anthropic said to walk away from $6 billion Decart purchase</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Bloomberg reports that Anthropic walked away from a potential $6 billion purchase of AI startup Decart. The report is attributed to people familiar with the matter.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://recipes.vllm.ai/openbmb/MiniCPM5-2B">MiniCPM5-2B recipe</a></h3><p class="entry-meta">Sep 7, 2026</p><p>The vLLM recipe describes OpenBMB’s 2B MiniCPM5 checkpoint as a dense model for on-device and resource-constrained deployment, highlighting agentic tool use, code generation, and reasoning; the recipe was updated September 7.</p></article>
+  </div></section>
 </main>
-<footer class="footer"><p>Generated 2026-09-07 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
+<footer class="footer"><p>Generated 2026-09-08 05:45 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
 </body>
 </html>

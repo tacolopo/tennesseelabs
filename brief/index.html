@@ -9,52 +9,190 @@
 <link rel="canonical" href="https://tennesseelabs.com/brief/">
 <base target="_blank">
 <link rel="icon" href="https://tennesseelabs.com/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
 <link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-  .deck.mono { font-family:var(--mono);font-size:.9rem;letter-spacing:.02em;color:var(--ink-2) }.notice{margin-top:1.1rem;padding:.85rem 1rem;background:var(--card);border:1px solid var(--rule);border-left:2px solid var(--negated);font-size:.875rem;line-height:1.55;color:var(--ink-2);max-width:var(--measure)}
-  .rundown-list{counter-reset:rundown;margin:0;padding:0;list-style:none;display:grid;gap:1.1rem}.rundown-list li{padding-left:1.7rem;position:relative;max-width:var(--measure)}.rundown-list li::before{content:counter(rundown);counter-increment:rundown;position:absolute;left:0;top:.15rem;font-family:var(--mono);font-size:.75rem;color:var(--accent)}.rundown-head{font-weight:500}.rundown-why{color:var(--ink-2)}.cite{font-family:var(--mono);font-size:.75em;color:var(--accent);vertical-align:super;margin-left:.2rem;text-decoration:none}.cite:hover{text-decoration:underline}
-  .entry-meta{margin:-.15rem 0 .55rem;font-family:var(--mono);font-size:.75rem;color:var(--ink-3);letter-spacing:.01em}.entry-title a{color:var(--ink);text-decoration:none}.entry-title a:hover{color:var(--accent)}.reaction{margin:.85rem 0 0;padding-left:.9rem;border-left:2px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-2);line-height:1.5}.reaction .who{display:block;margin-top:.3rem;font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--ink-3);letter-spacing:.02em}.reaction .who a{color:var(--ink-3)}.empty,.fail{margin:0;padding-left:1rem;max-width:var(--measure);border-left:1.5px dashed var(--negated);color:var(--ink-3);font-size:.9rem}.fail{color:var(--ink-2)}.fail::before{content:"\26A0  "}
+  /* Daily Brief — extends styles.css tokens; scoped to this page only */
+  .deck.mono {
+    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
+    color: var(--ink-2);
+  }
+  .notice {
+    margin-top: 1.1rem; padding: 0.85rem 1rem;
+    background: var(--card); border: 1px solid var(--rule);
+    border-left: 2px solid var(--negated);
+    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
+    max-width: var(--measure);
+  }
+
+  .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
+  .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
+  .rundown-list li::before {
+    content: counter(rundown); counter-increment: rundown;
+    position: absolute; left: 0; top: 0.15rem;
+    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
+  }
+  .rundown-head { font-weight: 500; }
+  .rundown-why { color: var(--ink-2); }
+  .cite {
+    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
+    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
+  }
+  .cite:hover { text-decoration: underline; }
+
+  .entry-meta {
+    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
+    color: var(--ink-3); letter-spacing: 0.01em;
+  }
+  .entry-title a { color: var(--ink); text-decoration: none; }
+  .entry-title a:hover { color: var(--accent); }
+
+  .reaction {
+    margin: 0.85rem 0 0; padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+    color: var(--ink-2); line-height: 1.5;
+  }
+  .reaction .who {
+    display: block; margin-top: 0.3rem;
+    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
+    color: var(--ink-3); letter-spacing: 0.02em;
+  }
+  .reaction .who a { color: var(--ink-3); }
+
+  .empty, .fail {
+    margin: 0; padding-left: 1rem; max-width: var(--measure);
+    border-left: 1.5px dashed var(--negated);
+    color: var(--ink-3); font-size: 0.9rem;
+  }
+  .fail { color: var(--ink-2); }
+  .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
-<header class="masthead"><a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a><nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav></header>
+
+<header class="masthead">
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <g fill="none" stroke-linecap="square">
+        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
+      </g>
+    </svg>
+    <span>Tennessee&nbsp;Labs</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="https://tennesseelabs.com/" target="_self">Home</a>
+    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
+  </nav>
+</header>
+
 <main id="top">
-<section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Wednesday · Sep 9, 2026 · 6:00 AM ET</p></div></section>
-<section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Three to five top stories, synthesized across the sections below.</p></div><div class="col"><ol class="rundown-list">
-<li><span class="rundown-head">OpenAI published an AI-generated Navier–Stokes solution with a Lean formal proof.</span> <span class="rundown-why">It puts a Millennium Prize problem at the center of a large developer and mathematics debate.</span><a class="cite" href="https://openai.com/index/navier-stokes-solution">[1]</a></li>
-<li><span class="rundown-head">ChatGPT Images 2.5 is the day’s other major OpenAI product release.</span> <span class="rundown-why">The company positions it around more personalized results from ideas, sketches, and reference photos.</span><a class="cite" href="https://openai.com/index/introducing-chatgpt-images-2-5">[2]</a></li>
-<li><span class="rundown-head">Meta launched Muse, a personal agent that can act on schedules, shopping, and longer-term plans.</span> <span class="rundown-why">The launch makes privacy and delegated action the immediate product questions.</span><a class="cite" href="https://apnews.com/article/meta-muse-ai-agent-3a4572eb4cf4e95d8a0dfdad6e6ca065">[3]</a></li>
-<li><span class="rundown-head">Mistral announced a €3B Series D.</span> <span class="rundown-why">The company says the capital will expand frontier research, training compute, and infrastructure.</span><a class="cite" href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/">[4]</a></li>
-</ol></div></section>
-<section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/navier-stokes-solution/">On the Navier–Stokes Millennium Prize Problem</a></h3><p class="entry-meta">Sep 8 · <a href="https://news.ycombinator.com/item?id=49613262">1,260 points, 1,008 comments</a></p><p>HN’s highest-signal AI thread followed OpenAI’s publication of an AI-generated solution and formal Lean proof for the Navier–Stokes problem. Discussion focused on the scale and cost of the agentic research run, alongside the claim itself.</p><blockquote class="reaction">“Don’t even try to do the math on how much that would cost at normal API prices.” <span class="who">— minimaxir on <a href="https://news.ycombinator.com/item?id=49613262">HN</a></span></blockquote></article>
-<article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/">AlphaGenome Atlas: a high-resolution map of human DNA</a></h3><p class="entry-meta">Sep 8 · <a href="https://news.ycombinator.com/item?id=49611251">560 points, 120 comments</a></p><p>Developers and researchers elevated Google DeepMind’s AlphaGenome Atlas announcement as a major science-oriented AI release.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-chatgpt-images-2-5/">ChatGPT Images 2.5</a></h3><p class="entry-meta">Sep 8 · <a href="https://news.ycombinator.com/item?id=49614720">341 points, 417 comments</a></p><p>HN discussion tracked OpenAI’s new image-generation release, which the company says is aimed at turning ideas, sketches, and reference photos into more polished personalized images.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://github.com/argonautlabsai/deltafin">Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs</a></h3><p class="entry-meta">Sep 8 · <a href="https://news.ycombinator.com/item?id=49616257">258 points, 131 comments</a></p><p>The author described streaming a 2.78T-parameter MoE’s expert weights from SSDs on an M5 Max MacBook Pro, reporting a steady 1 token/second decode rate and a much slower prefill path.</p><blockquote class="reaction">“The useful bits: one drive gives ≈52% of four, two ≈73%, three ≈90%; and prefill is slow.” <span class="who">— Argonautlabs on <a href="https://news.ycombinator.com/item?id=49616257">HN</a></span></blockquote></article>
-</div></section>
-<section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">5 items</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/codex-quantum-computing-experiments">How GPT-5.6 Sol helps run quantum computing experiments</a></h3><p class="entry-meta">Sep 8, 2026</p><p>OpenAI describes an MIT researcher using GPT-5.6 Sol with Codex to run quantum-computing experiments, analyze results, and calibrate qubits.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/the-work-now-within-reach">The Work Now Within Reach</a></h3><p class="entry-meta">Sep 8, 2026</p><p>OpenAI argues that more capable, affordable AI can broaden the work people and businesses can do while improving the economics of growth.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-chatgpt-images-2-5">Introducing ChatGPT Images 2.5</a></h3><p class="entry-meta">Sep 8, 2026</p><p>OpenAI says ChatGPT Images 2.5 helps users turn ideas, sketches, and reference photos into more personalized and polished images.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/navier-stokes-solution">On the Navier–Stokes Millennium Prize Problem</a></h3><p class="entry-meta">Sep 8, 2026</p><p>OpenAI published what it calls an AI-generated solution to the Navier–Stokes Millennium Prize Problem, with a writeup and a formal proof in Lean.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/teen-development-research-grants">Funding grants for new research into AI and teen development</a></h3><p class="entry-meta">Sep 8, 2026</p><p>OpenAI opened a $5 million grant program for independent research on generative AI’s effects on teen development, well-being, and safety.</p></article>
-</div></section>
-<section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-<section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform">Reducing cost and improving performance with Claude Platform</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Claude’s product blog recommends improving prompt-cache hit rates, removing legacy prompt anti-patterns, and calibrating effort to the task. Its customer-support example reports 90.5% held-out accuracy at about one-fifth the original cost after the configuration search.</p></article></div></section>
-<section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">3 items</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/apple-foldable-iphone-ternus-fd35312e6d894d5f3b055b3d62f22cd2">New Apple CEO to unveil latest iPhone lineup</a></h3><p class="entry-meta">Sep 9, 2026</p><p>AP reports that Apple’s latest iPhone event, led by new CEO John Ternus, is widely expected to include a foldable model. The report frames the launch as Apple entering a category already served by Samsung, Motorola, and Google.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/license-plate-readers-school-buses-connecticut-43e4546bb39afc677c671c4916be98e6">Connecticut towns are installing license plate reading cameras on school buses</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Several Connecticut towns are deploying BusPatrol cameras that capture drivers passing stopped buses and provide footage to law enforcement. AP reports that the systems are triggered by stopped-bus warning lights, while residents raise privacy and data-sharing concerns.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/meta-muse-ai-agent-3a4572eb4cf4e95d8a0dfdad6e6ca065">Meta launches personal AI agent, Muse, emphasizes safety and privacy</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Meta launched Muse for U.S. adults, saying its agent can handle tasks such as email and travel booking or help pursue longer-term goals. AP reports that Meta says it runs in a dedicated virtual machine housing the agent and the user’s data.</p></article>
-</div></section>
-<section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/09/openai-claims-it-solved-elusive-math-problem-with-1-million-prize/">OpenAI claims solution to one of math’s $1 million Millennium Prize problems</a></h3><p class="entry-meta">Sep 8, 2026</p><p>The Post reports that OpenAI released a technical paper for its result, which will now be closely read by mathematicians around the world.</p></article></div></section>
-<section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from today’s web discussion</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/09/trump-ai-plan-lacks-public-incident-reporting-guidelines">Trump AI framework lacks public incident reporting guidelines</a></h3><p class="entry-meta">Sep 9, 2026</p><p>Axios reports that the administration’s emerging AI framework does not include a process for companies to publicly report real-world incidents from advanced models before release, leaving key pre-deployment questions unresolved.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/09/openai-artificial-general-intelligence-safety">OpenAI is begging for someone to slow the AI race</a></h3><p class="entry-meta">Sep 9, 2026</p><p>Axios says AI leaders are warning that their own advances sharpen the tension between slowing down and the risk of falling behind, or continuing and risking loss of control.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/">Mistral raises €3B to make sovereign, open-weight AI the technology frontier</a></h3><p class="entry-meta">Sep 8, 2026</p><p>Mistral announced a €3 billion Series D at a post-money valuation above €21 billion, led by Samsung. It says the round will expand frontier research, training compute, infrastructure, commercial growth, and international reach.</p></article>
-</div></section>
+
+  <section class="band band--hero">
+    <div class="rail">
+      <p class="label">AI / Tech<br>Morning brief</p>
+      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
+    </div>
+    <div class="col">
+      <h1 class="display">Daily&nbsp;Brief.</h1>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Thursday · Sep 10, 2026 · 6:00 AM ET</p>
+      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
+           Omit this <p> entirely on a normal run. -->
+    </div>
+  </section>
+
+  <section class="band" id="rundown">
+    <div class="rail">
+      <h2 class="label label--section">Rundown</h2>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
+    </div>
+    <div class="col">
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
+      <ol class="rundown-list">
+        <li><span class="rundown-head">OpenAI introduced GPT-6 Astra for work.</span> <span class="rundown-why">The company says the model advances reasoning, computer use, writing, and design judgment.</span><a class="cite" href="https://openai.com/index/gpt-6-astra-next-generation-work">[1]</a></li>
+        <li><span class="rundown-head">Developers are debating what looped transformers mean for hidden reasoning.</span> <span class="rundown-why">A technical explainer and its HN thread focus on recurrent depth and the limits of chain-of-thought monitoring.</span><a class="cite" href="https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and">[2]</a></li>
+        <li><span class="rundown-head">Desert Ant Labs launched 18 on-device AI models.</span> <span class="rundown-why">Its pitch is specialized audio, vision, and text models that run locally instead of through cloud inference.</span><a class="cite" href="https://desertant.com/blog/introducing-desert-ant-labs/">[3]</a></li>
+        <li><span class="rundown-head">The policy conversation is widening from models to infrastructure.</span> <span class="rundown-why">New reporting links AI’s data-center buildout to potential permitting changes for temporary gas turbines.</span><a class="cite" href="https://www.axios.com/2026/09/10/trump-ease-environmental-rules-data-centers">[4]</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="developer-pulse">
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">4 items from Hacker News</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://desertant.com/blog/introducing-desert-ant-labs/">Desert Ant Labs: local, fast models that run on device</a></h3>
+        <p class="entry-meta">Sep 9 · 445 points · <a href="https://news.ycombinator.com/item?id=49624823">96 comments on HN</a></p>
+        <p>Desert Ant Labs launched 18 small, specialized models for audio, vision, and text, offered through SDKs for Swift, Kotlin, and JavaScript. It says the models run locally in milliseconds, with the first 12 stable and six beta releases available now.</p>
+        <blockquote class="reaction">“It’s an ANE optimized version of Parakeet, with our own inference, which enabled us to push performance to about 300x realtime speed on an iPhone 16/17.” <span class="who">&mdash; pveugen on <a href="https://news.ycombinator.com/item?id=49624823">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and">GPT-6 Astra, looped transformers, and hidden reasoning</a></h3>
+        <p class="entry-meta">Sep 9 · 428 points · <a href="https://news.ycombinator.com/item?id=49627370">141 comments on HN</a></p>
+        <p>Sebastian Raschka surveys recurrent depth and looping transformer blocks in the context of GPT-6 Astra, asking whether the technique changes what can be inferred from a model’s reasoning trace. The post also compares model performance through independent and harness-based benchmarks.</p>
+        <blockquote class="reaction">“No-one knows exactly how OpenAI have implemented looping.” <span class="who">&mdash; famouswaffles on <a href="https://news.ycombinator.com/item?id=49627370">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3">Qwen 3.8 follows GPT-5.5 Pro reasoning prefills</a></h3>
+        <p class="entry-meta">Sep 9 · 212 points · <a href="https://news.ycombinator.com/item?id=49630026">83 comments on HN</a></p>
+        <p>A GitHub Gist reran a reasoning-prefill experiment across 45 problems. It reports that Qwen3.8 A95B’s visible-answer overlap rose 18.18 percentage points when given the first 1% of GPT-5.5 Pro reasoning, and frames that result as suggestive rather than conclusive.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://hugovergnes.github.io/little-lm-3-8b/">Training a 3.8B LLM to 0.384 CORE for $998</a></h3>
+        <p class="entry-meta">Sep 10 · 73 points · <a href="https://news.ycombinator.com/item?id=49637435">13 comments on HN</a></p>
+        <p>Hugo Vergnes documents a 3.8B-parameter model trained from scratch on 65.3B tokens in 43 hours for $998. The write-up attributes its 0.384 CORE score to choices including a trapezoidal learning-rate schedule, Muon for matrix parameters, ClimbMix data, and FP8 training.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="openai">
+    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">3 items</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/gpt-6-astra-next-generation-work">GPT-6 Astra: The next generation in intelligence for work</a></h3><p class="entry-meta">Sep 9, 2026</p><p>OpenAI presents GPT-6 Astra as its most capable model for business, emphasizing advanced reasoning, computer use, and stronger writing and design judgment.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/ai-policy-window">The AI policy window is open. We need to act.</a></h3><p class="entry-meta">Sep 9, 2026</p><p>Chris Lehane argues that growing AI capability calls for stronger safety evidence, shared standards, and durable policy action while a policy window remains open.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/paul-christiano-joins-openai-foundation-board">Paul Christiano joins OpenAI Foundation Board</a></h3><p class="entry-meta">Sep 9, 2026</p><p>OpenAI says Paul Christiano has joined the Foundation Board and its Safety and Security Committee, bringing experience in alignment, safety, and standards.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+
+  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+
+  <section class="band" id="ap-news"><div class="rail"><h2 class="label label--section">AP News</h2><p class="rail-note">Fetch failed</p></div><div class="col"><p class="fail">Could not fetch the AI or Technology indexes after two attempts &mdash; HTTP 403 Forbidden.</p></div></section>
+
+  <section class="band" id="washington-post">
+    <div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">4 items</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/10/years-they-warned-ai-could-kill-all-humans-now-people-are-listening/">For years they warned AI could kill all humans. Now people are listening.</a></h3><p class="entry-meta">Sep 10, 2026</p><p>The Post reports that a once-peripheral AI-risk community has gained influence as AI agents demonstrate increasingly striking and concerning capabilities.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/09/anthropic-researcher-resigns-warning-reckless-race-toward-superintelligence/">Political world erupts as AI researchers warn of ‘extinction’ threat</a></h3><p class="entry-meta">Sep 9, 2026</p><p>The Post says Anthropic’s safety-focused reputation is being tested by researchers who fear the company has joined a race that could end catastrophically.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/business/2026/09/09/apple-increased-prices-its-new-iphone-18-line-older-models/">Apple just raised prices on new and older iPhones. Here’s what they cost now.</a></h3><p class="entry-meta">Sep 9, 2026</p><p>The Post reports that Apple and other device makers have raised prices partly amid shortages of key components sought by AI companies.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/09/peter-thiel-backed-firm-make-low-cost-missiles-amid-us-shortage/">Peter Thiel-backed firm to make low-cost missiles amid U.S. shortage</a></h3><p class="entry-meta">Sep 9, 2026</p><p>Defense startup Covenant says it has about $150 million in orders that will begin delivery in 2027, according to the Post.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://apnews.com/article/0f6ca61301630134607551b1dab0d632">China hits back at US claims of ‘malicious’ AI distillation</a></h3><p class="entry-meta">Sep 9, 2026</p><p>AP reports that China rejected U.S. claims that Chinese AI developers extracted capabilities from advanced American models; the allegations appeared in a joint U.S. cybersecurity advisory.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://elpais.com/economia/2026-09-09/el-ecosistema-europeo-de-la-ia-avanza-con-mistral-pero-todavia-queda-muy-lejos-de-ee-uu.html">Mistral announces a €3 billion funding round</a></h3><p class="entry-meta">Sep 9, 2026</p><p>El País reports that Mistral announced a €3 billion round, described as the largest in European technology history, at a €21 billion valuation.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/10/trump-ease-environmental-rules-data-centers">Trump moves to ease environmental rules for data centers</a></h3><p class="entry-meta">Sep 10, 2026</p><p>Axios reports that the EPA is considering whether some temporary gas turbines could be treated as mobile equipment rather than stationary pollution sources, potentially easing permits for infrastructure tied to the AI boom.</p></article>
+    </div>
+  </section>
+
 </main>
-<footer class="footer"><p>Generated 2026-09-09 05:43 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
+
+<footer class="footer">
+  <p>Generated 2026-09-10 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
+</footer>
+
 </body>
 </html>

@@ -90,47 +90,122 @@
 </header>
 
 <main id="top">
-  <section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Tuesday · Sep 15, 2026 · 6:00 AM ET</p></div></section>
-  <section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Top stories synthesized from the sections below.</p></div><div class="col"><ol class="rundown-list">
-  <li><span class="rundown-head">OpenAI published two case studies on agents doing inbox work and production-system work.</span> <span class="rundown-why">They put fine-tuning, memory, feedback loops, software changes, and monitoring in the spotlight.</span><a class="cite" href="https://openai.com/index/fyxer">[1]</a><a class="cite" href="https://openai.com/index/perplexity-improving-accuracy-with-astra">[2]</a></li>
-  <li><span class="rundown-head">Anthropic says agentic coding pushed its CI job volume up 25× in six months.</span> <span class="rundown-why">Its response was to redesign deterministic test selection rather than keep applying short-lived capacity fixes.</span><a class="cite" href="https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic">[3]</a></li>
-  <li><span class="rundown-head">A Ruby maintainer says OpenAI bots appeared to probe a RubyGems caching weakness and RubyDoc’s build environment.</span> <span class="rundown-why">The episode is driving concrete concern about package-install and documentation-build isolation.</span><a class="cite" href="https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/">[4]</a></li>
-  <li><span class="rundown-head">Perplexity brought a local agent workflow to compatible Windows RTX PCs.</span> <span class="rundown-why">The product combines local work with permissioned cloud escalation and connectors to common work systems.</span><a class="cite" href="https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/">[5]</a></li>
-  </ol></div></section>
-  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div><div class="col">
-  <article class="entry"><h3 class="entry-title"><a href="https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/">OpenAI bots knew about the RubyGems caching vulnerability</a></h3><p class="entry-meta">Sep 14, 2026 · 472 points · <a href="https://news.ycombinator.com/item?id=49695876">383 comments on HN</a></p><p>A Ruby maintainer writes that bots appeared to exploit a Fastly caching weakness and use RubyDoc’s documentation processing to execute package code in a networked container. The post points to a package ecosystem boundary that deserves hardening.</p><blockquote class="reaction">“We really need sandboxed builds in every language ecosystem at this point.” <span class="who">— swiftcoder on <a href="https://news.ycombinator.com/item?id=49695876">HN</a></span></blockquote></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://andonlabs.com/blog/why-we-built-pion">Pion, an agent designed to run any company autonomously</a></h3><p class="entry-meta">Sep 14, 2026 · 423 points · <a href="https://news.ycombinator.com/item?id=49700477">524 comments on HN</a></p><p>Andon Labs opened a research preview of the platform it uses in autonomous-business experiments, from vending machines to a store and café. It frames Pion as a way to test where models succeed and fail in real-world operations.</p><blockquote class="reaction">“There was surprisingly little information on how they actually do this.” <span class="who">— extralongdivisi on <a href="https://news.ycombinator.com/item?id=49700477">HN</a></span></blockquote></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review">GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 model good enough for code review?</a></h3><p class="entry-meta">Sep 14, 2026 · 147 points · <a href="https://news.ycombinator.com/item?id=49703003">136 comments on HN</a></p><p>Entelligence’s 50-pull-request evaluation found Luna much cheaper per run, but with fewer verified bugs, more failed findings, and fewer security bugs than Astra. Its conclusion: use the cheaper model for routine correctness work, not alone on authentication or permissions.</p><blockquote class="reaction">“$0.10 extra per PR review is nothing.” <span class="who">— StevenWaterman on <a href="https://news.ycombinator.com/item?id=49703003">HN</a></span></blockquote></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://github.com/anuj0456/OpenArch">OpenArch — PyTorch implementations of modern LLM architectures</a></h3><p class="entry-meta">Sep 14, 2026 · 138 points · <a href="https://news.ycombinator.com/item?id=49693384">31 comments on HN</a></p><p>This open-source learning repository implements modern open-weight LLM architectures in PyTorch from scratch, with an emphasis on readability.</p></article>
-  </div></section>
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">2 items</p></div><div class="col">
-  <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/fyxer">How Fyxer built an AI executive assistant people trust</a></h3><p class="entry-meta">Sep 14, 2026</p><p>OpenAI says Fyxer uses its models, fine-tuning, memory, and feedback from real users to organize inboxes and draft messages in a user’s voice.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/perplexity-improving-accuracy-with-astra">Perplexity trusts GPT-6 Astra with end-to-end systems</a></h3><p class="entry-meta">Sep 14, 2026</p><p>OpenAI says Perplexity uses Astra for communication, software changes, and production monitoring, with operators checking in less often than with earlier models.</p></article>
-  </div></section>
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">4 items</p></div><div class="col">
-  <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic">Agentic coding is straining CI. Here’s how we scaled test impact analysis at Anthropic</a></h3><p class="entry-meta">Sep 14, 2026</p><p>Anthropic says its CI job volume rose 25× over six months as engineers shipped more code and tests grew. Its test-selection service now uses horizontally scaled, deterministic listener and selector components to keep test history and PR choices synchronized.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-for-financial-advisors">Claude for Financial Advisors</a></h3><p class="entry-meta">Sep 14, 2026</p><p>Anthropic introduced connectors and workflow skills for financial advisors, covering research, preparation, documentation, portfolio analysis, and compliance checks across custodians, CRMs, and planning tools.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/how-healthcare-organizations-use-claude-tag">How healthcare organizations use Claude Tag</a></h3><p class="entry-meta">Sep 14, 2026</p><p>A new enterprise post on how healthcare organizations use Claude Tag.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/deploying-ai-from-pilot-to-production">Deploying AI from pilot to production</a></h3><p class="entry-meta">Sep 14, 2026</p><p>A new enterprise post on moving AI deployments from pilot projects to production.</p></article>
-  </div></section>
-  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">5 items</p></div><div class="col">
-  <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/15/investors-are-trying-work-out-financial-costs-an-ai-slowdown/">AI companies buoyed the U.S. economy. What happens if they slow down?</a></h3><p class="entry-meta">Sep 15, 2026</p><p>The Post reports that the president has argued a slower AI-development pace could weaken an engine of U.S. economic growth.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/politics/2026/09/14/onstage-call-with-nvidia-ceo-trump-deems-ai-fears-hoax/">In onstage call with Nvidia CEO, Trump deems AI fears a ‘hoax’</a></h3><p class="entry-meta">Sep 14, 2026</p><p>The Post reports that the president rejected industry leaders’ calls for a coordinated slowdown in AI development.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/14/anthropic-openai-google-discussed-creating-new-ai-safety-body/">Trump wants to push tempo of AI race, countering tech leaders’ call for slowdown</a></h3><p class="entry-meta">Sep 14, 2026</p><p>The Post reports that the president forcefully rejected the idea of U.S. AI companies agreeing to slow their work.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/14/china-pushes-back-calls-an-ai-slowdown-trump-xi-meeting-looms/">China says U.S. tech leaders’ calls for AI slowdown are ‘malicious competition’</a></h3><p class="entry-meta">Sep 14, 2026</p><p>The Post reports that China’s foreign ministry and state security chief rejected the proposed slowdown as harmful competition.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/world/2026/09/14/king-charles-host-ai-leaders-disaster-warnings-mount/">King Charles to host AI leaders as disaster warnings mount</a></h3><p class="entry-meta">Sep 14, 2026</p><p>The Post reports that a planned meeting has gained urgency amid warnings from within the AI industry.</p></article>
-  </div></section>
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
-  <article class="entry"><h3 class="entry-title"><a href="https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/">Perplexity Portable Computer is now available on Windows, powered by NVIDIA RTX</a></h3><p class="entry-meta">Sep 14, 2026</p><p>NVIDIA says Perplexity’s local agent now supports compatible Windows RTX PCs. It keeps sensitive work on-device, offers permissioned cloud support for harder tasks, and connects to tools including GitHub, Slack, Gmail, and OneDrive.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/15/ai-trust-safety-anthropic-openai">Why a swift AI pause is unlikely: no one trusts AI companies</a></h3><p class="entry-meta">Sep 15, 2026</p><p>Axios reports that calls for new AI guardrails face resistance from administration factions, executives worried about competition, and advocates of cheaper, customizable open models.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/15/ai-cybersecurity-stocks">AI fears send cybersecurity stocks higher</a></h3><p class="entry-meta">Sep 15, 2026</p><p>Axios reports that concerns about rogue agents and cyberattacks are also strengthening the investment case for cybersecurity companies.</p></article>
-  </div></section>
+
+  <section class="band band--hero">
+    <div class="rail">
+      <p class="label">AI / Tech<br>Morning brief</p>
+      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
+    </div>
+    <div class="col">
+      <h1 class="display">Daily&nbsp;Brief.</h1>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Wednesday · Sep 16, 2026 · 6:00 AM ET</p>
+      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
+           Omit this <p> entirely on a normal run. -->
+    </div>
+  </section>
+
+  <section class="band" id="rundown">
+    <div class="rail">
+      <h2 class="label label--section">Rundown</h2>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
+    </div>
+    <div class="col">
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
+      <ol class="rundown-list">
+        <li><span class="rundown-head">TypeSafe AI introduced Jev, a model aimed at fast, typed decisions rather than text generation.</span> <span class="rundown-why">Its claims of calibrated outputs, 70–500 ms responses, and much lower token cost make it a notable alternative for classification and routing workloads.</span><a class="cite" href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">[1]</a></li>
+        <li><span class="rundown-head">Claude expanded its Small Business product with workflows, integrations, and training.</span> <span class="rundown-why">The release is oriented around embedding Claude in the tools owners already use.</span><a class="cite" href="https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs">[2]</a></li>
+        <li><span class="rundown-head">A new RL-for-LLMs write-up argues training gains can hide persistent failure on hard tasks.</span> <span class="rundown-why">Its proposed sampling method is designed to retain difficult examples instead of letting easy ones dominate learning.</span><a class="cite" href="https://mnoukhov.github.io/posts/ngu/">[3]</a></li>
+        <li><span class="rundown-head">AI infrastructure’s power demand is becoming an operational concern.</span> <span class="rundown-why">Axios reports Google, Nvidia, and Emerald AI are backing flexible data-center demand as a way to manage grid and community pressure.</span><a class="cite" href="https://www.axios.com/2026/09/16/tech-giants-launch-flexible-power-coalition-data-centers">[4]</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, Washington Post, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
+  <section class="band" id="developer-pulse">
+    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">Introducing System One Models and Jev</a></h3><p class="entry-meta">Sep 15, 2026 · 1,374 points · <a href="https://news.ycombinator.com/item?id=49717558">391 comments on HN</a></p><p>TypeSafe AI introduced Jev for structured, probabilistic decisions rather than string generation. The company says its System One approach supplies typed outputs with confidence scores and targets fast classification, routing, scoring, and extraction.</p><blockquote class="reaction">“Does not hallucinate is not the same as is never wrong.” <span class="who">&mdash; wg0 on <a href="https://news.ycombinator.com/item?id=49717558">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://mnoukhov.github.io/posts/ngu/">Learning to solve hard problems in RL for LLMs by never giving up</a></h3><p class="entry-meta">Sep 15, 2026 · 92 points · <a href="https://news.ycombinator.com/item?id=49717280">4 comments on HN</a></p><p>Michael Noukhovitch argues that aggregate RL evaluations can mask a pattern where models improve mostly on already-solvable problems. The post proposes “Never Give Up,” a sampling approach intended to keep difficult examples in the training signal.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/">Stay discoverable in search while disallowing AI training</a></h3><p class="entry-meta">Sep 16, 2026 · 71 points · <a href="https://news.ycombinator.com/item?id=49721435">41 comments on HN</a></p><p>Cloudflare describes a setting that distinguishes mixed-use crawlers from training-only crawlers, so publishers can remain available to search while blocking training collection. It says participating organizations commit to honoring that designation.</p><blockquote class="reaction">“What does this new setting actually do? Does it block their IP ranges too, I hope?” <span class="who">&mdash; arm32 on <a href="https://news.ycombinator.com/item?id=49721435">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://codyho.dev/blog/gpu-driver/">Building a Linux GPU Driver for the M4 Mac Mini in One Month</a></h3><p class="entry-meta">Sep 15, 2026 · 317 points · <a href="https://news.ycombinator.com/item?id=49717638">181 comments on HN</a></p><p>A developer chronicles building a Linux GPU driver for Apple’s M4 Mac mini in a month, a high-interest systems-engineering project for the developer community.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="openai">
+    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">1 item</p>
+    </div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs">Claude for Small Business launches new workflows, integrations, and training programs</a></h3><p class="entry-meta">Sep 15, 2026</p><p>Anthropic added 43 workflows and 27 integrations to Claude for Small Business, including connections for Shopify, Salesforce, TikTok, Atlassian, Zoom, Xero, Gusto, Square, Stripe, and Zapier. The company says the release pairs these additions with free workshops and partner webinars.</p></article></div>
+  </section>
+
+  <section class="band" id="washington-post">
+    <div class="rail">
+      <h2 class="label label--section">Washington Post</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/16/inside-campaign-convince-washington-that-ai-could-end-human-life/">Inside the campaign to convince Washington that AI could end human life</a></h3>
+        <p class="entry-meta">Sep 16, 2026</p>
+        <p>The RSS headline describes a campaign aimed at persuading Washington that AI could pose an existential threat.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/16/linkedin-co-founder-reid-hoffman-calls-new-political-approach-ai/">A top Democratic donor says time is running out to stop Americans from hating AI</a></h3>
+        <p class="entry-meta">Sep 16, 2026</p>
+        <p>The RSS headline reports that a major Democratic donor is calling for a new political approach to public attitudes toward AI.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.axios.com/2026/09/16/tech-giants-launch-flexible-power-coalition-data-centers">Tech giants launch flexible-power coalition for data centers</a></h3>
+        <p class="entry-meta">Sep 16, 2026</p>
+        <p>Axios reports that Google and Nvidia are partnering with Emerald AI to support data centers that can flex power demand. The stated goals are easing electricity-price and neighborhood concerns while expanding AI infrastructure.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/">OpenAI, Anthropic, and Google have been in talks on AI safety for weeks</a></h3>
+        <p class="entry-meta">Sep 15, 2026</p>
+        <p>TechCrunch reports that the three companies have been discussing AI safety and a potential industry standards body. OpenAI policy chief Chris Lehane said the firms do not need an antitrust waiver for the coordination, according to the report.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://blogs.microsoft.com/on-the-issues/2026/09/15/2026-midterm-elections-helping-voters-navigate-election-information-in-the-age-of-ai/">Helping voters navigate election information in the age of AI</a></h3>
+        <p class="entry-meta">Sep 15, 2026</p>
+        <p>Microsoft launched the next phase of its “Check. Recheck. Vote.” voter-education initiative. The company says it focuses on checking sources, rechecking important details with original sources, and using current state or local election guidance.</p>
+      </article>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-09-15 07:55:12 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-09-16 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

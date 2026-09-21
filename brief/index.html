@@ -98,57 +98,132 @@
     </div>
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
-      <p class="deck mono">Thursday · Sep 17, 2026 · 6:00 AM ET</p>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Monday · Sep 21, 2026 · 6:00 AM ET</p>
+      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
+           Omit this <p> entirely on a normal run. -->
     </div>
   </section>
 
   <section class="band" id="rundown">
-    <div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Four top stories, synthesized across the sections below.</p></div>
-    <div class="col"><ol class="rundown-list">
-      <li><span class="rundown-head">OpenAI has set out a public process for recording model-misalignment incidents.</span> <span class="rundown-why">The framework arrives with six reports, turning unusual model behavior into a disclosure and investigation practice.</span><a class="cite" href="https://openai.com/index/model-misalignment-reporting-framework/">[1]</a></li>
-      <li><span class="rundown-head">Anthropic opened a verified-access beta for more permissive life-science work.</span> <span class="rundown-why">Its approach trades blanket real-time blocking for organization vetting, scoped grants, and monitoring.</span><a class="cite" href="https://www.anthropic.com/news/life-sciences-verification-program">[2]</a></li>
-      <li><span class="rundown-head">Claude Code projects are being recast as coordinated, cloud-based workstreams.</span> <span class="rundown-why">The beta uses a coordinator, parallel threads, shared memory, and PR-oriented execution for longer-running work.</span><a class="cite" href="https://claude.com/blog/projects-redesigned">[3]</a></li>
-      <li><span class="rundown-head">Developer attention settled on specialized and smaller-model engineering.</span> <span class="rundown-why">A 4B model learned query planning with measured rewards, while new ternary packing work targets lower storage and inference cost.</span><a class="cite" href="https://rohanbansal.com/qorl">[4]</a><a class="cite" href="https://arxiv.org/abs/2609.16338">[5]</a></li>
-    </ol></div>
-  </section>
-
-  <section class="band" id="developer-pulse">
-    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div>
+    <div class="rail">
+      <h2 class="label label--section">Rundown</h2>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
+    </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://rohanbansal.com/qorl">Training a 4B model to produce 81% faster query plans than Postgres</a></h3><p class="entry-meta">Sep 16, 2026 · 696 points · <a href="https://news.ycombinator.com/item?id=49731285">143 comments on HN</a></p><p>Rohan Bansal describes post-training a 4B Qwen model with supervised trajectories and agentic reinforcement learning, using measured PostgreSQL execution time as the reward. The write-up reports a 44.7% latency reduction across 113 join-heavy queries versus the initial model.</p><blockquote class="reaction">“I would be cautious about over interpreting the results.” <span class="who">&mdash; refibrillator on <a href="https://news.ycombinator.com/item?id=49731285">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://z.ai/blog/glm-built-its-inference-infrastructure">How GLM built its own inference infrastructure</a></h3><p class="entry-meta">Sep 17, 2026 · 408 points · <a href="https://news.ycombinator.com/item?id=49737922">285 comments on HN</a></p><p>Z.ai’s engineering post says it built a production inference service for GLM-5.3-Flash on more than 100,000 Chinese-made AI accelerators. Discussion focused on the scale of the deployment and the practical tradeoffs of its hardware and serving stack.</p><blockquote class="reaction">“This whole thing sounds like industrial scale auto-research, but done by people who actually know what they are doing.” <span class="who">&mdash; throwa356262 on <a href="https://news.ycombinator.com/item?id=49737922">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2609.16338">Breaking the 1.58-bit Barrier for Ternary LLMs</a></h3><p class="entry-meta">Sep 16, 2026 · 243 points · <a href="https://news.ycombinator.com/item?id=49732931">41 comments on HN</a></p><p>The paper introduces BITCOS, a distribution-adaptive layout that exploits the large share of zero weights in ternary models. Across 29 models, the authors report up to 1.485 bits per weight and measured matrix-vector and inference-throughput gains on tested hardware.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://harnesstax.github.io/">HarnessTax: How Much Does the Harness Matter for Coding Agents?</a></h3><p class="entry-meta">Sep 16, 2026 · 229 points · <a href="https://news.ycombinator.com/item?id=49733726">95 comments on HN</a></p><p>This benchmark asks how much an agent harness affects coding-agent performance and cost. The HN thread debated whether leaner harnesses reduce token overhead without discarding important controls such as sandboxing and evaluation.</p><blockquote class="reaction">“Having a coding harness is critical but the differences between them are overstated.” <span class="who">&mdash; corv on <a href="https://news.ycombinator.com/item?id=49733726">HN</a></span></blockquote></article>
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
+      <ol class="rundown-list">
+        <li><span class="rundown-head">Qwen released Qwen-Image-2.1, a compact open-weight image model that combines generation and editing.</span> <span class="rundown-why">Its 7B visual component supports transparent-image work and up to 10 reference images.</span><a class="cite" href="https://qwen.ai/blog?id=qwen-image-2.1">[1]</a></li>
+        <li><span class="rundown-head">Google’s AX drew developer attention as infrastructure for running sandboxed agent tasks at scale.</span> <span class="rundown-why">It separates task execution, workspace setup, network policy, and model configuration into declarative primitives.</span><a class="cite" href="https://agentexecutor.io">[2]</a></li>
+        <li><span class="rundown-head">Open-model distribution is getting a peer-to-peer alternative.</span> <span class="rundown-why">Pirate Face mirrors eligible Hugging Face model files as checksum-verified torrents, aiming to reduce dependency on a single host.</span><a class="cite" href="https://pirateface.co/">[3]</a></li>
+        <li><span class="rundown-head">The Washington Post reports AI security and governance questions remain prominent.</span> <span class="rundown-why">Its latest technology feed covers a breach of OpenAI and the growing influence of extinction scenarios in policy debates.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/09/20/breach-chatgpt-maker-openai-highlights-risks-ai-getting-hacked/">[4]</a><a class="cite" href="https://www.washingtonpost.com/technology/2026/09/21/is-this-how-world-ends-extinction-scenarios-are-taking-over-ai-debate/">[5]</a></li>
+      </ol>
     </div>
   </section>
 
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">6 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/astra-for-law">Introducing Astra for Law</a></h3><p class="entry-meta">Sep 17, 2026</p><p>OpenAI says its legal offering combines frontier intelligence, firm-specific workflows, connected legal data, and controls intended for confidential client work.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/model-misalignment-reporting-framework/">Our framework for reporting model misalignment</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI published a framework for tracking, investigating, and disclosing model-misalignment incidents, alongside six reports of unexpected or concerning behavior.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/helping-older-adults-use-ai-in-everyday-life">Helping older adults use AI in everyday life</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI and AARP say they are bringing free, hands-on ChatGPT workshops to 1,000 older adults in 10 U.S. cities, focused on practical and safe use.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/reimagining-advertising-with-ai">Reimagining advertising with AI</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI outlines AI-powered advertising experiences, including Sponsored Agents, marketer tools, and integrations with HubSpot and Shopify.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/hex-gpt-6-astra">Hex uses GPT-6 Astra</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI’s feed describes how Hex is using GPT-6 Astra in its product.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/how-to-connect-ai-usage-to-business-value">How to connect AI usage to business value</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI published guidance on connecting AI usage to measurable business value.</p></article>
-  </div></section>
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, Washington Post, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
+  <section class="band" id="developer-pulse">
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">4 items from Hacker News</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://qwen.ai/blog?id=qwen-image-2.1">Qwen-Image-2.1</a></h3>
+        <p class="entry-meta">Sep 20, 2026 · 653 points · <a href="https://news.ycombinator.com/item?id=49775499">174 comments on HN</a></p>
+        <p>Qwen’s release combines text-to-image generation and image editing in one open-weight model. The company says its 7B visual-generation component supports native transparency and editing with up to 10 reference images.</p>
+        <blockquote class="reaction">“The point I think is interesting is that this is just 7B.” <span class="who">&mdash; 26d0 on <a href="https://news.ycombinator.com/item?id=49775499">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://agentexecutor.io">AX — Google’s Open Agentic Orchestrator</a></h3>
+        <p class="entry-meta">Sep 20, 2026 · 499 points · <a href="https://news.ycombinator.com/item?id=49780797">220 comments on HN</a></p>
+        <p>AX presents a control plane for sandboxed agent workloads: tasks, workspaces, network gateways, and model configuration. Its site says tasks can be suspended and resumed, while gateway policies restrict outbound hosts and ports.</p>
+        <blockquote class="reaction">“It is on Google’s github … the repo description … is ‘Google’s open agentic orchestrator.’” <span class="who">&mdash; varun_ch on <a href="https://news.ycombinator.com/item?id=49780797">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://pirateface.co/">Pirate Face Rescues LLM Models from Deletion</a></h3>
+        <p class="entry-meta">Sep 20, 2026 · 537 points · <a href="https://news.ycombinator.com/item?id=49776699">143 comments on HN</a></p>
+        <p>Pirate Face indexes eligible open models, datasets, image, and audio files as magnet links. It says the copies retain the source Hugging Face SHA-256 hashes and continue through peer seeding if the original host disappears.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0">Laya on Mac M4 CoreML Offline</a></h3>
+        <p class="entry-meta">Sep 21, 2026 · 156 points · <a href="https://news.ycombinator.com/item?id=49777106">30 comments on HN</a></p>
+        <p>A short reproducible setup shows how to run Laya’s Core ML Snake demo locally on Apple silicon. The accompanying measurement reports a 560.4 MB physical footprint and a 778 MB peak.</p>
+      </article>
+    </div>
+  </section>
 
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/life-sciences-verification-program">Introducing the Life Sciences Verification Program</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Anthropic launched a beta program that gives verified life-science organizations access to Mythos, Opus, and Sonnet with more permissive biology safeguards. Standard grants cover broad team work; higher-risk, project-specific grants require additional vetting and retain other safeguards, including cyber classifiers.</p></article></div></section>
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col">
+      <p class="empty">Nothing new in the last 24h.</p>
+    </div>
+  </section>
 
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">2 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/projects-redesigned">Projects redesigned: from folder to conversation</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Claude Code projects are now in beta for select Pro and Max users with cloud sessions. A coordinator can scope work, delegate parallel threads, retain shared project memory, and help run tests and open pull requests across connected repositories.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5">Working at the frontier: How Balyasny Asset Management evaluates and governs Claude Fable 5</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Balyasny Asset Management describes evaluating new models on thousands of real financial tasks and building its own agent platform, with governance and safeguards as part of its deployment of Claude Fable 5.</p></article>
-  </div></section>
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
 
-  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
 
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/">The new CC, an AI agent built for families</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Google Labs introduced an experimental household agent that can coordinate shared calendars and tasks for up to six members. Google says each member chooses what to share, while CC maintains a separate account and permissions model.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://www.huawei.com/en/news/2026/9/new-computing-architecture-peerium">Huawei introduces the Peerium Computing Architecture</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Huawei announced an AI-computing architecture that it says can make one million processors operate as one computer, using nested parallelism, unified memory addressing, and its UnifiedBus interconnect.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://blog.mozilla.org/en/firefox/mozilla-mistral-partnership/">Mozilla and Mistral partner to expand AI competition and user choice</a></h3><p class="entry-meta">Sep 16, 2026</p><p>Mozilla and Mistral announced that Mistral Small 4 will power Firefox Smart Window beta for users in the U.S. and Canada, alongside expanded beta access and French-language support in France.</p></article>
-  </div></section>
+  <section class="band" id="washington-post">
+    <div class="rail">
+      <h2 class="label label--section">Washington Post</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/21/is-this-how-world-ends-extinction-scenarios-are-taking-over-ai-debate/">Is this how the world ends? Extinction scenarios are taking over the AI debate.</a></h3>
+        <p class="entry-meta">Sep 21, 2026</p>
+        <p>The Post reports that nightmare thought experiments are shaping arguments over how to govern the multitrillion-dollar AI industry, while some experts worry those parables could mislead decision-makers.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/20/breach-chatgpt-maker-openai-highlights-risks-ai-getting-hacked/">Hackers who broke into OpenAI warn the AI industry has a security problem</a></h3>
+        <p class="entry-meta">Sep 20, 2026</p>
+        <p>The Post reports that security experts say companies developing powerful AI should improve protections against cyberattacks after a breach involving OpenAI.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">1 item from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.axios.com/2026/09/21/trump-ai-force-czar">Trump’s call for “AI Force” sets off weekend scramble</a></h3>
+        <p class="entry-meta">Sep 21, 2026</p>
+        <p>Axios reports that President Trump announced plans for an “AI Force,” modeled on the Space Force, and an AI czar. The report says the proposal caught advisers by surprise and offered few operational details.</p>
+      </article>
+    </div>
+  </section>
 
 </main>
 
-<footer class="footer"><p>Generated 2026-09-21 06:19 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
+<footer class="footer">
+  <!-- FILL: generation timestamp -->
+  <p>Generated 2026-09-21 06:26 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
+</footer>
 
 </body>
 </html>

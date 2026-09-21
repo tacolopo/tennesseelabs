@@ -98,116 +98,57 @@
     </div>
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
-      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Wednesday · Sep 16, 2026 · 6:00 AM ET</p>
-      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
-           Omit this <p> entirely on a normal run. -->
+      <p class="deck mono">Thursday · Sep 17, 2026 · 6:00 AM ET</p>
     </div>
   </section>
 
   <section class="band" id="rundown">
-    <div class="rail">
-      <h2 class="label label--section">Rundown</h2>
-      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
-    </div>
-    <div class="col">
-      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
-           numbered cite link to the item's URL in the sections below. -->
-      <ol class="rundown-list">
-        <li><span class="rundown-head">TypeSafe AI introduced Jev, a model aimed at fast, typed decisions rather than text generation.</span> <span class="rundown-why">Its claims of calibrated outputs, 70–500 ms responses, and much lower token cost make it a notable alternative for classification and routing workloads.</span><a class="cite" href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">[1]</a></li>
-        <li><span class="rundown-head">Claude expanded its Small Business product with workflows, integrations, and training.</span> <span class="rundown-why">The release is oriented around embedding Claude in the tools owners already use.</span><a class="cite" href="https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs">[2]</a></li>
-        <li><span class="rundown-head">A new RL-for-LLMs write-up argues training gains can hide persistent failure on hard tasks.</span> <span class="rundown-why">Its proposed sampling method is designed to retain difficult examples instead of letting easy ones dominate learning.</span><a class="cite" href="https://mnoukhov.github.io/posts/ngu/">[3]</a></li>
-        <li><span class="rundown-head">AI infrastructure’s power demand is becoming an operational concern.</span> <span class="rundown-why">Axios reports Google, Nvidia, and Emerald AI are backing flexible data-center demand as a way to manage grid and community pressure.</span><a class="cite" href="https://www.axios.com/2026/09/16/tech-giants-launch-flexible-power-coalition-data-centers">[4]</a></li>
-      </ol>
-    </div>
+    <div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Four top stories, synthesized across the sections below.</p></div>
+    <div class="col"><ol class="rundown-list">
+      <li><span class="rundown-head">OpenAI has set out a public process for recording model-misalignment incidents.</span> <span class="rundown-why">The framework arrives with six reports, turning unusual model behavior into a disclosure and investigation practice.</span><a class="cite" href="https://openai.com/index/model-misalignment-reporting-framework/">[1]</a></li>
+      <li><span class="rundown-head">Anthropic opened a verified-access beta for more permissive life-science work.</span> <span class="rundown-why">Its approach trades blanket real-time blocking for organization vetting, scoped grants, and monitoring.</span><a class="cite" href="https://www.anthropic.com/news/life-sciences-verification-program">[2]</a></li>
+      <li><span class="rundown-head">Claude Code projects are being recast as coordinated, cloud-based workstreams.</span> <span class="rundown-why">The beta uses a coordinator, parallel threads, shared memory, and PR-oriented execution for longer-running work.</span><a class="cite" href="https://claude.com/blog/projects-redesigned">[3]</a></li>
+      <li><span class="rundown-head">Developer attention settled on specialized and smaller-model engineering.</span> <span class="rundown-why">A 4B model learned query planning with measured rewards, while new ternary packing work targets lower storage and inference cost.</span><a class="cite" href="https://rohanbansal.com/qorl">[4]</a><a class="cite" href="https://arxiv.org/abs/2609.16338">[5]</a></li>
+    </ol></div>
   </section>
 
-  <!-- FILL: one <section class="band" id="..."> per source, in this order:
-       Developer Pulse, OpenAI, Anthropic, Claude Blog, Washington Post, AI Zeitgeist.
-       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
-       Developer Pulse items may include a quoted reaction after the summary:
-       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
     <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">Introducing System One Models and Jev</a></h3><p class="entry-meta">Sep 15, 2026 · 1,374 points · <a href="https://news.ycombinator.com/item?id=49717558">391 comments on HN</a></p><p>TypeSafe AI introduced Jev for structured, probabilistic decisions rather than string generation. The company says its System One approach supplies typed outputs with confidence scores and targets fast classification, routing, scoring, and extraction.</p><blockquote class="reaction">“Does not hallucinate is not the same as is never wrong.” <span class="who">&mdash; wg0 on <a href="https://news.ycombinator.com/item?id=49717558">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://mnoukhov.github.io/posts/ngu/">Learning to solve hard problems in RL for LLMs by never giving up</a></h3><p class="entry-meta">Sep 15, 2026 · 92 points · <a href="https://news.ycombinator.com/item?id=49717280">4 comments on HN</a></p><p>Michael Noukhovitch argues that aggregate RL evaluations can mask a pattern where models improve mostly on already-solvable problems. The post proposes “Never Give Up,” a sampling approach intended to keep difficult examples in the training signal.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/">Stay discoverable in search while disallowing AI training</a></h3><p class="entry-meta">Sep 16, 2026 · 71 points · <a href="https://news.ycombinator.com/item?id=49721435">41 comments on HN</a></p><p>Cloudflare describes a setting that distinguishes mixed-use crawlers from training-only crawlers, so publishers can remain available to search while blocking training collection. It says participating organizations commit to honoring that designation.</p><blockquote class="reaction">“What does this new setting actually do? Does it block their IP ranges too, I hope?” <span class="who">&mdash; arm32 on <a href="https://news.ycombinator.com/item?id=49721435">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://codyho.dev/blog/gpu-driver/">Building a Linux GPU Driver for the M4 Mac Mini in One Month</a></h3><p class="entry-meta">Sep 15, 2026 · 317 points · <a href="https://news.ycombinator.com/item?id=49717638">181 comments on HN</a></p><p>A developer chronicles building a Linux GPU driver for Apple’s M4 Mac mini in a month, a high-interest systems-engineering project for the developer community.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://rohanbansal.com/qorl">Training a 4B model to produce 81% faster query plans than Postgres</a></h3><p class="entry-meta">Sep 16, 2026 · 696 points · <a href="https://news.ycombinator.com/item?id=49731285">143 comments on HN</a></p><p>Rohan Bansal describes post-training a 4B Qwen model with supervised trajectories and agentic reinforcement learning, using measured PostgreSQL execution time as the reward. The write-up reports a 44.7% latency reduction across 113 join-heavy queries versus the initial model.</p><blockquote class="reaction">“I would be cautious about over interpreting the results.” <span class="who">&mdash; refibrillator on <a href="https://news.ycombinator.com/item?id=49731285">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://z.ai/blog/glm-built-its-inference-infrastructure">How GLM built its own inference infrastructure</a></h3><p class="entry-meta">Sep 17, 2026 · 408 points · <a href="https://news.ycombinator.com/item?id=49737922">285 comments on HN</a></p><p>Z.ai’s engineering post says it built a production inference service for GLM-5.3-Flash on more than 100,000 Chinese-made AI accelerators. Discussion focused on the scale of the deployment and the practical tradeoffs of its hardware and serving stack.</p><blockquote class="reaction">“This whole thing sounds like industrial scale auto-research, but done by people who actually know what they are doing.” <span class="who">&mdash; throwa356262 on <a href="https://news.ycombinator.com/item?id=49737922">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2609.16338">Breaking the 1.58-bit Barrier for Ternary LLMs</a></h3><p class="entry-meta">Sep 16, 2026 · 243 points · <a href="https://news.ycombinator.com/item?id=49732931">41 comments on HN</a></p><p>The paper introduces BITCOS, a distribution-adaptive layout that exploits the large share of zero weights in ternary models. Across 29 models, the authors report up to 1.485 bits per weight and measured matrix-vector and inference-throughput gains on tested hardware.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://harnesstax.github.io/">HarnessTax: How Much Does the Harness Matter for Coding Agents?</a></h3><p class="entry-meta">Sep 16, 2026 · 229 points · <a href="https://news.ycombinator.com/item?id=49733726">95 comments on HN</a></p><p>This benchmark asks how much an agent harness affects coding-agent performance and cost. The HN thread debated whether leaner harnesses reduce token overhead without discarding important controls such as sandboxing and evaluation.</p><blockquote class="reaction">“Having a coding harness is critical but the differences between them are overstated.” <span class="who">&mdash; corv on <a href="https://news.ycombinator.com/item?id=49733726">HN</a></span></blockquote></article>
     </div>
   </section>
 
-  <section class="band" id="openai">
-    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
-  </section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">6 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/astra-for-law">Introducing Astra for Law</a></h3><p class="entry-meta">Sep 17, 2026</p><p>OpenAI says its legal offering combines frontier intelligence, firm-specific workflows, connected legal data, and controls intended for confidential client work.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/model-misalignment-reporting-framework/">Our framework for reporting model misalignment</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI published a framework for tracking, investigating, and disclosing model-misalignment incidents, alongside six reports of unexpected or concerning behavior.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/helping-older-adults-use-ai-in-everyday-life">Helping older adults use AI in everyday life</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI and AARP say they are bringing free, hands-on ChatGPT workshops to 1,000 older adults in 10 U.S. cities, focused on practical and safe use.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/reimagining-advertising-with-ai">Reimagining advertising with AI</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI outlines AI-powered advertising experiences, including Sponsored Agents, marketer tools, and integrations with HubSpot and Shopify.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/hex-gpt-6-astra">Hex uses GPT-6 Astra</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI’s feed describes how Hex is using GPT-6 Astra in its product.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/how-to-connect-ai-usage-to-business-value">How to connect AI usage to business value</a></h3><p class="entry-meta">Sep 16, 2026</p><p>OpenAI published guidance on connecting AI usage to measurable business value.</p></article>
+  </div></section>
 
-  <section class="band" id="anthropic">
-    <div class="rail">
-      <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
-  </section>
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/life-sciences-verification-program">Introducing the Life Sciences Verification Program</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Anthropic launched a beta program that gives verified life-science organizations access to Mythos, Opus, and Sonnet with more permissive biology safeguards. Standard grants cover broad team work; higher-risk, project-specific grants require additional vetting and retain other safeguards, including cyber classifiers.</p></article></div></section>
 
-  <section class="band" id="claude-blog">
-    <div class="rail">
-      <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">1 item</p>
-    </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs">Claude for Small Business launches new workflows, integrations, and training programs</a></h3><p class="entry-meta">Sep 15, 2026</p><p>Anthropic added 43 workflows and 27 integrations to Claude for Small Business, including connections for Shopify, Salesforce, TikTok, Atlassian, Zoom, Xero, Gusto, Square, Stripe, and Zapier. The company says the release pairs these additions with free workshops and partner webinars.</p></article></div>
-  </section>
+  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">2 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/projects-redesigned">Projects redesigned: from folder to conversation</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Claude Code projects are now in beta for select Pro and Max users with cloud sessions. A coordinator can scope work, delegate parallel threads, retain shared project memory, and help run tests and open pull requests across connected repositories.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5">Working at the frontier: How Balyasny Asset Management evaluates and governs Claude Fable 5</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Balyasny Asset Management describes evaluating new models on thousands of real financial tasks and building its own agent platform, with governance and safeguards as part of its deployment of Claude Fable 5.</p></article>
+  </div></section>
 
-  <section class="band" id="washington-post">
-    <div class="rail">
-      <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">2 items</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/16/inside-campaign-convince-washington-that-ai-could-end-human-life/">Inside the campaign to convince Washington that AI could end human life</a></h3>
-        <p class="entry-meta">Sep 16, 2026</p>
-        <p>The RSS headline describes a campaign aimed at persuading Washington that AI could pose an existential threat.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/16/linkedin-co-founder-reid-hoffman-calls-new-political-approach-ai/">A top Democratic donor says time is running out to stop Americans from hating AI</a></h3>
-        <p class="entry-meta">Sep 16, 2026</p>
-        <p>The RSS headline reports that a major Democratic donor is calling for a new political approach to public attitudes toward AI.</p>
-      </article>
-    </div>
-  </section>
+  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
 
-  <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/2026/09/16/tech-giants-launch-flexible-power-coalition-data-centers">Tech giants launch flexible-power coalition for data centers</a></h3>
-        <p class="entry-meta">Sep 16, 2026</p>
-        <p>Axios reports that Google and Nvidia are partnering with Emerald AI to support data centers that can flex power demand. The stated goals are easing electricity-price and neighborhood concerns while expanding AI infrastructure.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/">OpenAI, Anthropic, and Google have been in talks on AI safety for weeks</a></h3>
-        <p class="entry-meta">Sep 15, 2026</p>
-        <p>TechCrunch reports that the three companies have been discussing AI safety and a potential industry standards body. OpenAI policy chief Chris Lehane said the firms do not need an antitrust waiver for the coordination, according to the report.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://blogs.microsoft.com/on-the-issues/2026/09/15/2026-midterm-elections-helping-voters-navigate-election-information-in-the-age-of-ai/">Helping voters navigate election information in the age of AI</a></h3>
-        <p class="entry-meta">Sep 15, 2026</p>
-        <p>Microsoft launched the next phase of its “Check. Recheck. Vote.” voter-education initiative. The company says it focuses on checking sources, rechecking important details with original sources, and using current state or local election guidance.</p>
-      </article>
-    </div>
-  </section>
+  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/">The new CC, an AI agent built for families</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Google Labs introduced an experimental household agent that can coordinate shared calendars and tasks for up to six members. Google says each member chooses what to share, while CC maintains a separate account and permissions model.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.huawei.com/en/news/2026/9/new-computing-architecture-peerium">Huawei introduces the Peerium Computing Architecture</a></h3><p class="entry-meta">Sep 17, 2026</p><p>Huawei announced an AI-computing architecture that it says can make one million processors operate as one computer, using nested parallelism, unified memory addressing, and its UnifiedBus interconnect.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://blog.mozilla.org/en/firefox/mozilla-mistral-partnership/">Mozilla and Mistral partner to expand AI competition and user choice</a></h3><p class="entry-meta">Sep 16, 2026</p><p>Mozilla and Mistral announced that Mistral Small 4 will power Firefox Smart Window beta for users in the U.S. and Canada, alongside expanded beta access and French-language support in France.</p></article>
+  </div></section>
 
 </main>
 
-<footer class="footer">
-  <!-- FILL: generation timestamp -->
-  <p>Generated 2026-09-16 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
-  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
-</footer>
+<footer class="footer"><p>Generated 2026-09-21 06:19 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
 
 </body>
 </html>

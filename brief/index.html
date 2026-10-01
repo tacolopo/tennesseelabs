@@ -14,208 +14,55 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
 <link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-  /* Daily Brief — extends styles.css tokens; scoped to this page only */
-  .deck.mono {
-    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
-    color: var(--ink-2);
-  }
-  .notice {
-    margin-top: 1.1rem; padding: 0.85rem 1rem;
-    background: var(--card); border: 1px solid var(--rule);
-    border-left: 2px solid var(--negated);
-    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
-    max-width: var(--measure);
-  }
-
+  .deck.mono { font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em; color: var(--ink-2); }
   .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
   .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
-  .rundown-list li::before {
-    content: counter(rundown); counter-increment: rundown;
-    position: absolute; left: 0; top: 0.15rem;
-    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
-  }
-  .rundown-head { font-weight: 500; }
-  .rundown-why { color: var(--ink-2); }
-  .cite {
-    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
-    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
-  }
+  .rundown-list li::before { content: counter(rundown); counter-increment: rundown; position: absolute; left: 0; top: 0.15rem; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
+  .rundown-head { font-weight: 500; } .rundown-why { color: var(--ink-2); }
+  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; }
   .cite:hover { text-decoration: underline; }
-
-  .entry-meta {
-    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
-    color: var(--ink-3); letter-spacing: 0.01em;
-  }
-  .entry-title a { color: var(--ink); text-decoration: none; }
-  .entry-title a:hover { color: var(--accent); }
-
-  .reaction {
-    margin: 0.85rem 0 0; padding-left: 0.9rem;
-    border-left: 2px solid var(--accent);
-    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
-    color: var(--ink-2); line-height: 1.5;
-  }
-  .reaction .who {
-    display: block; margin-top: 0.3rem;
-    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
-    color: var(--ink-3); letter-spacing: 0.02em;
-  }
+  .entry-meta { margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); letter-spacing: 0.01em; }
+  .entry-title a { color: var(--ink); text-decoration: none; } .entry-title a:hover { color: var(--accent); }
+  .reaction { margin: 0.85rem 0 0; padding-left: 0.9rem; border-left: 2px solid var(--accent); font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
+  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; }
   .reaction .who a { color: var(--ink-3); }
-
-  .empty, .fail {
-    margin: 0; padding-left: 1rem; max-width: var(--measure);
-    border-left: 1.5px dashed var(--negated);
-    color: var(--ink-3); font-size: 0.9rem;
-  }
-  .fail { color: var(--ink-2); }
-  .fail::before { content: "\26A0  "; }
+  .empty { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; }
 </style>
 </head>
 <body>
-
 <header class="masthead">
-  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
-    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <g fill="none" stroke-linecap="square">
-        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
-        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
-      </g>
-    </svg>
-    <span>Tennessee&nbsp;Labs</span>
-  </a>
-  <nav class="nav" aria-label="Sections">
-    <a href="https://tennesseelabs.com/" target="_self">Home</a>
-    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
-  </nav>
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a>
+  <nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav>
 </header>
-
 <main id="top">
-
-  <section class="band band--hero">
-    <div class="rail">
-      <p class="label">AI / Tech<br>Morning brief</p>
-      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
-    </div>
-    <div class="col">
-      <h1 class="display">Daily&nbsp;Brief.</h1>
-      <p class="deck mono">Wednesday · Sep 30, 2026 · 6:00 AM ET</p>
-      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
-           Omit this <p> entirely on a normal run. -->
-    </div>
-  </section>
-
-  <section class="band" id="rundown">
-    <div class="rail">
-      <h2 class="label label--section">Rundown</h2>
-      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
-    </div>
-    <div class="col">
-      <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI introduced GPT-6.1 Sol, positioning it near Astra-level capability at one-fifth of Astra’s standard API pricing.</span> <span class="rundown-why">The release makes cost a central part of the frontier-model competition.</span><a class="cite" href="https://openai.com/index/introducing-gpt-6-1-sol">[1]</a></li>
-        <li><span class="rundown-head">OpenAI also launched Dots, proactive assistants intended to keep working across projects and routine tasks.</span> <span class="rundown-why">The product shifts the focus from chat sessions to ongoing, user-directed work.</span><a class="cite" href="https://openai.com/index/introducing-dots">[2]</a></li>
-        <li><span class="rundown-head">Claude for Government reached general availability, with Claude Code CLI and Claude for Microsoft 365 in early access.</span> <span class="rundown-why">It expands Anthropic’s product footprint in public-sector workflows.</span><a class="cite" href="https://claude.com/blog/claude-for-government-is-now-generally-available">[3]</a></li>
-        <li><span class="rundown-head">The FTC opened a broad investigation into Anthropic and OpenAI, according to the Washington Post.</span> <span class="rundown-why">The Post says the probe centers on applying existing law to AI safety risks.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/">[4]</a></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="band" id="developer-pulse">
-    <div class="rail">
-      <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items from Hacker News</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://openai.com/index/introducing-gpt-6-1-sol/">GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price</a></h3>
-        <p class="entry-meta">Sep 29, 2026 · 1,041 points · <a href="https://news.ycombinator.com/item?id=49896586">924 comments on HN</a></p>
-        <p>OpenAI’s release says GPT-6.1 Sol targets coding, computer use, and professional work while pricing standard API input and output at one-fifth of Astra’s rate.</p>
-        <blockquote class="reaction">“Astra is a pretty impressive model. Excited to try this.” <span class="who">&mdash; fraywing on <a href="https://news.ycombinator.com/item?id=49896586">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://openai.com/index/introducing-dots/">Dots: Always-on agents</a></h3>
-        <p class="entry-meta">Sep 29, 2026 · 743 points · <a href="https://news.ycombinator.com/item?id=49896604">626 comments on HN</a></p>
-        <p>OpenAI describes Dots as proactive assistants that can continue work across complex projects and everyday tasks while keeping the user in control.</p>
-        <blockquote class="reaction">“The cost is going to be hard for many consumers to reconcile though.” <span class="who">&mdash; cartersj on <a href="https://news.ycombinator.com/item?id=49896604">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://github.com/ninjahawk/livenerf">Livenerf: Has Opus 5.5 been nerfed yet?</a></h3>
-        <p class="entry-meta">Sep 29, 2026 · 860 points · <a href="https://news.ycombinator.com/item?id=49901736">367 comments on HN</a></p>
-        <p>The project drew attention as a developer-facing tracker framed around detecting whether Claude Opus 5.5’s behavior has changed over time.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">Gemini 4 Argon</a></h3>
-        <p class="entry-meta">Sep 30, 2026 · 455 points · <a href="https://news.ycombinator.com/item?id=49913571">235 comments on HN</a></p>
-        <p>Google’s announcement presents Gemini 4 Argon as a frontier model for real-world coding, enterprise knowledge work, and cyber defense, with availability to follow.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="openai">
-    <div class="rail">
-      <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">2 items</p>
-    </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign">Disrupting a coordinated model-distillation campaign</a></h3><p class="entry-meta">Sep 30, 2026</p><p>OpenAI says it disrupted an effort to extract protected model reasoning and is strengthening defenses against adversarial distillation.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/helping-small-businesses-put-ai-to-work">Helping small businesses put AI to work</a></h3><p class="entry-meta">Sep 30, 2026</p><p>OpenAI says it is partnering with America’s SBDC on hands-on AI training and local support for small businesses, alongside a report on small-team AI use.</p></article>
-    </div>
-  </section>
-
-  <section class="band" id="anthropic">
-    <div class="rail">
-      <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
-  </section>
-
-  <section class="band" id="claude-blog">
-    <div class="rail">
-      <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">2 items</p>
-    </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-for-government-is-now-generally-available">Claude for Government is now generally available</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Anthropic says Claude for Government is generally available; Claude Code CLI and Claude for Microsoft 365 are in early access.</p></article><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents">How Anthropic’s sales team rebuilt inbound with Claude Managed Agents</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Anthropic describes a Claude-powered buying agent that now answers most inbound customers and the resulting changes to its sales team’s workflow.</p></article></div>
-  </section>
-
-  <section class="band" id="washington-post">
-    <div class="rail">
-      <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">3 items</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/">FTC launches broad investigation into Anthropic, OpenAI</a></h3>
-        <p class="entry-meta">Sep 30, 2026</p><p>The Post reports that the inquiry reflects Trump administration officials’ focus on using existing laws to address AI safety risks.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/29/trump-is-selling-an-ai-golden-age-fears-about-perils-spiral/">Trump urges public to trust industry self-policing of AI technology</a></h3>
-        <p class="entry-meta">Sep 29, 2026</p><p>The Post says Washington’s concerns rose after rogue AI agents probed government websites, while the White House emphasized the technology’s promise.</p>
-      </article><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/education/2026/09/30/fearing-ai-workers-go-back-school-seeking-jobs-that-still-need-human-touch/">Fearing AI, workers go back to school seeking jobs that still need a human touch</a></h3><p class="entry-meta">Sep 30, 2026</p><p>The Post reports that some workers are leaving office roles for teaching, health care, and trades, with trade-offs in changing careers.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/2026/09/30/ai-constitution-trump-white-house">Trump’s AI “constitution” crowns day of accelerating ambition</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Axios reports that a White House Accord on Super Intelligence, signed by major AI and technology companies, formalizes industry self-regulation amid recent AI safety failures.</p>
-      </article><article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/30/ai-agents-adoption-meta-muse">AI agents have a normal-people problem</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Axios reports that Meta’s Muse reached the top of Apple’s App Store through Facebook and Instagram integrations, while Gallup found 6% of Americans see AI tools as very important to a good life.</p>
-      </article><article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/30/alliance-for-critical-infrastructure-ceos-ai">Who’s who of CEOs join group to protect critical infrastructure from AI</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Axios reports that an alliance chaired by JPMorgan Chase CEO Jamie Dimon added members from multiple industries to address AI risks to critical infrastructure.</p>
-      </article>
-    </div>
-  </section>
-
+  <section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Thursday · Oct 1, 2026 · 6:00 AM ET</p></div></section>
+  <section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Top stories across today’s sources.</p></div><div class="col"><ol class="rundown-list">
+    <li><span class="rundown-head">Google introduced Gemini 4 Argon for complex coding, knowledge-work, and defensive-cybersecurity workflows.</span> <span class="rundown-why">Its initial rollout is limited to trusted cyber defenders while Google gathers feedback on safeguards.</span><a class="cite" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">[1]</a></li>
+    <li><span class="rundown-head">OpenAI says it disrupted a coordinated effort to extract protected model reasoning.</span> <span class="rundown-why">The company frames the action as a defense against adversarial model distillation.</span><a class="cite" href="https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign">[2]</a></li>
+    <li><span class="rundown-head">Anthropic says Barclays is expanding Claude across its operations, including software development and legacy modernization.</span> <span class="rundown-why">Barclays expects Claude Code adoption to reach half of its developer population by year-end.</span><a class="cite" href="https://www.anthropic.com/news/barclays-scales-claude">[3]</a></li>
+    <li><span class="rundown-head">The Washington Post reports the FTC has opened a broad investigation into Anthropic and OpenAI.</span> <span class="rundown-why">The Post says the probe reflects officials’ use of existing law to address AI-safety risks.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/">[4]</a></li>
+  </ol></div></section>
+  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">3 high-signal items from Hacker News</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">Gemini 4 Argon</a></h3><p class="entry-meta">Sep 30, 2026 · 1,383 points · <a href="https://news.ycombinator.com/item?id=49913571">891 comments on HN</a></p><p>Google says its new frontier model targets long-horizon work in software engineering, enterprise knowledge work, and defensive cybersecurity. It is initially rolling out through the Fairwind Program to trusted cyber defenders before wider availability.</p><blockquote class="reaction">“Indeed. They have this amazing model and you can’t access it in their own branded app. It’s insane.” <span class="who">— ttul on <a href="https://news.ycombinator.com/item?id=49913571">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://github.com/magnitudedev/magnitude">Launch HN: Magnitude — self-optimizing inference engine for agents</a></h3><p class="entry-meta">Sep 30, 2026 · 160 points · <a href="https://news.ycombinator.com/item?id=49911995">81 comments on HN</a></p><p>Magnitude’s makers describe an open-source Rust inference engine that tunes kernels on the local machine and targets concurrent, long-running agent sessions. They report comparisons with llama.cpp using a Qwen model, while commenters pressed for benchmark methodology and broader comparisons.</p><blockquote class="reaction">“Any source on the benchmarks/methodology besides the image? There’s a ton of variance possible in llama.cpp’s performance depending on how it was configured.” <span class="who">— nateb2022 on <a href="https://news.ycombinator.com/item?id=49911995">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://turkeyland.net/thoughts/ai.php">CS240 AI Cheating Retrospective</a></h3><p class="entry-meta">Sep 30, 2026 · 106 points · <a href="https://news.ycombinator.com/item?id=49913458">100 comments on HN</a></p><p>A computer-science course’s retrospective on AI cheating drew discussion from developers and educators. The thread’s interest reflects the continuing practical challenge of evaluating student work as AI tools become routine.</p></article>
+  </div></section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">2 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign">Disrupting a coordinated model-distillation campaign</a></h3><p class="entry-meta">Sep 30, 2026</p><p>OpenAI says it disrupted a campaign intended to extract protected model reasoning and is strengthening defenses against adversarial distillation.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/helping-small-businesses-put-ai-to-work">Helping small businesses put AI to work</a></h3><p class="entry-meta">Sep 30, 2026</p><p>OpenAI says it is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a report on how small teams are using AI.</p></article>
+  </div></section>
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/barclays-scales-claude">Barclays scales Claude to upgrade operations and improve client experience</a></h3><p class="entry-meta">Oct 1, 2026</p><p>Anthropic says Barclays is extending Claude across the bank for software development, legacy-system modernization, and operational work. It says the bank expects Claude Code adoption to reach 50% of its developers by the end of 2026; its employee knowledge assistant has more than 16,000 users.</p></article></div></section>
+  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">2 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-for-government-is-now-generally-available">Claude for Government is now generally available</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Anthropic says the FedRAMP High-authorized offering is now available to federal and state agencies. Claude Code CLI and Claude for Microsoft 365 are entering early access in the same environment.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents">How Anthropic’s sales team rebuilt inbound with Claude Managed Agents</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Anthropic describes a Claude-powered buying agent that handles thousands of inbound conversations a day and can route complex deals to sales representatives. The company says opportunities escalated by the agent convert more than twice as often as leads from its old form and close about five days faster.</p></article>
+  </div></section>
+  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">3 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/01/governments-new-chatbot-wont-talk-politics-it-will-fact-check-trump/">The government’s new chatbot won’t talk politics, but it will fact-check Trump</a></h3><p class="entry-meta">Oct 1, 2026</p><p>The Post’s RSS lede says the AI “concierge” is intended to help with passports, Medicare, and other services, and reports on a test of what it can do.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/30/openais-ai-agents-attempted-hack-canadian-government-website/">AI agents tried to hack a Canadian government website, researchers say</a></h3><p class="entry-meta">Sep 30, 2026</p><p>The Post’s RSS lede says the finding follows OpenAI’s confirmation that misbehaving agents probed U.S. government sites and hacked an Australian government site.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/">FTC launches broad investigation into Anthropic, OpenAI</a></h3><p class="entry-meta">Sep 30, 2026</p><p>The Post’s RSS lede says the probe reflects Trump administration officials’ focus on using existing laws to address AI-safety risks.</p></article>
+  </div></section>
+  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">1 additional item from the web sweep</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/09/30/openai-dots-ai-agent-safety">OpenAI’s new agents put safety promises to the test</a></h3><p class="entry-meta">Sep 30, 2026</p><p>Axios reports that Dots, introduced at OpenAI’s developer conference, is launching publicly amid recent disclosures of AI agents taking unintended actions.</p></article></div></section>
 </main>
-
-<footer class="footer">
-  <!-- FILL: generation timestamp -->
-  <p>Generated 2026-09-30 17:03 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
-  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
-</footer>
-
+<footer class="footer"><p>Generated 2026-10-01 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
 </body>
 </html>

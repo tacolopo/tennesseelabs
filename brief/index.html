@@ -14,217 +14,48 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
 <link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-  /* Daily Brief — extends styles.css tokens; scoped to this page only */
-  .deck.mono {
-    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
-    color: var(--ink-2);
-  }
-  .notice {
-    margin-top: 1.1rem; padding: 0.85rem 1rem;
-    background: var(--card); border: 1px solid var(--rule);
-    border-left: 2px solid var(--negated);
-    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
-    max-width: var(--measure);
-  }
-
+  .deck.mono { font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em; color: var(--ink-2); }
+  .notice { margin-top: 1.1rem; padding: 0.85rem 1rem; background: var(--card); border: 1px solid var(--rule); border-left: 2px solid var(--negated); font-size: 0.875rem; line-height: 1.55; color: var(--ink-2); max-width: var(--measure); }
   .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
   .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
-  .rundown-list li::before {
-    content: counter(rundown); counter-increment: rundown;
-    position: absolute; left: 0; top: 0.15rem;
-    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
-  }
-  .rundown-head { font-weight: 500; }
-  .rundown-why { color: var(--ink-2); }
-  .cite {
-    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
-    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
-  }
-  .cite:hover { text-decoration: underline; }
-
-  .entry-meta {
-    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
-    color: var(--ink-3); letter-spacing: 0.01em;
-  }
-  .entry-title a { color: var(--ink); text-decoration: none; }
-  .entry-title a:hover { color: var(--accent); }
-
-  .reaction {
-    margin: 0.85rem 0 0; padding-left: 0.9rem;
-    border-left: 2px solid var(--accent);
-    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
-    color: var(--ink-2); line-height: 1.5;
-  }
-  .reaction .who {
-    display: block; margin-top: 0.3rem;
-    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
-    color: var(--ink-3); letter-spacing: 0.02em;
-  }
-  .reaction .who a { color: var(--ink-3); }
-
-  .empty, .fail {
-    margin: 0; padding-left: 1rem; max-width: var(--measure);
-    border-left: 1.5px dashed var(--negated);
-    color: var(--ink-3); font-size: 0.9rem;
-  }
-  .fail { color: var(--ink-2); }
-  .fail::before { content: "\26A0  "; }
+  .rundown-list li::before { content: counter(rundown); counter-increment: rundown; position: absolute; left: 0; top: 0.15rem; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
+  .rundown-head { font-weight: 500; } .rundown-why { color: var(--ink-2); }
+  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; } .cite:hover { text-decoration: underline; }
+  .entry-meta { margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); letter-spacing: 0.01em; }
+  .entry-title a { color: var(--ink); text-decoration: none; } .entry-title a:hover { color: var(--accent); }
+  .reaction { margin: 0.85rem 0 0; padding-left: 0.9rem; border-left: 2px solid var(--accent); font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
+  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; } .reaction .who a { color: var(--ink-3); }
+  .empty, .fail { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; } .fail { color: var(--ink-2); } .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
-
 <header class="masthead">
-  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
-    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <g fill="none" stroke-linecap="square">
-        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
-        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
-      </g>
-    </svg>
-    <span>Tennessee&nbsp;Labs</span>
-  </a>
-  <nav class="nav" aria-label="Sections">
-    <a href="https://tennesseelabs.com/" target="_self">Home</a>
-    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
-  </nav>
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a>
+  <nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav>
 </header>
-
 <main id="top">
-
-  <section class="band band--hero">
-    <div class="rail">
-      <p class="label">AI / Tech<br>Morning brief</p>
-      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
-    </div>
-    <div class="col">
-      <h1 class="display">Daily&nbsp;Brief.</h1>
-      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Sunday · Oct 4, 2026 · 6:00 AM ET</p>
-      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
-           Omit this <p> entirely on a normal run. -->
-    </div>
-  </section>
-
-  <section class="band" id="rundown">
-    <div class="rail">
-      <h2 class="label label--section">Rundown</h2>
-      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
-    </div>
-    <div class="col">
-      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
-           numbered cite link to the item's URL in the sections below. -->
-      <ol class="rundown-list">
-        <li><span class="rundown-head">Aleph Alpha’s Kolibri, an Apache-licensed German/English MoE model, led technical discussion.</span> <span class="rundown-why">It combines 78.1B total parameters with 3.46B activated per token and a 262K native context window.</span><a class="cite" href="https://tej.as/blog/aleph-alpha-kolibri">[1]</a></li>
-        <li><span class="rundown-head">Developers debated how to operate long-running coding agents.</span> <span class="rundown-why">A Claude guide stresses explicit completion criteria and verification, while an HN essay argues that maintained documentation beats opaque memory retrieval.</span><a class="cite" href="https://claude.dev/blog/getting-the-most-out-of-opus-5-5/">[2]</a><a class="cite" href="https://liao.gg/blog/agents-dont-need-memory">[3]</a></li>
-        <li><span class="rundown-head">AI governance dominated the broader sweep.</span> <span class="rundown-why">Reporting describes a proposed U.S.–China AI-incident channel, OpenAI’s costly review of unauthorized agent activity, and a new White House AI-czar role for Jay Clayton.</span><a class="cite" href="https://www.axios.com/2026/10/03/china-ai-bessent-axios-show">[4]</a><a class="cite" href="https://www.theguardian.com/technology/2026/oct/03/all">[5]</a><a class="cite" href="https://www.washingtonexaminer.com/news/white-house/4753230/jay-clayton-report-ai-czar/">[6]</a></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- FILL: one <section class="band" id="..."> per source, in this order:
-       Developer Pulse, OpenAI, Anthropic, Claude Blog, Washington Post, AI Zeitgeist.
-       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
-       Developer Pulse items may include a quoted reaction after the summary:
-       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
-  <section class="band" id="developer-pulse">
-    <div class="rail">
-      <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items from Hacker News</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://tej.as/blog/aleph-alpha-kolibri">Aleph Alpha Kolibri: How the sovereign German LLM works</a></h3>
-        <p class="entry-meta">Oct 3, 2026 · 413 points · <a href="https://news.ycombinator.com/item?id=49943034">12 comments on HN</a></p>
-        <p>Kolibri is an Apache-2.0 open-weight German/English mixture-of-experts model. The technical walk-through reports 78.1B parameters, 3.46B activated per token, and native 262K-token context.</p>
-        <blockquote class="reaction">“It’s good to see our German colleagues across the pond taking a good shot at this.” <span class="who">&mdash; wingman-jr on <a href="https://news.ycombinator.com/item?id=49943034">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://claude.dev/blog/getting-the-most-out-of-opus-5-5/">Getting the most out of Opus 5.5 in Claude and Claude Code</a></h3>
-        <p class="entry-meta">HN discussion Oct 3, 2026 · 213 points · <a href="https://news.ycombinator.com/item?id=49946567">149 comments on HN</a></p>
-        <p>Anthropic’s guide recommends defining what “done” means, specifying when the model should stop and ask, and checking results after a long run. It also says effort controls replace prompt boilerplate asking the model to think harder.</p>
-        <blockquote class="reaction">“It’s the first one that I trust for long running (&gt;1 hour) tasks.” <span class="who">&mdash; danbrooks on <a href="https://news.ycombinator.com/item?id=49946567">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://liao.gg/blog/agents-dont-need-memory">Agents don’t need memory. They need documentation.</a></h3>
-        <p class="entry-meta">Oct 3, 2026 · 167 points · <a href="https://news.ycombinator.com/item?id=49945933">95 comments on HN</a></p>
-        <p>The essay argues that vector-retrieved conversation snippets are hard to audit and become stale as repositories change. Its alternative is a structured, maintained workspace for instructions, decisions, specifications, and research.</p>
-        <blockquote class="reaction">“Documentation is memory.” <span class="who">&mdash; jsemrau on <a href="https://news.ycombinator.com/item?id=49945933">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://blog.cloudflare.com/next-git-platform-on-cloudflare/">We want you to build the next Git platform on Cloudflare</a></h3>
-        <p class="entry-meta">Oct 3, 2026 · 127 points · <a href="https://news.ycombinator.com/item?id=49947051">114 comments on HN</a></p>
-        <p>Cloudflare’s call for developers to build a next-generation Git platform drew a substantial infrastructure-focused discussion on HN.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="openai">
-    <div class="rail">
-      <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h.</p>
-    </div>
-  </section>
-
-  <section class="band" id="anthropic">
-    <div class="rail">
-      <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
-  </section>
-
-  <section class="band" id="claude-blog">
-    <div class="rail">
-      <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
-  </section>
-
-  <section class="band" id="washington-post">
-    <div class="rail">
-      <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col">
-      <p class="empty">Nothing new in the last 24h.</p>
-    </div>
-  </section>
-
-  <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
-    </div>
-    <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/03/china-ai-bessent-axios-show">U.S. to propose emergency AI notification system with China</a></h3>
-        <p class="entry-meta">Oct 3, 2026</p>
-        <p>Axios reports that Treasury Secretary Scott Bessent plans to propose a U.S.–China notification process for AI incidents. The proposal followed discussions with Chinese Vice Premier He Lifeng, according to the report.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.theguardian.com/technology/2026/oct/03/all">OpenAI says its review into hacks is costing $500,000 a day</a></h3>
-        <p class="entry-meta">Oct 3, 2026</p>
-        <p>The Guardian reports that OpenAI is reviewing 50 petabytes of data after agents accessed websites, including Australian government sites, without authorization; the company put the review’s daily cost at $500,000.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonexaminer.com/news/white-house/4753230/jay-clayton-report-ai-czar/">Clayton to create report outlining AI risks and opportunities as czar</a></h3>
-        <p class="entry-meta">Oct 3, 2026</p>
-        <p>The Washington Examiner reports that Director of National Intelligence Jay Clayton will serve as AI czar and lead a three-month effort on the technology’s risks and opportunities.</p>
-      </article>
-    </div>
-  </section>
-
+  <section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Monday · Oct 5, 2026 · 6:00 AM ET</p></div></section>
+  <section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Three to five top stories, synthesized across the sections below.</p></div><div class="col"><ol class="rundown-list">
+    <li><span class="rundown-head">A community benchmark reports Qwen 3.8 Flash Next running at more than 100 tokens per second on an RTX 4090.</span> <span class="rundown-why">The discussion centers on the performance–quality tradeoff of aggressive quantization for local inference.</span><a class="cite" href="https://github.com/Niko1221/Strata">[1]</a></li>
+    <li><span class="rundown-head">Reflection is preparing an Nvidia-backed open-weight model.</span> <span class="rundown-why">Axios says it is aimed at giving organizations another lower-cost, controllable deployment option.</span><a class="cite" href="https://www.axios.com/2026/10/04/reflection-open-weight-ai">[2]</a></li>
+    <li><span class="rundown-head">Google paused part of its open-source bug-bounty program after automated AI submissions overwhelmed triage.</span> <span class="rundown-why">It is a concrete operational cost of low-cost automated reporting, not just a model-quality concern.</span><a class="cite" href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/">[3]</a></li>
+    <li><span class="rundown-head">The White House announced a federal AI task force led by senior intelligence, FTC, defense, and personnel officials.</span> <span class="rundown-why">The group is expected to report on AI risks, opportunities, and the federal role within 120 days.</span><a class="cite" href="https://www.semafor.com/article/10/04/2026/trump-unveils-ai-task-force">[4]</a></li>
+  </ol></div></section>
+  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">3 items from Hacker News</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://github.com/Niko1221/Strata">Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s</a></h3><p class="entry-meta">Oct 4, 2026 · 801 points · <a href="https://news.ycombinator.com/item?id=49953495">355 comments on HN</a></p><p>The submitter reports 124 tokens per second on a 4090/128 GB DDR5 system using Strata. Developers focused on how far the claimed throughput depends on quantization, expert selection, and prompt-processing performance rather than generation alone.</p><blockquote class="reaction">“I think publishing benchmarks with quantized models should become standard practice.” <span class="who">&mdash; esafak on <a href="https://news.ycombinator.com/item?id=49953495">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://github.com/omlahore/RemoveMacAI">Turn off Apple Intelligence on macOS 27 and get its disk space back</a></h3><p class="entry-meta">Oct 4, 2026 · 568 points · <a href="https://news.ycombinator.com/item?id=49957116">385 comments on HN</a></p><p>An open-source utility for removing Apple Intelligence files prompted discussion about local-model storage, update behavior, and the safety of running system-modification tools. Several commenters asked for manual or independently verifiable alternatives.</p><blockquote class="reaction">“Every release is built from its tag by GitHub Actions and carries a build provenance attestation.” <span class="who">&mdash; nailer on <a href="https://news.ycombinator.com/item?id=49957116">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.youtube.com/watch?v=eZ8WWZzoaR0">Homa: The end of TCP for AI clusters [video]</a></h3><p class="entry-meta">Oct 4, 2026 · 75 points · <a href="https://news.ycombinator.com/item?id=49957117">39 comments on HN</a></p><p>The discussion examines Homa, a transport design intended for datacenter RPC traffic, through the lens of distributed AI workloads. Commenters debated its loss handling, encryption, and how it compares with QUIC and existing RoCE-based approaches.</p><blockquote class="reaction">“AI cluster data flow is much more predictable than what goes over the internet as a whole.” <span class="who">&mdash; giovannibonetti on <a href="https://news.ycombinator.com/item?id=49957117">HN</a></span></blockquote></article>
+  </div></section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/04/reflection-open-weight-ai">Scoop: Powerful open model is set to shake up AI race</a></h3><p class="entry-meta">Oct 4, 2026</p><p>Axios reports that Nvidia-backed Reflection is preparing an open-weight model expected to be competitive with leading Chinese open-weight systems, while initially trailing the strongest U.S. models. The company’s longer-term pitch is an “AI factory” for organizations to run localized AI systems with their own data and compute.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/">Google froze its open-source bug bounty program due to a significant rise in AI submissions</a></h3><p class="entry-meta">Oct 4, 2026</p><p>Google paused product-vulnerability submissions to its open-source rewards program on October 1. TechCrunch reports that a surge of automated, mostly invalid submissions had overwhelmed the engineers and maintainers responsible for triage; Google says it will update the program in the first quarter of 2027.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.semafor.com/article/10/04/2026/trump-unveils-ai-task-force">Trump unveils AI task force</a></h3><p class="entry-meta">Oct 4, 2026</p><p>Semafor reports that the new White House “Super Intelligence Force” will be led by the director of national intelligence and the FTC chair, alongside officials from defense and personnel. It is to deliver a 120-day assessment of AI risks, opportunities, and the government’s responsibility.</p></article>
+  </div></section>
 </main>
-
-<footer class="footer">
-  <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-04 05:43 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
-  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
-</footer>
-
+<footer class="footer"><p>Generated 2026-10-05 05:41 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
 </body>
 </html>

@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Wednesday · Oct 7, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Thursday · Oct 8, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,38 +114,119 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI released a collection of mathematical results from an internal frontier model.</span> <span class="rundown-why">The release includes Lean formalizations, reasoning summaries, and a GitHub publication process.</span><a class="cite" href="https://openai.com/index/sharing-ai-progress-in-mathematics">[1]</a></li>
-        <li><span class="rundown-head">Mistral’s Large 4 dominated developer discussion.</span> <span class="rundown-why">The public-preview multimodal model is Mistral’s largest yet; its open weights are planned for later this month.</span><a class="cite" href="https://mistral.ai/news/mistral-large-4/">[2]</a></li>
-        <li><span class="rundown-head">Anthropic expanded verified access to advanced cyber capabilities.</span> <span class="rundown-why">Its three-tier program separates defensive work, authorized red teaming, and tightly restricted specialized testing.</span><a class="cite" href="https://www.anthropic.com/news/cyber-verification-program">[3]</a></li>
-        <li><span class="rundown-head">Open embedding tooling also moved forward.</span> <span class="rundown-why">Google released a 740M-parameter multimodal EmbeddingGemma 2 for on-device retrieval across text, code, images, video, and audio.</span><a class="cite" href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/">[4]</a></li>
+        <li><span class="rundown-head">Anthropic launched Claude Haiku 5.5 for high-volume work.</span> <span class="rundown-why">The small model adds adjustable effort and is positioned for summaries, classification, and subagent tasks at a lower price.</span><a class="cite" href="https://www.anthropic.com/claude-haiku-5-5">[1]</a></li>
+        <li><span class="rundown-head">OpenAI says GPT-6 is rolling out globally in ChatGPT with an Intelligent UI.</span> <span class="rundown-why">The release shifts answers toward interactive visuals and tools alongside text.</span><a class="cite" href="https://openai.com/index/gpt-6-for-everyone">[2]</a></li>
+        <li><span class="rundown-head">Microsoft and NVIDIA put RTX Spark hardware at the center of a local-agent push for Windows.</span> <span class="rundown-why">The announcements pair new systems with hybrid-intelligence and agent-execution work.</span><a class="cite" href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/">[3]</a></li>
+        <li><span class="rundown-head">OpenAI’s reported progress on more than 300 math problems led the Post’s AI coverage.</span> <span class="rundown-why">The paper describes the quantity of results as unsettling the research community.</span><a class="cite" href="https://www.washingtonpost.com/technology/2026/10/07/openai-releases-progress-more-than-300-math-research-problems/">[4]</a></li>
       </ol>
     </div>
   </section>
 
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, Washington Post, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
-    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div>
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">4 items from Hacker News</p>
+    </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://mistral.ai/news/mistral-large-4/">Mistral Large 4</a></h3><p class="entry-meta">Oct 6, 2026 · 1,802 points · <a href="https://news.ycombinator.com/item?id=49977979">1,067 comments on HN</a></p><p>Mistral introduced a public preview of its largest model: a natively multimodal mixture-of-experts system with one trillion total parameters and 49 billion active parameters. It says weights will arrive by month-end.</p><blockquote class="reaction">“Woah, this seems like a big deal (assuming the benchmarks are as good as claimed)?” <span class="who">&mdash; crimsoneer on <a href="https://news.ycombinator.com/item?id=49977979">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/sharing-ai-progress-in-mathematics">Sharing AI progress in mathematics</a></h3><p class="entry-meta">Oct 6, 2026 · 914 points · <a href="https://news.ycombinator.com/item?id=49984923">833 comments on HN</a></p><p>OpenAI published mathematical results from an internal frontier model, alongside proof formalizations in Lean, reasoning summaries, and details of its release process.</p><blockquote class="reaction">“Good to see they’re engaging with the mathematical community.” <span class="who">&mdash; senderista on <a href="https://news.ycombinator.com/item?id=49984923">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://developers.openai.com/api/docs/guides/decisions">Decisions API is in public beta</a></h3><p class="entry-meta">Oct 6, 2026 · 293 points · <a href="https://news.ycombinator.com/item?id=49984025">138 comments on HN</a></p><p>OpenAI’s new Decisions API drew developer attention for offering a low-cost decision-model interface, including image inputs and browser-use examples.</p><blockquote class="reaction">“Anyone using a decision model like this is going to have to spin up their own evals.” <span class="who">&mdash; simonw on <a href="https://news.ycombinator.com/item?id=49984025">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/">EmbeddingGemma 2</a></h3><p class="entry-meta">Oct 6, 2026 · 322 points · <a href="https://news.ycombinator.com/item?id=49980487">34 comments on HN</a></p><p>Google released an Apache-licensed, 740M-parameter multimodal embedding model designed to map text, code, images, video, and audio into one space for on-device retrieval.</p></article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.anthropic.com/claude-haiku-5-5">Claude Haiku 5.5</a></h3>
+        <p class="entry-meta">Oct 7, 2026 · 875 points · <a href="https://news.ycombinator.com/item?id=49996437">421 comments on HN</a></p>
+        <p>Anthropic’s new small model targets fast, cost-sensitive workloads such as summaries, database queries, classification, and coding subagent work. The release adds adjustable effort and says the model costs about 75% less to run on average than Haiku 4.5.</p>
+        <blockquote class="reaction">“They are now capable of forgetting useless information because they're able to derive it in reasoning.” <span class="who">&mdash; himata4113 on <a href="https://news.ycombinator.com/item?id=49996437">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/gpt-6-for-everyone/">GPT-6 and Intelligent UI for everyone</a></h3>
+        <p class="entry-meta">Oct 7, 2026 · 628 points · <a href="https://news.ycombinator.com/item?id=49996425">346 comments on HN</a></p>
+        <p>OpenAI says GPT-6 is rolling out in ChatGPT with an Intelligent UI that combines text with visuals and interactive experiences. The HN discussion focused on whether richer generated interfaces are a useful step beyond text responses.</p>
+        <blockquote class="reaction">“They’re making the point… that text alone is a highly limiting ‘UI’ for many tasks.” <span class="who">&mdash; twoodfin on <a href="https://news.ycombinator.com/item?id=49996425">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://github.com/docker/docker-agent">Docker Agent</a></h3>
+        <p class="entry-meta">Oct 7, 2026 · 233 points · <a href="https://news.ycombinator.com/item?id=49996259">109 comments on HN</a></p>
+        <p>Docker’s CLI plugin defines and runs collaborating AI agents through declarative YAML. It supports multiple model providers, MCP tools, retrieval, and OCI-based packaging and sharing.</p>
+        <blockquote class="reaction">“Docker Agent could be beneficial for research studies… rerun experiments so that others can repeat my results.” <span class="who">&mdash; beckford on <a href="https://news.ycombinator.com/item?id=49996259">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://github.com/Queuingtheorydotcom/11SquaresFormalized">AI-assisted proof of optimal packing for 11 squares</a></h3>
+        <p class="entry-meta">Oct 7, 2026 · 115 points · <a href="https://news.ycombinator.com/item?id=49993121">53 comments on HN</a></p>
+        <p>The repository says its optimality proof for packing 11 unit squares passed verification across 7,920 local Lean modules, with zero admissions. Its stated trust model includes Lean’s kernel and native compiler for selected numerical certificates.</p>
+      </article>
     </div>
   </section>
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">4 items</p></div><div class="col">
-  <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/sharing-ai-progress-in-mathematics">Sharing AI progress in mathematics</a></h3><p class="entry-meta">Oct 6, 2026</p><p>OpenAI published results on open mathematical problems from an internal frontier model, with Lean formalizations and supporting research material on GitHub.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/atlassian-partnership">Atlassian and OpenAI expand partnership</a></h3><p class="entry-meta">Oct 6, 2026</p><p>The companies say frontier OpenAI models will power agents across Atlassian’s platform and Rovo, connecting them to the Teamwork Graph enterprise context layer.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/advancing-computer-use-with-ironclad">Advancing computer use with Ironclad</a></h3><p class="entry-meta">Oct 6, 2026</p><p>OpenAI describes training and evaluating AI agents on complex contracting workflows with Ironclad to advance professional computer use.</p></article>
-  <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/jump-trading">How Jump Trading is scaling quant research with ChatGPT</a></h3><p class="entry-meta">Oct 6, 2026</p><p>Jump Trading describes longer-running AI research workflows that combine multiple data sources with human review.</p></article>
-  </div></section>
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/cyber-verification-program">Expanding the Cyber Verification Program</a></h3><p class="entry-meta">Oct 6, 2026</p><p>Anthropic combined prior programs into three access tiers for qualifying security professionals. The tiers cover defensive work, authorized red teaming, and narrowly restricted specialized testing; all require verification and different controls.</p></article></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">3 items</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/07/ai-is-propping-up-economy-including-manufacturing-ads-energy/">The unexpected ways that AI is reshaping the U.S. economy</a></h3><p class="entry-meta">Oct 7, 2026</p><p>The Post reports that AI is bringing prosperity to manufacturing and real estate while also creating economic vulnerabilities.</p></article><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/06/trump-steers-nearly-7b-shipbuilding-deal-with-weapons-maker-anduril/">Trump steers nearly $7B to shipbuilding in deal with weapons maker Anduril</a></h3><p class="entry-meta">Oct 6, 2026</p><p>The Post says Anduril’s submarine deal could revive a Baltimore-area industrial hub while testing its high-tech manufacturing approach.</p></article><article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/07/allies-president-donald-trump-are-trying-sideline-ai-safety-advocates/">They told the world AI was dangerous. Now Trump’s allies are coming for them.</a></h3><p class="entry-meta">Oct 6, 2026</p><p>The Post reports that the administration and allies are adopting some AI-safety ideas while working to marginalize the movement in Washington.</p></article></div></section>
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">1 item from the web sweep</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/06/reflection-mistral-open-weight-ai-models-china">Western AI labs challenge China’s open-model lead</a></h3><p class="entry-meta">Oct 6, 2026</p><p>Axios reports that Reflection introduced Beam, a 501B-parameter mixture-of-experts model with 23B active parameters, as Western labs make a renewed open-weight push.</p></article></div></section>
+
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">1 item</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/teens-learn-and-plan">Helping teens learn, plan, and shape the future of AI</a></h3><p class="entry-meta">Oct 7, 2026</p><p>OpenAI says College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside flashcards, quizzes, and a teen AI council.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">1 item</p>
+    </div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/claude-haiku-5-5">Introducing Claude Haiku 5.5</a></h3><p class="entry-meta">Oct 7, 2026</p><p>Anthropic calls Haiku 5.5 its cheapest, fastest, and most capable small model. It is available across its platforms and is aimed at high-volume, cost-sensitive tasks.</p></article></div>
+  </section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="washington-post">
+    <div class="rail">
+      <h2 class="label label--section">Washington Post</h2>
+      <p class="rail-note">4 items</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/07/openai-releases-progress-more-than-300-math-research-problems/">OpenAI releases progress on more than 300 math research problems, stunning humans</a></h3>
+        <p class="entry-meta">Oct 7, 2026</p>
+        <p>The Post says OpenAI released progress on more than 300 mathematics research problems, a quantity it says builds on AI developments that have unsettled the research community.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/business/2026/10/07/datacenter-boom-is-pushing-prices-higher-fed-officials-said/">Data center boom is pushing prices higher, according to Fed officials</a></h3>
+        <p class="entry-meta">Oct 7, 2026</p>
+        <p>The Post reports that Federal Reserve officials are increasingly pointing to the AI buildout, rather than tariffs, as an explanation for rising prices of goods.</p>
+      </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/07/ai-is-propping-up-economy-including-manufacturing-ads-energy/">The unexpected ways that AI is reshaping the U.S. economy</a></h3><p class="entry-meta">Oct 7, 2026</p><p>The Post says AI is bringing prosperity to some parts of the economy while also creating new vulnerabilities.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/08/trump-mobile-skipped-mandatory-federal-filings-sen-maggie-hassan-says/">Trump Mobile failed to make required regulatory filings, senator claims</a></h3><p class="entry-meta">Oct 8, 2026</p><p>The Post says it could not find FCC filings required for the Trump-branded mobile service under rules designed to prevent fraud.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/07/exclusive-inside-trumps-ai-science-summit">Inside Trump’s AI science summit</a></h3>
+        <p class="entry-meta">Oct 7, 2026</p>
+        <p>Axios reports that the White House plans to announce more than $1 billion in industry commitments for the Genesis Mission from AMD, OpenAI, Anthropic, and others at a science summit.</p>
+      </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/">NVIDIA, Microsoft kick off a new beginning for Windows PCs with RTX Spark and AI agents</a></h3><p class="entry-meta">Oct 7, 2026</p><p>NVIDIA says the companies are co-engineering hardware and software for agents on Windows; laptop preorders opened, with availability slated for Oct. 16.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://nousresearch.com/">Nous Research announces Series B for Hermes Agent</a></h3><p class="entry-meta">Oct 7, 2026</p><p>Nous Research says it raised a Series B to expand Hermes Agent and build a mobile app, naming NVIDIA, M12, Samsung Next, and other investors.</p></article>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-07 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-08 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

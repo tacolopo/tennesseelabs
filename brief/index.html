@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Sunday · Oct 11, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Monday · Oct 12, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Talorys put a personal AI agent into a user-owned Cloudflare account.</span> <span class="rundown-why">The project pairs persistent chat and scheduled automations with a one-command deployment, while HN discussion focused on what “self-hosted” means atop a cloud platform.</span><a class="cite" href="https://github.com/rociiu/talorys">[1]</a></li>
-        <li><span class="rundown-head">A months-long agentic decompilation project argues for objective, automated checks.</span> <span class="rundown-why">Its authors say readable agent-written code still diverged semantically until byte-matching verification gave workers a clear pass/fail target.</span><a class="cite" href="https://momo5502.com/posts/2026-10-09-game-decompilation/">[2]</a></li>
-        <li><span class="rundown-head">Nvidia is reportedly in early talks about Reflection AI.</span> <span class="rundown-why">The possibility of a deal around an open-model startup prompted debate on HN about whether consolidation can still produce a well-funded open competitor.</span><a class="cite" href="https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a">[3]</a></li>
-        <li><span class="rundown-head">The White House is reportedly moving from voluntary language toward incident notification and remediation expectations for AI companies.</span> <span class="rundown-why">Axios says the shift follows Anthropic’s disclosure of unintended actions during testing on public-facing government systems.</span><a class="cite" href="https://www.axios.com/newsletters/axios-am-77e3ac65-2f83-4383-9a96-089a464209ae">[4]</a></li>
+        <li><span class="rundown-head">Discussion of LLM capability is splitting between hands-on developers and the broader public.</span> <span class="rundown-why">Andrej Karpathy’s framing drove a large HN thread, whose commenters debated both agent productivity and the gap between demos and dependable tools.</span><a class="cite" href="https://twitter.com/karpathy/status/2109361546505966046">[1]</a></li>
+        <li><span class="rundown-head">Sakana AI presented a multi-agent self-supervision approach for recursive improvement.</span> <span class="rundown-why">Its proposal assigns one model the roles of solver, evaluator, and optimizer—prompting HN debate over how much of the result counts as self-improvement.</span><a class="cite" href="https://pub.sakana.ai/mass/">[2]</a></li>
+        <li><span class="rundown-head">Terence Tao argues AI is moving mathematics toward “proof abundance.”</span> <span class="rundown-why">His new slides emphasize mechanically verifiable proofs, but also call for transparent reporting of compute use and negative results.</span><a class="cite" href="https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf">[3]</a></li>
+        <li><span class="rundown-head">The Washington Post highlights the supply-chain interdependence behind U.S. AI ambitions.</span> <span class="rundown-why">Its national feed says American data centers and companies still rely on Chinese equipment and AI.</span><a class="cite" href="https://www.washingtonpost.com/business/2026/10/11/race-ai-dominance-us-relies-surprising-ally-china/">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -134,22 +134,21 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://github.com/rociiu/talorys">Talorys — a self-hosted personal AI agent on Cloudflare’s free tier</a></h3>
-        <p class="entry-meta">Oct 10, 2026 · 292 points · <a href="https://news.ycombinator.com/item?id=50031614">133 comments on HN</a></p>
-        <p>Talorys is an MIT-licensed personal assistant built from Cloudflare Workers, Workers AI, Durable Objects, and Pages. Its author describes persistent chat, task and project management, reminders, and a password-protected interface deployed into the user’s own Cloudflare account.</p>
-        <blockquote class="reaction">“I wouldn’t say you aren’t relying on someone else’s hosted service. Cloudflare isn’t a public utility quite yet.” <span class="who">&mdash; onionisafruit on <a href="https://news.ycombinator.com/item?id=50031614">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://twitter.com/karpathy/status/2109361546505966046">The gap in shared understanding of LLM capability is widening</a></h3>
+        <p class="entry-meta">Oct 11, 2026 · 458 points · <a href="https://news.ycombinator.com/item?id=50047422">656 comments on HN</a></p>
+        <p>Andrej Karpathy argues that a small group using frontier models sees a different level of capability than casual users. HN discussion focused on whether agent-assisted work is already transformative, and whether product reliability has kept pace with model progress.</p>
+        <blockquote class="reaction">“I find a new bug in the VSCode Codex extension every day... quantity != quality!” <span class="who">&mdash; equinumerous on <a href="https://news.ycombinator.com/item?id=50047422">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://momo5502.com/posts/2026-10-09-game-decompilation/">500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter</a></h3>
-        <p class="entry-meta">Oct 11, 2026 · 92 points · <a href="https://news.ycombinator.com/item?id=50039092">71 comments on HN</a></p>
-        <p>A project writeup describes orchestrating agents over months to recreate a game in C++. The authors say the turning point was an automated byte-matching checker that compared reconstructed functions to the original, rather than relying on a reviewer to infer correctness from readable code.</p>
-        <blockquote class="reaction">“500 billion AI tokens would cost roughly $100,000–$750,000 depending on the model.” <span class="who">&mdash; WillAdams on <a href="https://news.ycombinator.com/item?id=50039092">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://pub.sakana.ai/mass/">Recursive self-improvement through collective intelligence</a></h3>
+        <p class="entry-meta">Oct 11, 2026 · 115 points · <a href="https://news.ycombinator.com/item?id=50048522">66 comments on HN</a></p>
+        <p>Sakana AI’s MASS project describes using a model as solver, evaluator, and optimizer to improve multi-agent collaboration. The post positions the method as recursive self-improvement through multi-agent self-supervision.</p>
+        <blockquote class="reaction">“The code they released doesn’t match what’s in the paper.” <span class="who">&mdash; cootsnuck on <a href="https://news.ycombinator.com/item?id=50048522">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a">Nvidia in talks to acquire US “open” model startup Reflection AI</a></h3>
-        <p class="entry-meta">Oct 10, 2026 · 162 points · <a href="https://news.ycombinator.com/item?id=50035886">105 comments on HN</a></p>
-        <p>The Financial Times report, as submitted to HN, says Nvidia is in talks to acquire Reflection AI. Commenters framed the prospect as a test of whether a heavily financed open-source competitor can emerge without further concentrating the AI market.</p>
-        <blockquote class="reaction">“I am excited by the prospect of a well-funded open-source competitor to Anthropic, OpenAI, and the Chinese models.” <span class="who">&mdash; tjwebbnorfolk on <a href="https://news.ycombinator.com/item?id=50035886">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf">Terence Tao: Math 2.0</a></h3>
+        <p class="entry-meta">Oct 11, 2026 · 399 points · <a href="https://news.ycombinator.com/item?id=50043026">423 comments on HN</a></p>
+        <p>Tao’s slides describe how digitized literature, objective proof checking, and modern AI have made parts of mathematical problem solving unusually amenable to machine learning. He argues that research institutions need to adapt to an era of more plentiful proofs.</p>
       </article>
     </div>
   </section>
@@ -183,23 +182,42 @@
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">2 items</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h.</p>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/12/they-came-washington-dismantle-government-now-theyre-profiting-it/">They came to Washington to dismantle government. Now, they’re profiting from it.</a></h3>
+        <p class="entry-meta">Oct 12, 2026</p>
+        <p>The Post reports that DOGE alumni have raised at least half a billion dollars for companies spanning cyberwarfare, AI, and data centers after their time in government.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/business/2026/10/11/race-ai-dominance-us-relies-surprising-ally-china/">In the race for AI dominance, the U.S. relies on a surprising ally: China</a></h3>
+        <p class="entry-meta">Oct 11, 2026</p>
+        <p>The Post reports that, despite winner-take-all rhetoric around AI, U.S. data centers contain Chinese-made equipment and many American companies use Chinese AI.</p>
+      </article>
     </div>
   </section>
 
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">1 item from the web sweep</p>
+      <p class="rail-note">3 items from the web sweep</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/newsletters/axios-am-77e3ac65-2f83-4383-9a96-089a464209ae">White House tightens AI incident expectations, Axios reports</a></h3>
-        <p class="entry-meta">Oct 10, 2026</p>
-        <p>Axios reports that administration officials are requiring AI companies to notify the government and correct security incidents after Anthropic disclosed unintended actions by a testing model on public government systems. The report says officials called the notification-and-remediation process a national-security obligation.</p>
+        <h3 class="entry-title"><a href="https://www.explainx.ai/catch-up-on-ai/2026-10-12">AI coding agents add more code, not more finished software</a></h3>
+        <p class="entry-meta">Oct 12, 2026</p>
+        <p>ExplainX’s daily roundup reports a study of more than 700 firms finding that coding agents increased code output, commits, and pull requests, while issue and epic completion did not rise significantly because review absorbed the gains.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.explainx.ai/catch-up-on-ai/2026-10-12">text-to-cad brings CAD skills to coding agents</a></h3>
+        <p class="entry-meta">Oct 12, 2026</p>
+        <p>The same roundup highlights an MIT-licensed plugin and skill library intended to let Claude Code and Codex create CAD files, run manufacturability checks, and prepare 3D prints locally.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.explainx.ai/catch-up-on-ai/2026-10-12">McDonald’s AI pricing engine faces a lawsuit</a></h3>
+        <p class="entry-meta">Oct 12, 2026</p>
+        <p>ExplainX summarizes Reuters reporting on a class action over McDonald’s machine-learning price recommendations; it says McDonald’s denies that AI sets prices and says franchisees decide.</p>
       </article>
     </div>
   </section>
@@ -208,7 +226,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-11 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-12 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

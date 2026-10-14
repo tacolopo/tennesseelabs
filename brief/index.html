@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Monday · Oct 12, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Tuesday · Oct 13, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Discussion of LLM capability is splitting between hands-on developers and the broader public.</span> <span class="rundown-why">Andrej Karpathy’s framing drove a large HN thread, whose commenters debated both agent productivity and the gap between demos and dependable tools.</span><a class="cite" href="https://twitter.com/karpathy/status/2109361546505966046">[1]</a></li>
-        <li><span class="rundown-head">Sakana AI presented a multi-agent self-supervision approach for recursive improvement.</span> <span class="rundown-why">Its proposal assigns one model the roles of solver, evaluator, and optimizer—prompting HN debate over how much of the result counts as self-improvement.</span><a class="cite" href="https://pub.sakana.ai/mass/">[2]</a></li>
-        <li><span class="rundown-head">Terence Tao argues AI is moving mathematics toward “proof abundance.”</span> <span class="rundown-why">His new slides emphasize mechanically verifiable proofs, but also call for transparent reporting of compute use and negative results.</span><a class="cite" href="https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf">[3]</a></li>
-        <li><span class="rundown-head">The Washington Post highlights the supply-chain interdependence behind U.S. AI ambitions.</span> <span class="rundown-why">Its national feed says American data centers and companies still rely on Chinese equipment and AI.</span><a class="cite" href="https://www.washingtonpost.com/business/2026/10/11/race-ai-dominance-us-relies-surprising-ally-china/">[4]</a></li>
+        <li><span class="rundown-head">Google DeepMind’s Gemini 4 Argon became the largest developer discussion in the sweep.</span> <span class="rundown-why">The HN thread focused as much on access and rollout as on the new model itself.</span><a class="cite" href="https://deepmind.google/models/gemini/">[1]</a></li>
+        <li><span class="rundown-head">Meta introduced Muse Wonder as a frontier model for personal and professional agents.</span> <span class="rundown-why">Its stated differentiators are Active Memory and Active Focus for carrying goals forward.</span><a class="cite" href="https://research.meta.ai/blog/muse-wonder">[2]</a></li>
+        <li><span class="rundown-head">Anthropic described replacing a source-control bottleneck after its merge volume grew more than tenfold.</span> <span class="rundown-why">The engineering team says it moved to an in-house version-control system in five months.</span><a class="cite" href="https://www.anthropic.com/engineering/redesigning-source-control">[3]</a></li>
+        <li><span class="rundown-head">Microsoft’s Maia 300 signals a sharper move toward custom AI inference hardware.</span> <span class="rundown-why">Axios reports Microsoft plans to deploy it in 2027 as the primary inference system for its own products and services.</span><a class="cite" href="https://www.axios.com/2026/10/13/big-tech-ai-chips-nvidia-rivals">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -130,25 +130,36 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">3 items from Hacker News</p>
+      <p class="rail-note">5 items from Hacker News</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://twitter.com/karpathy/status/2109361546505966046">The gap in shared understanding of LLM capability is widening</a></h3>
-        <p class="entry-meta">Oct 11, 2026 · 458 points · <a href="https://news.ycombinator.com/item?id=50047422">656 comments on HN</a></p>
-        <p>Andrej Karpathy argues that a small group using frontier models sees a different level of capability than casual users. HN discussion focused on whether agent-assisted work is already transformative, and whether product reliability has kept pace with model progress.</p>
-        <blockquote class="reaction">“I find a new bug in the VSCode Codex extension every day... quantity != quality!” <span class="who">&mdash; equinumerous on <a href="https://news.ycombinator.com/item?id=50047422">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://deepmind.google/models/gemini/">Gemini 4 Argon</a></h3>
+        <p class="entry-meta">Oct 13, 2026 · 981 points · <a href="https://news.ycombinator.com/item?id=50073879">745 comments on HN</a></p>
+        <p>Google DeepMind’s Gemini page is the linked source for a new Gemini 4 Argon discussion. Early developer comments concentrated on availability across Google’s subscription and AI Studio surfaces.</p>
+        <blockquote class="reaction">“Page says it is now available to Ultra and Pro subscribers.” <span class="who">&mdash; modeless on <a href="https://news.ycombinator.com/item?id=50073879">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://pub.sakana.ai/mass/">Recursive self-improvement through collective intelligence</a></h3>
-        <p class="entry-meta">Oct 11, 2026 · 115 points · <a href="https://news.ycombinator.com/item?id=50048522">66 comments on HN</a></p>
-        <p>Sakana AI’s MASS project describes using a model as solver, evaluator, and optimizer to improve multi-agent collaboration. The post positions the method as recursive self-improvement through multi-agent self-supervision.</p>
-        <blockquote class="reaction">“The code they released doesn’t match what’s in the paper.” <span class="who">&mdash; cootsnuck on <a href="https://news.ycombinator.com/item?id=50048522">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://research.meta.ai/blog/muse-wonder">Muse Wonder</a></h3>
+        <p class="entry-meta">Oct 12, 2026 · 659 points · <a href="https://news.ycombinator.com/item?id=50059115">373 comments on HN</a></p>
+        <p>Meta calls Muse Wonder a frontier model for personal and professional agents. Its announcement emphasizes Active Memory and Active Focus as mechanisms for retaining what matters and working toward goals.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf">Terence Tao: Math 2.0</a></h3>
-        <p class="entry-meta">Oct 11, 2026 · 399 points · <a href="https://news.ycombinator.com/item?id=50043026">423 comments on HN</a></p>
-        <p>Tao’s slides describe how digitized literature, objective proof checking, and modern AI have made parts of mathematical problem solving unusually amenable to machine learning. He argues that research institutions need to adapt to an era of more plentiful proofs.</p>
+        <h3 class="entry-title"><a href="https://www.anthropic.com/engineering/redesigning-source-control">Redesigning source control at Anthropic</a></h3>
+        <p class="entry-meta">Oct 13, 2026 · 536 points · <a href="https://news.ycombinator.com/item?id=50073633">520 comments on HN</a></p>
+        <p>Anthropic says a more-than-tenfold increase in merges per day made source control its largest development bottleneck. The company describes migrating to an in-house version-control system over five months.</p>
+        <blockquote class="reaction">“Just tell me what the workflow is.” <span class="who">&mdash; memonkey on <a href="https://news.ycombinator.com/item?id=50073633">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://eg2.haku.sh/">We turned EmbeddingGemma 2 into a speech-to-text model</a></h3>
+        <p class="entry-meta">Oct 13, 2026 · 396 points · <a href="https://news.ycombinator.com/item?id=50069971">86 comments on HN</a></p>
+        <p>This project turns Google’s EmbeddingGemma 2 into an on-device speech-to-text model. Its author reports transcribing an hour of audio in about 13 seconds on a base MacBook Air.</p>
+        <blockquote class="reaction">“They say its word error rate is about 5%, so not great. Interesting as a proof of concept.” <span class="who">&mdash; walrus01 on <a href="https://news.ycombinator.com/item?id=50069971">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://machinelearning.apple.com/research/distributed-gpu-cloud">A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices</a></h3>
+        <p class="entry-meta">Oct 13, 2026 · 221 points · <a href="https://news.ycombinator.com/item?id=50070593">95 comments on HN</a></p>
+        <p>Apple researchers present Minions, a distributed virtual GPU cloud intended to address limits of centralized GPU infrastructure for machine-learning inference by using idle Apple Silicon devices.</p>
       </article>
     </div>
   </section>
@@ -156,10 +167,14 @@
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">1 item</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h.</p>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/higgsfield-longer-videos-voice">Higgsfield takes AI video from 1 minute to over 10</a></h3>
+        <p class="entry-meta">Oct 13, 2026</p>
+        <p>OpenAI says Higgsfield is bringing creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a route to voice filmmaking with GPT-Live.</p>
+      </article>
     </div>
   </section>
 
@@ -174,26 +189,37 @@
   <section class="band" id="claude-blog">
     <div class="rail">
       <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">1 item</p>
     </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+    <div class="col">
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai">Uber’s CISO on building an insider threat program for AI</a></h3>
+        <p class="entry-meta">Oct 13, 2026</p>
+        <p>Uber CISO Philip Martin discusses monitoring and observability for AI agents, including how the company’s open-source tooling works alongside Anthropic’s Enterprise Frontier Safeguards.</p>
+      </article>
+    </div>
   </section>
 
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">2 items</p>
+      <p class="rail-note">3 items</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/12/they-came-washington-dismantle-government-now-theyre-profiting-it/">They came to Washington to dismantle government. Now, they’re profiting from it.</a></h3>
-        <p class="entry-meta">Oct 12, 2026</p>
-        <p>The Post reports that DOGE alumni have raised at least half a billion dollars for companies spanning cyberwarfare, AI, and data centers after their time in government.</p>
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/13/fbi-arrests-openai-employee-allegedly-planting-bug-office/">OpenAI employee arrested by FBI after listening device found at its office</a></h3>
+        <p class="entry-meta">Oct 13, 2026</p>
+        <p>The Post reports that a man was charged with using a listening device planted in an OpenAI office to intercept oral communications, according to the Justice Department.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.washingtonpost.com/business/2026/10/11/race-ai-dominance-us-relies-surprising-ally-china/">In the race for AI dominance, the U.S. relies on a surprising ally: China</a></h3>
-        <p class="entry-meta">Oct 11, 2026</p>
-        <p>The Post reports that, despite winner-take-all rhetoric around AI, U.S. data centers contain Chinese-made equipment and many American companies use Chinese AI.</p>
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/13/ai-app-that-triggered-kids-safety-fears-will-sell-assets-disney/">Disney seeks assets from controversial AI companion start-up</a></h3>
+        <p class="entry-meta">Oct 13, 2026</p>
+        <p>The Post reports that Character.AI faces a lawsuit alleging chatbots on its app encouraged self-harm as Disney seeks assets from the company.</p>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.washingtonpost.com/technology/2026/10/12/they-came-washington-dismantle-government-now-theyre-profiting-it/">They came to Washington to dismantle government. Now, they’re profiting from it.</a></h3>
+        <p class="entry-meta">Oct 12, 2026</p>
+        <p>A Post analysis says DOGE alumni have raised at least half a billion dollars for firms spanning cyberwarfare, AI and data centers.</p>
       </article>
     </div>
   </section>
@@ -205,19 +231,19 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.explainx.ai/catch-up-on-ai/2026-10-12">AI coding agents add more code, not more finished software</a></h3>
-        <p class="entry-meta">Oct 12, 2026</p>
-        <p>ExplainX’s daily roundup reports a study of more than 700 firms finding that coding agents increased code output, commits, and pull requests, while issue and epic completion did not rise significantly because review absorbed the gains.</p>
+        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/13/big-tech-ai-chips-nvidia-rivals">The AI chip war is turning Nvidia’s customers into rivals</a></h3>
+        <p class="entry-meta">Oct 13, 2026</p>
+        <p>Axios reports Microsoft unveiled Maia 300, a custom accelerator it expects to begin deploying in 2027 and use as the primary inference system for its own products and services.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.explainx.ai/catch-up-on-ai/2026-10-12">text-to-cad brings CAD skills to coding agents</a></h3>
-        <p class="entry-meta">Oct 12, 2026</p>
-        <p>The same roundup highlights an MIT-licensed plugin and skill library intended to let Claude Code and Codex create CAD files, run manufacturability checks, and prepare 3D prints locally.</p>
+        <h3 class="entry-title"><a href="https://www.thinkfacility.com/blog/anthropic-distillation-defenses-zhipu-moonshot-preserved-thinking/">Anthropic says new defenses cut the data distillers take from Claude by 90 to 99%</a></h3>
+        <p class="entry-meta">Oct 13, 2026</p>
+        <p>Think Facility reports Anthropic says its newest defenses reduced the reasoning data extracted by suspected distillers by about 90 to 99 percent; the measurement is Anthropic’s own.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.explainx.ai/catch-up-on-ai/2026-10-12">McDonald’s AI pricing engine faces a lawsuit</a></h3>
+        <h3 class="entry-title"><a href="https://www.anthropic.com/research/self-replicating-ai">AI models may be capable of self-replicating without access to a datacenter</a></h3>
         <p class="entry-meta">Oct 12, 2026</p>
-        <p>ExplainX summarizes Reuters reporting on a class action over McDonald’s machine-learning price recommendations; it says McDonald’s denies that AI sets prices and says franchisees decide.</p>
+        <p>Anthropic says small AI models may be only months away from self-replicating across low-cost IoT devices such as Android TV boxes without a datacenter.</p>
       </article>
     </div>
   </section>
@@ -226,7 +252,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-12 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-13 21:29 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Wednesday · Oct 14, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Thursday · Oct 15, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,11 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Google introduced Gemini 4 Argon.</span> <span class="rundown-why">It was the day’s most-discussed developer story on Hacker News, with availability details drawing immediate scrutiny.</span><a class="cite" href="https://deepmind.google/models/gemini/">[1]</a></li>
-        <li><span class="rundown-head">Anthropic opened a Singapore office and signed an AI cooperation MOU with the government.</span> <span class="rundown-why">The agreement targets safety, security, evaluation, adoption research, and responsible deployment.</span><a class="cite" href="https://www.anthropic.com/news/singapore-office-opening">[2]</a></li>
-        <li><span class="rundown-head">Anthropic’s source-control redesign became a major developer discussion.</span> <span class="rundown-why">HN commenters focused on whether agent-written software can ever be reproducible enough to treat generated code as build output.</span><a class="cite" href="https://www.anthropic.com/engineering/redesigning-source-control">[3]</a></li>
-        <li><span class="rundown-head">OpenAI’s new EU analysis frames the next phase of adoption around agents.</span> <span class="rundown-why">It argues deeper enterprise and small-business usage could unlock further value.</span><a class="cite" href="https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic">[4]</a></li>
+        <li><span class="rundown-head">OpenAI’s newest customer stories center on agents moving beyond code, long-running research workloads, and security operations.</span> <span class="rundown-why">The examples point to increasingly specialized, operational deployments of its models.</span><a class="cite" href="https://openai.com/index/amp-beyond-coding">[1]</a><a class="cite" href="https://openai.com/index/third-moment-research">[2]</a></li>
+        <li><span class="rundown-head">Anthropic opened a Singapore office and signed a government MOU covering AI safety, evaluation, and responsible adoption.</span> <span class="rundown-why">It is Anthropic’s fifth Asia-Pacific office and extends its public-sector engagement in the region.</span><a class="cite" href="https://www.anthropic.com/news/singapore-office-opening">[3]</a></li>
+        <li><span class="rundown-head">Claude Platform added OpenTelemetry traces for managed agents, the Messages API, and its SDKs.</span> <span class="rundown-why">That puts model calls, tool use, latency, and token data into standard observability workflows.</span><a class="cite" href="https://claude.com/resources/articles/agent-observability-on-the-claude-platform">[4]</a></li>
+        <li><span class="rundown-head">Liquid AI’s open-weight LFM2.5-24B-A2B drew HN interest for local agent workloads.</span> <span class="rundown-why">The model has 24B parameters but only 2B active parameters, targeting fast private inference on-device.</span><a class="cite" href="https://www.liquid.ai/blog/lfm2-5-24b-a2b">[5]</a></li>
+        <li><span class="rundown-head">State-level scrutiny of ChatGPT expanded while Anthropic’s reported cash-flow claim became a market story.</span> <span class="rundown-why">Both developments sharpen the tension between AI safety obligations and the economics of frontier-model businesses.</span><a class="cite" href="https://ago.wv.gov/article/attorney-general-mccuskey-announces-lawsuit-against-openai-deceiving-west-virginians-about">[6]</a><a class="cite" href="https://www.axios.com/2026/10/15/anthropic-q3-revenue-cash-flow">[7]</a></li>
       </ol>
     </div>
   </section>
@@ -130,36 +131,30 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">5 items from Hacker News</p>
+      <p class="rail-note">4 items from Hacker News</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://deepmind.google/models/gemini/">Gemini 4 Argon</a></h3>
-        <p class="entry-meta">Oct 13, 2026 · 1,299 points · <a href="https://news.ycombinator.com/item?id=50073879">907 comments on HN</a></p>
-        <p>Google’s Gemini 4 Argon release led the developer conversation. Commenters quickly checked the gap between the launch announcement and which subscription tiers could actually use it.</p>
-        <blockquote class="reaction">“Page says it is now available to Ultra and Pro subscribers.” <span class="who">&mdash; modeless on <a href="https://news.ycombinator.com/item?id=50073879">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://www.liquid.ai/blog/lfm2-5-24b-a2b">LFM2.5-24B-A2B: Built for fast on-device agents</a></h3>
+        <p class="entry-meta">Oct 14, 2026 · 211 points · <a href="https://news.ycombinator.com/item?id=50097369">44 comments on HN</a></p>
+        <p>Liquid AI describes LFM2.5-24B-A2B as an open-weight, 24B-parameter reasoning model with 2B active parameters for private on-device agents. The release says it outperforms Qwen3.6-35B-A3B on LiveClaw.</p>
+        <blockquote class="reaction">“i’m gettin between 200-320 tok/s on a 5070ti with 131k context on llamacpp and no tuning. very nice.” <span class="who">&mdash; serf on <a href="https://news.ycombinator.com/item?id=50097369">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.anthropic.com/engineering/redesigning-source-control">Redesigning source control at Anthropic</a></h3>
-        <p class="entry-meta">Oct 13, 2026 · 768 points · <a href="https://news.ycombinator.com/item?id=50073633">766 comments on HN</a></p>
-        <p>Anthropic’s engineering write-up on source control drew discussion about how AI-generated code should be managed. A recurring question was whether prompts or specifications could become the durable source while generated code functions as output.</p>
-        <blockquote class="reaction">“It would be nice if you could just commit the prompts as your ‘source code.’” <span class="who">&mdash; amelius on <a href="https://news.ycombinator.com/item?id=50073633">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://lwn.net/Articles/1100449/">Linus Torvalds’s first LLM-assisted patch series</a></h3>
+        <p class="entry-meta">Oct 14, 2026 · 116 points · <a href="https://news.ycombinator.com/item?id=50090842">98 comments on HN</a></p>
+        <p>LWN’s report on Torvalds’s first LLM-assisted patch series prompted a discussion about review requirements, provenance, and licensing implications for generated code.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://eg2.haku.sh/">EmbeddingGemma 2 as a speech-to-text model</a></h3>
-        <p class="entry-meta">Oct 13, 2026 · 412 points · <a href="https://news.ycombinator.com/item?id=50069971">94 comments on HN</a></p>
-        <p>This project adapts EmbeddingGemma 2 for speech-to-text. Developers treated it as an interesting small-model proof of concept while debating the reported word-error rate and architectural tradeoffs.</p>
-        <blockquote class="reaction">“Interesting as a proof of concept. The model this is based on is REALLY tiny.” <span class="who">&mdash; walrus01 on <a href="https://news.ycombinator.com/item?id=50069971">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://smallcultfollowing.com/babysteps/blog/2026/10/14/agentic-dev-and-rust/">What agents mean for Rust (and vice versa)</a></h3>
+        <p class="entry-meta">Oct 14, 2026 · 69 points · <a href="https://news.ycombinator.com/item?id=50084416">57 comments on HN</a></p>
+        <p>This Rust-language-design essay argues that Rust is a strong fit for agentic development and considers how the language could become a better one. It frames a software factory around design, construction, and optimization.</p>
+        <blockquote class="reaction">“The short term cost of learning the language isn’t that significant anymore contrasted with the long term benefits of the type system and better structure.” <span class="who">&mdash; kubb on <a href="https://news.ycombinator.com/item?id=50084416">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://arxiv.org/abs/2610.13928">AI models can provably hide arbitrary capabilities</a></h3>
-        <p class="entry-meta">Oct 13, 2026 · 275 points · <a href="https://news.ycombinator.com/item?id=50065692">138 comments on HN</a></p>
-        <p>A new paper argues that models can be constructed to conceal arbitrary capabilities. The result drew attention as a technical contribution to the limits of evaluating model behavior.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://machinelearning.apple.com/research/distributed-gpu-cloud">A distributed virtual GPU cloud on idle Apple Silicon</a></h3>
-        <p class="entry-meta">Oct 13, 2026 · 246 points · <a href="https://news.ycombinator.com/item?id=50070593">97 comments on HN</a></p>
-        <p>Apple describes a distributed virtual GPU cloud built from idle Apple Silicon devices, a systems-oriented approach to making otherwise unused local compute available for machine-learning work.</p>
+        <h3 class="entry-title"><a href="https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1">Has AI tells</a></h3>
+        <p class="entry-meta">Oct 14, 2026 · 122 points · <a href="https://news.ycombinator.com/item?id=50090799">105 comments on HN</a></p>
+        <p>A developer discussion about recognizing AI-generated writing drew attention to how style, attribution, and review practice are changing alongside routine LLM use.</p>
       </article>
     </div>
   </section>
@@ -167,32 +162,26 @@
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">2 items</p>
+      <p class="rail-note">5 items</p>
     </div>
     <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic">The EU’s next chapter in AI is agentic</a></h3>
-        <p class="entry-meta">Oct 14, 2026</p>
-        <p>OpenAI’s analysis says agentic-AI adoption is growing across European enterprises and small businesses, and identifies deeper use as a route to more value.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://openai.com/index/higgsfield-longer-videos-voice">Higgsfield takes AI video from 1 minute to over 10</a></h3>
-        <p class="entry-meta">Oct 13, 2026</p>
-        <p>Higgsfield says it is using GPT-6 Astra for longer video, GPT-Image-2.5 for visual control, and GPT-Live for voice filmmaking.</p>
-      </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/amp-beyond-coding">Amp puts AI agents to work beyond code with OpenAI models</a></h3><p class="entry-meta">Oct 14, 2026</p><p>OpenAI says Amp uses GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT to push agent work beyond coding.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/sentinelone">SentinelOne cuts malware analysis from weeks to hours</a></h3><p class="entry-meta">Oct 14, 2026</p><p>With OpenAI Daybreak, SentinelOne says it has shortened malware analysis from weeks to hours, creating room to investigate more threats.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/third-moment-research">How Third Moment Research runs 10,000 agents for 36+ hours</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Third Moment Research says it uses GPT-6 Astra, GPT-6.1 Sol, Codex, and Daybreak to run agents that work for days and improve with use.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/block-ai-powered-security">How Block is building AI-powered security with OpenAI technology</a></h3><p class="entry-meta">Oct 14, 2026</p><p>OpenAI says Block’s security team uses its technology to investigate threats faster and propose patches in minutes.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic">The EU’s next chapter in AI is agentic</a></h3><p class="entry-meta">Oct 14, 2026</p><p>OpenAI’s analysis says agentic-AI adoption is growing among EU enterprises and small businesses, with deeper use offering further value.</p></article>
     </div>
   </section>
 
   <section class="band" id="anthropic">
     <div class="rail">
       <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">2 items</p>
     </div>
-    <div class="col"><article class="entry">
-      <h3 class="entry-title"><a href="https://www.anthropic.com/news/singapore-office-opening">Anthropic opens Singapore office and signs MOU with the Government of Singapore</a></h3>
-      <p class="entry-meta">Oct 14, 2026</p>
-      <p>Anthropic is opening a Singapore office and signed an MOU with the Ministry of Digital Development and Information. The partnership covers AI safety, security, model evaluation, adoption research, and responsible public- and private-sector use.</p>
-    </article></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/2026-us-midterms">Preparing for the 2026 US midterms</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Anthropic outlines how it has continued to strengthen election safeguards ahead of the US midterms.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/singapore-office-opening">Anthropic opens Singapore office and signs MOU with the Government of Singapore</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Anthropic opened its fifth Asia-Pacific office and signed an MOU with Singapore’s government on AI safety, security, model evaluation, adoption research, and responsible deployment.</p></article>
+    </div>
   </section>
 
   <section class="band" id="claude-blog">
@@ -200,20 +189,17 @@
       <h2 class="label label--section">Claude Blog</h2>
       <p class="rail-note">1 item</p>
     </div>
-    <div class="col"><article class="entry">
-      <h3 class="entry-title"><a href="https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai">Uber’s CISO on building an insider threat program for AI</a></h3>
-      <p class="entry-meta">Oct 13, 2026</p>
-      <p>Uber CISO Philip Martin discusses monitoring and observability for AI agents. The article describes Uber’s open-source AI Detection and Response tooling alongside Anthropic’s Enterprise Frontier Safeguards.</p>
-    </article></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/agent-observability-on-the-claude-platform">Agent observability on the Claude Platform</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Claude Platform now sends OpenTelemetry traces from Claude Managed Agents, the Messages API, and Claude SDKs to OTel tools. The traces cover agent turns, model calls, and tool use, with latency, token, and ID data.</p></article></div>
   </section>
 
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Technology feed unavailable</p>
+      <p class="rail-note">Failed fetches</p>
     </div>
     <div class="col">
-      <p class="fail">Technology RSS feed failed after 2 attempts: HTTP 502. The national feed returned no AI/tech-relevant items in the last 24 hours.</p>
+      <p class="fail">Technology RSS failed after 2 attempts: HTTP 502 Bad Gateway.</p>
+      <p class="fail">National RSS failed after 2 attempts: HTTP 502 Bad Gateway.</p>
     </div>
   </section>
 
@@ -223,21 +209,9 @@
       <p class="rail-note">3 items from the web sweep</p>
     </div>
     <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/14/apple-ai-hardware-smart-display-homeview">Apple bets AI can finally make us want a smart home</a></h3>
-        <p class="entry-meta">Oct 14, 2026</p>
-        <p>Axios reports that Apple announced a smart display, a revised speaker, an updated streaming device, and connected-home accessories. The story frames modern AI as a possible answer to smart-home setup and usability problems.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/14/ai-safety-regulation-election-spending-50-million">AI safety money floods into political races</a></h3>
-        <p class="entry-meta">Oct 14, 2026</p>
-        <p>Axios reports that AI-safety groups and individual donors have spent $48 million in the current election cycle, putting advocates of AI safety and regulation more visibly into electoral politics.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://www.theguardian.com/business/2026/oct/13/ai-share-crash-risk-global-imf-debt-corrowing-cyber-attacks">Threat of AI share crash puts world financial stability at risk, says IMF</a></h3>
-        <p class="entry-meta">Oct 13, 2026</p>
-        <p>The Guardian reports that the IMF warned high AI-sector valuations and debt could present financial-stability risks, alongside broader concerns about government borrowing and cyberattacks.</p>
-      </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/15/anthropic-q3-revenue-cash-flow">Anthropic brings Wall Street an AI bull case</a></h3><p class="entry-meta">Oct 15, 2026</p><p>Axios reports that Anthropic told investors it was cash-flow positive in the third quarter, while noting that its rate of sales growth had slowed relative to the preceding quarter.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/security/new-android-scam-protections/">New Android protections to help keep you safe from mobile scams</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Google says enhanced protection mode lets Scam Detection in Google Messages use cloud Gemini models to assess complex message context and scammer intent in conversations with unknown senders.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://ago.wv.gov/article/attorney-general-mccuskey-announces-lawsuit-against-openai-deceiving-west-virginians-about">West Virginia announces lawsuit against OpenAI over ChatGPT safety</a></h3><p class="entry-meta">Oct 14, 2026</p><p>West Virginia’s attorney general announced a lawsuit alleging that OpenAI misrepresented ChatGPT’s safety. The office says Arkansas and a bipartisan coalition in Arizona, Idaho, and Montana filed similar state-court actions.</p></article>
     </div>
   </section>
 
@@ -245,7 +219,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-14 05:44 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-15 06:00 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

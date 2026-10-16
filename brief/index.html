@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Thursday · Oct 15, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Friday · Oct 16, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,11 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI’s newest customer stories center on agents moving beyond code, long-running research workloads, and security operations.</span> <span class="rundown-why">The examples point to increasingly specialized, operational deployments of its models.</span><a class="cite" href="https://openai.com/index/amp-beyond-coding">[1]</a><a class="cite" href="https://openai.com/index/third-moment-research">[2]</a></li>
-        <li><span class="rundown-head">Anthropic opened a Singapore office and signed a government MOU covering AI safety, evaluation, and responsible adoption.</span> <span class="rundown-why">It is Anthropic’s fifth Asia-Pacific office and extends its public-sector engagement in the region.</span><a class="cite" href="https://www.anthropic.com/news/singapore-office-opening">[3]</a></li>
-        <li><span class="rundown-head">Claude Platform added OpenTelemetry traces for managed agents, the Messages API, and its SDKs.</span> <span class="rundown-why">That puts model calls, tool use, latency, and token data into standard observability workflows.</span><a class="cite" href="https://claude.com/resources/articles/agent-observability-on-the-claude-platform">[4]</a></li>
-        <li><span class="rundown-head">Liquid AI’s open-weight LFM2.5-24B-A2B drew HN interest for local agent workloads.</span> <span class="rundown-why">The model has 24B parameters but only 2B active parameters, targeting fast private inference on-device.</span><a class="cite" href="https://www.liquid.ai/blog/lfm2-5-24b-a2b">[5]</a></li>
-        <li><span class="rundown-head">State-level scrutiny of ChatGPT expanded while Anthropic’s reported cash-flow claim became a market story.</span> <span class="rundown-why">Both developments sharpen the tension between AI safety obligations and the economics of frontier-model businesses.</span><a class="cite" href="https://ago.wv.gov/article/attorney-general-mccuskey-announces-lawsuit-against-openai-deceiving-west-virginians-about">[6]</a><a class="cite" href="https://www.axios.com/2026/10/15/anthropic-q3-revenue-cash-flow">[7]</a></li>
+        <li><span class="rundown-head">Meta released Muse Spark Open, an 816B-parameter open-weight multimodal model aimed at coding and agentic work.</span> <span class="rundown-why">It arrives with broad inference-engine support, though Meta’s own desktop configuration calls for two high-memory Mac Studios.</span><a class="cite" href="https://research.meta.ai/blog/muse-spark-open">[1]</a></li>
+        <li><span class="rundown-head">OpenAI introduced sponsored GPT-Rosalind access for eligible life-sciences research labs.</span> <span class="rundown-why">The program packages the model with tools for academic research rather than a general consumer launch.</span><a class="cite" href="https://openai.com/index/introducing-the-rosalind-academic-plan">[2]</a></li>
+        <li><span class="rundown-head">Anthropic embedded a six-person METR team with employee-like access for independent risk assessment.</span> <span class="rundown-why">METR can publish its assessments, subject only to narrowly defined redactions.</span><a class="cite" href="https://www.anthropic.com/news/an-update-on-independent-evaluators">[3]</a></li>
+        <li><span class="rundown-head">Claude Code Review moved from preview to general availability for Team and Enterprise customers.</span> <span class="rundown-why">Anthropic says most reviews now finish in six to ten minutes, with repository-level depth controls.</span><a class="cite" href="https://claude.com/blog/code-review-is-now-generally-available">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -135,26 +134,25 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.liquid.ai/blog/lfm2-5-24b-a2b">LFM2.5-24B-A2B: Built for fast on-device agents</a></h3>
-        <p class="entry-meta">Oct 14, 2026 · 211 points · <a href="https://news.ycombinator.com/item?id=50097369">44 comments on HN</a></p>
-        <p>Liquid AI describes LFM2.5-24B-A2B as an open-weight, 24B-parameter reasoning model with 2B active parameters for private on-device agents. The release says it outperforms Qwen3.6-35B-A3B on LiveClaw.</p>
-        <blockquote class="reaction">“i’m gettin between 200-320 tok/s on a 5070ti with 131k context on llamacpp and no tuning. very nice.” <span class="who">&mdash; serf on <a href="https://news.ycombinator.com/item?id=50097369">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://research.meta.ai/blog/muse-spark-open">Muse Spark Open</a></h3>
+        <p class="entry-meta">Oct 15, 2026 · 810 points · <a href="https://news.ycombinator.com/item?id=50107379">402 comments on HN</a></p>
+        <p>Meta released the weights for its multimodal Muse Spark Open model: 816B total parameters, 42B active, and a 1M-token context window. The release targets coding and agentic work and lists support across major runtimes and hosted providers.</p>
+        <blockquote class="reaction">“They've done considerable effort in making sure this model can run on basically every model runner, from Unsloth to MLX.” <span class="who">&mdash; armcat on <a href="https://news.ycombinator.com/item?id=50107379">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://lwn.net/Articles/1100449/">Linus Torvalds’s first LLM-assisted patch series</a></h3>
-        <p class="entry-meta">Oct 14, 2026 · 116 points · <a href="https://news.ycombinator.com/item?id=50090842">98 comments on HN</a></p>
-        <p>LWN’s report on Torvalds’s first LLM-assisted patch series prompted a discussion about review requirements, provenance, and licensing implications for generated code.</p>
+        <h3 class="entry-title"><a href="https://www.krea.ai/krea-3">Krea 3 — an image model built for editing at scale</a></h3>
+        <p class="entry-meta">Oct 15, 2026 · 308 points · <a href="https://news.ycombinator.com/item?id=50105648">99 comments on HN</a></p>
+        <p>Krea presents Krea 3 as a production image-editing model, claiming sub-second editing, a $0.06 per-image price, and faster performance than the comparison models on its launch page.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://smallcultfollowing.com/babysteps/blog/2026/10/14/agentic-dev-and-rust/">What agents mean for Rust (and vice versa)</a></h3>
-        <p class="entry-meta">Oct 14, 2026 · 69 points · <a href="https://news.ycombinator.com/item?id=50084416">57 comments on HN</a></p>
-        <p>This Rust-language-design essay argues that Rust is a strong fit for agentic development and considers how the language could become a better one. It frames a software factory around design, construction, and optimization.</p>
-        <blockquote class="reaction">“The short term cost of learning the language isn’t that significant anymore contrasted with the long term benefits of the type system and better structure.” <span class="who">&mdash; kubb on <a href="https://news.ycombinator.com/item?id=50084416">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/">Using AI to reverse engineer hardware</a></h3>
+        <p class="entry-meta">Oct 15, 2026 · 189 points · <a href="https://news.ycombinator.com/item?id=50104299">174 comments on HN</a></p>
+        <p>A GNOME engineering post describes using AI tools while reverse engineering hardware, presenting the work as a practical development technique rather than a model release.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1">Has AI tells</a></h3>
-        <p class="entry-meta">Oct 14, 2026 · 122 points · <a href="https://news.ycombinator.com/item?id=50090799">105 comments on HN</a></p>
-        <p>A developer discussion about recognizing AI-generated writing drew attention to how style, attribution, and review practice are changing alongside routine LLM use.</p>
+        <h3 class="entry-title"><a href="https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/">Simons Foundation launches $15M effort to help mathematicians navigate AI era</a></h3>
+        <p class="entry-meta">Oct 15, 2026 · 239 points · <a href="https://news.ycombinator.com/item?id=50104654">193 comments on HN</a></p>
+        <p>The Simons Foundation announced a $15 million effort focused on helping mathematicians navigate the impact of AI on the field.</p>
       </article>
     </div>
   </section>
@@ -162,26 +160,20 @@
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">5 items</p>
+      <p class="rail-note">2 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/amp-beyond-coding">Amp puts AI agents to work beyond code with OpenAI models</a></h3><p class="entry-meta">Oct 14, 2026</p><p>OpenAI says Amp uses GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT to push agent work beyond coding.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/sentinelone">SentinelOne cuts malware analysis from weeks to hours</a></h3><p class="entry-meta">Oct 14, 2026</p><p>With OpenAI Daybreak, SentinelOne says it has shortened malware analysis from weeks to hours, creating room to investigate more threats.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/third-moment-research">How Third Moment Research runs 10,000 agents for 36+ hours</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Third Moment Research says it uses GPT-6 Astra, GPT-6.1 Sol, Codex, and Daybreak to run agents that work for days and improve with use.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/block-ai-powered-security">How Block is building AI-powered security with OpenAI technology</a></h3><p class="entry-meta">Oct 14, 2026</p><p>OpenAI says Block’s security team uses its technology to investigate threats faster and propose patches in minutes.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic">The EU’s next chapter in AI is agentic</a></h3><p class="entry-meta">Oct 14, 2026</p><p>OpenAI’s analysis says agentic-AI adoption is growing among EU enterprises and small businesses, with deeper use offering further value.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-the-rosalind-academic-plan">Bringing GPT-Rosalind to academic research labs</a></h3><p class="entry-meta">Oct 15, 2026</p><p>OpenAI introduced the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and related tools for life-sciences research.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/teaching-students-to-think-and-learn-through-questions">Teaching students to think and learn through questions</a></h3><p class="entry-meta">Oct 15, 2026</p><p>OpenAI highlighted Brazilian Portuguese AI for Educators material and Study Mode as tools intended to support active, step-by-step learning.</p></article>
     </div>
   </section>
 
   <section class="band" id="anthropic">
     <div class="rail">
       <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">2 items</p>
+      <p class="rail-note">1 item</p>
     </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/2026-us-midterms">Preparing for the 2026 US midterms</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Anthropic outlines how it has continued to strengthen election safeguards ahead of the US midterms.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/singapore-office-opening">Anthropic opens Singapore office and signs MOU with the Government of Singapore</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Anthropic opened its fifth Asia-Pacific office and signed an MOU with Singapore’s government on AI safety, security, model evaluation, adoption research, and responsible deployment.</p></article>
-    </div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/an-update-on-independent-evaluators">An update on independent evaluators</a></h3><p class="entry-meta">Oct 15, 2026</p><p>Anthropic says it has given six METR employees company hardware, office space, and near employee-level access for risk assessment. METR will publish its analysis; Anthropic says it may require only narrow, predefined redactions.</p></article></div>
   </section>
 
   <section class="band" id="claude-blog">
@@ -189,17 +181,16 @@
       <h2 class="label label--section">Claude Blog</h2>
       <p class="rail-note">1 item</p>
     </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/agent-observability-on-the-claude-platform">Agent observability on the Claude Platform</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Claude Platform now sends OpenTelemetry traces from Claude Managed Agents, the Messages API, and Claude SDKs to OTel tools. The traces cover agent turns, model calls, and tool use, with latency, token, and ID data.</p></article></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/code-review-is-now-generally-available">Code Review is now generally available</a></h3><p class="entry-meta">Oct 15, 2026</p><p>Claude Code Review is now available to Claude Team and Enterprise organizations. Anthropic says most reviews now take roughly six to ten minutes, versus about 20 minutes in preview, and administrators can select Quick, Standard, or Deep per repository.</p></article></div>
   </section>
 
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Failed fetches</p>
+      <p class="rail-note">Fetch failed</p>
     </div>
     <div class="col">
-      <p class="fail">Technology RSS failed after 2 attempts: HTTP 502 Bad Gateway.</p>
-      <p class="fail">National RSS failed after 2 attempts: HTTP 502 Bad Gateway.</p>
+      <p class="fail">Technology and national RSS feeds returned HTTP 502 Bad Gateway on both fetch attempts.</p>
     </div>
   </section>
 
@@ -209,9 +200,9 @@
       <p class="rail-note">3 items from the web sweep</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/15/anthropic-q3-revenue-cash-flow">Anthropic brings Wall Street an AI bull case</a></h3><p class="entry-meta">Oct 15, 2026</p><p>Axios reports that Anthropic told investors it was cash-flow positive in the third quarter, while noting that its rate of sales growth had slowed relative to the preceding quarter.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/security/new-android-scam-protections/">New Android protections to help keep you safe from mobile scams</a></h3><p class="entry-meta">Oct 14, 2026</p><p>Google says enhanced protection mode lets Scam Detection in Google Messages use cloud Gemini models to assess complex message context and scammer intent in conversations with unknown senders.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://ago.wv.gov/article/attorney-general-mccuskey-announces-lawsuit-against-openai-deceiving-west-virginians-about">West Virginia announces lawsuit against OpenAI over ChatGPT safety</a></h3><p class="entry-meta">Oct 14, 2026</p><p>West Virginia’s attorney general announced a lawsuit alleging that OpenAI misrepresented ChatGPT’s safety. The office says Arkansas and a bipartisan coalition in Arizona, Idaho, and Montana filed similar state-court actions.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/16/wall-street-limit-ai-spending-debt">The debt-fueled AI boom is cracking</a></h3><p class="entry-meta">Oct 16, 2026</p><p>Axios reports widening concern that debt-funded AI infrastructure spending may be outpacing expected returns, citing pressure on AI-linked stocks and debt markets.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/android-gets-ai-defenses-against-messaging-scams-fake-calls/">Android gets AI defenses against messaging scams, fake calls</a></h3><p class="entry-meta">Oct 15, 2026</p><p>BleepingComputer reports that Google announced Android protections using AI against scam messages and call-forwarding abuse, with availability rolling out to eligible devices.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-october-16-2026/">Everything that happened in AI today</a></h3><p class="entry-meta">Oct 16, 2026</p><p>The Neuron’s daily roundup reports that Bank of America hired contractors to address flaws it says were exposed by Anthropic’s Mythos, alongside fresh attention to deepfake-evidence authentication.</p></article>
     </div>
   </section>
 
@@ -219,7 +210,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-15 06:00 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-16 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

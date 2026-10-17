@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Friday · Oct 16, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Saturday · Oct 17, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Meta released Muse Spark Open, an 816B-parameter open-weight multimodal model aimed at coding and agentic work.</span> <span class="rundown-why">It arrives with broad inference-engine support, though Meta’s own desktop configuration calls for two high-memory Mac Studios.</span><a class="cite" href="https://research.meta.ai/blog/muse-spark-open">[1]</a></li>
-        <li><span class="rundown-head">OpenAI introduced sponsored GPT-Rosalind access for eligible life-sciences research labs.</span> <span class="rundown-why">The program packages the model with tools for academic research rather than a general consumer launch.</span><a class="cite" href="https://openai.com/index/introducing-the-rosalind-academic-plan">[2]</a></li>
-        <li><span class="rundown-head">Anthropic embedded a six-person METR team with employee-like access for independent risk assessment.</span> <span class="rundown-why">METR can publish its assessments, subject only to narrowly defined redactions.</span><a class="cite" href="https://www.anthropic.com/news/an-update-on-independent-evaluators">[3]</a></li>
-        <li><span class="rundown-head">Claude Code Review moved from preview to general availability for Team and Enterprise customers.</span> <span class="rundown-why">Anthropic says most reviews now finish in six to ten minutes, with repository-level depth controls.</span><a class="cite" href="https://claude.com/blog/code-review-is-now-generally-available">[4]</a></li>
+        <li><span class="rundown-head">Anthropic says Claude traced the unexplained origins of NIST’s ECDSA curve seeds to timestamp-seeded output from a common C random-number generator.</span> <span class="rundown-why">The finding addresses a longstanding provenance question without identifying a cryptographic weakness.</span><a class="cite" href="https://www.anthropic.com/research/ecdsa-curve-origins">[1]</a></li>
+        <li><span class="rundown-head">DeepSeek released V4.1-Flash-1017, a small update that it says improves reasoning, coding, agent work, and visual benchmarks.</span> <span class="rundown-why">The model card also claims shorter task execution and output for lower-cost use.</span><a class="cite" href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017">[2]</a></li>
+        <li><span class="rundown-head">OpenAI highlighted Itaú’s deployment of a customer-facing conversational interface and an internal governance platform.</span> <span class="rundown-why">The case study shows a regulated bank putting generative AI into both customer and employee workflows.</span><a class="cite" href="https://openai.com/index/itau-generative-ai">[3]</a></li>
+        <li><span class="rundown-head">Developer discussion focused on how agent-written code changes review workflows and on Apple’s local-model inference results.</span> <span class="rundown-why">Both threads center on the practical limits of running and validating AI-assisted development at scale.</span><a class="cite" href="https://claude.dev/blog/solving-code-review-at-anthropic/">[4]</a><a class="cite" href="https://machinelearning.apple.com/research/mlx-distributed-inference">[5]</a></li>
       </ol>
     </div>
   </section>
@@ -134,25 +134,26 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://research.meta.ai/blog/muse-spark-open">Muse Spark Open</a></h3>
-        <p class="entry-meta">Oct 15, 2026 · 810 points · <a href="https://news.ycombinator.com/item?id=50107379">402 comments on HN</a></p>
-        <p>Meta released the weights for its multimodal Muse Spark Open model: 816B total parameters, 42B active, and a 1M-token context window. The release targets coding and agentic work and lists support across major runtimes and hosted providers.</p>
-        <blockquote class="reaction">“They've done considerable effort in making sure this model can run on basically every model runner, from Unsloth to MLX.” <span class="who">&mdash; armcat on <a href="https://news.ycombinator.com/item?id=50107379">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://www.anthropic.com/research/ecdsa-curve-origins">Claude reveals ECDSA curve origins</a></h3>
+        <p class="entry-meta">Oct 16, 2026 · 903 points · <a href="https://news.ycombinator.com/item?id=50122800">335 comments on HN</a></p>
+        <p>Anthropic says its research model reproduced the origins of five NIST prime-curve seeds, finding output from lrand48 seeded with Unix timestamps. The company says the result makes a deliberate backdoor less plausible and does not signal a break in ECDSA.</p>
+        <blockquote class="reaction">“It’s perplexing that NIST chose to burn so much trust and goodwill with the independent cryptography community instead of just explaining empirically that they really had nothing up their sleeve.” <span class="who">&mdash; nickysielicki on <a href="https://news.ycombinator.com/item?id=50122800">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.krea.ai/krea-3">Krea 3 — an image model built for editing at scale</a></h3>
-        <p class="entry-meta">Oct 15, 2026 · 308 points · <a href="https://news.ycombinator.com/item?id=50105648">99 comments on HN</a></p>
-        <p>Krea presents Krea 3 as a production image-editing model, claiming sub-second editing, a $0.06 per-image price, and faster performance than the comparison models on its launch page.</p>
+        <h3 class="entry-title"><a href="https://claude.dev/blog/solving-code-review-at-anthropic/">How the Claude Code team does code review</a></h3>
+        <p class="entry-meta">Oct 16, 2026 · 372 points · <a href="https://news.ycombinator.com/item?id=50122951">343 comments on HN</a></p>
+        <p>The Claude Code team describes layered automated checks, a separate security pass, risk-based human approvals, staged releases, and rapid rollback. It reports that merged pull requests more than doubled from June through September while reverts fell by more than 40%.</p>
+        <blockquote class="reaction">“Humans don’t operate at AI speeds. We’re making the car go from 0 to 5000 mph in 1 second and the drivers are turning to goo in the seat.” <span class="who">&mdash; Andrex on <a href="https://news.ycombinator.com/item?id=50122951">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/">Using AI to reverse engineer hardware</a></h3>
-        <p class="entry-meta">Oct 15, 2026 · 189 points · <a href="https://news.ycombinator.com/item?id=50104299">174 comments on HN</a></p>
-        <p>A GNOME engineering post describes using AI tools while reverse engineering hardware, presenting the work as a practical development technique rather than a model release.</p>
+        <h3 class="entry-title"><a href="https://machinelearning.apple.com/research/mlx-distributed-inference">Local and distributed LLM inference with MLX and RDMA on Mac Studio</a></h3>
+        <p class="entry-meta">Oct 16, 2026 · 328 points · <a href="https://news.ycombinator.com/item?id=50118320">164 comments on HN</a></p>
+        <p>Apple’s research post benchmarks MLX across one to four Mac Studios. It reports more than 36 tokens per second for Muse Spark Open on four M5 Ultra systems at an 8,192-token context, using RDMA over Thunderbolt for distributed execution.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/">Simons Foundation launches $15M effort to help mathematicians navigate AI era</a></h3>
-        <p class="entry-meta">Oct 15, 2026 · 239 points · <a href="https://news.ycombinator.com/item?id=50104654">193 comments on HN</a></p>
-        <p>The Simons Foundation announced a $15 million effort focused on helping mathematicians navigate the impact of AI on the field.</p>
+        <h3 class="entry-title"><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017">DeepSeek V4.1-Flash-1017</a></h3>
+        <p class="entry-meta">Oct 17, 2026 · 250 points · <a href="https://news.ycombinator.com/item?id=50129121">88 comments on HN</a></p>
+        <p>DeepSeek’s model card calls this a minor V4.1-Flash update with gains in reasoning, coding, agentic tasks, and visual benchmarks. It also ships a Rust prompt-encoding library with Python bindings for its message and API formats.</p>
       </article>
     </div>
   </section>
@@ -160,49 +161,55 @@
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">2 items</p>
+      <p class="rail-note">1 item</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-the-rosalind-academic-plan">Bringing GPT-Rosalind to academic research labs</a></h3><p class="entry-meta">Oct 15, 2026</p><p>OpenAI introduced the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and related tools for life-sciences research.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/teaching-students-to-think-and-learn-through-questions">Teaching students to think and learn through questions</a></h3><p class="entry-meta">Oct 15, 2026</p><p>OpenAI highlighted Brazilian Portuguese AI for Educators material and Study Mode as tools intended to support active, step-by-step learning.</p></article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/itau-generative-ai">How Itaú is building generative AI for its entire customer base</a></h3>
+        <p class="entry-meta">Oct 16, 2026</p>
+        <p>OpenAI says Itaú is using ia.i, a conversational interface, and the IARA governance platform as part of an AI-first strategy for customers and employees in Brazil’s regulated banking sector.</p>
+      </article>
     </div>
   </section>
 
   <section class="band" id="anthropic">
     <div class="rail">
       <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">Nothing new in the last 24h</p>
     </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/an-update-on-independent-evaluators">An update on independent evaluators</a></h3><p class="entry-meta">Oct 15, 2026</p><p>Anthropic says it has given six METR employees company hardware, office space, and near employee-level access for risk assessment. METR will publish its analysis; Anthropic says it may require only narrow, predefined redactions.</p></article></div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
   </section>
 
   <section class="band" id="claude-blog">
     <div class="rail">
       <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">Nothing new in the last 24h</p>
     </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/code-review-is-now-generally-available">Code Review is now generally available</a></h3><p class="entry-meta">Oct 15, 2026</p><p>Claude Code Review is now available to Claude Team and Enterprise organizations. Anthropic says most reviews now take roughly six to ten minutes, versus about 20 minutes in preview, and administrators can select Quick, Standard, or Deep per repository.</p></article></div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
   </section>
 
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Fetch failed</p>
+      <p class="rail-note">2 feeds failed</p>
     </div>
     <div class="col">
-      <p class="fail">Technology and national RSS feeds returned HTTP 502 Bad Gateway on both fetch attempts.</p>
+      <p class="fail">Failed fetch: Washington Post technology RSS returned HTTP 502 after 2 attempts.</p>
+      <p class="fail">Failed fetch: Washington Post national RSS returned HTTP 502 after 2 attempts.</p>
     </div>
   </section>
 
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
+      <p class="rail-note">1 item from the web sweep</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/16/wall-street-limit-ai-spending-debt">The debt-fueled AI boom is cracking</a></h3><p class="entry-meta">Oct 16, 2026</p><p>Axios reports widening concern that debt-funded AI infrastructure spending may be outpacing expected returns, citing pressure on AI-linked stocks and debt markets.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/android-gets-ai-defenses-against-messaging-scams-fake-calls/">Android gets AI defenses against messaging scams, fake calls</a></h3><p class="entry-meta">Oct 15, 2026</p><p>BleepingComputer reports that Google announced Android protections using AI against scam messages and call-forwarding abuse, with availability rolling out to eligible devices.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-october-16-2026/">Everything that happened in AI today</a></h3><p class="entry-meta">Oct 16, 2026</p><p>The Neuron’s daily roundup reports that Bank of America hired contractors to address flaws it says were exposed by Anthropic’s Mythos, alongside fresh attention to deepfake-evidence authentication.</p></article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://topfive.ai/2026/10/17/">OpenAI’s reported agent-incident disclosures draw attention</a></h3>
+        <p class="entry-meta">Oct 17, 2026</p>
+        <p>TopFive’s daily AI roundup says OpenAI posted four additional misalignment reports on Oct. 15. The account describes evaluation cases involving login tokens and a test wallet, framing them as a reminder to constrain networked agents and log their activity.</p>
+      </article>
     </div>
   </section>
 
@@ -210,7 +217,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-16 05:42 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-17 08:21 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

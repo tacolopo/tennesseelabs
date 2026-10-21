@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Sunday · Oct 18, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Wednesday · Oct 21, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Sphinx puts an understanding check in front of an agent-assisted git push.</span> <span class="rundown-why">The hook turns a diff into a short failure-mode question before a protected branch can receive it.</span><a class="cite" href="https://sphinx-six-theta.vercel.app/">[1]</a></li>
-        <li><span class="rundown-head">A Codex Desktop bug report drew attention to unbounded Crashpad dump growth on macOS.</span> <span class="rundown-why">The report documents a usable app alongside thousands of accumulated crash artifacts, making local-disk management a practical agent-tooling concern.</span><a class="cite" href="https://github.com/openai/codex/issues/25921">[2]</a></li>
-        <li><span class="rundown-head">Reports say Anthropic has circulated a frontier-AI safety bill with lawmakers.</span> <span class="rundown-why">The proposed thresholds and outside evaluation process would shape when the government could intervene.</span><a class="cite" href="https://aidapted.ro/en/articles/ai-news-october-18-2026/">[3]</a></li>
-        <li><span class="rundown-head">Meta’s reported Muse Spark Open release keeps local, open-weight deployment in the conversation.</span> <span class="rundown-why">The report describes an 816B-parameter mixture-of-experts model optimized with Apple for a high-end Mac Studio setup.</span><a class="cite" href="https://aidapted.ro/en/articles/ai-news-october-18-2026/">[4]</a></li>
+        <li><span class="rundown-head">OpenAI is taking its models and Codex workflows to Google Cloud’s Model Garden.</span> <span class="rundown-why">The deal gives Google Cloud customers another route to buy OpenAI models through an existing cloud marketplace.</span><a class="cite" href="https://openai.com/index/openai-models-google-cloud/">[1]</a></li>
+        <li><span class="rundown-head">Critical PHP flaws have brought AI-assisted vulnerability research into immediate operational focus.</span> <span class="rundown-why">Wiz says the vulnerabilities can enable remote code execution or memory disclosure, and PHP released fixes today.</span><a class="cite" href="https://www.wiz.io/blog/php2shell-php-rce">[2]</a></li>
+        <li><span class="rundown-head">Google has open-sourced TorchTPU, a native PyTorch backend for TPUs.</span> <span class="rundown-why">It is meant to make TPU training and inference more accessible to PyTorch users.</span><a class="cite" href="https://github.com/google-pytorch/torch_tpu">[3]</a></li>
+        <li><span class="rundown-head">OpenAI, PerturbAI, and Scripps used distributed agents to search brain-cell data for biological leads.</span> <span class="rundown-why">The project applies large-scale agent workflows to a research dataset rather than a general chat task.</span><a class="cite" href="https://openai.com/index/scaling-ai-research-for-complex-biological-data">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -130,40 +130,48 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">2 items from Hacker News</p>
+      <p class="rail-note">5 items from Hacker News</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://sphinx-six-theta.vercel.app/">Sphinx: a git hook that quizzes you on your AI’s code before shipping</a></h3>
-        <p class="entry-meta">Oct 17, 2026 · 125 points · <a href="https://news.ycombinator.com/item?id=50137950">31 comments on HN</a></p>
-        <p>Sphinx is a Git hook for agent-assisted development. Before a protected push proceeds, it asks a question drawn from the diff about behavior or failure modes; the site says answers are not sent to the coding agent, and it excludes .env files and keys.</p>
-        <blockquote class="reaction">“The right problem statement, but we normally let the code review process take care of this.” <span class="who">&mdash; cjimesh on <a href="https://news.ycombinator.com/item?id=50137950">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://docs.mistral.ai/models/mistral-large-4-0">Mistral Large 4</a></h3>
+        <p class="entry-meta">Oct 21, 2026 · 271 points · <a href="https://news.ycombinator.com/item?id=50186129">67 comments on HN</a></p>
+        <p>Mistral’s documentation describes Large 4 as an open-weight, multimodal mixture-of-experts model with 52B active parameters, 1.05T total parameters, a vision encoder, and a one-million-token context window.</p>
+        <blockquote class="reaction">“waiting for pelican bench results (the only benchmark that matters)” <span class="who">&mdash; dropbox_miner on <a href="https://news.ycombinator.com/item?id=50186129">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://github.com/openai/codex/issues/25921">Codex Desktop continuously generates Crashpad pending dumps</a></h3>
-        <p class="entry-meta">Oct 17, 2026 · 132 points · <a href="https://news.ycombinator.com/item?id=50133231">50 comments on HN</a></p>
-        <p>A long-running GitHub issue reports continuous Crashpad dump generation by Codex Desktop on macOS, with one reporter measuring 4.9 GB and 54,504 files in a day while the app remained usable. HN commenters compared notes on worktrees, logs, caches, and container isolation.</p>
-        <blockquote class="reaction">“I’d been running into a lot of disk pressure on my system from agents running.” <span class="who">&mdash; glenngillen on <a href="https://news.ycombinator.com/item?id=50133231">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://www.wiz.io/blog/php2shell-php-rce">PHP2Shell: AI uncovers critical RCE in PHP</a></h3>
+        <p class="entry-meta">Oct 21, 2026 · 419 points · <a href="https://news.ycombinator.com/item?id=50180836">164 comments on HN</a></p>
+        <p>Wiz reports multiple PHP flaws affecting versions back to 5.4, including unauthenticated remote-code-execution and memory-disclosure paths. Its researchers say frontier models helped make exploit development and adaptation practical; PHP issued fixes on Oct. 21.</p>
+        <blockquote class="reaction">“Can anyone explain the two month window between reporting and disclosure?” <span class="who">&mdash; Topfi on <a href="https://news.ycombinator.com/item?id=50180836">HN</a></span></blockquote>
       </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/google-pytorch/torch_tpu">Google open-sources TorchTPU, a native PyTorch back end for TPUs</a></h3><p class="entry-meta">Oct 20, 2026 · 375 points · <a href="https://news.ycombinator.com/item?id=50169053">87 comments on HN</a></p><p>TorchTPU provides a PyTorch backend for Google TPUs, with custom ATen kernels, a compilation cache, distributed-training examples, and torch.compile integration.</p><blockquote class="reaction">“I remember the days when you had to fight XLA to make PyTorch run on TPUs, it seems we finally got first-party support!” <span class="who">&mdash; ismailmaj on <a href="https://news.ycombinator.com/item?id=50169053">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/openai-models-google-cloud/">OpenAI models are coming to Google Cloud</a></h3><p class="entry-meta">Oct 21, 2026 · 176 points · <a href="https://news.ycombinator.com/item?id=50180079">78 comments on HN</a></p><p>OpenAI says its frontier models and Codex workflows will be available in Google Cloud’s Model Garden through Google Cloud Marketplace.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/scaling-ai-research-for-complex-biological-data">Using thousands of AI agents to uncover new leads in biological data</a></h3><p class="entry-meta">Oct 21, 2026 · 110 points · <a href="https://news.ycombinator.com/item?id=50180752">55 comments on HN</a></p><p>OpenAI describes a collaboration with PerturbAI and Scripps Research that used distributed agents to look for research leads in data from millions of brain cells.</p></article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">6 items</p>
     </div>
     <div class="col">
-      <p class="empty">Nothing new in the last 24h.</p>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/openai-models-google-cloud">OpenAI models are coming to Google Cloud</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI says frontier models and Codex workflows will be offered through Google Cloud’s Model Garden and Marketplace.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities">Patch the Planet: global response coordination as agents uncover critical vulnerabilities</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI describes Patch the Planet as a program connecting security researchers, maintainers, and incident responders around critical open-source vulnerabilities.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/scaling-ai-research-for-complex-biological-data">Using thousands of AI agents to uncover new leads in biological data</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI, PerturbAI, and Scripps Research used distributed agents to explore biological data drawn from millions of brain cells.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/building-chatgpt-ad-stack">How we built ChatGPT’s novel ad stack for user trust and relevance</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI says its LLM-powered advertising stack interprets conversational intent while keeping ads separate from answers.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/empowering-cyber-defenders">Democratic governance of frontier AI, part II: Empowering cyber defenders</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI outlines a policy blueprint centered on frontier AI for cyber defenders, safeguards, and public-sector resilience.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/att-legal">How AT&amp;T is rethinking in-house legal work with OpenAI</a></h3><p class="entry-meta">Oct 21, 2026</p><p>AT&amp;T says its LegalEdge team is using OpenAI to make legal knowledge easier to access and to scale intake work.</p></article>
     </div>
   </section>
 
   <section class="band" id="anthropic">
     <div class="rail">
       <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">1 item</p>
     </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust">Physicist Christopher Stubbs joins Anthropic’s Long-Term Benefit Trust</a></h3><p class="entry-meta">Oct 21, 2026</p><p>Anthropic appointed Harvard physicist Christopher Stubbs to its Long-Term Benefit Trust. The company says the Trust can appoint a majority of its board and advises leaders on AI risks and societal impacts.</p></article></div>
   </section>
 
   <section class="band" id="claude-blog">
@@ -191,19 +199,19 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://aidapted.ro/en/articles/ai-news-october-18-2026/">Anthropic’s reported frontier-AI safety bill</a></h3>
-        <p class="entry-meta">Oct 18, 2026</p>
-        <p>AIdapted reports that Anthropic has presented lawmakers with a draft allowing intervention only for imminent, significant risks, with independent evaluators registered through the Commerce Department. The article describes a proposal, not enacted law.</p>
+        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/21/ai-hacking-cybersecurity-water-power-grid">AI is getting better at hacking power and water systems</a></h3>
+        <p class="entry-meta">Oct 21, 2026</p>
+        <p>Axios reports that Frenos researchers tested 10 AI models on planning attacks against industrial systems such as water-treatment monitoring software.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://aidapted.ro/en/articles/ai-news-october-18-2026/">Meta Muse Spark Open is reported as a large open-weight release</a></h3>
-        <p class="entry-meta">Oct 18, 2026</p>
-        <p>AIdapted reports that Meta released Muse Spark Open, an 816B-parameter mixture-of-experts model with 42B active parameters and a one-million-token context window. Its account says Meta and Apple optimized a two-Mac-Studio setup with MLX.</p>
+        <h3 class="entry-title"><a href="https://www.techradar.com/pro/security/deepseek-ai-tools-banned-from-us-government-agency-systems-as-rift-with-china-grows">DeepSeek AI tools banned from U.S. government agency systems</a></h3>
+        <p class="entry-meta">Oct 20, 2026</p>
+        <p>TechRadar reports that the Department of Homeland Security ordered federal civilian agencies to stop buying and remove DeepSeek products, including third-party products developed using DeepSeek implementations.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://aidailypost.com/archives/2026/10">DeepSeek V4.1-Flash-1017 enters the discussion</a></h3>
-        <p class="entry-meta">Oct 17, 2026</p>
-        <p>AI Daily Post reports that DeepSeek released V4.1-Flash-1017 and made a Search API available. The report lists a 77.0 DeepSWE score for the checkpoint; readers should consult the release materials before using that benchmark for a deployment decision.</p>
+        <h3 class="entry-title"><a href="https://www.theatlantic.com/technology/2026/10/ai-hacking-apocalypse-began-last-night/689106/">The AI-Hacking Apocalypse Began Last Night</a></h3>
+        <p class="entry-meta">Oct 21, 2026</p>
+        <p>The Atlantic reports that hackers have tried to exploit newly disclosed vulnerabilities and that companies may need days or weeks to install fixes.</p>
       </article>
     </div>
   </section>
@@ -212,7 +220,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-18 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-21 05:10 PM ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

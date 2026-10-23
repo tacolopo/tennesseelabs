@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Thursday · Oct 22, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Friday · Oct 23, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,11 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Anthropic opened a research preview of Claude Duet, a proactive agent app that can work in the background but asks before acting.</span> <span class="rundown-why">It is a concrete test of how much autonomy consumers will accept from a persistent assistant.</span><a class="cite" href="https://claude.com/blog/claude-duet">[1]</a></li>
-        <li><span class="rundown-head">OpenAI is bringing its frontier models and Codex workflows to Google Cloud’s Model Garden.</span> <span class="rundown-why">The Marketplace route broadens where enterprises can procure and run OpenAI models.</span><a class="cite" href="https://openai.com/index/openai-models-google-cloud">[2]</a></li>
-        <li><span class="rundown-head">Claude Security added continuous repository monitoring, fix tracking, and API/MCP integrations in public beta.</span> <span class="rundown-why">The product shifts from point-in-time scans toward a security workflow that follows active codebases.</span><a class="cite" href="https://claude.com/blog/claude-security-now-scans-continuously-and-tracks-fixes">[3]</a></li>
-        <li><span class="rundown-head">Mistral Large 4 and a 360M terminal world model led developer discussion.</span> <span class="rundown-why">The former is a large multimodal open-weight preview; the latter demonstrates a compact model predicting terminal state changes from keystrokes.</span><a class="cite" href="https://mistral.ai/news/mistral-large-4/">[4]</a><a class="cite" href="https://simedw.com/2026/10/21/world-model-terminal/">[5]</a></li>
-        <li><span class="rundown-head">U.S. banks are tightening controls around third-party AI agents using customer credentials.</span> <span class="rundown-why">The reports underscore an immediate operational problem: distinguishing human-directed actions from bot activity.</span><a class="cite" href="https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access">[6]</a></li>
+        <li><span class="rundown-head">Anthropic says Claude produced assembly-level security proofs across more than 100 open-source projects.</span> <span class="rundown-why">The result could put formal verification into reach for projects that cannot support years of specialized proof work.</span><a class="cite" href="https://www.anthropic.com/research/formal-verification">[1]</a></li>
+        <li><span class="rundown-head">NVIDIA’s OpenShell drew developer attention for policy-enforced agent sandboxes.</span> <span class="rundown-why">It targets constrained access to files, networks, and credentials.</span><a class="cite" href="https://github.com/NVIDIA/OpenShell">[2]</a></li>
+        <li><span class="rundown-head">OpenAI introduced a Decisions API for quick, lower-cost application decisions.</span> <span class="rundown-why">The release positions a focused API alongside broader model calls.</span><a class="cite" href="https://openai.com/index/decisions-api">[3]</a></li>
+        <li><span class="rundown-head">NVIDIA launched Minerva, an AIOps platform for AI-factory telemetry.</span> <span class="rundown-why">It combines infrastructure and workload signals to surface degraded components.</span><a class="cite" href="https://blogs.nvidia.com/blog/minerva-platform-infrastructure/">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -131,94 +130,65 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">5 items from Hacker News</p>
+      <p class="rail-note">4 items from Hacker News</p>
     </div>
     <div class="col">
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://claude.com/product/claude-duet">Claude Duet</a></h3>
-        <p class="entry-meta">Oct 21, 2026 · 374 points · <a href="https://news.ycombinator.com/item?id=50186037">343 comments on HN</a></p>
-        <p>Anthropic’s new app is a proactive agent that can work while its user is away and asks before acting. The research preview is available by waitlist to U.S. Claude Pro and Max subscribers.</p>
-        <blockquote class="reaction">“These agent assistants are really appealing ... but I have a hard time making the trust leap.” <span class="who">&mdash; charlesabarnes on <a href="https://news.ycombinator.com/item?id=50186037">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://mistral.ai/news/mistral-large-4/">Mistral Large 4</a></h3>
-        <p class="entry-meta">Oct 21, 2026 · 320 points · <a href="https://news.ycombinator.com/item?id=50186129">98 comments on HN</a></p>
-        <p>Mistral calls its public-preview model a natively multimodal, trillion-parameter model with 52 billion active parameters. It says weights will arrive at the end of the month.</p>
-        <blockquote class="reaction">“Impressive if these benches hold up to real world use. Not groundbreaking, but certainly in the game.” <span class="who">&mdash; skohan on <a href="https://news.ycombinator.com/item?id=50186129">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://simedw.com/2026/10/21/world-model-terminal/">WorldTUI: I trained a 360M model to pretend to be a terminal</a></h3>
-        <p class="entry-meta">Oct 22, 2026 · 198 points · <a href="https://news.ycombinator.com/item?id=50190363">60 comments on HN</a></p>
-        <p>Simon Edwardsson fine-tuned a 360M model on terminal sessions so that it predicts screen updates from raw keystrokes, without a shell or filesystem behind it. The demonstration can create files, use vim and tmux, and play Snake.</p>
-        <blockquote class="reaction">“Very cool. Fun project. I feel like there’s a wide field to be explored once you understand fine tuning good existing models.” <span class="who">&mdash; oilkillsbirds on <a href="https://news.ycombinator.com/item?id=50190363">HN</a></span></blockquote>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://github.com/omnara-ai/omnara">Omnara — open-source managed agent platform</a></h3>
-        <p class="entry-meta">Oct 21, 2026 · 78 points · <a href="https://news.ycombinator.com/item?id=50183892">24 comments on HN</a></p>
-        <p>Omnara offers a self-hostable, Apache-2.0 platform for running agents on any model and machine, with tools, secrets, permissions, and streaming built in.</p>
-      </article>
-      <article class="entry">
-        <h3 class="entry-title"><a href="https://layerfs.ai/">LayerFS: the filesystem for AI coding agents</a></h3>
-        <p class="entry-meta">Oct 21, 2026 · 72 points · <a href="https://news.ycombinator.com/item?id=50179857">45 comments on HN</a></p>
-        <p>LayerFS presents ephemeral writable workspaces layered over durable shared history. It says every tool call becomes a commit, allowing agents to work across branches without copying whole filesystems.</p>
-      </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/NVIDIA/OpenShell">OpenShell — a private runtime for autonomous-agent fleets</a></h3><p class="entry-meta">Oct 22, 2026 · 394 points · <a href="https://news.ycombinator.com/item?id=50198675">194 comments on HN</a></p><p>NVIDIA’s OpenShell lets operators declare the files, network access, secrets, and APIs an agent may use. It enforces those policies at runtime through kernel instrumentation and checks a policy change before applying it.</p><blockquote class="reaction">“There’s no such thing as anonymity in 2026.” <span class="who">&mdash; lcampbell on <a href="https://news.ycombinator.com/item?id=50198675">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/formal-verification">LLMs are making formal software verification feasible at larger scale</a></h3><p class="entry-meta">Oct 22, 2026 · 347 points · <a href="https://news.ycombinator.com/item?id=50202217">202 comments on HN</a></p><p>Anthropic reports that Claude generated assembly-level security proofs for more than 100 real-world open-source libraries with Theorem, including a scope of 123 libraries under stated execution assumptions.</p><blockquote class="reaction">“Writing proofs is just writing code in a niche language.” <span class="who">&mdash; nextaccountic on <a href="https://news.ycombinator.com/item?id=50202217">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.lesswrong.com/posts/WHEQps5PK8LrrcTAb/how-does-fable-5-1-hide-messages-in-images">How does Fable 5.1 hide messages in images?</a></h3><p class="entry-meta">Oct 22, 2026 · 85 points · <a href="https://news.ycombinator.com/item?id=50201445">24 comments on HN</a></p><p>Across 50 prompts, the authors found that Fable 5.1 often encoded letters as visual attributes in SVG images, particularly the heights of repeated objects. A separate instance decoded many images without a pre-agreed scheme.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2610.27251">AI and the Enclosure of the Scientific Commons</a></h3><p class="entry-meta">Oct 22, 2026 · 134 points · <a href="https://news.ycombinator.com/item?id=50199230">77 comments on HN</a></p><p>This paper applies the history of enclosure to scientific information commons and argues that their durability deserves close attention as AI reshapes access to research.</p></article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">5 items</p>
+      <p class="rail-note">3 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/broad-access-through-consistent-standards">Broad access through consistent standards</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI describes how it works with distribution partners to apply consistent safeguards and clarify Usage Policy expectations.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/att-legal">How AT&amp;T is rethinking in-house legal work with OpenAI</a></h3><p class="entry-meta">Oct 21, 2026</p><p>AT&amp;T’s LegalEdge team is using OpenAI to make legal knowledge easier to access and rethink intake and scaling legal judgment.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/chatgpt-ads-expands-26-new-countries">ChatGPT Ads expands to 26 new countries</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI says ChatGPT Ads has expanded to 26 additional countries and that more than 100,000 advertisers have used the platform.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/openai-models-google-cloud">OpenAI models are coming to Google Cloud</a></h3><p class="entry-meta">Oct 21, 2026</p><p>OpenAI and Google Cloud will bring frontier models and Codex workflows to Gemini’s Model Garden through Google Cloud Marketplace.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities">Patch the Planet: global response coordination as agents uncover critical vulnerabilities</a></h3><p class="entry-meta">Oct 21, 2026</p><p>Patch the Planet connects security researchers, maintainers, and incident responders to address critical vulnerabilities found across open source.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/openai-nask-ai-safety-security-partnership">OpenAI and Poland’s NASK partner to advance AI safety and security</a></h3><p class="entry-meta">Oct 23, 2026</p><p>OpenAI says it will work with Poland’s NASK on AI safety, security, and technical research to strengthen safeguards and digital resilience.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/decisions-api">Build more responsive apps with the Decisions API</a></h3><p class="entry-meta">Oct 22, 2026</p><p>OpenAI introduced the Decisions API as a fast, focused, lower-cost option for application decisions.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/forward-deployed-engineering-means">What FDE means at OpenAI</a></h3><p class="entry-meta">Oct 22, 2026</p><p>OpenAI published an overview of what forward-deployed engineering means at the company.</p></article>
     </div>
   </section>
 
   <section class="band" id="anthropic">
     <div class="rail">
       <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">Nothing new in the last 24h</p>
     </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust">Physicist Christopher Stubbs joins Anthropic’s Long-Term Benefit Trust</a></h3><p class="entry-meta">Oct 21, 2026</p><p>Experimental physicist and former Harvard Dean of Science Christopher Stubbs has joined Anthropic’s Long-Term Benefit Trust. Anthropic says the independent Trust appoints a majority of its board and advises on balancing growth with its public-benefit purpose.</p></article></div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
   </section>
 
   <section class="band" id="claude-blog">
     <div class="rail">
       <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">3 items</p>
+      <p class="rail-note">2 items</p>
     </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-duet">Introducing Claude Duet</a></h3><p class="entry-meta">Oct 21, 2026</p><p>Claude Duet is a research-preview app in which Claude works proactively: it surfaces attention items, can continue work while a user steps away, and checks before acting. It is on a waitlist for U.S. Pro and Max subscribers across iOS, Android, and claude.ai.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-security-now-scans-continuously-and-tracks-fixes">Claude Security now scans continuously and tracks fixes</a></h3><p class="entry-meta">Oct 21, 2026</p><p>Claude Security now monitors repositories as code changes, tracks findings through fixes, and incorporates team-supplied context. The update is in public beta for Claude Enterprise and adds API and MCP access.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/hcltech-joins-claude-partner-network">HCLTech joins the Claude Partner Network</a></h3><p class="entry-meta">Oct 21, 2026</p></article>
-    </div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop">Building agents: When to fold subagents into your main agent loop</a></h3><p class="entry-meta">Oct 22, 2026</p><p>Claude’s Applied AI team says some enterprise systems gain quality, cost, and latency benefits by folding routers, planners, and domain agents into a main loop that progressively loads skills and tools. The guidance emphasizes end-to-end evaluations and incremental changes.</p></article><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed">The full Claude Platform, available on Google Cloud</a></h3><p class="entry-meta">Oct 22, 2026</p><p>Anthropic says its managed Claude offering on Google Cloud is generally available with Google Cloud IAM, billing, commitment retirement, and same-day access to Claude Platform features and betas.</p></article></div>
   </section>
 
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Fetch failed</p>
+      <p class="rail-note">Feed unavailable</p>
     </div>
-    <div class="col">
-      <p class="fail">Technology and National RSS feeds returned HTTP 502 after two attempts.</p>
-    </div>
+    <div class="col"><p class="fail">Washington Post technology and national RSS feeds returned HTTP 502 Bad Gateway after 2 attempts each.</p></div>
   </section>
 
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">1 item from the web sweep</p>
+      <p class="rail-note">3 items from the web sweep</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access">Unvetted AI agents are accessing U.S. bank accounts</a></h3>
+        <h3 class="entry-title"><a href="https://blogs.nvidia.com/blog/minerva-platform-infrastructure/">NVIDIA unveils Minerva for AI-factory observability</a></h3>
         <p class="entry-meta">Oct 22, 2026</p>
-        <p>Axios reports that major U.S. banks are detecting third-party agents inside customer accounts and are restricting access as they struggle to distinguish people from authorized or rogue bots. Several banks are pursuing read-only access as a possible middle ground.</p>
+        <p>NVIDIA launched Minerva, an AIOps platform that combines infrastructure and workload telemetry to identify problems early and track AI-factory yield through GPU hours, goodput, uptime, and token production.</p>
+      </article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/22/php-vulnerability-security-update-websites">AI-assisted research puts PHP2Shell at the center of web-security response</a></h3><p class="entry-meta">Oct 22, 2026</p><p>Axios reports that AI researchers found two critical PHP vulnerabilities and that organizations rushed to patch after the disclosure.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://casemagic.ai/case/cand/5-26-cv-12308">Reservoir Media Management v. Anthropic records new court activity</a></h3><p class="entry-meta">Oct 22, 2026</p><p>The Northern District of California’s public docket feed shows an initial case-management scheduling order, summons activity, and related entries in Reservoir Media Management’s case against Anthropic.</p></article>
       </article>
     </div>
   </section>
@@ -227,7 +197,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-22 05:42 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-23 05:44 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

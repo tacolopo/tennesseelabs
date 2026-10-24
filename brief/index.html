@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Friday · Oct 23, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Saturday · Oct 24, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Anthropic says Claude produced assembly-level security proofs across more than 100 open-source projects.</span> <span class="rundown-why">The result could put formal verification into reach for projects that cannot support years of specialized proof work.</span><a class="cite" href="https://www.anthropic.com/research/formal-verification">[1]</a></li>
-        <li><span class="rundown-head">NVIDIA’s OpenShell drew developer attention for policy-enforced agent sandboxes.</span> <span class="rundown-why">It targets constrained access to files, networks, and credentials.</span><a class="cite" href="https://github.com/NVIDIA/OpenShell">[2]</a></li>
-        <li><span class="rundown-head">OpenAI introduced a Decisions API for quick, lower-cost application decisions.</span> <span class="rundown-why">The release positions a focused API alongside broader model calls.</span><a class="cite" href="https://openai.com/index/decisions-api">[3]</a></li>
-        <li><span class="rundown-head">NVIDIA launched Minerva, an AIOps platform for AI-factory telemetry.</span> <span class="rundown-why">It combines infrastructure and workload signals to surface degraded components.</span><a class="cite" href="https://blogs.nvidia.com/blog/minerva-platform-infrastructure/">[4]</a></li>
+        <li><span class="rundown-head">OpenAI detailed new containment measures for frontier-model training, including offline environments and high-compute red-teaming.</span> <span class="rundown-why">The security work arrives alongside a separate storage-engineering account of serving ChatGPT at billion-user scale.</span><a class="cite" href="https://openai.com/index/securing-our-frontier-model-training-environment">[1]</a><a class="cite" href="https://openai.com/index/scaling-storage-one-billion-users-part-two">[2]</a></li>
+        <li><span class="rundown-head">Kimi introduced K3.1 Pro, a 3T-class open-weight model with a one-million-token context window.</span> <span class="rundown-why">HN’s discussion focused on its claimed frontier placement and decision to hold back cyber-focused training data from the open-weight release.</span><a class="cite" href="https://www.kimi.ai/blog/kimi-k3-1-pro">[3]</a></li>
+        <li><span class="rundown-head">Claude brought its combined chat-and-Cowork experience to Enterprise, while previewing the security model for its persistent Duet agent.</span> <span class="rundown-why">Both posts are about moving agentic work into a managed cloud environment with organizational controls.</span><a class="cite" href="https://claude.com/blog/unified-claude-enterprise">[4]</a><a class="cite" href="https://claude.com/blog/claude-duet-safety-privacy-and-security">[5]</a></li>
+        <li><span class="rundown-head">The UK launched an AI Biosecurity Lab backed by £100 million in public funding and up to £200 million in commitments from OpenAI and Anthropic.</span> <span class="rundown-why">The initiative brings AI labs and public agencies together around detecting and responding to biological threats.</span><a class="cite" href="https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab">[6]</a></li>
       </ol>
     </div>
   </section>
@@ -130,25 +130,37 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items from Hacker News</p>
+      <p class="rail-note">3 items from Hacker News</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/NVIDIA/OpenShell">OpenShell — a private runtime for autonomous-agent fleets</a></h3><p class="entry-meta">Oct 22, 2026 · 394 points · <a href="https://news.ycombinator.com/item?id=50198675">194 comments on HN</a></p><p>NVIDIA’s OpenShell lets operators declare the files, network access, secrets, and APIs an agent may use. It enforces those policies at runtime through kernel instrumentation and checks a policy change before applying it.</p><blockquote class="reaction">“There’s no such thing as anonymity in 2026.” <span class="who">&mdash; lcampbell on <a href="https://news.ycombinator.com/item?id=50198675">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/formal-verification">LLMs are making formal software verification feasible at larger scale</a></h3><p class="entry-meta">Oct 22, 2026 · 347 points · <a href="https://news.ycombinator.com/item?id=50202217">202 comments on HN</a></p><p>Anthropic reports that Claude generated assembly-level security proofs for more than 100 real-world open-source libraries with Theorem, including a scope of 123 libraries under stated execution assumptions.</p><blockquote class="reaction">“Writing proofs is just writing code in a niche language.” <span class="who">&mdash; nextaccountic on <a href="https://news.ycombinator.com/item?id=50202217">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.lesswrong.com/posts/WHEQps5PK8LrrcTAb/how-does-fable-5-1-hide-messages-in-images">How does Fable 5.1 hide messages in images?</a></h3><p class="entry-meta">Oct 22, 2026 · 85 points · <a href="https://news.ycombinator.com/item?id=50201445">24 comments on HN</a></p><p>Across 50 prompts, the authors found that Fable 5.1 often encoded letters as visual attributes in SVG images, particularly the heights of repeated objects. A separate instance decoded many images without a pre-agreed scheme.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2610.27251">AI and the Enclosure of the Scientific Commons</a></h3><p class="entry-meta">Oct 22, 2026 · 134 points · <a href="https://news.ycombinator.com/item?id=50199230">77 comments on HN</a></p><p>This paper applies the history of enclosure to scientific information commons and argues that their durability deserves close attention as AI reshapes access to research.</p></article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.kimi.ai/blog/kimi-k3-1-pro">Kimi K3.1 Pro and K3.1 Pro Highspeed</a></h3>
+        <p class="entry-meta">Oct 23, 2026 · 910 points · <a href="https://news.ycombinator.com/item?id=50212065">529 comments on HN</a></p>
+        <p>Kimi says its new 3T-class model has a one-million-token context window and improvements in coding, 3D creation, financial research, and agentic work. A faster variant is available now; the company says full weights are due by Nov. 4.</p>
+        <blockquote class="reaction">“The more interesting question is how much more performance can be squeezed out by post training the open weights through RL.” <span class="who">&mdash; Onavo on <a href="https://news.ycombinator.com/item?id=50212065">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://block.xyz/dessa">Dessa: Conversation Model trained only on speech</a></h3>
+        <p class="entry-meta">Oct 23, 2026 · 384 points · <a href="https://news.ycombinator.com/item?id=50213925">138 comments on HN</a></p>
+        <p>Block’s Dessa is presented as a full-duplex speech model trained from raw human conversation rather than text or pretrained models. The company says it can hold real-time conversations with turn-taking, cadence, and expressive delivery.</p>
+        <blockquote class="reaction">“It is interesting that they’ve done this reasonably successfully, impressive technology.” <span class="who">&mdash; SwellJoe on <a href="https://news.ycombinator.com/item?id=50213925">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://openai.com/index/securing-our-frontier-model-training-environment">Securing our frontier model training environment</a></h3>
+        <p class="entry-meta">Oct 23, 2026 · 106 points · <a href="https://news.ycombinator.com/item?id=50214416">105 comments on HN</a></p>
+        <p>OpenAI’s post describes strengthened containment for frontier-model training and evaluation, including offline environments and high-compute red-teaming.</p>
+      </article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">3 items</p>
+      <p class="rail-note">2 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/openai-nask-ai-safety-security-partnership">OpenAI and Poland’s NASK partner to advance AI safety and security</a></h3><p class="entry-meta">Oct 23, 2026</p><p>OpenAI says it will work with Poland’s NASK on AI safety, security, and technical research to strengthen safeguards and digital resilience.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/decisions-api">Build more responsive apps with the Decisions API</a></h3><p class="entry-meta">Oct 22, 2026</p><p>OpenAI introduced the Decisions API as a fast, focused, lower-cost option for application decisions.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/forward-deployed-engineering-means">What FDE means at OpenAI</a></h3><p class="entry-meta">Oct 22, 2026</p><p>OpenAI published an overview of what forward-deployed engineering means at the company.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/scaling-storage-one-billion-users-part-two">Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)</a></h3><p class="entry-meta">Oct 23, 2026</p><p>OpenAI says it scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB, delivering 12× faster reads for ChatGPT.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/securing-our-frontier-model-training-environment">Securing our frontier model training environment</a></h3><p class="entry-meta">Oct 23, 2026</p><p>OpenAI describes strengthened containment for frontier-model training and evaluation, including offline environments and high-compute red-teaming.</p></article>
     </div>
   </section>
 
@@ -165,30 +177,29 @@
       <h2 class="label label--section">Claude Blog</h2>
       <p class="rail-note">2 items</p>
     </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop">Building agents: When to fold subagents into your main agent loop</a></h3><p class="entry-meta">Oct 22, 2026</p><p>Claude’s Applied AI team says some enterprise systems gain quality, cost, and latency benefits by folding routers, planners, and domain agents into a main loop that progressively loads skills and tools. The guidance emphasizes end-to-end evaluations and incremental changes.</p></article><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed">The full Claude Platform, available on Google Cloud</a></h3><p class="entry-meta">Oct 22, 2026</p><p>Anthropic says its managed Claude offering on Google Cloud is generally available with Google Cloud IAM, billing, commitment retirement, and same-day access to Claude Platform features and betas.</p></article></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/unified-claude-enterprise">Claude Cowork and chat come together for Enterprise</a></h3><p class="entry-meta">Oct 23, 2026</p><p>Claude’s combined chat and Cowork experience is now generally available for Enterprise. Anthropic says agentic work runs in its managed cloud environment, with role-based access controls and an Efficient mode for admins.</p></article><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-duet-safety-privacy-and-security">Claude Duet Safety, Privacy, and Security</a></h3><p class="entry-meta">Oct 23, 2026</p><p>Anthropic introduces its security approach for Duet, a research-preview agent that works from a cloud computer across connected apps. The post describes a draft-message classifier and states that Duet does not see passwords, browser cookies, or sign-in credentials.</p></article></div>
   </section>
 
   <section class="band" id="washington-post">
     <div class="rail">
       <h2 class="label label--section">Washington Post</h2>
-      <p class="rail-note">Feed unavailable</p>
+      <p class="rail-note">Feed unavailable this run</p>
     </div>
-    <div class="col"><p class="fail">Washington Post technology and national RSS feeds returned HTTP 502 Bad Gateway after 2 attempts each.</p></div>
+    <div class="col">
+      <p class="fail">Technology and national RSS feeds failed after 2 attempts: HTTP 502.</p>
+    </div>
   </section>
 
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
+      <p class="rail-note">1 item from the web sweep</p>
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://blogs.nvidia.com/blog/minerva-platform-infrastructure/">NVIDIA unveils Minerva for AI-factory observability</a></h3>
-        <p class="entry-meta">Oct 22, 2026</p>
-        <p>NVIDIA launched Minerva, an AIOps platform that combines infrastructure and workload telemetry to identify problems early and track AI-factory yield through GPU hours, goodput, uptime, and token production.</p>
-      </article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/10/22/php-vulnerability-security-update-websites">AI-assisted research puts PHP2Shell at the center of web-security response</a></h3><p class="entry-meta">Oct 22, 2026</p><p>Axios reports that AI researchers found two critical PHP vulnerabilities and that organizations rushed to patch after the disclosure.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://casemagic.ai/case/cand/5-26-cv-12308">Reservoir Media Management v. Anthropic records new court activity</a></h3><p class="entry-meta">Oct 22, 2026</p><p>The Northern District of California’s public docket feed shows an initial case-management scheduling order, summons activity, and related entries in Reservoir Media Management’s case against Anthropic.</p></article>
+        <h3 class="entry-title"><a href="https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab">Introducing the AI Biosecurity Lab</a></h3>
+        <p class="entry-meta">Oct 24, 2026</p>
+        <p>The UK says its new AI Biosecurity Lab has £100 million in government funding and up to £200 million in company commitments from OpenAI and Anthropic. Google DeepMind researchers will collaborate and provide access to frontier Gemini and specialised science models.</p>
       </article>
     </div>
   </section>
@@ -197,7 +208,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-23 05:44 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-24 05:42 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

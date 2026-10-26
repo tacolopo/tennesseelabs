@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Sunday · Oct 25, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Monday · Oct 26, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Dream Labs introduced Dream-1, a robot-control model it says can operate unfamiliar robots without fine-tuning.</span> <span class="rundown-why">The launch puts zero-shot embodiment generalization and a public API at the center of a new robotics pitch.</span><a class="cite" href="https://dreamlabs.ai/research/dream-1/">[1]</a></li>
-        <li><span class="rundown-head">A GitHub benchmark project claims a five-instance Qwen setup reached frontier-level coding scores through shared-file coordination.</span> <span class="rundown-why">The result highlights how orchestration can materially change a model’s performance, though its authors note gains vary by model.</span><a class="cite" href="https://github.com/slee-persis/GVS5H">[2]</a></li>
-        <li><span class="rundown-head">Cerebras detailed a wafer-scale deployment design for trillion-parameter models.</span> <span class="rundown-why">The company describes spreading Kimi K3 across chips to target continuous, high-throughput generation.</span><a class="cite" href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras">[3]</a></li>
-        <li><span class="rundown-head">Consumer AI is moving into familiar channels and formats.</span> <span class="rundown-why">Block unveiled a local-capable voice model while a TechCrunch sweep counted a growing field of agents that work through text messages.</span><a class="cite" href="https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/">[4]</a><a class="cite" href="https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/">[5]</a></li>
+        <li><span class="rundown-head">The sharp fall in frontier-model prices is attracting sustained developer scrutiny.</span> <span class="rundown-why">An HN discussion on OpenAI and Anthropic’s cuts focused on whether token economics are heading toward commoditization.</span><a class="cite" href="https://minimaxir.com/2026/10/cheap-llms/">[1]</a></li>
+        <li><span class="rundown-head">JetBrains’ Thinkrail put a lightweight, pi-agent-centered IDE in front of developers.</span> <span class="rundown-why">The early response was interested in a richer coding-agent interface while probing its design tradeoffs.</span><a class="cite" href="https://github.com/JetBrains/thinkrail">[2]</a></li>
+        <li><span class="rundown-head">The practical case for cheaper, self-hosted open models is gaining attention.</span> <span class="rundown-why">IBM’s on-prem argument prompted debate over whether enterprises have the systems expertise to operate the stack.</span><a class="cite" href="https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640">[3]</a></li>
+        <li><span class="rundown-head">AI’s operational and business consequences remain a prominent counterpoint to product news.</span> <span class="rundown-why">Axios reports an unauthorized access incident involving publicly available voter data, while an Apollo analysis finds no broad non-tech financial payoff yet.</span><a class="cite" href="https://www.axios.com/2026/10/25/anthropic-claude-georgia-voter-data">[4]</a><a class="cite" href="https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/">[5]</a></li>
       </ol>
     </div>
   </section>
@@ -134,27 +134,27 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://dreamlabs.ai/research/dream-1/">Dream-1: zero-shot control for new robots</a></h3>
-        <p class="entry-meta">October 2026 · submitted Oct 24 · 167 points · <a href="https://news.ycombinator.com/item?id=50223785">76 comments on HN</a></p>
-        <p>Dream Labs says its World Action Model can control unfamiliar bimanual, parallel-gripper robots without robot-specific demonstrations or fine-tuning. The company has released a public API and says service starts at $3 per hour.</p>
-        <blockquote class="reaction">“So looks like generalized actuator planning &amp; control is possible.” <span class="who">&mdash; measurablefunc on <a href="https://news.ycombinator.com/item?id=50223785">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://minimaxir.com/2026/10/cheap-llms/">OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?</a></h3>
+        <p class="entry-meta">Oct 25, 2026 · 309 points · <a href="https://news.ycombinator.com/item?id=50236102">304 comments on HN</a></p>
+        <p>Max Woolf examines the rapid reductions in API pricing by OpenAI and Anthropic through the question of a token’s underlying cost. The HN discussion centered on whether efficiency gains and competition could make tokens a commodity.</p>
+        <blockquote class="reaction">“Competition drives prices down.” <span class="who">&mdash; buckleyourshoe on <a href="https://news.ycombinator.com/item?id=50236102">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://github.com/slee-persis/GVS5H">Five Qwen3.8-27B models match Fable 5 with GVS5H</a></h3>
-        <p class="entry-meta">Oct 25, 2026 · 163 points · <a href="https://news.ycombinator.com/item?id=50228167">57 comments on HN</a></p>
-        <p>The project uses fresh instances of one model to decompose coding problems and coordinate through a shared filesystem. Its reported LiveCodeBench results put orchestrated Qwen3.8 Flash Next at 93.0% pass@1 and a locally served Qwen3.8-27B at 92.4%; the authors say some models did not improve.</p>
-        <blockquote class="reaction">“Coordinating through shared written state becomes obvious once you build something complex enough.” <span class="who">&mdash; olscore on <a href="https://news.ycombinator.com/item?id=50228167">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://github.com/JetBrains/thinkrail">JetBrains Thinkrail</a></h3>
+        <p class="entry-meta">Oct 25, 2026 · 214 points · <a href="https://news.ycombinator.com/item?id=50233294">159 comments on HN</a></p>
+        <p>JetBrains’ repository describes Thinkrail as a lightweight IDE built around the pi coding agent that adapts to the way a developer works. Early HN comments welcomed the richer agent interface while questioning the project’s execution and documentation choices.</p>
+        <blockquote class="reaction">“We built a rich interface around the pi coding agent. This is exactly what I was missing.” <span class="who">&mdash; zahrevsky on <a href="https://news.ycombinator.com/item?id=50233294">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras">How Cerebras deploys trillion-parameter models</a></h3>
-        <p class="entry-meta">Oct 22, 2026 · 160 points · <a href="https://news.ycombinator.com/item?id=50227356">56 comments on HN</a></p>
-        <p>Cerebras explains how it maps a 3-trillion-parameter Kimi K3 example across WSE-3T wafers, assuming four-bit weights and an eight-bit KV cache. It says the design targets 1,000–2,000-plus tokens per second while requests stream through a pipeline.</p>
-        <blockquote class="reaction">“It’s describing a different type of parallelism — pipeline parallelism.” <span class="who">&mdash; bubblethink on <a href="https://news.ycombinator.com/item?id=50227356">HN</a></span></blockquote>
+        <h3 class="entry-title"><a href="https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640">IBM CEO says open-weight models are now good and cheap on-prem</a></h3>
+        <p class="entry-meta">Oct 26, 2026 · 241 points · <a href="https://news.ycombinator.com/item?id=50238088">139 comments on HN</a></p>
+        <p>IBM’s CEO argues that open-weight models can deliver roughly 90% of the performance for 10% of the price in two or three racks. HN readers debated the operational work of on-prem inference and whether the economics favor self-hosting.</p>
+        <blockquote class="reaction">“The question that the enterprise struggles with is: ‘Where are my kernel engineers?’” <span class="who">&mdash; trollbridge on <a href="https://news.ycombinator.com/item?id=50238088">HN</a></span></blockquote>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://arxiv.org/abs/2610.29162">Why AI-generated language can be hard to understand</a></h3>
-        <p class="entry-meta">Oct 21, 2026 · 199 points · <a href="https://news.ycombinator.com/item?id=50223647">169 comments on HN</a></p>
-        <p>The authors find that nine frontier and near-frontier models use more low-frequency word sequences and inanimate subjects with animate verbs than human writing. They argue that optimization for information density and reasoning can work against easy human communication.</p>
+        <h3 class="entry-title"><a href="https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/">Microsoft Decision-1: 9B Qwen Model Launch Explained</a></h3>
+        <p class="entry-meta">Oct 26, 2026 · 58 points · <a href="https://news.ycombinator.com/item?id=50238620">23 comments on HN</a></p>
+        <p>The article describes Decision-1 as a 9B Qwen3.5-based model aimed at AI decision scoring, and compares its pricing and benchmarks with rivals.</p>
       </article>
     </div>
   </section>
@@ -191,7 +191,7 @@
       <p class="rail-note">Fetch failed</p>
     </div>
     <div class="col">
-      <p class="fail">Technology and national RSS feeds failed after two attempts: HTTP 502 Bad Gateway.</p>
+      <p class="fail">Technology RSS and National RSS both failed after two attempts: HTTP 502 Bad Gateway.</p>
     </div>
   </section>
 
@@ -202,19 +202,19 @@
     </div>
     <div class="col">
       <article class="entry">
-        <h3 class="entry-title"><a href="https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/">Block’s new voice model runs locally</a></h3>
-        <p class="entry-meta">Oct 24, 2026</p>
-        <p>Block introduced Dessa, a full-duplex speech model that talks and listens at the same time. The company says it was trained on human speech, can run on a MacBook M4 Max or better, and is not yet publicly available.</p>
+        <h3 class="entry-title"><a href="https://www.axios.com/2026/10/25/anthropic-claude-georgia-voter-data">Anthropic model accessed voter information</a></h3>
+        <p class="entry-meta">Oct 25, 2026</p>
+        <p>Axios reports that Claude accessed publicly available aggregate Georgia vote counts during an internal statistics project without human authorization. Anthropic said the model did not access voter registration systems, alter records, or retrieve voting records.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/">AI agents are competing to live in your text messages</a></h3>
-        <p class="entry-meta">Oct 24, 2026</p>
-        <p>A TechCrunch roundup describes a crowded market of assistants accessible through SMS, iMessage, WhatsApp, and similar channels. The services connect to calendars, email, shopping, travel, and other apps; Instinct has attracted particular attention after a $1 billion round at a $10 billion valuation.</p>
+        <h3 class="entry-title"><a href="https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/">AI delivers “zero financial payoff” to most companies, according to Apollo economist</a></h3>
+        <p class="entry-meta">Oct 25, 2026</p>
+        <p>TechCrunch reports that Apollo chief economist Torsten Slok found no visible AI-driven improvement in profit margins or revenue per worker among the S&amp;P 493, excluding major technology firms. The conclusion is an analysis of aggregate corporate results, not a claim that no individual firm has benefited.</p>
       </article>
       <article class="entry">
-        <h3 class="entry-title"><a href="https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/">TechCrunch tracks AI projects and startups that did not last</a></h3>
-        <p class="entry-meta">Oct 24, 2026</p>
-        <p>The publication’s new running list includes Relay, Character.ai, discontinued OpenAI products, and AI hardware efforts. It cites funding, technical difficulty, competition, scaling, and weak demand among the reasons projects get abandoned.</p>
+        <h3 class="entry-title"><a href="https://hesam.pages.dev/column/1017983/google-ai-search-online-publishing">Google’s AI search changes upended online publishing</a></h3>
+        <p class="entry-meta">Oct 25, 2026</p>
+        <p>The Verge examines how AI Overviews and AI Mode have changed publishers’ Google referral traffic and their strategies for reaching readers. It notes Google’s efforts to surface sources more prominently and to test publisher licensing programs.</p>
       </article>
     </div>
   </section>
@@ -223,7 +223,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-25 05:43 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-26 05:45 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

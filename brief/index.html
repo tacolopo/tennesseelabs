@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Wednesday · Oct 28, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Thursday · Oct 29, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,43 +114,104 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI and Oracle expanded their partnership to bring business applications and agents into ChatGPT.</span> <span class="rundown-why">It is a direct push to make ChatGPT a workplace interface for enterprise systems.</span><a class="cite" href="https://openai.com/index/oracle-apps-in-chatgpt">[1]</a></li>
-        <li><span class="rundown-head">Anthropic offered U.S. government users a 40% Claude discount across its product surfaces.</span> <span class="rundown-why">The company estimates the OneGov agreement could save government users $1 billion.</span><a class="cite" href="https://www.anthropic.com/news/expanding-partnership-gsa">[2]</a></li>
-        <li><span class="rundown-head">Claude launched connectors and workflow skills for financial advisors.</span> <span class="rundown-why">The product is designed around research, meeting preparation, and documentation with human approval on critical work.</span><a class="cite" href="https://claude.com/blog/claude-for-financial-advisors">[3]</a></li>
-        <li><span class="rundown-head">Google DeepMind announced Genie 4, a real-time interactive world model.</span> <span class="rundown-why">The research preview adds native audio and is slated for Project Genie and early Gemini API access.</span><a class="cite" href="https://deepmind.google/models/genie/">[4]</a></li>
+        <li><span class="rundown-head">Google introduced Gemini 4 Carbon, a frontier model initially limited to a subset of cyber defenders.</span> <span class="rundown-why">It led the day’s HN developer discussion, where readers welcomed the claimed anti-cheating gains but wanted hands-on validation.</span><a class="cite" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">[1]</a></li>
+        <li><span class="rundown-head">OpenAI and ServiceNow expanded their partnership to put OpenAI models and agents into ServiceNow workflows and ServiceNow into ChatGPT and Codex.</span> <span class="rundown-why">It is the day’s clearest enterprise-distribution announcement from OpenAI.</span><a class="cite" href="https://openai.com/index/openai-servicenow-partnership-expansion">[2]</a></li>
+        <li><span class="rundown-head">Claude Enterprise added smart reports, in-app surveys, and pooled group budgets.</span> <span class="rundown-why">The release is aimed at helping administrators understand use, feedback, and spend at the team level.</span><a class="cite" href="https://claude.com/blog/smart-reports-surveys-pooled-budgets">[3]</a></li>
+        <li><span class="rundown-head">NVIDIA released Nemotron 3.5 Transcribe, an open model for transcription, translation, language ID, and speaker-attributed timestamps across 40 languages.</span> <span class="rundown-why">It extends the open-model push into speech workloads.</span><a class="cite" href="https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/">[4]</a></li>
       </ol>
     </div>
   </section>
 
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, Washington Post, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
-    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items from Hacker News</p></div>
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">3 items from Hacker News</p>
+    </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/early-progress-drug-development">Early progress on accelerating drug development with Claude</a></h3><p class="entry-meta">Oct 27, 2026 · 225 points · <a href="https://news.ycombinator.com/item?id=50265609">214 comments on HN</a></p><p>Anthropic’s account of six drug-development partnerships was the top high-signal technical story in this sweep. It describes Claude’s role across research, molecule design, manufacturing, and regulatory work, while stressing that the work remains largely preclinical.</p><blockquote class="reaction">“In biology you need to wait for wet lab experiments, clinical trials, regulatory steps, etc. before you can call something ‘solved’.” <span class="who">&mdash; enraged_camel on <a href="https://news.ycombinator.com/item?id=50265609">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work">Here be monsters: What do you still need to know when agents do the work?</a></h3><p class="entry-meta">Oct 27, 2026 · 170 points · <a href="https://news.ycombinator.com/item?id=50258868">94 comments on HN</a></p><p>An engineering essay on working with agents argues that ownership still requires a high-level model of a system and knowing when to investigate more deeply.</p><blockquote class="reaction">“In an emergency even if you are using an agent you will be much quicker if you know what questions to ask the agent.” <span class="who">&mdash; zaphar on <a href="https://news.ycombinator.com/item?id=50258868">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.liquid.ai/blog/lfm3">Introducing LFM3: Every Modality for Specialized Intelligence</a></h3><p class="entry-meta">Oct 27, 2026 · 145 points · <a href="https://news.ycombinator.com/item?id=50262229">55 comments on HN</a></p><p>Liquid AI introduced a small-model family spanning text, vision, audio, multimodal, and decision tasks. The thread focused on local deployment, OCR, and specialized use cases.</p><blockquote class="reaction">“If you want to do local classification/image processing, I think the d1-2B is amazing, it can run on 1GB of unified RAM.” <span class="who">&mdash; samstevens on <a href="https://news.ycombinator.com/item?id=50262229">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5">Artificial Analysis Intelligence Index v5</a></h3><p class="entry-meta">Oct 28, 2026 · 52 points · <a href="https://news.ycombinator.com/item?id=50268868">60 comments on HN</a></p><p>Artificial Analysis published a new intelligence-index methodology and scores. HN discussion centered on how benchmark selection and weighting can move comparative model rankings.</p></article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">Gemini 4 Carbon</a></h3>
+        <p class="entry-meta">Oct 28, 2026 · 930 points · <a href="https://news.ycombinator.com/item?id=50276792">746 comments on HN</a></p>
+        <p>Google calls Carbon its strongest model, aimed at cybersecurity and long-horizon work. It says access starts with a subset of cyber defenders while it participates in U.S. pre-release testing.</p>
+        <blockquote class="reaction">“seriously ‘big if true’... looking forward to seeing non benchmark tasks and seeing if this actually outperforms opus 5.5” <span class="who">&mdash; blovescoffee on <a href="https://news.ycombinator.com/item?id=50276792">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce">Claude Code regularly sends each background agent’s transcript to its model</a></h3>
+        <p class="entry-meta">Oct 29, 2026 · 355 points · <a href="https://news.ycombinator.com/item?id=50284255">115 comments on HN</a></p>
+        <p>A third-party report says Claude Code’s recurring background-agent status summaries can consume meaningful token spend; it supplies a Bun preload workaround and says it tested the behavior on Linux builds 2.1.257–2.1.312.</p>
+        <blockquote class="reaction">“Longer contexts and more concurrent agents increase the overhead.” <span class="who">&mdash; NikZaal on <a href="https://news.ycombinator.com/item?id=50284255">HN</a></span></blockquote>
+      </article>
+      <article class="entry">
+        <h3 class="entry-title"><a href="https://www.cartesia.ai/blog/from-tokens-to-bytes-part-1">From Tokens to Bytes I: Scaling Hierarchical Networks</a></h3>
+        <p class="entry-meta">Oct 28, 2026 · 67 points · <a href="https://news.ycombinator.com/item?id=50278253">3 comments on HN</a></p>
+        <p>Cartesia describes hierarchical networks that learn directly from raw bytes rather than fixed tokenization; it reports matching an open-source 3B Transformer with 10× less compute and data.</p>
+      </article>
     </div>
   </section>
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">2 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/retell-ai">Retell uses OpenAI models to help power 100M monthly calls</a></h3><p class="entry-meta">Oct 27, 2026</p><p>OpenAI says GPT-6 Astra leads Retell’s voice-agent benchmark, while Codex helped the company reach a $1.6 million annual revenue run rate per employee.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/oracle-apps-in-chatgpt">OpenAI expands partnership with Oracle to bring its apps to ChatGPT</a></h3><p class="entry-meta">Oct 27, 2026</p><p>OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT, as well as power new Oracle offerings.</p></article>
-  </div></section>
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/expanding-partnership-gsa">Expanding our partnership with GSA to bring Claude to all levels of government</a></h3><p class="entry-meta">Oct 27, 2026</p><p>Anthropic says a new GSA agreement gives government partners a 40% discount on Claude Enterprise, Claude for Government, and the Claude API. It estimates the discounts could save government users $1 billion; agencies have no minimum-spend commitment.</p></article></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">2 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-for-financial-advisors">Claude for Financial Advisors</a></h3><p class="entry-meta">Oct 27, 2026</p><p>Claude for Financial Advisors adds connectors and workflow skills for research, preparation, and documentation. Critical actions remain staged for advisor review and approval.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud">Manage costs and demonstrate ROI for Claude Code on Google Cloud</a></h3><p class="entry-meta">Oct 27, 2026</p><p>Anthropic outlines three levers for organizations using Claude Code on Google Cloud: control spending, track token and model use, and prove return on investment.</p></article>
-  </div></section>
-  <section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Fetch failed</p></div><div class="col"><p class="fail">Washington Post technology and national RSS feeds returned HTTP 502 after two attempts.</p></div></section>
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://deepmind.google/models/genie/">Genie 4: A new generation of world simulation</a></h3><p class="entry-meta">Oct 27, 2026</p><p>Google DeepMind announced Genie 4, a real-time interactive world model with native audio. It is a research preview for trusted testers, with Project Genie and Gemini API access planned next.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://investors.cerebras.ai/node/7696/pdf">Cerebras and Oracle plan OCI inference partnership</a></h3><p class="entry-meta">Oct 27, 2026</p><p>Cerebras and Oracle said they plan to make Cerebras inference available on Oracle Cloud Infrastructure for AI labs, enterprises, and developers building interactive applications.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/">Ant Group launches LingGuang 2.0</a></h3><p class="entry-meta">Oct 28, 2026</p><p>The web sweep reported that Ant Group’s LingGuang 2.0 adds persistent memory and ongoing task management after a user leaves a conversation.</p></article>
-  </div></section>
+
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">3 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/openai-servicenow-partnership-expansion">OpenAI and ServiceNow expand partnership across enterprise workflows</a></h3><p class="entry-meta">Oct 28, 2026</p><p>OpenAI says the expanded partnership brings its models and agents into ServiceNow, while bringing ServiceNow workflows into ChatGPT and Codex.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/the-future-of-the-firm">The future of the firm</a></h3><p class="entry-meta">Oct 28, 2026</p><p>An Intelligence Age essay considers how AI might enter the organizational chart: beneath, beside, and between people.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/legora">Legora is building the agentic operating system for legal work</a></h3><p class="entry-meta">Oct 28, 2026</p><p>OpenAI says Legora uses its models, ChatGPT, and Codex to accelerate legal workflows and contract analysis, with the aim of freeing lawyers for higher-value work.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">1 item</p>
+    </div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions">AI for Science expands to foundations and research institutions</a></h3><p class="entry-meta">Oct 28, 2026</p><p>Anthropic highlights 20 scientific foundations, institutions, and research groups it has partnered with as part of an expansion of its AI for Science program, which provides free Claude credits for high-impact scientific projects.</p></article></div>
+  </section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">3 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/smart-reports-surveys-pooled-budgets">Smart reports, surveys, and pooled group budgets for Claude Enterprise</a></h3><p class="entry-meta">Oct 28, 2026</p><p>Anthropic made three Enterprise features generally available: reports that analyze sampled team transcripts into workstreams, in-app feedback surveys, and shared per-team budgets. It says reports are for understanding adoption and planning, not employee evaluation.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company">IDC brings Quanta into Claude and adopts Claude across the company</a></h3><p class="entry-meta">Oct 28, 2026</p><p>IDC integrated its Quanta research platform into Claude through an MCP connector, so customers can query IDC forecasts and research in Claude with cited answers. IDC says it has also deployed Claude internally.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/introducing-artifacts-for-legal-work">Introducing artifacts for legal work</a></h3><p class="entry-meta">Oct 28, 2026</p><p>Claude for Legal added ready-to-use, shareable artifacts for contract review, regulatory tracking, and legal-intake workflows.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="washington-post">
+    <div class="rail">
+      <h2 class="label label--section">Washington Post</h2>
+      <p class="rail-note">Fetch failed</p>
+    </div>
+    <div class="col">
+      <p class="fail">Washington Post technology and national RSS feeds each returned HTTP 502 after two attempts.</p>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/products/ads-commerce/ads-in-ai-mode-global/">Ads in AI Mode expand to new markets</a></h3><p class="entry-meta">Oct 28, 2026</p><p>Google is expanding AI Mode ads to Australia, Canada, India, Kenya, Malaysia, New Zealand, Nigeria, Pakistan, the Philippines, and Singapore, and is adding ads to follow-up AI Mode queries in the U.S.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/">NVIDIA Nemotron 3.5 Transcribe: Intelligent Transcription with a Speech LLM</a></h3><p class="entry-meta">Oct 28, 2026</p><p>NVIDIA released an open speech-augmented language model that handles transcription, translation, spoken-language identification, and speaker-attributed timestamps in 40 languages; it says the model supports recordings up to one hour.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/">Build and manage Connected Apps in one place</a></h3><p class="entry-meta">Oct 28, 2026</p><p>Google launched a preview Connected Apps Platform for developers to build and manage integrations for both Search and the Gemini app, using cloud-hosted or Android MCP servers.</p></article>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-28 05:40 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-29 05:48 ET &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

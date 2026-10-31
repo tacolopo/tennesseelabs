@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Friday · Oct 30, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Saturday · Oct 31, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI updated its Model Spec around five core values for more capable systems.</span> <span class="rundown-why">The company ties the revision to judgment, human agency, and fidelity to human intent.</span><a class="cite" href="https://openai.com/index/updated-model-spec">[1]</a></li>
-        <li><span class="rundown-head">Mistral released the weights for its trillion-parameter Large 4 model, “Le Chonk.”</span> <span class="rundown-why">Mistral positions the open model for agentic coding and cybersecurity work.</span><a class="cite" href="https://mistral.ai/news/mistral-large-4/">[2]</a></li>
-        <li><span class="rundown-head">Thrive Holdings agreed to acquire ADT in a $15.3 billion transaction.</span> <span class="rundown-why">The deal brings a large physical-security business into an AI-focused investment group backed by OpenAI.</span><a class="cite" href="https://newsroom.adt.com/financial/adt-to-be-acquired-by-thrive-holdings-in-15-3-billion-transaction">[3]</a></li>
-        <li><span class="rundown-head">CrowdStrike described a China-linked campaign that used AI tooling against more than 200 organizations.</span> <span class="rundown-why">The report offers a concrete view of agents being used to conduct parallel intrusion activity.</span><a class="cite" href="https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/">[4]</a></li>
+        <li><span class="rundown-head">OpenAI said it will honor a shared robots.txt signal for AI-training preferences.</span> <span class="rundown-why">The move makes a machine-readable preference available to website operators and participating providers.</span><a class="cite" href="https://openai.com/index/helping-websites-express-ai-training-preferences">[1]</a></li>
+        <li><span class="rundown-head">A reported malicious Claude Code extension drove the day’s largest developer-security thread.</span> <span class="rundown-why">The discussion centered on remediation and unanswered questions about the publishing path.</span><a class="cite" href="https://news.ycombinator.com/item?id=50302334">[2]</a></li>
+        <li><span class="rundown-head">Nvidia is reportedly considering debt support for an AI data-center project tied to Anthropic.</span> <span class="rundown-why">The proposal would extend chipmaker backing beyond equipment and leases into construction financing.</span><a class="cite" href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/">[3]</a></li>
+        <li><span class="rundown-head">A new project compiles an NES CPU directly into Qwen 3.5 model weights.</span> <span class="rundown-why">It is a striking, testable demonstration of a transformer checkpoint used as a deterministic machine state.</span><a class="cite" href="https://github.com/dbreunig/nesformer">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -130,20 +130,25 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">4 items</p>
     </div>
     <div class="col">
-      <p class="empty">No Hacker News stories matched the developer-focused sweep at 50 points or above.</p>
+      <article class="entry"><h3 class="entry-title"><a href="https://cyberplace.social/@GossiTheDog/117528831681803563">Backdoors in official Claude Code extensions</a></h3><p class="entry-meta">Oct 30, 2026 · 655 points · 17 comments · <a href="https://news.ycombinator.com/item?id=50302334">HN thread</a></p><p>The highest-scoring developer thread linked to a report about backdoors in official Claude Code extensions. The discussion focused on the available cleanup guidance and on how the extension reached the marketplace.</p><blockquote class="reaction">“Looks like a solid response with instructions and scripts how to get rid of the infection, but it doesn’t explain how it got there.” <span class="who">&mdash; sharpshadow on <a href="https://news.ycombinator.com/item?id=50302334">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling">AI isn't replacing SREs, it's deskilling them</a></h3><p class="entry-meta">Oct 30, 2026 · 595 points · 444 comments · <a href="https://news.ycombinator.com/item?id=50305693">HN thread</a></p><p>This SRE essay argues that automating routine incident work can leave people less practiced for novel failures. It applies the classic automation paradox to AI-assisted alerting, diagnosis, runbooks, and remediation.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/dbreunig/nesformer">Show HN: A working Nintendo in ~1GB of Qwen weights</a></h3><p class="entry-meta">Oct 30, 2026 · 249 points · 122 comments · <a href="https://news.ycombinator.com/item?id=50306442">HN thread</a></p><p>Nesformer puts an NES 6502 CPU, RAM, and cartridge program ROM inside a stock Qwen3.5 checkpoint; its author says a compiler, not training, produced the weights. The host program handles display, controller input, and interrupts while the model emits the CPU execution log.</p><blockquote class="reaction">“I love these hacks, even though from an efficiency point of view it is horrifying to my assembly-code-golfing-brain.” <span class="who">&mdash; jacquesm on <a href="https://news.ycombinator.com/item?id=50306442">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/">Cisco gives engineer unlimited AI tokens to rewrite legacy code</a></h3><p class="entry-meta">Oct 30, 2026 · 188 points · 219 comments · <a href="https://news.ycombinator.com/item?id=50304122">HN thread</a></p><p>The HN discussion of a Cisco legacy-code rewrite turned into a practical debate about AI-assisted rewrites: whether models can preserve undocumented production behavior, and how much testing and human context still matter.</p><blockquote class="reaction">“Production code accumulates bug fixes, performance tweaks, special cases, additional requirements.” <span class="who">&mdash; HarHarVeryFunny on <a href="https://news.ycombinator.com/item?id=50304122">HN</a></span></blockquote></article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">3 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/updated-model-spec">An updated Model Spec for more capable and beneficial AI</a></h3><p class="entry-meta">Oct 29, 2026</p><p>OpenAI’s revised Model Spec sets out five core values intended to guide more capable AI. The RSS summary says the update focuses on sound judgment, human agency, and faithfulness to human intent.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/helping-websites-express-ai-training-preferences">Making it easier for websites to express AI training preferences</a></h3><p class="entry-meta">Oct 30, 2026</p><p>OpenAI says it will honor a shared robots.txt signal through which website operators can express AI-training preferences. Its RSS summary frames the signal as a way to communicate those preferences to participating providers.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/community-safety-report-and-new-protections-for-teens">Community safety report and new protections for teens</a></h3><p class="entry-meta">Oct 30, 2026</p><p>OpenAI says it is expanding violence-prevention protections in ChatGPT, with earlier interventions and public safety reporting. The RSS description describes the work as strengthened safeguards for teen users.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/fair-use-benefits-everyone">Fair use benefits everyone</a></h3><p class="entry-meta">Oct 30, 2026</p><p>OpenAI published excerpts from court briefs by creators, academics, accessibility advocates, and legal experts. The company says the materials address how fair use supports AI training and innovation.</p></article>
     </div>
   </section>
 
@@ -179,9 +184,9 @@
       <p class="rail-note">3 items from the web sweep</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://mistral.ai/news/mistral-large-4/">Mistral releases the weights of Large 4, “Le Chonk”</a></h3><p class="entry-meta">Oct 29, 2026</p><p>Mistral says it released weights for Large 4, a one-trillion-parameter model with 52 billion active parameters. The company describes it as an open model for agentic coding and cybersecurity.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://newsroom.adt.com/financial/adt-to-be-acquired-by-thrive-holdings-in-15-3-billion-transaction">Thrive Holdings to acquire ADT in $15.3 billion transaction</a></h3><p class="entry-meta">Oct 29, 2026</p><p>ADT says Thrive Holdings will acquire the company in an all-cash transaction valued at $15.3 billion. The announced $10-per-share price is a 45.6% premium to ADT’s unaffected Oct. 27 close, according to ADT.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/">CrowdStrike reports AI-assisted VAPOR PANDA intrusion campaign</a></h3><p class="entry-meta">Oct 29, 2026</p><p>CrowdStrike says a China-linked operator used ARTEX, DeepSeek, and another commercial LLM against more than 200 organizations beginning Oct. 17. Its researchers describe parallel targeting of government, semiconductor, defense, telecom, and other high-value organizations.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/">Nvidia weighs guaranteeing debt for Nscale’s West Virginia AI data center</a></h3><p class="entry-meta">Oct 30, 2026</p><p>TechCrunch reports that Nvidia is discussing a residual-value guarantee for debt financing tied to Nscale’s planned Anthropic campus. Under the reported arrangement, Nvidia could take over and help retenant the facility if Nscale defaulted on construction payments.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/">Zest launches a restaurant concierge that works over text</a></h3><p class="entry-meta">Oct 30, 2026</p><p>Zest introduced an AI restaurant concierge that uses a customer’s history and friends’ preferences to suggest places in text messages. TechCrunch reports it can check availability and book through connected services including OpenTable, Resy, and SevenRooms.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/">Privacy-focused AI assistant Ollie is shutting down</a></h3><p class="entry-meta">Oct 30, 2026</p><p>Ollie says it will close on Nov. 6. TechCrunch reports that the subscription assistant connected to email and calendars for family organization, booking, meal planning, and bills, but struggled to stand out and raise capital amid growing competition.</p></article>
     </div>
   </section>
 
@@ -189,7 +194,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-10-30 05:42 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-10-31 05:42 EDT &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

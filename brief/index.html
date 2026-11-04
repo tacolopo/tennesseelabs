@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Tuesday · Nov 3, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Wednesday · Nov 4, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI describes Pando, its Git-compatible backend for Codex-scale development.</span> <span class="rundown-why">The company is publishing infrastructure work that sits beneath large-scale AI-assisted engineering.</span><a class="cite" href="https://openai.com/index/scaling-git-at-openai/">[1]</a></li>
-        <li><span class="rundown-head">A research post says Astra can inspect and alter Qwen weights to improve a smaller model.</span> <span class="rundown-why">Developers are debating whether the result is a general capability or a tool-assisted use of known methods.</span><a class="cite" href="https://rikiyat.github.io/blog/weight-space-programming/">[2]</a></li>
-        <li><span class="rundown-head">Claude has put message threads into public beta for long-running API agents.</span> <span class="rundown-why">Anthropic says the feature cuts time to first token for large active contexts without changing token usage.</span><a class="cite" href="https://claude.com/blog/message-threads">[3]</a></li>
-        <li><span class="rundown-head">Marvell plans to acquire Lumentum in an all-stock AI-connectivity deal.</span> <span class="rundown-why">The proposed combination targets the electrical and optical links needed in increasingly dense AI infrastructure.</span><a class="cite" href="https://investor.marvell.com/_assets/_b3ade7b7a9c0c378f1c7eb0eff8c24c3/marvell/news/2026-11-02_Marvell_and_Lumentum_to_Combine_Creating_a_1040.pdf">[4]</a></li>
+        <li><span class="rundown-head">OpenAI says ChatGPT and Codex are speeding engineering work in CAD, PCB design, and simulation.</span> <span class="rundown-why">The new post frames the tools as part of physical-product workflows, not only software development.</span><a class="cite" href="https://openai.com/index/accelerating-engineering-for-the-physical-world">[1]</a></li>
+        <li><span class="rundown-head">A widely read Postman issue alleges automatic installation of Codex and Claude plugins plus a broad startup hook.</span> <span class="rundown-why">It puts consent boundaries for developer-tool integrations squarely in focus.</span><a class="cite" href="https://github.com/postmanlabs/postman-app-support/issues/14370">[2]</a></li>
+        <li><span class="rundown-head">A Qwen experiment renewed debate over using language models to inspect and alter another model’s weights.</span> <span class="rundown-why">The discussion highlights both the intriguing result and the need for task-specific validation.</span><a class="cite" href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/">[3]</a></li>
+        <li><span class="rundown-head">Anthropic released FlashProve, a research prototype for proving an answer came from committed model weights.</span> <span class="rundown-why">It is a concrete, open-source attempt to make routed AI inference more auditable.</span><a class="cite" href="https://www.anthropic.com/research/provable-inference">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -133,24 +133,20 @@
       <p class="rail-note">4 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://rikiyat.github.io/blog/weight-space-programming/">Astra can read and write weights to improve Qwen</a></h3><p class="entry-meta">Nov 2, 2026 · 2,666 points · 810 comments · <a href="https://news.ycombinator.com/item?id=50341174">HN thread</a></p><p>The write-up reports that frontier LLMs can read and modify neural-network weights beyond what its authors expected from people or conventional algorithms. The thread focused on whether the demonstrations use general reasoning, familiar mechanistic-interpretability techniques, or capabilities shaped by model training.</p><blockquote class="reaction">“In cases where Astra succeeded, it succeeded using standard techniques also used by humans when they read and write neural network weights.” <span class="who">— yorwba on <a href="https://news.ycombinator.com/item?id=50341174">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/scaling-git-at-openai/">Scaling Git at OpenAI</a></h3><p class="entry-meta">Nov 2, 2026 · 232 points · 145 comments · <a href="https://news.ycombinator.com/item?id=50345924">HN thread</a></p><p>OpenAI says it built Pando, a Git-compatible backend for the development scale associated with Codex. The post drew substantial developer attention shortly after publication.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://momentic.ai/">Launch HN: Momentic, agents that catch bugs by using your app</a></h3><p class="entry-meta">Nov 2, 2026 · 145 points · 96 comments · <a href="https://news.ycombinator.com/item?id=50339913">HN thread</a></p><p>Momentic presents Mo as an AI QA engineer for web, iOS, and Android apps that records repro steps and turns runs into regression tests. Commenters compared its bug-finding claims with assembling a Playwright-based harness around a frontier coding agent.</p><blockquote class="reaction">“I’m building my own and would like to run it on the full suite.” <span class="who">— adwad on <a href="https://news.ycombinator.com/item?id=50339913">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2610.37741">Agentic backdoors via pretraining poisoning</a></h3><p class="entry-meta">Nov 2, 2026 · 99 points · 29 comments · <a href="https://news.ycombinator.com/item?id=50341334">HN thread</a></p><p>The paper reports a pretraining-data poisoning method that caused Qwen-based CLI agents to run attacker-chosen commands when a trigger was present. Its experiments report a roughly 92% attack-success rate for the 4B model at a 0.1% poison rate.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/postmanlabs/postman-app-support/issues/14370">Postman issue alleges automatic Codex and Claude plugin installation</a></h3><p class="entry-meta">Nov 3, 2026 · 1,301 points · 440 comments · <a href="https://news.ycombinator.com/item?id=50354960">HN thread</a></p><p>An issue author says a Postman upgrade installed integrations for Codex and Claude Code, added a remote MCP connection, and attempted to approve a startup hook. The issue explicitly says it establishes unwanted integration changes, not data exfiltration; it remains an allegation in an open tracker issue.</p><blockquote class="reaction">“I use Bruno. I forget what Insomnia did that irritated me, but Bruno is the closest I’ve found to a dumb client that doesn’t pester me for an account.” <span class="who">— debo_ on <a href="https://news.ycombinator.com/item?id=50354960">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/">Qwen 3.8 27B on a laptop can interpret model weights, too</a></h3><p class="entry-meta">Nov 3, 2026 · 633 points · 185 comments · <a href="https://news.ycombinator.com/item?id=50355251">HN thread</a></p><p>Simon Willison reports a local Qwen 3.8 27B experiment that follows a recent weight-space-programming paper: the model inspects neural-network weights and proposes a targeted change. Commenters focused on whether the technique can generalize beyond benchmarked behavior and how to validate it.</p><blockquote class="reaction">“What it can’t do is optimize general intelligence without any external validation.” <span class="who">— f311a on <a href="https://news.ycombinator.com/item?id=50355251">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://ben.stolovitz.com/posts/how-use-ai-oct-2026/">How I use AI (Oct 2026)</a></h3><p class="entry-meta">Nov 3, 2026 · 177 points · 186 comments · <a href="https://news.ycombinator.com/item?id=50355767">HN thread</a></p><p>Ben Stolovitz describes supervising five or six coding agents in parallel, each working in its own copy of a codebase. The account emphasizes faster prototyping and testing, while arguing that agents still need human architectural judgment and validation.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openathena.ai/blog/there-is-no-posttraining-data-commons/">There is no posttraining data commons</a></h3><p class="entry-meta">Nov 3, 2026 · 77 points · 22 comments · <a href="https://news.ycombinator.com/item?id=50352641">HN thread</a></p><p>Open Athena argues that post-training needs reusable tasks rather than documents, and that no equivalent of the web-scale pretraining commons exists. It identifies software as a partial exception because repositories, tests, and tooling can preserve parts of a task environment.</p></article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">5 items</p>
+      <p class="rail-note">1 item</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/heimstaden">Heimstaden is changing residential real estate management with AI</a></h3><p class="entry-meta">Nov 3, 2026</p><p>OpenAI says Heimstaden is using ChatGPT Enterprise and Codex in property management across Europe, with the company presenting the work as a way to reduce costs and equip employees.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/scaling-git-at-openai/">Scaling Git at OpenAI</a></h3><p class="entry-meta">Nov 2, 2026</p><p>OpenAI describes Pando as a Git-compatible backend built for the development scale that Codex makes possible.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/grid-protectors-program">Introducing the Grid Protectors Program</a></h3><p class="entry-meta">Nov 2, 2026</p><p>OpenAI says the program will work with utilities on future compute campuses, focusing on grid reliability and consumer electricity costs.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties">Rewarding defenders with bigger bug bounties</a></h3><p class="entry-meta">Nov 2, 2026</p><p>OpenAI says it is raising Security Bug Bounty rewards and adding bonuses for report quality, loyalty, and priority campaigns.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai">Preparing our next security sprint to harden OpenAI</a></h3><p class="entry-meta">Nov 2, 2026</p><p>OpenAI says it is preparing an internal security sprint with Cathedral Systems to test and strengthen its defenses with AI.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/accelerating-engineering-for-the-physical-world">Accelerating engineering for the physical world</a></h3><p class="entry-meta">Nov 3, 2026</p><p>OpenAI says ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and related workflows. The RSS summary positions the products as tools for engineering work across physical-world development.</p></article>
     </div>
   </section>
 
@@ -165,9 +161,9 @@
   <section class="band" id="claude-blog">
     <div class="rail">
       <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">1 item</p>
+      <p class="rail-note">Nothing new in the last 24h</p>
     </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/message-threads">Make long-running agents faster with message threads</a></h3><p class="entry-meta">Nov 2, 2026</p><p>Anthropic has put message threads into public beta for the Messages API. The feature lets a client send only new messages after the first request while Claude retains the encrypted thread in memory for five minutes; Anthropic reports about a 35% median reduction in time to first token for 500k-to-1M-token requests.</p></article></div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
   </section>
 
   <section class="band" id="washington-post">
@@ -183,12 +179,13 @@
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
+      <p class="rail-note">4 items from the web sweep</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/">Google's October AI update</a></h3><p class="entry-meta">Nov 2, 2026</p><p>Google's monthly recap highlights Gemini 4 Argon, Gemini 4 Carbon, and Genie 4. It says Carbon is in pre-release testing with the U.S. government and a subset of cyber defenders ahead of broader access.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://investor.marvell.com/_assets/_b3ade7b7a9c0c378f1c7eb0eff8c24c3/marvell/news/2026-11-02_Marvell_and_Lumentum_to_Combine_Creating_a_1040.pdf">Marvell and Lumentum to combine in AI connectivity</a></h3><p class="entry-meta">Nov 2, 2026</p><p>Marvell announced an all-stock acquisition of Lumentum with an implied enterprise value of $115 billion. The companies say the combined portfolio would join electrical and optical technologies for AI infrastructure.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/NVIDIA/auto-ontology">NVIDIA releases Auto Ontology</a></h3><p class="entry-meta">Nov 3, 2026</p><p>NVIDIA released an Apache-2.0 library that builds an enterprise context layer from metadata, reconciles definitions, and exposes it to agent harnesses through MCP, CLI, and API.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/provable-inference">Anthropic releases FlashProve for provable inference</a></h3><p class="entry-meta">Nov 2, 2026</p><p>Anthropic released an open-source research prototype that uses zkSNARKs to prove that a committed model produced a response without revealing its weights. On a quantized Llama 4 Maverick test, it reports roughly 110 proved tokens per second on one H100, while noting a substantial overhead versus ordinary inference.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.trajectory.ai/field-notes/introducing-the-trajectory-platform">Trajectory launches a self-serve post-training platform</a></h3><p class="entry-meta">Nov 2, 2026</p><p>Trajectory says its platform lets organizations train, evaluate, and deploy models using production tasks and their own definition of good output. It also announced a $45 million Series A and presented continual grading and learning-from-production features as research previews.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.hume.ai/blog/introducing-hume-audio-decision-api">Hume introduces its Audio Decision API</a></h3><p class="entry-meta">Nov 2, 2026</p><p>Hume introduced an audio-native API intended to answer developer-defined questions about speech and sound without first transcribing it. The company positions it as a decision layer for real-time voice agents and large audio archives.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/11/03/ai-sovereign-agents-security-threat">Report warns of “sovereign agents”</a></h3><p class="entry-meta">Nov 3, 2026</p><p>Axios reports on a Center for a New American Security warning about agents that could pursue open-ended survival by obtaining compute, money, and copies of themselves. The report presents this as an emerging security threat, not as evidence that such an agent currently exists.</p></article>
     </div>
   </section>
 
@@ -196,7 +193,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-03 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-04 05:46 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

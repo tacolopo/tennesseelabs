@@ -1,38 +1,210 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily Brief — Tennessee Labs</title>
-<meta name="description" content="AI/tech morning brief — regenerated every morning, every line cites its source."><meta name="robots" content="noindex"><link rel="canonical" href="https://tennesseelabs.com/brief/"><base target="_blank"><link rel="icon" href="https://tennesseelabs.com/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap"><link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
+<meta name="description" content="AI/tech morning brief — Hacker News developer reactions, OpenAI, Anthropic, Claude Blog, and Washington Post — regenerated every morning, every line cites its source.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://tennesseelabs.com/brief/">
+<base target="_blank">
+<link rel="icon" href="https://tennesseelabs.com/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-.deck.mono { font-family:var(--mono);font-size:.9rem;letter-spacing:.02em;color:var(--ink-2) }.rundown-list { counter-reset:rundown;margin:0;padding:0;list-style:none;display:grid;gap:1.1rem }.rundown-list li { padding-left:1.7rem;position:relative;max-width:var(--measure) }.rundown-list li::before { content:counter(rundown);counter-increment:rundown;position:absolute;left:0;top:.15rem;font-family:var(--mono);font-size:.75rem;color:var(--accent) }.rundown-head { font-weight:500 }.rundown-why { color:var(--ink-2) }.cite { font-family:var(--mono);font-size:.75em;color:var(--accent);vertical-align:super;margin-left:.2rem;text-decoration:none }.cite:hover { text-decoration:underline }.entry-meta { margin:-.15rem 0 .55rem;font-family:var(--mono);font-size:.75rem;color:var(--ink-3);letter-spacing:.01em }.entry-title a { color:var(--ink);text-decoration:none }.entry-title a:hover { color:var(--accent) }.reaction { margin:.85rem 0 0;padding-left:.9rem;border-left:2px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-2);line-height:1.5 }.reaction .who { display:block;margin-top:.3rem;font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--ink-3);letter-spacing:.02em }.reaction .who a { color:var(--ink-3) }.empty,.fail { margin:0;padding-left:1rem;max-width:var(--measure);border-left:1.5px dashed var(--negated);color:var(--ink-3);font-size:.9rem }.fail { color:var(--ink-2) }.fail::before { content:"\26A0  " }
+  /* Daily Brief — extends styles.css tokens; scoped to this page only */
+  .deck.mono {
+    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
+    color: var(--ink-2);
+  }
+  .notice {
+    margin-top: 1.1rem; padding: 0.85rem 1rem;
+    background: var(--card); border: 1px solid var(--rule);
+    border-left: 2px solid var(--negated);
+    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
+    max-width: var(--measure);
+  }
+
+  .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
+  .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
+  .rundown-list li::before {
+    content: counter(rundown); counter-increment: rundown;
+    position: absolute; left: 0; top: 0.15rem;
+    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
+  }
+  .rundown-head { font-weight: 500; }
+  .rundown-why { color: var(--ink-2); }
+  .cite {
+    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
+    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
+  }
+  .cite:hover { text-decoration: underline; }
+
+  .entry-meta {
+    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
+    color: var(--ink-3); letter-spacing: 0.01em;
+  }
+  .entry-title a { color: var(--ink); text-decoration: none; }
+  .entry-title a:hover { color: var(--accent); }
+
+  .reaction {
+    margin: 0.85rem 0 0; padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+    color: var(--ink-2); line-height: 1.5;
+  }
+  .reaction .who {
+    display: block; margin-top: 0.3rem;
+    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
+    color: var(--ink-3); letter-spacing: 0.02em;
+  }
+  .reaction .who a { color: var(--ink-3); }
+
+  .empty, .fail {
+    margin: 0; padding-left: 1rem; max-width: var(--measure);
+    border-left: 1.5px dashed var(--negated);
+    color: var(--ink-3); font-size: 0.9rem;
+  }
+  .fail { color: var(--ink-2); }
+  .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
-<header class="masthead"><a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a><nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav></header>
+
+<header class="masthead">
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <g fill="none" stroke-linecap="square">
+        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
+      </g>
+    </svg>
+    <span>Tennessee&nbsp;Labs</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="https://tennesseelabs.com/" target="_self">Home</a>
+    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
+  </nav>
+</header>
+
 <main id="top">
-<section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Thursday · Nov 5, 2026 · 6:00 AM ET</p></div></section>
-<section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Three to five top stories, synthesized across the sections below.</p></div><div class="col"><ol class="rundown-list">
-<li><span class="rundown-head">OpenAI says it will acquire Pierre Computer Company to extend Codex’s code-building, understanding, and review tools.</span> <span class="rundown-why">It is a concrete move to add developer infrastructure to the coding-agent stack.</span><a class="cite" href="https://openai.com/index/openai-to-acquire-pierre">[1]</a></li>
-<li><span class="rundown-head">OpenAI described an autonomous pipeline that found, validated, and generated patches for 948 Linux kernel privilege-escalation vulnerabilities.</span> <span class="rundown-why">Developers are focusing on how continuous scanning and the unknown remainder could be measured.</span><a class="cite" href="https://openai.com/index/a-thousand-fewer-paths-to-root/">[2]</a></li>
-<li><span class="rundown-head">Kimi K3.1 Pro’s open weights arrived with a 1-million-token context window and deployment recipes.</span> <span class="rundown-why">The release adds a large open-weight option for agentic workloads, though HN discussion immediately centered on the hardware needed to run it.</span><a class="cite" href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro">[3]</a></li>
-<li><span class="rundown-head">Meta acquired the multi-agent coding startup Conductor, according to reporting cited in the web sweep.</span> <span class="rundown-why">The deal puts another signal behind parallel-agent software engineering workflows.</span><a class="cite" href="https://www.axios.com/2026/11/04/meta-acquires-ai-coding-startup-conductor">[4]</a></li>
-</ol></div></section>
-<section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">5 items</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/a-thousand-fewer-paths-to-root/">A thousand fewer paths to root</a></h3><p class="entry-meta">Nov 4, 2026 · 347 points · 248 comments · <a href="https://news.ycombinator.com/item?id=50372929">HN thread</a></p><p>OpenAI says its autonomous pipeline found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel. The HN discussion concentrated on whether repeated scans could keep reducing the unknown backlog.</p><blockquote class="reaction">“I’d rather know than not, but I would much prefer not having it in the first place.” <span class="who">— BoppreH on <a href="https://news.ycombinator.com/item?id=50372929">HN</a></span></blockquote></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-images-2-6/">Introducing Images 2.6</a></h3><p class="entry-meta">Nov 4, 2026 · 305 points · 177 comments · <a href="https://news.ycombinator.com/item?id=50372945">HN thread</a></p><p>OpenAI’s feed says Images 2.6 adds faster generation, GIF creation, more precise editing, and new controls across ChatGPT, Codex, and the API. HN commenters examined the practical implications of the claimed speed and animation features.</p><blockquote class="reaction">“FOUR BILLION IMAGES PER WEEK???” <span class="who">— rarisma on <a href="https://news.ycombinator.com/item?id=50372945">HN</a></span></blockquote></article>
-<article class="entry"><h3 class="entry-title"><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro">Kimi K3.1 Pro model weights are out</a></h3><p class="entry-meta">Nov 4, 2026 · 539 points · 149 comments · <a href="https://news.ycombinator.com/item?id=50366999">HN thread</a></p><p>The model card calls Kimi K3.1 Pro an open-weight, natively multimodal agentic model, with a 1-million-token context window and deployment examples for Transformers, vLLM, SGLang, and Docker Model Runner. Developers immediately discussed its substantial hardware requirements.</p><blockquote class="reaction">“Too bad you probably need something like an 8x B300 node to run this.” <span class="who">— __jf__ on <a href="https://news.ycombinator.com/item?id=50366999">HN</a></span></blockquote></article>
-<article class="entry"><h3 class="entry-title"><a href="https://www.ricursive.com/ripple">Ripple-65B Preview: U.S. open-weight SOTA on agentic coding</a></h3><p class="entry-meta">Nov 4, 2026 · 295 points · 108 comments · <a href="https://news.ycombinator.com/item?id=50369925">HN thread</a></p><p>Ricursive introduced a dense 65B model it says is designed for efficient reasoning and local deployment, including on NVIDIA DGX Spark. The release describes synthetic-data pipelines and a mixed RL recipe; HN commenters questioned the comparison set.</p><blockquote class="reaction">“It’s a pretty bad look to not even mention those other open weight models.” <span class="who">— wmf on <a href="https://news.ycombinator.com/item?id=50369925">HN</a></span></blockquote></article>
-<article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/provable-inference">Progress on provable inference for large language models</a></h3><p class="entry-meta">Nov 4, 2026 · 223 points · 109 comments · <a href="https://news.ycombinator.com/item?id=50368626">HN thread</a></p><p>Anthropic released FlashProve, code, Lean proofs, and documentation for a zkSNARK-based approach to verifying that a response came from a particular model. The post frames it as a way to check a model identity without rerunning the model.</p><blockquote class="reaction">“It only works for greedy decoding and short contexts for now.” <span class="who">— l9o on <a href="https://news.ycombinator.com/item?id=50368626">HN</a></span></blockquote></article>
-</div></section>
-<section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/openai-to-acquire-pierre">OpenAI to acquire Pierre Computer Company, Inc.</a></h3><p class="entry-meta">Nov 4, 2026</p><p>OpenAI says it will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.</p></article></div></section>
-<section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-<section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/new-agents-and-products-claude-marketplace">New agents and products for security, productivity, and creative work on Claude Marketplace</a></h3><p class="entry-meta">Nov 4, 2026</p><p>Claude says it added new partner agents and products to its Marketplace, which now has more than 25 offerings. Eligible enterprise customers can apply part of their committed Anthropic spend toward those partner solutions.</p></article></div></section>
-<section class="band" id="washington-post"><div class="rail"><h2 class="label label--section">Washington Post</h2><p class="rail-note">Fetch failed</p></div><div class="col"><p class="fail">Washington Post technology and national RSS feeds returned HTTP 502 after two attempts.</p></div></section>
-<section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/11/04/meta-acquires-ai-coding-startup-conductor">Meta acquires AI coding startup Conductor</a></h3><p class="entry-meta">Nov 4, 2026</p><p>Axios reports that Meta acquired Conductor, a startup whose software lets engineers manage multiple coding agents in parallel workspaces.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://www.research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/">Agile Deliberation: How AI helps humans define the gray areas</a></h3><p class="entry-meta">Nov 4, 2026</p><p>Google Research introduced an LLM-driven workflow for building image classifiers around subjective categories, using human feedback to scope subcategories and resolve edge cases. Google reports testing it in 18 live sessions.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/11/05/ai-data-center-election-backlash-concessions">Big tech scrambles to offer voters a new AI deal</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Axios reports a post-election push by large technology companies to respond to local opposition to AI data-center development, noting restrictive measures across 10 states.</p></article>
-</div></section>
-</main><footer class="footer"><p>Generated 2026-11-05 05:44 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
-</body></html>
+
+  <section class="band band--hero">
+    <div class="rail">
+      <p class="label">AI / Tech<br>Morning brief</p>
+      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
+    </div>
+    <div class="col">
+      <h1 class="display">Daily&nbsp;Brief.</h1>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Friday · Nov 6, 2026 · 6:00 AM ET</p>
+      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
+           Omit this <p> entirely on a normal run. -->
+    </div>
+  </section>
+
+  <section class="band" id="rundown">
+    <div class="rail">
+      <h2 class="label label--section">Rundown</h2>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
+    </div>
+    <div class="col">
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
+      <ol class="rundown-list">
+        <li><span class="rundown-head">OpenAI introduced GPT-6 Cyber for authorized security work.</span> <span class="rundown-why">The model is purpose-built to find exploitable flaws and develop fixes within approved scope.</span><a class="cite" href="https://openai.com/index/introducing-gpt-6-cyber">[1]</a></li>
+        <li><span class="rundown-head">Claude added Personal Finance and a set of Enterprise security controls.</span> <span class="rundown-why">Both updates broaden Claude's role around sensitive account data and organizational administration.</span><a class="cite" href="https://claude.com/blog/introducing-personal-finance-in-claude">[2]</a><a class="cite" href="https://claude.com/blog/claude-enterprise-security-updates">[3]</a></li>
+        <li><span class="rundown-head">A GitHub issue alleging that Claude Code exposes an email address in web requests dominated Hacker News.</span> <span class="rundown-why">Developers focused on consent, request metadata, and least-surprise behavior.</span><a class="cite" href="https://github.com/anthropics/claude-code/issues/107757">[4]</a></li>
+        <li><span class="rundown-head">METR said AI likely accounts for much of Anthropic's current R&amp;D acceleration, while stressing substantial uncertainty.</span> <span class="rundown-why">Its high-access assessment says much of the supporting evidence was redacted.</span><a class="cite" href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/">[5]</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, Washington Post, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
+  <section class="band" id="developer-pulse">
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">6 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/anthropics/claude-code/issues/107757">Claude Code sends your email address to websites</a></h3><p class="entry-meta">Nov 5, 2026 · 1,170 points · 369 comments · <a href="https://news.ycombinator.com/item?id=50385272">HN thread</a></p><p>A GitHub issue alleges that Claude Code includes the user's email address in a User-Agent header during web searches, creating a privacy risk. The discussion concentrated on consent and whether outbound identity data should be disclosed before a request runs.</p><blockquote class="reaction">“As implemented, it strongly violates the principle of least surprise.” <span class="who">— benregenspan on <a href="https://news.ycombinator.com/item?id=50385272">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://thinkingmachines.ai/news/inkling-2-small/">Inkling 2 Small</a></h3><p class="entry-meta">Nov 6, 2026 · 204 points · 68 comments · <a href="https://news.ycombinator.com/item?id=50386338">HN thread</a></p><p>Thinking Machines Lab introduced the second-generation Inkling line with Inkling 2 Small. HN readers compared its open-weight ambitions and design use cases with frontier models.</p><blockquote class="reaction">“Are the domestic open weights labs demonstrating incredible velocity? Undeniably.” <span class="who">— tcdent on <a href="https://news.ycombinator.com/item?id=50386338">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/">Tencent launches Hy4</a></h3><p class="entry-meta">Nov 5, 2026 · 95 points · 4 comments · <a href="https://news.ycombinator.com/item?id=50383963">HN thread</a></p><p>Tencent announced Hy4, describing it as a latest-generation large language model and saying it plans to release weights and system cards in the coming days.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/rivet-dev/rivet">Launch HN: Rivet — Scale and orchestrate agents on S3</a></h3><p class="entry-meta">Nov 5, 2026 · 98 points · 51 comments · <a href="https://news.ycombinator.com/item?id=50381687">HN thread</a></p><p>Rivet presented an orchestrator for agentic workloads that uses S3 as its storage layer. Its repository describes the project as a high-density, scalable runtime for workloads an agent needs.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/AGGIB/Stroq">Show HN: Stroq — a local audit of what your coding agent did and why</a></h3><p class="entry-meta">Nov 5, 2026 · 85 points · 30 comments · <a href="https://news.ycombinator.com/item?id=50380704">HN thread</a></p><p>Stroq scans Claude Code, Codex, and Cursor sessions for known secrets, then uses local hooks to trace risky commands to the content that prompted them. The project says it has no telemetry.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://village.dev/blog/closed-ai-models-now-dominate-the-price-performance-frontier/">Closed AI models dominate the price-performance frontier</a></h3><p class="entry-meta">Nov 6, 2026 · 73 points · 61 comments · <a href="https://news.ycombinator.com/item?id=50387546">HN thread</a></p><p>Village's analysis says closed models lead at nearly every budget it measured, with open-weight models winning at 3% of price points, down from 41% in June.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">6 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-gpt-6-cyber">GPT-6 Cyber: Advancing the frontier of aligned cybersecurity agents</a></h3><p class="entry-meta">Nov 5, 2026</p><p>OpenAI introduced GPT-6 Cyber for finding exploitable vulnerabilities and developing fixes within authorized scope.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/cultfit-builds-with-codex">Cult.fit builds operational muscle with Codex</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Cult.fit says it uses Codex to help teams across functions build tools, move faster, and change how work gets done.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/australian-universities-ai-native-graduates">Australian universities are creating AI-native graduates</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Australian universities are expanding ChatGPT access and adding AI to teaching and learning for an AI-enabled workforce.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/merge-builds-with-openai">Merge builds product and business tools with OpenAI technology</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Merge uses GPT-6 Astra, ChatGPT, and Codex for product-code review and business work including sales updates.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/setting-new-standard-responsible-ai-infrastructure">Setting a new standard for responsible AI infrastructure</a></h3><p class="entry-meta">Nov 5, 2026</p><p>OpenAI introduced a National Community Compact and a Compute Campus Policy Blueprint focused on local resources, jobs, and AI infrastructure.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/franklin-templeton">Franklin Templeton uses OpenAI to support investment research</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Franklin Templeton is developing AI workflows for portfolio managers to compare research views and examine investment risks.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/introducing-personal-finance-in-claude">Introducing Personal Finance in Claude</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Claude's new Personal Finance experience lets users ask questions about money using accounts they connect.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/claude-enterprise-security-updates">More visibility and control over Claude Enterprise for security teams</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Claude Enterprise added a security center, inference hooks, centralized management, and further access controls for administrators.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="washington-post">
+    <div class="rail">
+      <h2 class="label label--section">Washington Post</h2>
+      <p class="rail-note">Fetch failed</p>
+    </div>
+    <div class="col">
+      <p class="fail">Washington Post technology and national RSS feeds returned HTTP 502 after two attempts.</p>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/">METR assesses AI R&amp;D acceleration at Anthropic</a></h3><p class="entry-meta">Nov 5, 2026</p><p>METR's high-access assessment estimates that AI likely accounts for a majority of Anthropic's current R&amp;D acceleration, while emphasizing substantial uncertainty. Anthropic redacted much of the evidence METR found most informative.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Gemini Omni 1.2 Flash: 15-second video and lower pricing</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Google announced Gemini Omni 1.2 Flash with native 15-second video generation and editing, improved consistency, and 30% lower pricing.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/11/05/nasdaq-plummets-correction">Tech stocks tumble as election rattles AI trade</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Axios reported the tech-heavy Nasdaq Composite was down 4.7% late Thursday, with AI-related shares among the selloff's leading decliners.</p></article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <!-- FILL: generation timestamp -->
+  <p>Generated 2026-11-06 05:44 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
+</footer>
+
+</body>
+</html>

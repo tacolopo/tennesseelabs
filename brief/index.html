@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Saturday · Nov 7, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Sunday · Nov 8, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">A Hightouch experiment used a cheap decision model to route difficult identity-resolution judgments to Opus.</span> <span class="rundown-why">The company reports frontier-level accuracy at one-quarter of the cost in its benchmark.</span><a class="cite" href="https://hightouch.com/blog/llm-judges-identity-resolution">[1]</a></li>
-        <li><span class="rundown-head">Google's Gemini Omni 1.2 Flash reached Hacker News with native 15-second video generation and editing.</span> <span class="rundown-why">The launch couples longer clips with a stated 30% price reduction.</span><a class="cite" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">[2]</a></li>
-        <li><span class="rundown-head">NVIDIA detailed a collective for moving freshly trained weights into inference fleets during RL post-training.</span> <span class="rundown-why">Its reported 2.7×–5.7× refit speedup addresses an increasingly material distributed-systems bottleneck.</span><a class="cite" href="https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/">[3]</a></li>
-        <li><span class="rundown-head">Meta introduced customizable, connected “spaces” inside its Muse app.</span> <span class="rundown-why">The feature turns a prompt into an app-like workspace that can update from connected services.</span><a class="cite" href="https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/">[4]</a></li>
+        <li><span class="rundown-head">Microsoft Research's AI Frontiers group has been folded into Microsoft AI.</span> <span class="rundown-why">Its former leader describes a clash between a research-oriented program and the new group's emphasis on scaling.</span><a class="cite" href="https://hunch.net/?p=13764006">[1]</a></li>
+        <li><span class="rundown-head">A report on Claude Code's local settings files sparked a secrets-handling debate.</span> <span class="rundown-why">The thread centered on avoiding committed local configuration and adding safeguards around sensitive commands.</span><a class="cite" href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">[2]</a></li>
+        <li><span class="rundown-head">MaxxBench found coding agents can lose reliability when familiar benchmark tasks change slightly.</span> <span class="rundown-why">The result puts attention on task adaptation rather than headline benchmark scores.</span><a class="cite" href="https://maxxbench.unlap.ai/research/why-maxxbench/">[3]</a></li>
+        <li><span class="rundown-head">HyperFlow H3 Flash compressed a video-and-audio diffusion model for local use.</span> <span class="rundown-why">Its authors report a smaller model, fewer sampling steps, and INT8 inference.</span><a class="cite" href="https://github.com/Video-Rebirth/hyperflow-h3-flash">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -133,23 +133,20 @@
       <p class="rail-note">5 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://hightouch.com/blog/llm-judges-identity-resolution">A Jev that can ask Opus for help gives Opus accuracy at 4× lower cost</a></h3><p class="entry-meta">Nov 6, 2026 · 485 points · 110 comments · <a href="https://news.ycombinator.com/item?id=50397429">HN thread</a></p><p>Hightouch tested cheap decision models on identity-resolution grading, then sent uncertain cases to Claude Opus. Its hybrid reported frontier-model accuracy at one-quarter the cost; the benchmark is company-authored rather than an independent evaluation.</p><blockquote class="reaction">“I use the same hybrid approach for a lot of security engineering work and it’s working well after initial calibrations.” <span class="who">— gbrindisi on <a href="https://news.ycombinator.com/item?id=50397429">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Gemini Omni 1.2 Flash</a></h3><p class="entry-meta">Nov 6, 2026 · 339 points · 231 comments · <a href="https://news.ycombinator.com/item?id=50392118">HN thread</a></p><p>Google describes Omni 1.2 Flash as adding native 15-second video generation and editing, stronger consistency, and 30% lower pricing. Discussion included immediate availability and interest in extending video by 15 seconds.</p><blockquote class="reaction">“Extending an exiting video by 15 seconds is pretty nuts.” <span class="who">— thisisauserid on <a href="https://news.ycombinator.com/item?id=50392118">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2610.21375">Memorilla: Latent Semantic Memory for LLMs</a></h3><p class="entry-meta">Nov 6, 2026 · 104 points · 13 comments · <a href="https://news.ycombinator.com/item?id=50395919">HN thread</a></p><p>The paper proposes condensing a document collection into a fixed number of query-dependent memory tokens for a frozen LLM. The authors report that 16 tokens beat listed baselines on five of eight benchmarks; it is a preprint.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.perplexity.ai/en-GB/changelog/teammates-fully-local-computer-on-mac-and-voice-mode">Perplexity launches AI agents for work</a></h3><p class="entry-meta">Nov 6, 2026 · 61 points · 54 comments · <a href="https://news.ycombinator.com/item?id=50395866">HN thread</a></p><p>Perplexity introduced Teammates, persistent agents intended to plan and complete ongoing work using Computer tasks, skills, memory, and tools. The company says the feature is available to Max subscribers on the web.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://developers.openai.com/api/docs/guides/voice-sip">Outbound SIP calling is now available to all organizations</a></h3><p class="entry-meta">Nov 6, 2026 · 63 points · 54 comments · <a href="https://news.ycombinator.com/item?id=50399695">HN thread</a></p><p>OpenAI’s developer documentation announces general availability of outbound SIP calling for organizations, bringing programmable voice calling to its platform.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://hunch.net/?p=13764006">The End of Microsoft Research's AI Frontiers group</a></h3><p class="entry-meta">Nov 7, 2026 · 460 points · 277 comments · <a href="https://news.ycombinator.com/item?id=50406563">HN thread</a></p><p>John Langford writes that Microsoft Research formed the roughly 50-person AI Frontiers group to organize work on agents and fundamental capabilities. He says its September reorganization into Microsoft AI brought a scaling-first philosophy that conflicts with the program's research focus.</p><blockquote class="reaction">“This refers specifically to ‘AI Frontiers’, a research group within Microsoft Research that focuses on fundamental advances in AI.” <span class="who">— smokel on <a href="https://news.ycombinator.com/item?id=50406563">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">Claude Code's “Don't Ask Again” exposes passwords in 1,122 public GitHub files</a></h3><p class="entry-meta">Nov 7, 2026 · 402 points · 274 comments · <a href="https://news.ycombinator.com/item?id=50407882">HN thread</a></p><p>Apiiro's report prompted a discussion about Claude Code local settings containing sensitive command data. Claude Code team member Boris Cherny said those settings are meant to remain local and are automatically gitignored, while the thread focused on preventing accidental commits.</p><blockquote class="reaction">“Historically Claude Code has not done secret scrubbing ... but we are looking into what we can do to prevent this.” <span class="who">— bcherny on <a href="https://news.ycombinator.com/item?id=50407882">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://caleb.software/posts/claude-to-pi.html">Goodbye Claude, Hello Pi</a></h3><p class="entry-meta">Sep 21, 2026 · 331 points · 195 comments · <a href="https://news.ycombinator.com/item?id=50410107">HN thread</a></p><p>A longtime Claude Code user explains a move to the Pi coding harness, citing support for shared instruction files, multiple IDE-connected sessions, and product stability. The Hacker News discussion compared harness behavior and local-model setups.</p><blockquote class="reaction">“The AGENTS vs CLAUDE md issue was bound to be resolved.” <span class="who">— harrisonjackson on <a href="https://news.ycombinator.com/item?id=50410107">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://maxxbench.unlap.ai/research/why-maxxbench/">MaxxBench — “Nice DeepSWE score. But is it true?”</a></h3><p class="entry-meta">Oct 20, 2026 · 320 points · 84 comments · <a href="https://news.ycombinator.com/item?id=50406222">HN thread</a></p><p>MaxxBench alters instructions or starter code in 89 DeepSWE tasks to test whether coding agents follow revised requirements. Its authors report that small changes often produced large drops and that some agents optimized for imagined benchmark tests instead of the prompt.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/Video-Rebirth/hyperflow-h3-flash">Show HN: We compressed a 31B video+audio diffusion model to 14B, 6 steps, INT8</a></h3><p class="entry-meta">Nov 7, 2026 · 66 points · 13 comments · <a href="https://news.ycombinator.com/item?id=50405263">HN thread</a></p><p>The HyperFlow H3 Flash team says it compressed MiniMax-H3, a video-and-audio generation model, through pruning, low-rank factorization, fewer sampling steps, and INT8 quantization. The project is aimed at making the workload faster and lighter to run locally.</p></article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">2 items</p>
+      <p class="rail-note">Nothing new in the last 24h</p>
     </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/partnering-with-hacktron">Partnering with Hacktron</a></h3><p class="entry-meta">Nov 6, 2026</p><p class="fail">The RSS supplied this title and date, but the linked post returned HTTP 403 on both retrieval attempts; no further summary is shown.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science">Measuring how AI agents handle wet-lab science</a></h3><p class="entry-meta">Nov 6, 2026</p><p class="fail">The RSS supplied this title and date, but the linked post returned HTTP 403 on both retrieval attempts; no further summary is shown.</p></article>
-    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
   </section>
 
   <section class="band" id="anthropic">
@@ -171,20 +168,16 @@
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
+      <p class="rail-note">No additional distinct items from the web sweep</p>
     </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/">Accelerating Reinforcement Learning Weight Refit with the Reshard Collective</a></h3><p class="entry-meta">Nov 6, 2026</p><p>NVIDIA describes Reshard, a collective that transfers updated weights between training and inference GPUs without gather-and-broadcast. In its NeMo RL benchmarks, it reports 2.7×–5.7× faster refits for configurations including Qwen 3 235B and DeepSeek v3 671B.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/">Design the Muse App, Just for You</a></h3><p class="entry-meta">Nov 6, 2026</p><p>Meta introduced Spaces, custom interactive experiences built in Muse from a description. Users can place them in the app, connect services so they update in the background, and edit them over time.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/">Google’s data center investment in Wyoming</a></h3><p class="entry-meta">Nov 5, 2026</p><p>Google announced a $17 billion Wyoming data-center investment, including a planned 702 MW fuel-cell development with carbon capture and storage. It says the facility will be air-cooled and that it will cover power and infrastructure needs driven by its growth.</p></article>
-    </div>
+    <div class="col"><p class="empty">The web sweep found no additional high-signal stories published in the window after deduplication against the sections above.</p></div>
   </section>
 
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-07 05:42 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-08 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Sunday · Nov 8, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Monday · Nov 9, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,9 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Microsoft Research's AI Frontiers group has been folded into Microsoft AI.</span> <span class="rundown-why">Its former leader describes a clash between a research-oriented program and the new group's emphasis on scaling.</span><a class="cite" href="https://hunch.net/?p=13764006">[1]</a></li>
-        <li><span class="rundown-head">A report on Claude Code's local settings files sparked a secrets-handling debate.</span> <span class="rundown-why">The thread centered on avoiding committed local configuration and adding safeguards around sensitive commands.</span><a class="cite" href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">[2]</a></li>
-        <li><span class="rundown-head">MaxxBench found coding agents can lose reliability when familiar benchmark tasks change slightly.</span> <span class="rundown-why">The result puts attention on task adaptation rather than headline benchmark scores.</span><a class="cite" href="https://maxxbench.unlap.ai/research/why-maxxbench/">[3]</a></li>
-        <li><span class="rundown-head">HyperFlow H3 Flash compressed a video-and-audio diffusion model for local use.</span> <span class="rundown-why">Its authors report a smaller model, fewer sampling steps, and INT8 inference.</span><a class="cite" href="https://github.com/Video-Rebirth/hyperflow-h3-flash">[4]</a></li>
+        <li><span class="rundown-head">Developers focused on a reported Claude Code secret-exposure path through saved local permissions.</span> <span class="rundown-why">The HN discussion centered on repository hygiene and how local configuration files travel between machines.</span><a class="cite" href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">[1]</a></li>
+        <li><span class="rundown-head">A CPU-first project says it can run a 284B DeepSeek mixture-of-experts model in 64 GB of RAM.</span> <span class="rundown-why">Its claimed compression and CPU-only runtime drew strong Hacker News interest.</span><a class="cite" href="https://github.com/synchopate/llama-modchip">[2]</a></li>
+        <li><span class="rundown-head">A Next-Concept Modeling paper proposes parallel, coarse-to-fine text generation.</span> <span class="rundown-why">The authors report faster results than diffusion baselines at matched scales.</span><a class="cite" href="https://arxiv.org/abs/2610.14162">[3]</a></li>
       </ol>
     </div>
   </section>
@@ -130,14 +129,13 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">5 items</p>
+      <p class="rail-note">4 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://hunch.net/?p=13764006">The End of Microsoft Research's AI Frontiers group</a></h3><p class="entry-meta">Nov 7, 2026 · 460 points · 277 comments · <a href="https://news.ycombinator.com/item?id=50406563">HN thread</a></p><p>John Langford writes that Microsoft Research formed the roughly 50-person AI Frontiers group to organize work on agents and fundamental capabilities. He says its September reorganization into Microsoft AI brought a scaling-first philosophy that conflicts with the program's research focus.</p><blockquote class="reaction">“This refers specifically to ‘AI Frontiers’, a research group within Microsoft Research that focuses on fundamental advances in AI.” <span class="who">— smokel on <a href="https://news.ycombinator.com/item?id=50406563">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">Claude Code's “Don't Ask Again” exposes passwords in 1,122 public GitHub files</a></h3><p class="entry-meta">Nov 7, 2026 · 402 points · 274 comments · <a href="https://news.ycombinator.com/item?id=50407882">HN thread</a></p><p>Apiiro's report prompted a discussion about Claude Code local settings containing sensitive command data. Claude Code team member Boris Cherny said those settings are meant to remain local and are automatically gitignored, while the thread focused on preventing accidental commits.</p><blockquote class="reaction">“Historically Claude Code has not done secret scrubbing ... but we are looking into what we can do to prevent this.” <span class="who">— bcherny on <a href="https://news.ycombinator.com/item?id=50407882">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://caleb.software/posts/claude-to-pi.html">Goodbye Claude, Hello Pi</a></h3><p class="entry-meta">Sep 21, 2026 · 331 points · 195 comments · <a href="https://news.ycombinator.com/item?id=50410107">HN thread</a></p><p>A longtime Claude Code user explains a move to the Pi coding harness, citing support for shared instruction files, multiple IDE-connected sessions, and product stability. The Hacker News discussion compared harness behavior and local-model setups.</p><blockquote class="reaction">“The AGENTS vs CLAUDE md issue was bound to be resolved.” <span class="who">— harrisonjackson on <a href="https://news.ycombinator.com/item?id=50410107">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://maxxbench.unlap.ai/research/why-maxxbench/">MaxxBench — “Nice DeepSWE score. But is it true?”</a></h3><p class="entry-meta">Oct 20, 2026 · 320 points · 84 comments · <a href="https://news.ycombinator.com/item?id=50406222">HN thread</a></p><p>MaxxBench alters instructions or starter code in 89 DeepSWE tasks to test whether coding agents follow revised requirements. Its authors report that small changes often produced large drops and that some agents optimized for imagined benchmark tests instead of the prompt.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/Video-Rebirth/hyperflow-h3-flash">Show HN: We compressed a 31B video+audio diffusion model to 14B, 6 steps, INT8</a></h3><p class="entry-meta">Nov 7, 2026 · 66 points · 13 comments · <a href="https://news.ycombinator.com/item?id=50405263">HN thread</a></p><p>The HyperFlow H3 Flash team says it compressed MiniMax-H3, a video-and-audio generation model, through pruning, low-rank factorization, fewer sampling steps, and INT8 quantization. The project is aimed at making the workload faster and lighter to run locally.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">Claude Code’s “Don’t Ask Again” exposes passwords in public GitHub files</a></h3><p class="entry-meta">Nov 7, 2026 · 607 points · 410 comments · <a href="https://news.ycombinator.com/item?id=50407882">HN thread</a></p><p>Apiiro’s report prompted a discussion about commands with embedded credentials being saved to project-local Claude settings and later committed. Commenters stressed that exposure requires that additional repository step, while noting that a private repository can still broaden access to a secret.</p><blockquote class="reaction">“‘Don’t ask again’ still writes the password into a project file that gets committed.” <span class="who">— shmulc on <a href="https://news.ycombinator.com/item?id=50407882">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/synchopate/llama-modchip">Llama-modchip: 284B DeepSeek on 64 GB RAM, no GPU</a></h3><p class="entry-meta">Nov 8, 2026 · 431 points · 193 comments · <a href="https://news.ycombinator.com/item?id=50411961">HN thread</a></p><p>The project claims a CPU-first runtime and a 56.56 GiB checkpoint for DeepSeek-V4-Flash, intended to fit in a 64 GB machine with a 256K KV cache. Its README reports pure-CPU decode figures around 9–10 tokens per second for a 16-core Zen 5 system.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://caleb.software/posts/claude-to-pi.html">Goodbye Claude, hello Pi</a></h3><p class="entry-meta">Sep 21, 2026 · 775 points · 474 comments · <a href="https://news.ycombinator.com/item?id=50410107">HN thread</a></p><p>A developer’s migration note argues that Pi’s smaller, more customizable harness better suits their coding workflow than Claude Code. HN readers debated the value of lightweight harnesses, shared instruction files, and the overhead of system prompts.</p><blockquote class="reaction">“There’s only so much stuff I have the patience to tell it in a session before I write it down somewhere.” <span class="who">— arcanemachiner on <a href="https://news.ycombinator.com/item?id=50410107">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2610.14162">Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation</a></h3><p class="entry-meta">Oct 9, 2026 · 105 points · 13 comments · <a href="https://news.ycombinator.com/item?id=50422168">HN thread</a></p><p>The paper describes a two-stage framework that encodes text into multiscale discrete codes, then generates a level at a time in parallel. The authors report better perplexity than their strongest diffusion-language-model baseline on LM1B while running 21× faster.</p></article>
     </div>
   </section>
 
@@ -168,16 +166,18 @@
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">No additional distinct items from the web sweep</p>
+      <p class="rail-note">1 item from the web sweep</p>
     </div>
-    <div class="col"><p class="empty">The web sweep found no additional high-signal stories published in the window after deduplication against the sections above.</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/11/09/jensen-huang-spy-scandal-ai">Nvidia opens an independent probe involving CEO Jensen Huang</a></h3><p class="entry-meta">Nov 9, 2026</p><p>Axios reported that Nvidia’s board opened an independent probe after Huang described an alleged foreign-intelligence operation in a letter to employees. The story landed as Nvidia remains central to the AI-computing market.</p></article>
+    </div>
   </section>
 
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-08 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-09 06:48 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

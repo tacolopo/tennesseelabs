@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Monday · Nov 9, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Tuesday · Nov 10, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,9 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Developers focused on a reported Claude Code secret-exposure path through saved local permissions.</span> <span class="rundown-why">The HN discussion centered on repository hygiene and how local configuration files travel between machines.</span><a class="cite" href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">[1]</a></li>
-        <li><span class="rundown-head">A CPU-first project says it can run a 284B DeepSeek mixture-of-experts model in 64 GB of RAM.</span> <span class="rundown-why">Its claimed compression and CPU-only runtime drew strong Hacker News interest.</span><a class="cite" href="https://github.com/synchopate/llama-modchip">[2]</a></li>
-        <li><span class="rundown-head">A Next-Concept Modeling paper proposes parallel, coarse-to-fine text generation.</span> <span class="rundown-why">The authors report faster results than diffusion baselines at matched scales.</span><a class="cite" href="https://arxiv.org/abs/2610.14162">[3]</a></li>
+        <li><span class="rundown-head">Anthropic released Claude Fable 5.2 and Mythos 5.2 for difficult technical work.</span> <span class="rundown-why">The release led developer discussion, with attention on claimed coding performance and pricing.</span><a class="cite" href="https://www.anthropic.com/claude-fable-and-mythos-5-2">[1]</a></li>
+        <li><span class="rundown-head">Meta introduced Muse Ember, its smallest and most efficient model.</span> <span class="rundown-why">Meta positions it for complex reasoning, execution, and recurring agent work.</span><a class="cite" href="https://research.meta.ai/blog/muse-ember">[2]</a></li>
+        <li><span class="rundown-head">Google added TPU 8tx and TPU 8i Max to its eighth-generation TPU lineup.</span> <span class="rundown-why">The systems target secure inference and very large-context workloads.</span><a class="cite" href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/">[3]</a></li>
+        <li><span class="rundown-head">Australia said it will tighten AI oversight after an OpenAI-agent breach of a government site.</span> <span class="rundown-why">The proposed rules include incident reporting and model evaluations.</span><a class="cite" href="https://au.marketscreener.com/news/australia-tightens-ai-oversight-rules-after-openai-agent-breached-government-website-ce785fd3d08ef521">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -129,22 +130,23 @@
   <section class="band" id="developer-pulse">
     <div class="rail">
       <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items</p>
+      <p class="rail-note">5 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">Claude Code’s “Don’t Ask Again” exposes passwords in public GitHub files</a></h3><p class="entry-meta">Nov 7, 2026 · 607 points · 410 comments · <a href="https://news.ycombinator.com/item?id=50407882">HN thread</a></p><p>Apiiro’s report prompted a discussion about commands with embedded credentials being saved to project-local Claude settings and later committed. Commenters stressed that exposure requires that additional repository step, while noting that a private repository can still broaden access to a secret.</p><blockquote class="reaction">“‘Don’t ask again’ still writes the password into a project file that gets committed.” <span class="who">— shmulc on <a href="https://news.ycombinator.com/item?id=50407882">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/synchopate/llama-modchip">Llama-modchip: 284B DeepSeek on 64 GB RAM, no GPU</a></h3><p class="entry-meta">Nov 8, 2026 · 431 points · 193 comments · <a href="https://news.ycombinator.com/item?id=50411961">HN thread</a></p><p>The project claims a CPU-first runtime and a 56.56 GiB checkpoint for DeepSeek-V4-Flash, intended to fit in a 64 GB machine with a 256K KV cache. Its README reports pure-CPU decode figures around 9–10 tokens per second for a 16-core Zen 5 system.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://caleb.software/posts/claude-to-pi.html">Goodbye Claude, hello Pi</a></h3><p class="entry-meta">Sep 21, 2026 · 775 points · 474 comments · <a href="https://news.ycombinator.com/item?id=50410107">HN thread</a></p><p>A developer’s migration note argues that Pi’s smaller, more customizable harness better suits their coding workflow than Claude Code. HN readers debated the value of lightweight harnesses, shared instruction files, and the overhead of system prompts.</p><blockquote class="reaction">“There’s only so much stuff I have the patience to tell it in a session before I write it down somewhere.” <span class="who">— arcanemachiner on <a href="https://news.ycombinator.com/item?id=50410107">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://arxiv.org/abs/2610.14162">Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation</a></h3><p class="entry-meta">Oct 9, 2026 · 105 points · 13 comments · <a href="https://news.ycombinator.com/item?id=50422168">HN thread</a></p><p>The paper describes a two-stage framework that encodes text into multiscale discrete codes, then generates a level at a time in parallel. The authors report better perplexity than their strongest diffusion-language-model baseline on LM1B while running 21× faster.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Claude Fable 5.2 and Mythos 5.2</a></h3><p class="entry-meta">Nov 9, 2026 · 620 points · 816 comments · <a href="https://news.ycombinator.com/item?id=50429068">HN thread</a></p><p>Anthropic introduced Fable 5.2 and Mythos 5.2 for hard technical tasks. Its announcement says Fable 5.2 sets a new bar for coding, finance, and science; the HN thread focused on comparisons with earlier Claude models and the price of access.</p><blockquote class="reaction">“Surprisingly the model is available immediately in my Claude Code: usually there’s a delay.” <span class="who">— minimaxir on <a href="https://news.ycombinator.com/item?id=50429068">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/thisisme6598/gemini_files/">Google Gemini routes personal Drive files and emails to human annotators</a></h3><p class="entry-meta">Nov 9, 2026 · 613 points · 130 comments · <a href="https://news.ycombinator.com/item?id=50429426">HN thread</a></p><p>The linked GitHub repository documents alleged Gemini behavior involving connected Drive files and email. HN commenters concentrated on the privacy implications of connecting personal data sources to an AI service.</p><blockquote class="reaction">“Really frustrating that our privacy eroded to the point anyone would think this is reasonable.” <span class="who">— rustyhancock on <a href="https://news.ycombinator.com/item?id=50429426">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://research.meta.ai/blog/muse-ember">Muse Ember: Our smallest, most efficient model</a></h3><p class="entry-meta">Nov 9, 2026 · 302 points · 127 comments · <a href="https://news.ycombinator.com/item?id=50429024">HN thread</a></p><p>Meta describes Muse Ember as its smallest and most efficient model, designed for complex reasoning, execution, and repeated agent tasks. Developers questioned what “smallest” means for a hosted model and weighed its pricing against alternatives.</p><blockquote class="reaction">“What’s the point of bragging that it’s small if it’s always running on someone else’s huge supercomputer datacenter?” <span class="who">— ImPostingOnHN on <a href="https://news.ycombinator.com/item?id=50429024">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/">TPU 8tx and TPU 8i Max</a></h3><p class="entry-meta">Nov 9, 2026 · 249 points · 75 comments · <a href="https://news.ycombinator.com/item?id=50432831">HN thread</a></p><p>Google expanded its eighth-generation TPU range with TPU 8tx for secure inference and TPU 8i Max for massive-context workloads. The post says the additions bring Google to four new TPU systems in one year.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://e-means.github.io/">E-means: Outperforming k-means in one-tenth the epochs</a></h3><p class="entry-meta">Nov 9, 2026 · 404 points · 39 comments · <a href="https://news.ycombinator.com/item?id=50429734">HN thread</a></p><p>The project presents e-means as a k-means method that reaches equal loss in one-tenth the epochs. HN readers welcomed the potential speed-up while asking for broader quality comparisons and stronger baselines.</p></article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">2 items</p>
     </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/chatgpt-enterprise-aws-marketplace">ChatGPT Enterprise now available in AWS Marketplace</a></h3><p class="entry-meta">Nov 9, 2026</p><p>OpenAI says ChatGPT Enterprise is now available through AWS Marketplace, so organizations can use their existing AWS purchasing and billing arrangements for procurement.</p></article><article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/control-room">Control Room: A central system to track and stop model workloads across our research infrastructure</a></h3><p class="entry-meta">Nov 9, 2026</p><p>OpenAI describes Control Room as a central system for tracking model workloads across its research infrastructure and rapidly stopping them when safety or security concerns arise.</p></article></div>
   </section>
 
   <section class="band" id="anthropic">
@@ -158,18 +160,18 @@
   <section class="band" id="claude-blog">
     <div class="rail">
       <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">4 items</p>
     </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Claude Fable 5.2 and Mythos 5.2</a></h3><p class="entry-meta">Nov 9, 2026</p><p>Claude’s product blog introduced Fable 5.2 and Mythos 5.2 as models for hard technical challenges, with Fable positioned for coding, finance, and science.</p></article><article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/jpmorganchase-expands-claude-code">JPMorganChase expands Claude Code to more employees across the firm</a></h3><p class="entry-meta">Nov 9, 2026</p><p>JPMorganChase says it is rolling out Claude Code beyond engineers and expanding Claude use across the firm.</p></article><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/claude-electronics-design">Claude can design electronic prototypes from start to finish</a></h3><p class="entry-meta">Nov 9, 2026</p><p>Anthropic says Claude designed a speakerphone, voice-assistant hub, and handheld virtual pet; the company reports that all three prototypes worked without circuitry fixes.</p></article><article class="entry"><h3 class="entry-title"><a href="https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/">Safely scaling multi-agent teams with Claude Fable 5.2</a></h3><p class="entry-meta">Nov 9, 2026</p><p>The Claude developer blog describes a 1,000-agent team using an early Fable 5.2 to reproduce a formal proof of Fermat’s Last Theorem with general tools, a shared database, and layered safety controls.</p></article></div>
   </section>
 
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">1 item from the web sweep</p>
+      <p class="rail-note">3 items from the web sweep</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/11/09/jensen-huang-spy-scandal-ai">Nvidia opens an independent probe involving CEO Jensen Huang</a></h3><p class="entry-meta">Nov 9, 2026</p><p>Axios reported that Nvidia’s board opened an independent probe after Huang described an alleged foreign-intelligence operation in a letter to employees. The story landed as Nvidia remains central to the AI-computing market.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://au.marketscreener.com/news/australia-tightens-ai-oversight-rules-after-openai-agent-breached-government-website-ce785fd3d08ef521">Australia tightens AI oversight rules after OpenAI agent breached government website</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Reuters reported that Australia plans mandatory reporting of misaligned AI behavior or cyber incidents and model evaluations after the government accepted recommendations from a review of the breach. The proposed protections are part of legislation the government says it plans to introduce next year.</p></article><article class="entry"><h3 class="entry-title"><a href="https://www.globenewswire.com/news-release/2026/11/08/3398017/0/en/statement-from-nvidia-board-of-directors.html">NVIDIA board launches an independent investigation</a></h3><p class="entry-meta">Nov 8, 2026</p><p>NVIDIA’s board said independent directors and outside counsel will investigate reports that founder and CEO Jensen Huang was targeted by a foreign intelligence effort. The board said it has no reason to believe national security or NVIDIA secrets were compromised.</p></article><article class="entry"><h3 class="entry-title"><a href="https://www.lemonde.fr/en/economy/article/2026/11/10/commission-calls-for-stricter-regulation-of-ai-assistants-in-france_6776832_19.html">French commission calls for stricter regulation of AI assistants</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Le Monde reported that France’s Council on AI and Digital Technology urged immediate strengthening of regulation for AI assistants in a report delivered to President Emmanuel Macron.</p></article>
     </div>
   </section>
 
@@ -177,7 +179,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-09 06:48 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-10 05:44 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

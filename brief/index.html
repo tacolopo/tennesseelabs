@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Wednesday · Nov 11, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Thursday · Nov 12, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Google released Gemini 4 Carbon for demanding agentic coding, research, and cybersecurity work.</span> <span class="rundown-why">The launch also previews a coordinated-agent workflow in Antigravity.</span><a class="cite" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/">[1]</a></li>
-        <li><span class="rundown-head">Anthropic began the roadshow for its proposed Nasdaq IPO, with an expected $70–$78 share price.</span> <span class="rundown-why">The proposed offering includes 825 million Class A shares.</span><a class="cite" href="https://www.anthropic.com/news/roadshow-launch">[2]</a></li>
-        <li><span class="rundown-head">Claude added collaborative whiteboards and spreadsheets, while making its dashboard product generally available as Claude Data.</span> <span class="rundown-why">The tools keep shared work inside Claude before exporting to partner apps.</span><a class="cite" href="https://claude.com/resources/articles/sheets-whiteboards-data">[3]</a></li>
-        <li><span class="rundown-head">Google DeepMind used agentic formal verification to check selected cryptographic properties of Signal’s protocol.</span> <span class="rundown-why">The work generated more than six million lines of Lean proofs in about four weeks.</span><a class="cite" href="https://deepmind.google/blog/introducing-alphaproof-code/">[4]</a></li>
+        <li><span class="rundown-head">Google introduced Gemini Decision 1, a multimodal API for calibrated, closed-set choices.</span> <span class="rundown-why">It can score up to 1,000 questions against a shared input in one pass.</span><a class="cite" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">[1]</a></li>
+        <li><span class="rundown-head">AWS released a local AWS emulator whose code was written by autonomous agents.</span> <span class="rundown-why">AWS describes separate agent teams for test creation, issue finding, and fixes, with merge gates around their work.</span><a class="cite" href="https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator">[2]</a></li>
+        <li><span class="rundown-head">Google DeepMind released AlphaGenome 2 for predicting how variants affect specific cell types.</span> <span class="rundown-why">The model is available for non-commercial research through the AlphaGenome API.</span><a class="cite" href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/">[3]</a></li>
+        <li><span class="rundown-head">OpenAI published three new customer and safety updates, including a $2 million commitment to children’s-safety research.</span> <span class="rundown-why">The company also highlighted Codex work at Holiday Extras and AI use at law firm Gilbert + Tobin.</span><a class="cite" href="https://openai.com/index/children-first-declaration">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -127,67 +127,33 @@
        rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
        Developer Pulse items may include a quoted reaction after the summary:
        <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
-  <section class="band" id="developer-pulse">
-    <div class="rail">
-      <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items</p>
-    </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/">Gemini 4 Carbon is now available</a></h3><p class="entry-meta">Nov 10, 2026 · 285 points · 157 comments · <a href="https://news.ycombinator.com/item?id=50442303">HN thread</a></p><p>Google positions Carbon as its strongest Gemini model for long-horizon coding, open-ended research, and cybersecurity work. The company also previewed Antigravity’s <code>/swarm</code>, which assigns coordinated agents to roles such as architecture, auditing, and parallel implementation.</p><blockquote class="reaction">“Available through the API. To add, it’s actually surprisingly good.” <span class="who">— 5555watch on <a href="https://news.ycombinator.com/item?id=50442303">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/sheets-whiteboards-data">Claude Whiteboards, Claude Sheets, and Claude Data</a></h3><p class="entry-meta">Nov 10, 2026 · 232 points · 165 comments · <a href="https://news.ycombinator.com/item?id=50443716">HN thread</a></p><p>Anthropic launched Whiteboards and Sheets in beta for paid Claude plans, and renamed its generally available dashboard product Claude Data. Whiteboards can organize group notes into themes and action items; Sheets can generate and edit multi-tab spreadsheets with formulas and formatting.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/GoogleChrome/modern-web-guidance">Modern Web Guidance for coding agents</a></h3><p class="entry-meta">HN thread posted Nov 10, 2026 · 371 points · 114 comments · <a href="https://news.ycombinator.com/item?id=50443812">HN thread</a></p><p>Google Chrome, Microsoft Edge, and Mozilla steward this collection of skills for coding agents. It packages web-platform expertise, best practices, and browser-compatibility guidance so agents can avoid outdated patterns.</p><blockquote class="reaction">“The amount of pull requests I reviewed with a mess of codes that can be switched to 2 lines of modern features made me write such tools myself.” <span class="who">— halflife on <a href="https://news.ycombinator.com/item?id=50443812">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/">AI usage generates a fragile codebase</a></h3><p class="entry-meta">Nov 7, 2026 · 562 points · 531 comments · <a href="https://news.ycombinator.com/item?id=50438318">HN thread</a></p><p>Evan X. Merz argues that AI-generated code can produce shallow tests, unnecessary complexity, and less human understanding of a large codebase. The discussion largely treated oversight, guidance, and tooling as the deciding factors.</p><blockquote class="reaction">“You provide guidance, support and tooling so they can write better tests and code. You supervise and help them meet the standard. It is the same with AI agents.” <span class="who">— ricardobeat on <a href="https://news.ycombinator.com/item?id=50438318">HN</a></span></blockquote></article>
-    </div>
-  </section>
+  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">Gemini Decisions API</a></h3><p class="entry-meta">Nov 11, 2026 · 439 points · 132 comments · <a href="https://news.ycombinator.com/item?id=50456791">HN thread</a></p><p>Google introduced Gemini Decision 1 for bounded choices, including tool selection, policy checks, routing, and context grading. The API accepts text, images, audio, video, and PDFs, and can evaluate up to 1,000 questions against a shared input.</p><blockquote class="reaction">“It can accept Audio and Video as input as well and for those specific cases it can be extremely useful.” <span class="who">— waximabbax on <a href="https://news.ycombinator.com/item?id=50456791">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator">AWS Emulator</a></h3><p class="entry-meta">Nov 11, 2026 · 854 points · 236 comments · <a href="https://news.ycombinator.com/item?id=50456631">HN thread</a></p><p>AWS released a local emulator of AWS services and says autonomous agents wrote the code. Its process separates test-writing, issue-finding, and fix agents, then uses build, review, security, and fidelity checks before merging changes.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://blog.atuin.sh/threads-agent-sessions/">Atuin Threads: All your agent sessions on every machine</a></h3><p class="entry-meta">Oct 27, 2026 · 219 points · 80 comments · <a href="https://news.ycombinator.com/item?id=50453637">HN thread posted Nov 11, 2026</a></p><p>Atuin Threads indexes, synchronizes, and resumes opt-in agent sessions across supported harnesses and machines. The company says the synced session data is end-to-end encrypted and can stay local or use a self-hosted service.</p><blockquote class="reaction">“I find it a required bit of infrastructure. This is a nice upgrade!” <span class="who">— RyJones on <a href="https://news.ycombinator.com/item?id=50453637">HN</a></span></blockquote></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://cabird.com/talks/shipping-faster/">AI, activity, and outcomes in software engineering</a></h3><p class="entry-meta">Oct 30, 2026 · 118 points · 107 comments · <a href="https://news.ycombinator.com/item?id=50455332">HN thread posted Nov 11, 2026</a></p><p>Christian Bird’s talk examines the gap between AI-assisted activity and software-delivery outcomes, with links to research on developer tools, code review agents, and team adoption.</p></article>
+  </div></section>
 
-  <section class="band" id="openai">
-    <div class="rail">
-      <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">6 items</p>
-    </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/chatgpt-plus-for-veterans">ChatGPT Plus for veterans and servicemembers</a></h3><p class="entry-meta">Nov 11, 2026</p><p>OpenAI says more than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. The post focuses on uses for preparing for civilian careers.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/helping-caregivers-use-ai-in-everyday-life">Helping caregivers use AI in everyday life</a></h3><p class="entry-meta">Nov 10, 2026</p><p>OpenAI Academy is holding free, hands-on ChatGPT workshops for caregivers in five U.S. cities, focused on practical AI skills for day-to-day use.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-businesses-chatgpt">Introducing Businesses in ChatGPT</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Businesses in ChatGPT lets companies manage their business information, see how they appear in ChatGPT, and turn interest into action, according to OpenAI.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/closing-ai-guidance-gap-education">Closing the AI guidance gap in education</a></h3><p class="entry-meta">Nov 10, 2026</p><p>OpenAI points to new ThinkYoung research and lessons from its EMEA education partnerships on teacher support, AI literacy, and independent learning.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/singapore-airlines-travel-work">Singapore Airlines elevates travel &amp; work with OpenAI technology</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Singapore Airlines uses OpenAI models and APIs for customer support, travel discovery, and employee productivity. OpenAI says the airline doubled customer-satisfaction scores for its Kris chatbot.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/ai-effect-on-freelance-work">Work at the Frontier: AI’s effect on freelance work</a></h3><p class="entry-meta">Nov 10, 2026</p><p>OpenAI and Upwork report shifting freelance demand, new skill combinations, and larger budgets and more hours for AI-related projects.</p></article>
-    </div>
-  </section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">3 items</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/business/customer-stories/holidays-extras-codex">Holiday Extras is rethinking what it can build with Codex</a></h3><p class="entry-meta">Nov 12, 2026</p><p>OpenAI says Holiday Extras is using Codex to turn customer expertise into better apps, higher booking conversion, and new growth opportunities.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/children-first-declaration">Supporting research on AI and children’s safety</a></h3><p class="entry-meta">Nov 12, 2026</p><p>OpenAI committed $2 million to research on AI and children’s safety, focused on shared tools for measuring risks and opportunities for young people.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/gilbert-tobin-sam-nickless">Gilbert + Tobin rethinks the business of law with AI</a></h3><p class="entry-meta">Nov 12, 2026</p><p>OpenAI published a conversation with Sam Nickless, partner and chief executive officer at Gilbert + Tobin, about the firm’s use of AI.</p></article>
+  </div></section>
 
-  <section class="band" id="anthropic">
-    <div class="rail">
-      <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">1 item</p>
-    </div>
-    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/roadshow-launch">Anthropic launches roadshow for proposed initial public offering</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Anthropic began the roadshow for a proposed IPO of Class A common stock. The offering covers 825 million shares, with an expected $70–$78 price range; Anthropic has applied to list on Nasdaq under the symbol ANT.</p></article></div>
-  </section>
+  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
 
-  <section class="band" id="claude-blog">
-    <div class="rail">
-      <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
-  </section>
-
-  <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
-    </div>
-    <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://deepmind.google/blog/introducing-alphaproof-code/">Formal Verification of Signal’s Protocol with Gemini</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Google DeepMind says its AlphaProof Code agents generated more than six million lines of Lean proof to formally check selected properties of Signal’s protocol in about four weeks. The team also reintroduced two previously fixed bugs into an isolated code version to test whether the system could distinguish correct code from buggy code.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://blog.railway.com/p/incident-report-october-security-incident">Railway details October security attack and unauthorized AI spend</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Railway says an attacker obtained and decrypted customer variables from at most 1.85% of its workspaces, roughly 100,000, during an October incident. Its investigation estimates about $740,000 in unauthorized usage of stolen AI-provider credentials.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.engadget.com/2312487/new-york-will-independently-test-ai-models/">New York will independently test AI models</a></h3><p class="entry-meta">Nov 10, 2026</p><p>Governor Kathy Hochul launched a state-run AI testing program, according to Engadget. The program is intended to independently evaluate AI models.</p></article>
-    </div>
-  </section>
+  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
+    <article class="entry"><h3 class="entry-title"><a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/">AlphaGenome 2: Deciphering how cells read DNA</a></h3><p class="entry-meta">Nov 11, 2026</p><p>Google DeepMind released a model that predicts how DNA variants affect specific cell types. It trained on more than 100 million cell profiles across 68 tissues and is available for non-commercial research through the AlphaGenome API.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/">Try Tabletop: collaborative spaces for groups</a></h3><p class="entry-meta">Nov 11, 2026</p><p>Google Labs introduced Tabletop, a shared space where groups can add links, files, and ideas, then ask an agent to make planning tools such as itineraries, polls, expense splitters, and tournament brackets. It is rolling out through a U.S. waitlist for adults.</p></article>
+    <article class="entry"><h3 class="entry-title"><a href="https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/">United Airlines restricts AI agents from booking flights</a></h3><p class="entry-meta">Nov 11, 2026</p><p>United Airlines said unauthorized AI agents cannot make flight bookings on behalf of travelers. The policy drew substantial developer discussion on Hacker News as agents take on more transaction-oriented tasks.</p></article>
+  </div></section>
 
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-11 05:48 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-12 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

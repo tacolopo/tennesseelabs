@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Friday · Nov 13, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Saturday · Nov 14, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">Google introduced Gemini 4 Hydrogen, a fast, 1-million-token model for coding and agentic workflows.</span> <span class="rundown-why">It is being rolled out across Google’s API, apps, Search, and business products.</span><a class="cite" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">[1]</a></li>
-        <li><span class="rundown-head">Edge0 released open 145B-parameter weights designed for local coding, reasoning, and agent work.</span> <span class="rundown-why">The company says its memory design brings peak usage to 29GB on compatible hardware.</span><a class="cite" href="https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer">[2]</a></li>
-        <li><span class="rundown-head">OpenAI highlighted Amplitude’s Wave agent, which identifies product work, invokes coding agents, and measures results.</span> <span class="rundown-why">It is a practical example of a product-development loop built on OpenAI models.</span><a class="cite" href="https://openai.com/business/customer-stories/amplitude">[3]</a></li>
-        <li><span class="rundown-head">Brave added pay-per-request Search API access for agents via x402 and USDC.</span> <span class="rundown-why">It tests an accountless payment model for programmatic web search.</span><a class="cite" href="https://brave.com/blog/search-api-agentic-payments/">[4]</a></li>
+        <li><span class="rundown-head">OpenAI introduced ChatGPT Wallet for approved agent purchases.</span> <span class="rundown-why">It is a new transaction layer for ChatGPT Work, Codex, and Dots that keeps payment approval with the user.</span><a class="cite" href="https://openai.com/index/introducing-chatgpt-wallet">[1]</a></li>
+        <li><span class="rundown-head">Claude put collaboration into two new betas: a meeting participant and coordinated cloud coding projects.</span> <span class="rundown-why">Both move Claude from a single chat toward shared, long-running work.</span><a class="cite" href="https://claude.com/resources/articles/claude-meetings">[2]</a><a class="cite" href="https://claude.com/resources/articles/projects-redesigned">[3]</a></li>
+        <li><span class="rundown-head">llama.cpp and ggml reached 1.0.</span> <span class="rundown-why">The release formalizes API and ABI versioning for a widely used local-inference foundation.</span><a class="cite" href="https://huggingface.co/blog/ggml-org/llama-cpp-v1">[4]</a></li>
+        <li><span class="rundown-head">Ai2’s XYBench spotlights a persistent assistant failure: solving the literal question rather than the user’s underlying problem.</span> <span class="rundown-why">It provides an 8,000-plus-question evaluation set for measuring that gap.</span><a class="cite" href="https://huggingface.co/blog/allenai/xybench">[5]</a></li>
       </ol>
     </div>
   </section>
@@ -127,31 +127,66 @@
        rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
        Developer Pulse items may include a quoted reaction after the summary:
        <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
-  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Introducing Gemini 4 Hydrogen</a></h3><p class="entry-meta">Nov 12, 2026 · 531 points · 334 comments · <a href="https://news.ycombinator.com/item?id=50471431">HN thread</a></p><p>Google calls Hydrogen its daily driver for fast coding and agentic workflows. The model has a one-million-token context window and is available through AI Studio, the Gemini API, Gemini for business, the Gemini app, Search, and Antigravity.</p><blockquote class="reaction">“The orchestrator in Antigravity might be the most important part of this release.” <span class="who">— behat on <a href="https://news.ycombinator.com/item?id=50471431">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer">Edge0-145B: Frontier AI Capabilities on Your Own Computer</a></h3><p class="entry-meta">Nov 12, 2026 · 259 points · 72 comments · <a href="https://news.ycombinator.com/item?id=50475713">HN thread</a></p><p>Edge0 released open 145B-parameter weights for local coding, reasoning, and agent tasks. It says shared matrices and memory management allow a compatible laptop to run the model with 29GB peak memory.</p><blockquote class="reaction">“If 3rd party testing and benchmarking hold the published values this is very exciting.” <span class="who">— fesoliveira on <a href="https://news.ycombinator.com/item?id=50475713">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://developer.apple.com/foundation-models-framework/">Foundation Models framework</a></h3><p class="entry-meta">HN thread posted Nov 12, 2026 · 215 points · 31 comments · <a href="https://news.ycombinator.com/item?id=50474361">HN thread</a></p><p>Apple’s native Swift API offers access to Apple Foundation Models on-device and in Private Cloud Compute, with guided generation, tool calling, image understanding, and Dynamic Profiles built in.</p><blockquote class="reaction">“Their CoreAI stuff is kind of flying under the radar.” <span class="who">— cj00 on <a href="https://news.ycombinator.com/item?id=50474361">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://brave.com/blog/search-api-agentic-payments/">Brave Search API now accepts agentic payments via x402</a></h3><p class="entry-meta">Nov 12, 2026 · 107 points · 70 comments · <a href="https://news.ycombinator.com/item?id=50477649">HN thread</a></p><p>Brave now lets developers and agents pay for Search API requests with USDC through x402, settling each query without an account or API key. An unpaid request returns payment details; a signed payment can be attached to the retry.</p><blockquote class="reaction">“The part I keep coming back to isn’t the payment rail, it’s what happens before the payment.” <span class="who">— brodydung on <a href="https://news.ycombinator.com/item?id=50477649">HN</a></span></blockquote></article>
-  </div></section>
+  <section class="band" id="developer-pulse">
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">4 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/ggml-org/ggml/releases/tag/v1.0.0">Ggml v1.0.0</a></h3><p class="entry-meta">HN thread posted Nov 14, 2026 · 594 points · 343 comments · <a href="https://news.ycombinator.com/item?id=50493062">HN thread</a></p><p>ggml announced its 1.0 release, a major milestone for the C/C++ library underpinning local inference. The linked release formalizes major-version bumps for incompatible public API and ABI changes.</p><blockquote class="reaction">“ggml and llama.cpp are the Linux of the AI world. Driving local inference one bit at a time.” <span class="who">— evilelectron on <a href="https://news.ycombinator.com/item?id=50493062">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://haddyalchaer.com/jepa">After 600 experiments, here’s what I discovered about JEPA world models</a></h3><p class="entry-meta">HN thread posted Nov 13, 2026 · 262 points · 41 comments · <a href="https://news.ycombinator.com/item?id=50487185">HN thread</a></p><p>The engineering writeup on JEPA world models drew interest around planning and control rather than language-only systems. The discussion compared the approach with model-predictive control and considered where it could fit in robotics.</p><blockquote class="reaction">“JEPA is very similar to Model Predictive Control.” <span class="who">— hazrmard on <a href="https://news.ycombinator.com/item?id=50487185">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/claude-meetings">Claude Meetings</a></h3><p class="entry-meta">HN thread posted Nov 13, 2026 · 100 points · 76 comments · <a href="https://news.ycombinator.com/item?id=50491097">HN thread</a></p><p>Anthropic’s beta adds Claude as a visible participant in Google Meet calls for Team and Enterprise plans. It can answer questions, take notes, and build shared documents or whiteboards, with permission checks for connected tools.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/projects-redesigned">Claude Code Projects run parallel AI workers</a></h3><p class="entry-meta">HN thread posted Nov 14, 2026 · 88 points · 83 comments · <a href="https://news.ycombinator.com/item?id=50492141">HN thread</a></p><p>Updated Claude Code projects use a coordinator and parallel cloud-session threads to scope, delegate, review, and assemble work across repositories. The beta begins for select Pro and Max users.</p><blockquote class="reaction">“Projects are how I write pretty much all my code these days.” <span class="who">— bcherny on <a href="https://news.ycombinator.com/item?id=50492141">HN</a></span></blockquote></article>
+    </div>
+  </section>
 
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">2 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/business/customer-stories/amplitude">How Amplitude ships product improvements in 1–2 days with OpenAI</a></h3><p class="entry-meta">Nov 12, 2026</p><p>OpenAI says Amplitude’s proactive product agent, Wave, identifies what to build, uses coding agents to help teams ship changes, and measures the impact. Wave is built primarily on OpenAI models.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://openai.com/business/customer-stories/gondola">Gondola doubles revenue as its team builds more with Codex</a></h3><p class="entry-meta">Nov 12, 2026</p><p>OpenAI says Gondola’s lead engineer increased output by 50% with Codex, while the team uses ChatGPT for daily work.</p></article>
-  </div></section>
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-chatgpt-wallet">Introducing ChatGPT Wallet</a></h3><p class="entry-meta">Nov 13, 2026</p><p>OpenAI introduced ChatGPT Wallet, which it describes as a secure way for agents in ChatGPT Work, Codex, and Dots to complete purchases with user approval and existing card protections.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/business/customer-stories/shield">Shield helps technicians hand off legacy portal work with OpenAI</a></h3><p class="entry-meta">Nov 13, 2026</p><p>Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate those systems so technicians can focus on issues that need their judgment.</p></article>
+    </div>
+  </section>
 
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
 
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">2 items from the web sweep</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://newsroom.ibm.com/blog-ibm-advances-agent-identity-security-with-new-vault-capabilities">IBM advances agent identity security with new Vault capabilities</a></h3><p class="entry-meta">Nov 12, 2026</p><p>IBM says its acquisition of AuthMind expands HashiCorp Vault’s approach to securing agent credentials and secrets across applications, tools, and data. The update focuses on identifying agents, their authorizations and access, actions, and intervention points.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://unemploymentlabs.com/checkpoint-forensics">Chinese frontier AI models carry fingerprints of export-controlled Blackwell GPUs</a></h3><p class="entry-meta">Nov 12, 2026</p><p>Unemployment Labs reports that six open-weight models show initialization patterns consistent with Blackwell hardware. The report says the evidence supports hardware access but does not establish where the chips were located or that any export-control violation occurred.</p></article>
-  </div></section>
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/building-always-on-agents">Building always-on agents</a></h3><p class="entry-meta">Nov 13, 2026</p><p>Anthropic’s guide frames always-on agents as a durable loop of events, timers, memory, permissions, and delivery. It recommends separating those primitives into explicit stores and services rather than treating an agent as a single continuous process.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/claude-tag-guide-for-startups">The Claude Tag guide for startups</a></h3><p class="entry-meta">Nov 13, 2026</p><p>A newly published guide on how startups use Claude Tag to ship faster and scale operations.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://huggingface.co/blog/allenai/xybench">XYBench: Helping with the problem behind the question</a></h3><p class="entry-meta">Nov 13, 2026</p><p>Ai2 released an 8,115-question benchmark for the “XY problem”: when a user asks for an approach that misses their actual goal. Its evaluation found the tested models more often addressed the literal request than the underlying need.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://news.mit.edu/2026/new-ai-copilot-helps-engineers-design-better-structures-1113">New AI copilot helps engineers design better structures</a></h3><p class="entry-meta">Nov 13, 2026</p><p>MIT reported a copilot that identifies regions of algorithmically generated structures for engineers to review during design. The reported demonstrations improved manufacturability and buckling performance.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.blog/changelog/2026-11-13-manage-ai-scan-for-repositories-using-the-rest-api/">Manage AI Scan for repositories using the REST API</a></h3><p class="entry-meta">Nov 13, 2026</p><p>GitHub added REST API controls for enabling or disabling repository AI Scan at organization and repository scope, letting security teams automate that configuration.</p></article>
+    </div>
+  </section>
 
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-13 05:45 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-14 05:42 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

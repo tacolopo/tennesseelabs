@@ -1,42 +1,191 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily Brief — Tennessee Labs</title><meta name="description" content="AI/tech morning brief — Hacker News developer reactions, OpenAI, Anthropic, Claude Blog, and AI Zeitgeist."><meta name="robots" content="noindex"><link rel="canonical" href="https://tennesseelabs.com/brief/"><base target="_blank"><link rel="icon" href="https://tennesseelabs.com/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap"><link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Brief — Tennessee Labs</title>
+<meta name="description" content="AI/tech morning brief — Hacker News developer reactions, OpenAI, Anthropic, Claude Blog, and AI Zeitgeist — regenerated every morning, every line cites its source.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://tennesseelabs.com/brief/">
+<base target="_blank">
+<link rel="icon" href="https://tennesseelabs.com/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-.deck.mono{font-family:var(--mono);font-size:.9rem;letter-spacing:.02em;color:var(--ink-2)}.notice{margin-top:1.1rem;padding:.85rem 1rem;background:var(--card);border:1px solid var(--rule);border-left:2px solid var(--negated);font-size:.875rem;line-height:1.55;color:var(--ink-2);max-width:var(--measure)}.rundown-list{counter-reset:rundown;margin:0;padding:0;list-style:none;display:grid;gap:1.1rem}.rundown-list li{padding-left:1.7rem;position:relative;max-width:var(--measure)}.rundown-list li::before{content:counter(rundown);counter-increment:rundown;position:absolute;left:0;top:.15rem;font-family:var(--mono);font-size:.75rem;color:var(--accent)}.rundown-head{font-weight:500}.rundown-why{color:var(--ink-2)}.cite{font-family:var(--mono);font-size:.75em;color:var(--accent);vertical-align:super;margin-left:.2rem;text-decoration:none}.cite:hover{text-decoration:underline}.entry-meta{margin:-.15rem 0 .55rem;font-family:var(--mono);font-size:.75rem;color:var(--ink-3);letter-spacing:.01em}.entry-title a{color:var(--ink);text-decoration:none}.entry-title a:hover{color:var(--accent)}.reaction{margin:.85rem 0 0;padding-left:.9rem;border-left:2px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-2);line-height:1.5}.reaction .who{display:block;margin-top:.3rem;font-family:var(--mono);font-style:normal;font-size:.7rem;color:var(--ink-3);letter-spacing:.02em}.reaction .who a{color:var(--ink-3)}.empty,.fail{margin:0;padding-left:1rem;max-width:var(--measure);border-left:1.5px dashed var(--negated);color:var(--ink-3);font-size:.9rem}.fail{color:var(--ink-2)}.fail::before{content:"\26A0  "}
-</style></head>
+  /* Daily Brief — extends styles.css tokens; scoped to this page only */
+  .deck.mono {
+    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
+    color: var(--ink-2);
+  }
+  .notice {
+    margin-top: 1.1rem; padding: 0.85rem 1rem;
+    background: var(--card); border: 1px solid var(--rule);
+    border-left: 2px solid var(--negated);
+    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
+    max-width: var(--measure);
+  }
+
+  .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
+  .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
+  .rundown-list li::before {
+    content: counter(rundown); counter-increment: rundown;
+    position: absolute; left: 0; top: 0.15rem;
+    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
+  }
+  .rundown-head { font-weight: 500; }
+  .rundown-why { color: var(--ink-2); }
+  .cite {
+    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
+    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
+  }
+  .cite:hover { text-decoration: underline; }
+
+  .entry-meta {
+    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
+    color: var(--ink-3); letter-spacing: 0.01em;
+  }
+  .entry-title a { color: var(--ink); text-decoration: none; }
+  .entry-title a:hover { color: var(--accent); }
+
+  .reaction {
+    margin: 0.85rem 0 0; padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+    color: var(--ink-2); line-height: 1.5;
+  }
+  .reaction .who {
+    display: block; margin-top: 0.3rem;
+    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
+    color: var(--ink-3); letter-spacing: 0.02em;
+  }
+  .reaction .who a { color: var(--ink-3); }
+
+  .empty, .fail {
+    margin: 0; padding-left: 1rem; max-width: var(--measure);
+    border-left: 1.5px dashed var(--negated);
+    color: var(--ink-3); font-size: 0.9rem;
+  }
+  .fail { color: var(--ink-2); }
+  .fail::before { content: "\26A0  "; }
+</style>
+</head>
 <body>
-<header class="masthead"><a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a><nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav></header>
+
+<header class="masthead">
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <g fill="none" stroke-linecap="square">
+        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
+      </g>
+    </svg>
+    <span>Tennessee&nbsp;Labs</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="https://tennesseelabs.com/" target="_self">Home</a>
+    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
+  </nav>
+</header>
+
 <main id="top">
-<section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Tuesday · Nov 17, 2026 · 6:00 AM ET</p></div></section>
-<section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Four top stories, synthesized across the sections below.</p></div><div class="col"><ol class="rundown-list">
-<li><span class="rundown-head">OpenAI introduced GPT‑6.2 Astra and Sol across ChatGPT Work, Codex, and the API.</span> <span class="rundown-why">The company frames the pair around stronger professional work, coding, computer use, and lower-cost efficiency.</span><a class="cite" href="https://openai.com/index/introducing-gpt-6-2-astra-sol">[1]</a></li>
-<li><span class="rundown-head">Microsoft launched seven AI models at Ignite, including the MAI Code 2 coding family.</span> <span class="rundown-why">The company’s central pitch is price-performance for everyday enterprise work.</span><a class="cite" href="https://microsoft.ai/news/microsoft-ignite-2026/">[2]</a></li>
-<li><span class="rundown-head">The Claude Code team argues that agentic coding scales through evidence-producing verification loops.</span> <span class="rundown-why">Its engineering guide emphasizes end-to-end, property, and differential tests.</span><a class="cite" href="https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/">[3]</a></li>
-<li><span class="rundown-head">Claude introduced beta linked billing for third-party platforms.</span> <span class="rundown-why">It lets customers bill usage to their Claude Platform organization without giving platforms an API key.</span><a class="cite" href="https://claude.com/resources/articles/linked-billing-on-claude-platform">[4]</a></li>
-</ol></div></section>
-<section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/">GPT‑6.2 Astra and Sol</a></h3><p class="entry-meta">Nov 17, 2026 · 967 points · 601 comments · <a href="https://news.ycombinator.com/item?id=50535230">HN thread</a></p><p>OpenAI says Astra and Sol improve professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.</p><blockquote class="reaction">“Waiting for the pelicans benchmark.” <span class="who">— deathtrader666 on <a href="https://news.ycombinator.com/item?id=50535230">HN</a></span></blockquote></article>
-<article class="entry"><h3 class="entry-title"><a href="https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/">How the Claude Code team thinks about verification</a></h3><p class="entry-meta">Nov 16, 2026 · 246 points · 191 comments · <a href="https://news.ycombinator.com/item?id=50529612">HN thread</a></p><p>Claude Code’s team describes using end-to-end, property, and differential tests to give coding agents evidence about their work. It says verification loops make it practical to delegate more work while keeping the verifiers themselves honest.</p><blockquote class="reaction">“I am more interested in the remaining 10%.” <span class="who">— dude250711 on <a href="https://news.ycombinator.com/item?id=50529612">HN</a></span></blockquote></article>
-<article class="entry"><h3 class="entry-title"><a href="https://opencode.ai/product/browse">OpenCode Browse</a></h3><p class="entry-meta">HN thread posted Nov 16, 2026 · 323 points · 209 comments · <a href="https://news.ycombinator.com/item?id=50523459">HN thread</a></p><p>OpenCode introduced an MCP server and Chromium extension for agents to work in a user’s real browser, including its tabs, logins, and extensions. It keeps agent tabs in the background and hands control back for logins, 2FA, and payments.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://runta.com/blog/introducing-frontierharness-eval-v1-1/">Introducing FrontierHarness Eval v1.1</a></h3><p class="entry-meta">Nov 17, 2026 · 310 points · 109 comments · <a href="https://news.ycombinator.com/item?id=50532191">HN thread</a></p><p>Runta and Baseten benchmarked 22 agent harnesses across five models, 62 tasks, and four attempts. Their result: the best-value harness differs by model, so switching models can warrant switching the surrounding harness too.</p></article>
-</div></section>
-<section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">6 items</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol">Introducing GPT‑6.2 Astra and Sol</a></h3><p class="entry-meta">Nov 17, 2026</p><p>OpenAI introduced GPT‑6.2 Astra and Sol, describing better professional outputs, coding, computer use, and lower-cost efficiency across ChatGPT Work, Codex, and the API.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/strengthening-nato-allied-cyber-defences-ai">Strengthening NATO and allied cyber defenses with AI</a></h3><p class="entry-meta">Nov 17, 2026</p><p>OpenAI says it is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes, and protect essential systems.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-chatgpt-for-sales">Introducing ChatGPT for Sales</a></h3><p class="entry-meta">Nov 17, 2026</p><p>OpenAI introduced a Sales plugin plus more than 30 new and expanded partner plugins for prospect research, pitch preparation, CRM updates, and sales workflows.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/astra-law-6-2">Astra for Law leads in legal intelligence</a></h3><p class="entry-meta">Nov 17, 2026</p><p>OpenAI says Astra for Law ranked first in a launch evaluation covering 24 areas of law, and that ChatGPT Enterprise customers can request access.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-openai-for-chile">Introducing OpenAI for Chile</a></h3><p class="entry-meta">Nov 17, 2026</p><p>OpenAI and Chile’s government are partnering on responsible AI adoption, public-sector skills, and support for local startups building AI applications.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/expanding-chatgpt-for-academic-researchers">Broadening access to AI for scientists</a></h3><p class="entry-meta">Nov 16, 2026</p><p>OpenAI is expanding its ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to its frontier models.</p></article>
-</div></section>
-<section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-<section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">1 item</p></div><div class="col"><article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/linked-billing-on-claude-platform">Linked billing on the Claude Platform</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Anthropic introduced linked billing in beta for third-party platforms. Customers can connect their Claude Platform organization, keep their own billing and spend limits, and avoid sharing API keys with a platform.</p></article></div></section>
-<section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div><div class="col">
-<article class="entry"><h3 class="entry-title"><a href="https://microsoft.ai/news/microsoft-ignite-2026/">Microsoft launches seven AI models at Ignite</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Microsoft announced seven new models spanning cybersecurity, coding, image generation, voice, and decision work. The company says the lineup targets frontier capability at lower operating cost for developers and enterprises.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://microsoft.ai/news/introducing-mai-image-2-7/">MAI Image 2.7 and Canvas enter public preview</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Microsoft introduced MAI Image 2.7 and its Flash variant for image generation and editing, alongside Canvas, an interactive image-creation workspace. Both models are in public preview on Microsoft Foundry.</p></article>
-<article class="entry"><h3 class="entry-title"><a href="https://microsoft.ai/news/introducing-mai-licensed-weights/">Microsoft offers MAI Licensed Weights for Azure deployments</a></h3><p class="entry-meta">Nov 17, 2026</p><p>MAI Licensed Weights is intended to let organizations deploy and customize Microsoft AI models in their own Azure environments while retaining control over data, adaptations, access, and upgrades.</p></article>
-</div></section>
+
+  <section class="band band--hero">
+    <div class="rail">
+      <p class="label">AI / Tech<br>Morning brief</p>
+      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
+    </div>
+    <div class="col">
+      <h1 class="display">Daily&nbsp;Brief.</h1>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Wednesday · Nov 18, 2026 · 6:00 AM ET</p>
+      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
+           Omit this <p> entirely on a normal run. -->
+    </div>
+  </section>
+
+  <section class="band" id="rundown">
+    <div class="rail">
+      <h2 class="label label--section">Rundown</h2>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
+    </div>
+    <div class="col">
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
+      <ol class="rundown-list">
+        <li><span class="rundown-head">OpenAI introduced GPT-6.2 Astra and Sol across ChatGPT Work, Codex, and its API.</span> <span class="rundown-why">The company frames the release around professional output, coding, computer use, and lower-cost efficiency.</span><a class="cite" href="https://openai.com/index/introducing-gpt-6-2-astra-sol">[1]</a></li>
+        <li><span class="rundown-head">Microsoft’s MAI Code 2 and Code 2 Flash drew developer interest—and scrutiny of the comparison and pricing claims.</span> <span class="rundown-why">The release is a direct bid for coding workloads with Microsoft-built models.</span><a class="cite" href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/">[2]</a></li>
+        <li><span class="rundown-head">Cerebras put a GPU-prefill, wafer-scale-decode inference design into production.</span> <span class="rundown-why">It reports five times the throughput per megawatt without reducing generation speed.</span><a class="cite" href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference">[3]</a></li>
+        <li><span class="rundown-head">Google is widening access to Gemini Tasks, which can call businesses, sign in to sites, and make purchases.</span> <span class="rundown-why">The shift makes consumer-agent safeguards and reliability more immediate product questions.</span><a class="cite" href="https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/">[4]</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
+  <section class="band" id="developer-pulse">
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">4 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/">MAI Code 2 and Code 2 Flash</a></h3><p class="entry-meta">Nov 17, 2026 · 365 points · 155 comments · <a href="https://news.ycombinator.com/item?id=50535885">HN thread</a></p><p>Microsoft introduced two coding models, and the HN discussion centered on their benchmark positioning, price, and practical fit for coding work.</p><blockquote class="reaction">“skeptical but I like they went for it and put the benchmarks against the top stuff.” <span class="who">— zf00002 on <a href="https://news.ycombinator.com/item?id=50535885">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/">Harvard researchers find AI coding agents shifted the bottleneck to code review</a></h3><p class="entry-meta">Nov 17, 2026 · 189 points · 267 comments · <a href="https://news.ycombinator.com/item?id=50538303">HN thread</a></p><p>The story argues that agent-assisted coding moves pressure toward reviewing output. Developers debated whether review can scale and how much judgment remains essential.</p><blockquote class="reaction">“This again increases the demand for good programmers. Write only programmers are dime on dozen.” <span class="who">— u1hcw9nx on <a href="https://news.ycombinator.com/item?id=50538303">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference">Cerebras launches disaggregated inference</a></h3><p class="entry-meta">Nov 17, 2026 · 82 points · 19 comments · <a href="https://news.ycombinator.com/item?id=50540472">HN thread</a></p><p>Cerebras pairs GPUs for prompt processing with its wafer-scale systems for token generation, reporting five times the throughput per megawatt in a production deployment.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://shivamduggal4.github.io/latent-lattice-language-models/">Latent Lattice Language Models</a></h3><p class="entry-meta">Nov 17, 2026 · 51 points · 5 comments · <a href="https://news.ycombinator.com/item?id=50539039">HN thread</a></p><p>MIT and Adobe researchers propose recurrent horizontal latent streams alongside the usual residual stream, reporting lower perplexity than parameter-matched Transformer baselines.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership">Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT</a></h3><p class="entry-meta">Nov 18, 2026</p><p>OpenAI announced a partnership with Le Groupe Figaro to bring Le Figaro journalism to ChatGPT.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol">Introducing GPT-6.2 Astra and Sol</a></h3><p class="entry-meta">Nov 17, 2026</p><p>OpenAI says the new models improve professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/">Google expands access to Gemini Tasks</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Google is expanding Tasks in Gemini, a mode that can call businesses, book appointments, sign into websites, and make purchases through Google Pay. The free rollout uses Gemini 4 Hydrogen.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/">Isomorphic Labs raises $5B for AI drug discovery</a></h3><p class="entry-meta">Nov 17, 2026</p><p>The Google DeepMind spinout raised a $5 billion Series C to develop its AI drug-design engine and advance drug candidates toward clinical trials.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots/">Genesis AI raises $500M to deploy glove-wearing robots</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Genesis announced a $500 million Series A to develop its dexterity-focused robotics stack, which combines sensor-glove data, simulation, and its Eno robot platform.</p></article>
+    </div>
+  </section>
+
 </main>
-<footer class="footer"><p>Generated 2026-11-17 17:53 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
-</body></html>
+
+<footer class="footer">
+  <!-- FILL: generation timestamp -->
+  <p>Generated 2026-11-18 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
+</footer>
+
+</body>
+</html>

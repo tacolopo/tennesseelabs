@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Wednesday · Nov 18, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Thursday · Nov 19, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,68 +114,51 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI introduced GPT-6.2 Astra and Sol across ChatGPT Work, Codex, and its API.</span> <span class="rundown-why">The company frames the release around professional output, coding, computer use, and lower-cost efficiency.</span><a class="cite" href="https://openai.com/index/introducing-gpt-6-2-astra-sol">[1]</a></li>
-        <li><span class="rundown-head">Microsoft’s MAI Code 2 and Code 2 Flash drew developer interest—and scrutiny of the comparison and pricing claims.</span> <span class="rundown-why">The release is a direct bid for coding workloads with Microsoft-built models.</span><a class="cite" href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/">[2]</a></li>
-        <li><span class="rundown-head">Cerebras put a GPU-prefill, wafer-scale-decode inference design into production.</span> <span class="rundown-why">It reports five times the throughput per megawatt without reducing generation speed.</span><a class="cite" href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference">[3]</a></li>
-        <li><span class="rundown-head">Google is widening access to Gemini Tasks, which can call businesses, sign in to sites, and make purchases.</span> <span class="rundown-why">The shift makes consumer-agent safeguards and reliability more immediate product questions.</span><a class="cite" href="https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/">[4]</a></li>
+        <li><span class="rundown-head">Google introduced Gemini 4 Neon for complex coding and analysis at a lower cost.</span> <span class="rundown-why">It was the day’s most active developer discussion, with practitioners parsing a quickly expanding model lineup.</span><a class="cite" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">[1]</a></li>
+        <li><span class="rundown-head">Anthropic priced its IPO at $83 a share, with Nasdaq trading expected today.</span> <span class="rundown-why">The offering comprises 980 million Class A shares.</span><a class="cite" href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering">[2]</a></li>
+        <li><span class="rundown-head">OpenAI detailed AI-assisted chip-design results spanning Jalapeño silicon and RISC-V cores.</span> <span class="rundown-why">It is a concrete example of model-assisted work moving deeper into hardware engineering.</span><a class="cite" href="https://openai.com/index/advancing-chip-design-with-our-models">[3]</a></li>
+        <li><span class="rundown-head">Two malicious Microsoft Agent Framework package releases appeared on PyPI.</span> <span class="rundown-why">The incident puts supply-chain hygiene squarely in the path of teams building agents in Python.</span><a class="cite" href="https://theinjection.dev/items/wiz-agent-framework-pypi-credential-stealer/">[4]</a></li>
       </ol>
     </div>
   </section>
 
-  <!-- FILL: one <section class="band" id="..."> per source, in this order:
-       Developer Pulse, OpenAI, Anthropic, Claude Blog, AI Zeitgeist.
-       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
-       Developer Pulse items may include a quoted reaction after the summary:
-       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
-    <div class="rail">
-      <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items</p>
-    </div>
+    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">5 items</p></div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/">MAI Code 2 and Code 2 Flash</a></h3><p class="entry-meta">Nov 17, 2026 · 365 points · 155 comments · <a href="https://news.ycombinator.com/item?id=50535885">HN thread</a></p><p>Microsoft introduced two coding models, and the HN discussion centered on their benchmark positioning, price, and practical fit for coding work.</p><blockquote class="reaction">“skeptical but I like they went for it and put the benchmarks against the top stuff.” <span class="who">— zf00002 on <a href="https://news.ycombinator.com/item?id=50535885">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/">Harvard researchers find AI coding agents shifted the bottleneck to code review</a></h3><p class="entry-meta">Nov 17, 2026 · 189 points · 267 comments · <a href="https://news.ycombinator.com/item?id=50538303">HN thread</a></p><p>The story argues that agent-assisted coding moves pressure toward reviewing output. Developers debated whether review can scale and how much judgment remains essential.</p><blockquote class="reaction">“This again increases the demand for good programmers. Write only programmers are dime on dozen.” <span class="who">— u1hcw9nx on <a href="https://news.ycombinator.com/item?id=50538303">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference">Cerebras launches disaggregated inference</a></h3><p class="entry-meta">Nov 17, 2026 · 82 points · 19 comments · <a href="https://news.ycombinator.com/item?id=50540472">HN thread</a></p><p>Cerebras pairs GPUs for prompt processing with its wafer-scale systems for token generation, reporting five times the throughput per megawatt in a production deployment.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://shivamduggal4.github.io/latent-lattice-language-models/">Latent Lattice Language Models</a></h3><p class="entry-meta">Nov 17, 2026 · 51 points · 5 comments · <a href="https://news.ycombinator.com/item?id=50539039">HN thread</a></p><p>MIT and Adobe researchers propose recurrent horizontal latent streams alongside the usual residual stream, reporting lower perplexity than parameter-matched Transformer baselines.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">Introducing Gemini 4 Neon</a></h3><p class="entry-meta">Nov 18, 2026 · 840 points · 670 comments · <a href="https://news.ycombinator.com/item?id=50552424">HN thread</a></p><p>Google introduced Gemini 4 Neon as a frontier model for complex coding and analysis, positioning it as lower-cost while retaining a long context window. The thread centered on model choice and access as developers sorted through the new lineup.</p><blockquote class="reaction">“At this point you just use roulette on which Gemini model you’ll use for a task.” <span class="who">— bloky on <a href="https://news.ycombinator.com/item?id=50552424">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://microsoft.ai/news/microsoft-ignite-2026/">Seven new world-class models at scalable price-performance</a></h3><p class="entry-meta">Nov 18, 2026 · 542 points · 354 comments · <a href="https://news.ycombinator.com/item?id=50548021">HN thread</a></p><p>Microsoft presented seven MAI models spanning custom models, coding, image, voice, transcription, cyber defense, and routing. It says the licensed-weights offering lets customers customize frontier MAI models with proprietary data and run them in Azure.</p><blockquote class="reaction">“Looking forward to test the flash one.” <span class="who">— theanonymousone on <a href="https://news.ycombinator.com/item?id=50548021">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/">Project Genie update featuring Genie 4</a></h3><p class="entry-meta">Nov 18, 2026 · 259 points · 167 comments · <a href="https://news.ycombinator.com/item?id=50550415">HN thread</a></p><p>Google opened its new Project Genie experience to eligible AI Ultra subscribers, including access to Genie 4. The experience supports generating and remixing interactive worlds, real-time audio, in-world editing, and community publishing.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering">LLM assisted reverse engineering</a></h3><p class="entry-meta">Nov 18, 2026 · 218 points · 52 comments · <a href="https://news.ycombinator.com/item?id=50553225">HN thread</a></p><p>A practitioner describes using LLMs alongside Ghidra, decompilers, and targeted experiments to accelerate hardware and software reverse engineering. The post emphasizes preserving findings in reports and testing hypotheses instead of letting an agent guess indefinitely.</p><blockquote class="reaction">“For me, the process is what matters, because it’s through the process that you gain skills.” <span class="who">— therepanic on <a href="https://news.ycombinator.com/item?id=50553225">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/advancing-chip-design-with-our-models">Advancing chip design with OpenAI models</a></h3><p class="entry-meta">Nov 18, 2026 · 211 points · 149 comments · <a href="https://news.ycombinator.com/item?id=50549493">HN thread</a></p><p>OpenAI says its models optimized circuits used in Jalapeño silicon and improved RISC-V core designs, presenting the results as progress in AI-assisted chip design with GPT-6 Astra.</p></article>
     </div>
   </section>
 
   <section class="band" id="openai">
-    <div class="rail">
-      <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">2 items</p>
-    </div>
+    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">4 items</p></div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership">Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT</a></h3><p class="entry-meta">Nov 18, 2026</p><p>OpenAI announced a partnership with Le Groupe Figaro to bring Le Figaro journalism to ChatGPT.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol">Introducing GPT-6.2 Astra and Sol</a></h3><p class="entry-meta">Nov 17, 2026</p><p>OpenAI says the new models improve professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/the-silent-consensus">The Silent Consensus</a></h3><p class="entry-meta">Nov 18, 2026</p><p>Dean Ball examines how increasingly capable AI could reshape society and argues that people need to retain control of their institutions.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/research-acceleration-jagged-frontier">Research acceleration: The jagged frontier</a></h3><p class="entry-meta">Nov 18, 2026</p><p>OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what that suggests about recursive self-improvement.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/inside-the-codex-sandbox">Inside the Codex sandbox</a></h3><p class="entry-meta">Nov 18, 2026</p><p>OpenAI explains how Codex runs commands while enforcing user-controlled filesystem and network limits across macOS, Linux, and Windows.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/business/customer-stories/sumitomo-life">How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise</a></h3><p class="entry-meta">Nov 18, 2026</p><p>Sumitomo Life uses ChatGPT Enterprise to research insurers, prepare proposals, and draft code for investment analysis; OpenAI says early executive use helped drive adoption.</p></article>
     </div>
   </section>
 
   <section class="band" id="anthropic">
-    <div class="rail">
-      <h2 class="label label--section">Anthropic</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+    <div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">1 item</p></div>
+    <div class="col"><article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering">Anthropic prices initial public offering</a></h3><p class="entry-meta">Nov 18, 2026</p><p>Anthropic priced 980 million Class A shares at .00 each; 956,351,354 are being sold by Anthropic and 23,648,646 by selling stockholders. The company expects the shares to begin trading on Nasdaq on Nov. 19 under ANT, with closing expected Nov. 20 subject to customary conditions.</p></article></div>
   </section>
 
   <section class="band" id="claude-blog">
-    <div class="rail">
-      <h2 class="label label--section">Claude Blog</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
+    <div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div>
     <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
   </section>
 
   <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
-    </div>
+    <div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/">Google expands access to Gemini Tasks</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Google is expanding Tasks in Gemini, a mode that can call businesses, book appointments, sign into websites, and make purchases through Google Pay. The free rollout uses Gemini 4 Hydrogen.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/">Isomorphic Labs raises $5B for AI drug discovery</a></h3><p class="entry-meta">Nov 17, 2026</p><p>The Google DeepMind spinout raised a $5 billion Series C to develop its AI drug-design engine and advance drug candidates toward clinical trials.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots/">Genesis AI raises $500M to deploy glove-wearing robots</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Genesis announced a $500 million Series A to develop its dexterity-focused robotics stack, which combines sensor-glove data, simulation, and its Eno robot platform.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-acquire-applied-compute-bringing-secure-open">Palo Alto Networks to acquire Applied Compute</a></h3><p class="entry-meta">Nov 18, 2026</p><p>Palo Alto Networks announced a definitive agreement to acquire Applied Compute, a platform for post-training and inference of open-weight models. The company says the combination is intended to help enterprises train, adapt, and deploy open-source and open-weight models securely across public and sovereign clouds.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://theinjection.dev/items/wiz-agent-framework-pypi-credential-stealer/">agent-framework: two PyPI releases shipped an Azure credential stealer</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Versions 1.26.1 and 1.26.2 of the Python agent-framework package contained a credential stealer that collected Azure and CI tokens. The report identifies 1.26.0 as the most recent safe release.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://calif.io/java4shell/">Java4Shell: Write once, RCE everywhere</a></h3><p class="entry-meta">Nov 17, 2026</p><p>Calif disclosed CVE-2026-114938, a memory-corruption vulnerability in OpenJDK’s Base64 decoder. CERT-EU says Oracle and OpenJDK released fixes on Nov. 17 for affected Java SE and OpenJDK versions.</p></article>
     </div>
   </section>
 
@@ -183,7 +166,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-18 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-19 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

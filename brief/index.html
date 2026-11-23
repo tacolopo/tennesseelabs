@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Sunday · Nov 22, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Monday · Nov 23, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">The Lean and Mathlib communities say they have verified a 17-million-line Lean proof of the Riemann Hypothesis.</span> <span class="rundown-why">The work is a striking test of formal verification at a scale beyond ordinary mathematical review.</span><a class="cite" href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">[1]</a></li>
-        <li><span class="rundown-head">Inkling-2-Mini drew strong developer interest for fitting a capable local model into 5.4 GB of memory.</span> <span class="rundown-why">The conversation centered on hardware support, quantization, and the trade-offs of running models locally.</span><a class="cite" href="https://github.com/ShinMegamiBoson/lookatmyquant">[2]</a></li>
-        <li><span class="rundown-head">OpenRouter’s provider-incident post put zero-data-retention claims under renewed scrutiny.</span> <span class="rundown-why">Developer reactions stressed that routers add another trust boundary for sensitive prompts.</span><a class="cite" href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/">[3]</a></li>
-        <li><span class="rundown-head">Pandex launched an MCP and API layer over European legislation and high-court decisions for AI agents.</span> <span class="rundown-why">Its pitch is point-in-time, primary-source legal retrieval rather than ungrounded legal answers.</span><a class="cite" href="https://www.pandex.io">[4]</a></li>
+        <li><span class="rundown-head">OpenAI argues perplexity can be a shared signal for measuring model progress.</span> <span class="rundown-why">The proposal puts a familiar training metric at the center of cross-lab evaluation.</span><a class="cite" href="https://openai.com/index/perplexity-and-intelligence/">[1]</a></li>
+        <li><span class="rundown-head">Developers on HN focused on practical local-model hardware, especially memory capacity and bandwidth.</span> <span class="rundown-why">The discussion is a useful reality check for teams considering self-hosted Qwen deployments.</span><a class="cite" href="https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth">[2]</a></li>
+        <li><span class="rundown-head">A browser game turns the subagent metaphor into a playable management sim.</span> <span class="rundown-why">Its HN response shows the idea landed with developers already building agent-heavy workflows.</span><a class="cite" href="https://github.com/gulivan/worker755">[3]</a></li>
+        <li><span class="rundown-head">Google’s Gemini API previewed Tool Retrieval for on-demand tool schemas.</span> <span class="rundown-why">The feature targets agents with large tool libraries and promises leaner prompts.</span><a class="cite" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -133,19 +133,21 @@
       <p class="rail-note">4 items</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean verification of the Riemann Hypothesis</a></h3><p class="entry-meta">Nov 21, 2026 · 1,037 points · 61 comments · <a href="https://news.ycombinator.com/item?id=50589618">HN thread</a></p><p>The Lean and Mathlib communities say Levent Alpöge’s 17-million-line library proves the Riemann Hypothesis. They report independent theorem comparison and several proof checkers, including Lean’s kernel, checked an inert proof export.</p><blockquote class="reaction">“I don’t think there’s anything left to consider the result proven.” <span class="who">— jlev1 on <a href="https://news.ycombinator.com/item?id=50589618">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/ShinMegamiBoson/lookatmyquant">Inkling-2-Mini in 5.4 GB Memory</a></h3><p class="entry-meta">Nov 21, 2026 · 466 points · 116 comments · <a href="https://news.ycombinator.com/item?id=50591853">HN thread</a></p><p>The project packages a compact local-model setup around Inkling-2-Mini. Developers focused on the practical limits: the released files target Apple Silicon, while the repository describes a route toward llama.cpp-compatible plans.</p><blockquote class="reaction">“Locally you’re about a year or so behind SOTA. Is that terrible? Not really.” <span class="who">— wolvoleo on <a href="https://news.ycombinator.com/item?id=50591853">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/">Data Processing Incidents on Inference Providers</a></h3><p class="entry-meta">Nov 22, 2026 · 151 points · 59 comments · <a href="https://news.ycombinator.com/item?id=50595554">HN thread</a></p><p>OpenRouter’s incident post prompted a developer debate over whether zero-data-retention guarantees can be trusted when requests pass through a router and downstream inference providers. The discussion repeatedly favored direct contracts or local deployment for sensitive work.</p><blockquote class="reaction">“The most robust ZDR policy is running your own AI locally and enforcing the retention policy yourself.” <span class="who">— rkagerer on <a href="https://news.ycombinator.com/item?id=50595554">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.pandex.io">Pandex — Official European Law for AI Agents, over MCP</a></h3><p class="entry-meta">Nov 21, 2026 · 94 points · 22 comments · <a href="https://news.ycombinator.com/item?id=50593481">HN thread</a></p><p>Pandex offers an API and MCP server over legislation and high-court decisions from the EU and several European jurisdictions. Its site emphasizes official-source coverage, historical versions, and citations for legal-research workflows.</p><blockquote class="reaction">“AI models often get European law wrong, quoting old versions or making up text. Pandex gives them the official text instead.” <span class="who">— vasie on <a href="https://news.ycombinator.com/item?id=50593481">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/perplexity-and-intelligence/">Perplexity and Intelligence</a></h3><p class="entry-meta">HN thread posted Nov 22, 2026 · 592 points · 401 comments · <a href="https://news.ycombinator.com/item?id=50601525">HN thread</a></p><p>OpenAI makes the case that perplexity, a measure of next-token prediction, can help developers compare progress in emerging capabilities. The post presents it as one useful evaluation signal, not a complete account of model performance.</p><blockquote class="reaction">“The correlation between perplexity and the quality isn’t 1, but neither is it 0.” <span class="who">— tedsanders on <a href="https://news.ycombinator.com/item?id=50601525">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth">A Beginner’s Guide to Local AI with Inkling, Qwen, and Unsloth</a></h3><p class="entry-meta">HN thread posted Nov 22, 2026 · 522 points · 221 comments · <a href="https://news.ycombinator.com/item?id=50603845">HN thread</a></p><p>The guide walks through running a private, free personal ChatGPT-style setup on a PC with Inkling, Qwen, and Unsloth. Commenters concentrated on the practical limits of local inference: VRAM, memory bandwidth, model quantization, and context length.</p><blockquote class="reaction">“The sweet spot for VRAM for local model hosting is 128gb … at 50 t/s, and a generous context window.” <span class="who">— jfreds on <a href="https://news.ycombinator.com/item?id=50603845">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/gulivan/worker755">Show HN: I built a game where you are an LLM’s subagent</a></h3><p class="entry-meta">HN thread posted Nov 22, 2026 · 318 points · 78 comments · <a href="https://news.ycombinator.com/item?id=50599762">HN thread</a></p><p>Worker755 is a browser game in which an AI manager treats the player as a subagent. The project turns current agent-workflow language into a compact interactive joke about task assignment and review.</p><blockquote class="reaction">“Why are we all building more or less the same thing?” <span class="who">— samplifier on <a href="https://news.ycombinator.com/item?id=50599762">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://pequalnp.com/">Agent swarm trying to solve P vs. NP</a></h3><p class="entry-meta">HN thread posted Nov 22, 2026 · 146 points · 130 comments · <a href="https://news.ycombinator.com/item?id=50604314">HN thread</a></p><p>The site presents a coordinated agent fleet working on P versus NP in public, preserving proposed steps, refutations, and dead ends. It is an early public experiment in making an agent research process inspectable as it unfolds.</p></article>
     </div>
   </section>
 
   <section class="band" id="openai">
     <div class="rail">
       <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
+      <p class="rail-note">1 item</p>
     </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/perplexity-and-intelligence/">Perplexity and Intelligence</a></h3><p class="entry-meta">Nov 22, 2026</p><p>OpenAI explains how it uses perplexity to track model progress and argues that the metric could give developers a shared approach to evaluating emerging capabilities. The company frames it as a complement to task-specific evaluations.</p></article>
+    </div>
   </section>
 
   <section class="band" id="anthropic">
@@ -167,11 +169,12 @@
   <section class="band" id="ai-zeitgeist">
     <div class="rail">
       <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">2 items from the web sweep</p>
+      <p class="rail-note">3 items from the web sweep</p>
     </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://subagentic.ai/posts/apple-computer-use-agent-job-listing/">Apple’s computer-use agent appears in a pulled job listing</a></h3><p class="entry-meta">Nov 21, 2026</p><p>A report on a now-pulled Apple listing says the company is hiring for an AI agent intended to use a computer. The report describes work spanning app interaction, web browsing, and code-related tasks; Apple has not announced a product.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://x.com/TencentHunyuan/status/2123625549147070538">Tencent says it released open weights for Hy4</a></h3><p class="entry-meta">Nov 21, 2026</p><p>Tencent Hy’s announcement describes Hy4 as a natively multimodal mixture-of-experts model with 770 billion total parameters, 49 billion active parameters, and a one-million-token context window. The release includes weights and a system card.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/">Introducing Tool Retrieval in the Gemini API</a></h3><p class="entry-meta">Nov 19, 2026</p><p>Google previewed Tool Retrieval in the Gemini API’s Interactions API. It lets an agent keep a large library available while retrieving a tool’s parameter schema only when needed; Google says it works with Gemini 3.6 and later, including Gemini 4 models.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.nvidia.com/en-us/solutions/autonomous-vehicles/alpamayo/">Alpamayo 2 Edge is available for in-vehicle deployment</a></h3><p class="entry-meta">Nov 22, 2026</p><p>NVIDIA’s Alpamayo page says its compact Alpamayo 2 Edge reasoning model is now available for in-vehicle deployment. The company describes the Alpamayo family as reasoning models and software for autonomous vehicles and robotaxis.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/11/CSA_research_note_monai_label_agent_discovered_zero_day_20261121-csa-styled.pdf">AI agents reportedly found and exploited a MONAI Label zero-day</a></h3><p class="entry-meta">Nov 21, 2026</p><p>A Cloud Security Alliance research note says Amazon Threat Intelligence reported autonomous agents using the Cairn framework to find and exploit a previously unknown MONAI Label vulnerability. The note says the maintainers subsequently patched the issue.</p></article>
     </div>
   </section>
 
@@ -179,7 +182,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-22 05:41 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-23 05:41 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Tuesday · Nov 24, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Wednesday · Nov 25, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,45 +114,79 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">OpenAI and Cisco released Shirudo, an open-source Linux runtime for temporary protections while patches are prepared.</span> <span class="rundown-why">It targets the operational gap between vulnerability discovery and a safe production rollout.</span><a class="cite" href="https://openai.com/index/introducing-shirudo/">[1]</a></li>
-        <li><span class="rundown-head">Anthropic’s formal-math repository drew intense HN interest for a claimed VP ≠ VNP result.</span> <span class="rundown-why">The reaction is focused on verification and what the intermediate complexity result does—and does not—establish.</span><a class="cite" href="https://github.com/anthropics/formal-math/tree/main/vp-vnp">[2]</a></li>
-        <li><span class="rundown-head">Google DeepMind reports using agent teams plus Lean verification to improve quantum algorithms.</span> <span class="rundown-why">The work pairs automated search with proof checking rather than treating agent output as self-validating.</span><a class="cite" href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/">[3]</a></li>
-        <li><span class="rundown-head">Z.ai introduced GLM-5.4, its first Loop Transformer flagship for coding.</span> <span class="rundown-why">The architecture is a fresh attempt to increase reasoning depth by reusing layers rather than simply adding more of them.</span><a class="cite" href="https://z.ai/blog/glm-5.4">[4]</a></li>
+        <li><span class="rundown-head">OpenAI says GPT-6 designs proteins with reasoning and code, with lab evidence of binding across five targets.</span> <span class="rundown-why">It is a notable attempt to apply general-purpose models to protein work, though specialized systems still helped prepare and select candidates.</span><a class="cite" href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities">[1]</a></li>
+        <li><span class="rundown-head">Claude added skills, background tasks, and user-input requests to its MCP workflow.</span> <span class="rundown-why">The release makes MCP servers more useful for longer, interactive agent work.</span><a class="cite" href="https://claude.com/blog/skills-over-mcp-tasks-and-more">[2]</a></li>
+        <li><span class="rundown-head">Google made Workspace MCP servers and its CLI generally available.</span> <span class="rundown-why">The launch pairs agent access to Workspace data with standardized usage tiers and administrator controls.</span><a class="cite" href="https://workspaceupdates.googleblog.com/2026/11/">[3]</a></li>
+        <li><span class="rundown-head">A new preprint claims a precise matrix-multiplication exponent of 2.25.</span> <span class="rundown-why">The Hacker News discussion immediately centered on what the result does and does not imply for rectangular matrices and practical algorithms.</span><a class="cite" href="https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf">[4]</a></li>
       </ol>
     </div>
   </section>
 
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
-    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items</p></div>
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">4 items</p>
+    </div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/anthropics/formal-math/tree/main/vp-vnp">VP ≠ VNP over Every Field</a></h3><p class="entry-meta">HN thread posted Nov 23, 2026 · 329 points · 292 comments · <a href="https://news.ycombinator.com/item?id=50620102">HN thread</a></p><p>Anthropic’s formal-math repository publishes a paper and Lean 4 formalization for a claimed VP ≠ VNP result. The HN discussion centers on the result’s relationship to P versus NP and the need for mathematical scrutiny.</p><blockquote class="reaction">“It’s pretty obvious that they are throwing the kitchen sink at the Holy Grail (P vs NP).” <span class="who">— isomorphic_duck on <a href="https://news.ycombinator.com/item?id=50620102">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF">NariQ: BF16-level Qwen3.8-27B in a 10 GB file</a></h3><p class="entry-meta">HN thread posted Nov 23, 2026 · 171 points · 35 comments · <a href="https://news.ycombinator.com/item?id=50611402">HN thread</a></p><p>Nari Labs released sub-3-bit Qwen3.8-27B quantizations and says its 3-bit and 2.5-bit files match BF16 on several long-horizon agent tasks. The project currently requires its llama.cpp fork.</p><blockquote class="reaction">“16GB macbook being able to run ‘pretty useful’ ... LLMs is crazy.” <span class="who">— jedbrooke on <a href="https://news.ycombinator.com/item?id=50611402">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-shirudo/">Shirudo: OpenAI and Cisco’s open-source runtime for shielding unpatched Linux</a></h3><p class="entry-meta">HN thread posted Nov 23, 2026 · 71 points · 23 comments · <a href="https://news.ycombinator.com/item?id=50619630">HN thread</a></p><p>Shirudo applies targeted protections to running Linux systems while teams test and deploy permanent fixes. HN commenters weighed its potential against deployment and trust requirements.</p><blockquote class="reaction">“In theory, sounds amazing. In practice ... I can foresee this being an escape hatch for swamped teams.” <span class="who">— fathermarz on <a href="https://news.ycombinator.com/item?id=50619630">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/resources/articles/introducing-claude-ship">Claude Ship</a></h3><p class="entry-meta">HN thread posted Nov 23, 2026 · 57 points · 18 comments · <a href="https://news.ycombinator.com/item?id=50618513">HN thread</a></p><p>Anthropic’s Claude Ship is presented as a pull-request workflow in which Claude can review, fix, and approve changes allowed by a team’s policy.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf">Matrix Multiplication is Θ(n²·²⁵) [PDF]</a></h3><p class="entry-meta">HN thread posted Nov 24, 2026 · 650 points · 346 comments · <a href="https://news.ycombinator.com/item?id=50637220">HN thread</a></p><p>The linked preprint asserts that the exponent for square matrix multiplication is exactly 2.25. Developers dug into the distinction between square and rectangular cases, and noted that the result does not make the underlying algorithm practical.</p><blockquote class="reaction">“The matmul result is that omega is exactly 2.25, not just lower bound.” <span class="who">— mmoskal on <a href="https://news.ycombinator.com/item?id=50637220">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities">GPT-6 models demonstrate intrinsic protein-design capabilities</a></h3><p class="entry-meta">HN thread posted Nov 24, 2026 · 268 points · 84 comments · <a href="https://news.ycombinator.com/item?id=50634658">HN thread</a></p><p>OpenAI reports that GPT-6 models generated protein shapes and sequences through reasoning and code, and that designs showed binding evidence across five targets in lab tests. The work used specialized models to provide sequences and choose test candidates.</p><blockquote class="reaction">“They did actual wet lab tests in this experiment. Really impressive IMO.” <span class="who">— brandonb on <a href="https://news.ycombinator.com/item?id=50634658">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://greydanus.github.io/2026/11/12/pengpt/">PenGPT: A Generative Transformer for Handwriting and Sketches</a></h3><p class="entry-meta">HN thread posted Nov 25, 2026 · 260 points · 45 comments · <a href="https://news.ycombinator.com/item?id=50637056">HN thread</a></p><p>PenGPT is a pair of small transformers: a 6M-parameter model that continues unseen writers’ handwriting from a few words, and a 54M-parameter drawing model. Its author says most of the work went into data quality and performance rather than architecture.</p><blockquote class="reaction">“Amazing this fits in 50MB.” <span class="who">— k2xl on <a href="https://news.ycombinator.com/item?id=50637056">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/sous-labs/songe">A training engine for your local model, using your idle compute</a></h3><p class="entry-meta">HN thread posted Nov 24, 2026 · 216 points · 66 comments · <a href="https://news.ycombinator.com/item?id=50629231">HN thread</a></p><p>Songe is presented as a training engine that uses idle local compute for a local model. The project’s HN launch drew developer attention alongside the day’s larger model and research news.</p></article>
     </div>
   </section>
+
   <section class="band" id="openai">
-    <div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">3 items</p></div><div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/introducing-shirudo/">OpenAI and Cisco introduce Shirudo</a></h3><p class="entry-meta">Nov 23, 2026</p><p>OpenAI and Cisco introduced Shirudo, an open-source Linux runtime for applying targeted protections to running systems while patches are rolled out. OpenAI describes a controlled test where a Codex-generated protection was attached to a running Elasticsearch process.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/business/learn/connected-intelligence-for-in-house-legal">Connected intelligence for in-house legal</a></h3><p class="entry-meta">Nov 23, 2026</p><p>OpenAI published a webinar on using AI to connect business context, build reusable workflows, and work with outside counsel.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/business/customer-stories/richpanel-ai-customer-support">Richpanel helps companies automate 50% of support in 30 days</a></h3><p class="entry-meta">Nov 23, 2026</p><p>OpenAI says Richpanel uses GPT-6 Astra and GPT-6.1 Sol for its support agents’ tools and procedures, and GPT-6 Luna for conversations.</p></article>
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities">GPT-6 models demonstrate intrinsic protein-design capabilities</a></h3><p class="entry-meta">Nov 24, 2026</p><p>OpenAI says its GPT-6 family can design protein structures and sequences with reasoning and code, without using specialized biology models to generate them. In tests with Onava, designs from GPT-6.2 showed evidence of binding across five targets; specialized models helped with candidate preparation and selection.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://openai.com/index/searching-for-distant-planets-with-astra">Searching for distant planets with Astra</a></h3><p class="entry-meta">Nov 24, 2026</p><p>OpenAI profiles two amateur astronomers who used Codex and Astra to search public Kepler and TESS observations. Their potential exoplanet signals are now undergoing independent professional assessment.</p></article>
     </div>
   </section>
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
+
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">2 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/skills-over-mcp-tasks-and-more">MCP servers can now ship skills, run tasks, and more with Claude</a></h3><p class="entry-meta">Nov 24, 2026</p><p>Skills over MCP entered public beta for Claude and Claude Code, letting servers package workflow guidance with their tools. Tasks and Elicitation are generally available, allowing background work and user approval steps; file uploads are planned next.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://claude.com/blog/install-as-app">Turn artifacts into Mac and Windows apps</a></h3><p class="entry-meta">Nov 24, 2026</p><p>Claude’s beta “Install as app” feature lets users give an artifact its own desktop icon and window on Mac or Windows. Installed apps can use Claude and connectors with user-granted permissions, and they update when the underlying artifact changes.</p></article>
+    </div>
+  </section>
+
   <section class="band" id="ai-zeitgeist">
-    <div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">4 items from the web sweep</p></div><div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/">Finding faster quantum algorithms with agents and formal verification</a></h3><p class="entry-meta">Nov 23, 2026</p><p>Google DeepMind says teams of Gemini 4 agents, with results checked in Lean, found lower-cost quantum circuits. Reported improvements include an 11.8× cost reduction for a fusion-related calculation and a 2.57× speedup for a specific Grover implementation.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization">Amazon to purchase Decart’s AI optimization technology</a></h3><p class="entry-meta">Nov 23, 2026</p><p>Amazon announced an agreement to purchase Decart’s AI-optimization technology and hire members of its team. Amazon says it expects the technology to improve the speed, performance, cost efficiency, and capabilities of AI workloads and its custom silicon.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://z.ai/blog/glm-5.4">GLM-5.4: Toward Generalized Coding with Our First Loop Transformer</a></h3><p class="entry-meta">Nov 23, 2026</p><p>Z.ai introduced GLM-5.4 as its first Loop Transformer flagship and positioned it around coding and video-to-engineering demonstrations. The company says the approach reuses 28 GLM-5 layers twice.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/">Amazon Bedrock launches Trusted Access API</a></h3><p class="entry-meta">Nov 23, 2026</p><p>AWS made its Trusted Access Program API generally available and previewed Anthropic Enterprise Frontier Safeguards and Enterprise Data Controls. The offerings let eligible customers choose how retained data is stored and reviewed for covered Claude use cases.</p></article>
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://workspaceupdates.googleblog.com/2026/11/">Google makes Workspace MCP servers and CLI generally available</a></h3><p class="entry-meta">Nov 24, 2026</p><p>Google made its managed Workspace MCP servers and official CLI generally available. The servers expose ready-made tools across Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat, and Tasks, alongside new usage tiers and administrative controls.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://developers.googleblog.com/en/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/">Managed ingestion and SearchDocuments arrive in Agent Retrieval</a></h3><p class="entry-meta">Nov 24, 2026</p><p>Google’s Agent Retrieval service now offers managed ingestion and SearchDocuments for files and video in Cloud Storage. The company says the API can return matching passages with page numbers or timestamps, avoiding custom chunking and embedding pipelines.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.axios.com/2026/11/25/anthropic-ai-human-control-debate-free-will">AI leaders clash over surrendering human free will</a></h3><p class="entry-meta">Nov 25, 2026</p><p>Axios reports a widening dispute among AI leaders over human control as companies develop more capable systems. The article says executives are pushing back on the idea that people will surrender agency, while some employees worry about releasing powerful models.</p></article>
     </div>
   </section>
+
 </main>
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-24 05:45 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-25 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 

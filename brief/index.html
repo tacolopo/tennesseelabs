@@ -14,49 +14,175 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
 <link rel="stylesheet" href="https://tennesseelabs.com/styles.css">
 <style>
-  .deck.mono { font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em; color: var(--ink-2); }
-  .notice { margin-top: 1.1rem; padding: 0.85rem 1rem; background: var(--card); border: 1px solid var(--rule); border-left: 2px solid var(--negated); font-size: 0.875rem; line-height: 1.55; color: var(--ink-2); max-width: var(--measure); }
+  /* Daily Brief — extends styles.css tokens; scoped to this page only */
+  .deck.mono {
+    font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.02em;
+    color: var(--ink-2);
+  }
+  .notice {
+    margin-top: 1.1rem; padding: 0.85rem 1rem;
+    background: var(--card); border: 1px solid var(--rule);
+    border-left: 2px solid var(--negated);
+    font-size: 0.875rem; line-height: 1.55; color: var(--ink-2);
+    max-width: var(--measure);
+  }
+
   .rundown-list { counter-reset: rundown; margin: 0; padding: 0; list-style: none; display: grid; gap: 1.1rem; }
   .rundown-list li { padding-left: 1.7rem; position: relative; max-width: var(--measure); }
-  .rundown-list li::before { content: counter(rundown); counter-increment: rundown; position: absolute; left: 0; top: 0.15rem; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
-  .rundown-head { font-weight: 500; } .rundown-why { color: var(--ink-2); }
-  .cite { font-family: var(--mono); font-size: 0.75em; color: var(--accent); vertical-align: super; margin-left: 0.2rem; text-decoration: none; } .cite:hover { text-decoration: underline; }
-  .entry-meta { margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); letter-spacing: 0.01em; }
-  .entry-title a { color: var(--ink); text-decoration: none; } .entry-title a:hover { color: var(--accent); }
-  .reaction { margin: 0.85rem 0 0; padding-left: 0.9rem; border-left: 2px solid var(--accent); font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink-2); line-height: 1.5; }
-  .reaction .who { display: block; margin-top: 0.3rem; font-family: var(--mono); font-style: normal; font-size: 0.7rem; color: var(--ink-3); letter-spacing: 0.02em; } .reaction .who a { color: var(--ink-3); }
-  .empty, .fail { margin: 0; padding-left: 1rem; max-width: var(--measure); border-left: 1.5px dashed var(--negated); color: var(--ink-3); font-size: 0.9rem; } .fail { color: var(--ink-2); } .fail::before { content: "\26A0  "; }
+  .rundown-list li::before {
+    content: counter(rundown); counter-increment: rundown;
+    position: absolute; left: 0; top: 0.15rem;
+    font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
+  }
+  .rundown-head { font-weight: 500; }
+  .rundown-why { color: var(--ink-2); }
+  .cite {
+    font-family: var(--mono); font-size: 0.75em; color: var(--accent);
+    vertical-align: super; margin-left: 0.2rem; text-decoration: none;
+  }
+  .cite:hover { text-decoration: underline; }
+
+  .entry-meta {
+    margin: -0.15rem 0 0.55rem; font-family: var(--mono); font-size: 0.75rem;
+    color: var(--ink-3); letter-spacing: 0.01em;
+  }
+  .entry-title a { color: var(--ink); text-decoration: none; }
+  .entry-title a:hover { color: var(--accent); }
+
+  .reaction {
+    margin: 0.85rem 0 0; padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+    color: var(--ink-2); line-height: 1.5;
+  }
+  .reaction .who {
+    display: block; margin-top: 0.3rem;
+    font-family: var(--mono); font-style: normal; font-size: 0.7rem;
+    color: var(--ink-3); letter-spacing: 0.02em;
+  }
+  .reaction .who a { color: var(--ink-3); }
+
+  .empty, .fail {
+    margin: 0; padding-left: 1rem; max-width: var(--measure);
+    border-left: 1.5px dashed var(--negated);
+    color: var(--ink-3); font-size: 0.9rem;
+  }
+  .fail { color: var(--ink-2); }
+  .fail::before { content: "\26A0  "; }
 </style>
 </head>
 <body>
+
 <header class="masthead">
-  <a class="wordmark" href="https://tennesseelabs.com/" target="_self"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="square"><path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/><path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/></g></svg><span>Tennessee&nbsp;Labs</span></a>
-  <nav class="nav" aria-label="Sections"><a href="https://tennesseelabs.com/" target="_self">Home</a><a href="https://github.com/tacolopo/daily-brief">Sources</a></nav>
+  <a class="wordmark" href="https://tennesseelabs.com/" target="_self">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <g fill="none" stroke-linecap="square">
+        <path d="M4 10H28" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M7 16V22H21V16" class="mark-span" stroke-width="2.6"/>
+      </g>
+    </svg>
+    <span>Tennessee&nbsp;Labs</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="https://tennesseelabs.com/" target="_self">Home</a>
+    <a href="https://github.com/tacolopo/daily-brief">Sources</a>
+  </nav>
 </header>
+
 <main id="top">
-  <section class="band band--hero"><div class="rail"><p class="label">AI / Tech<br>Morning brief</p><p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p></div><div class="col"><h1 class="display">Daily&nbsp;Brief.</h1><p class="deck mono">Thursday · Nov 26, 2026 · 6:00 AM ET</p></div></section>
-  <section class="band" id="rundown"><div class="rail"><h2 class="label label--section">Rundown</h2><p class="rail-note">Four top stories, synthesized across the sections below.</p></div><div class="col"><ol class="rundown-list">
-    <li><span class="rundown-head">Google published Cogentic papers spanning integer factorization, discrete logarithms, game theory, and other problems.</span> <span class="rundown-why">The release gives developers concrete artifacts from a multi-agent proof-discovery effort.</span><a class="cite" href="https://github.com/google-research/google-research/tree/master/cogentic_research_papers">[1]</a></li>
-    <li><span class="rundown-head">A new Lean artifact compresses a prior Claude-assisted GRH proof into a 76,000-line edition.</span> <span class="rundown-why">HN discussion focused on the large reduction and the tradeoff between compactness and readability.</span><a class="cite" href="https://github.com/lsernau/grh-lean">[2]</a></li>
-    <li><span class="rundown-head">Google DeepMind released mass-spectrometry skills for Antigravity.</span> <span class="rundown-why">The agent combines Gemini with established chemistry tools and public databases, then presents evidence for a chemist to review.</span><a class="cite" href="https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/">[3]</a></li>
-    <li><span class="rundown-head">Anthropic described migrating its Messages API to Rust with Claude contributing most merged code by May.</span> <span class="rundown-why">The post centers on verification methods that maintained parity without inspecting user requests or replies.</span><a class="cite" href="https://www.anthropic.com/research/migrating-api-to-rust">[4]</a></li>
-  </ol></div></section>
-  <section class="band" id="developer-pulse"><div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://github.com/google-research/google-research/tree/master/cogentic_research_papers">Google releases Cogentic papers on integer factorization, discrete logs and more</a></h3><p class="entry-meta">HN thread posted Nov 25, 2026 · 494 points · 357 comments · <a href="https://news.ycombinator.com/item?id=50642086">HN thread</a></p><p>Google's repository lists Cogentic research papers dated Nov. 25 on integer factorization, discrete logarithms, approximate Nash equilibria, log-rank, and related topics. The HN thread treated the collection as evidence of a multi-agent proof-discovery workflow reaching publishable research artifacts.</p><blockquote class="reaction">"Cogentic appears to be a specialized harness for existing LLMs to collaborate together to solve mathematical conjectures, using a central orchestrator and a shared database of intermediate proofs." <span class="who">— david-gpu on <a href="https://news.ycombinator.com/item?id=50642086">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://github.com/lsernau/grh-lean">Much shorter version of GRH Lean verification from Anthropic</a></h3><p class="entry-meta">HN thread posted Nov 25, 2026 · 463 points · 244 comments · <a href="https://news.ycombinator.com/item?id=50648050">HN thread</a></p><p>The repository provides Lean 4 proofs of the Riemann Hypothesis and generalized Riemann Hypothesis for Dirichlet L-functions, based on Levent Alpöge's work with Claude. It offers a roughly 300,000-line readable edition and a 76,000-line compact edition; the project says machine checks have passed but no mathematician has read the proof end to end.</p><blockquote class="reaction">"From ~17M lines to just ~76k lines, a 99.56% reduction." <span class="who">— bananaflag on <a href="https://news.ycombinator.com/item?id=50648050">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os">Bare Metal Qwen</a></h3><p class="entry-meta">HN thread posted Nov 25, 2026 · 156 points · 39 comments · <a href="https://news.ycombinator.com/item?id=50648365">HN thread</a></p><p>This project boots Qwen3-0.6B directly on x86-64 hardware or KVM without a general-purpose operating system, C, Rust, or libc. Its README reports a 24 KB assembly kernel, persistent KV cache, and token-exact parity with its earlier implementation.</p><blockquote class="reaction">"Pretty cool as a concept, reminds me of the self-booting disks from back in the day." <span class="who">— hankbond on <a href="https://news.ycombinator.com/item?id=50648365">HN</a></span></blockquote></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://danprice.ai/blog/opus-symphony">Opus 5.5 writes its Magnum Opus (2500 times)</a></h3><p class="entry-meta">HN thread posted Nov 25, 2026 · 55 points · 67 comments · <a href="https://news.ycombinator.com/item?id=50646662">HN thread</a></p><p>Dan Price documented a month-long experiment in which Claude Opus 5.5 wrote, rendered, and filmed a 25-minute orchestral work through about 2,500 review rounds. The write-up estimates roughly 35 billion Opus tokens and stores the score sources, reviews, and scripts in a public repository.</p></article>
-  </div></section>
-  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="anthropic"><div class="rail"><h2 class="label label--section">Anthropic</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="claude-blog"><div class="rail"><h2 class="label label--section">Claude Blog</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
-  <section class="band" id="ai-zeitgeist"><div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">4 items from the web sweep</p></div><div class="col">
-    <article class="entry"><h3 class="entry-title"><a href="https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/">Mass Spec Skills for Google Antigravity</a></h3><p class="entry-meta">Nov 25, 2026</p><p>Google DeepMind introduced Mass Spec Skills, which combine Gemini with established mass-spectrometry tools and public chemical databases. The company says the agent can produce a proposed molecular structure and an evidence report for human review, while individual stages can also run separately.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization/">Copilot code review billing will default to the organization</a></h3><p class="entry-meta">Nov 25, 2026</p><p>GitHub says code reviews by paid Copilot members will default to the repository-owning organization on Dec. 30 when no billing choice is saved. Existing choices stay in place; administrators can select member billing to preserve use of individual entitlements.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://www.anthropic.com/research/migrating-api-to-rust">Migrating our Messages API to Rust</a></h3><p class="entry-meta">Nov 25, 2026</p><p>Anthropic says Claude wrote more than 80% of the code it merged by May 2026 during a Messages API migration to Rust. The engineering team built parity checks without reading user requests or Claude responses, then used discrepancies to drive the migration.</p></article>
-    <article class="entry"><h3 class="entry-title"><a href="https://eu-assets.contentstack.com/v3/assets/blt23eb5bbc4124baa6/blt3284fad4ee39d97e/6b071287af911015536d731d/FCC_Authorizes_1_Million_Satellites_for_Data_Centers_in_Space_PR_11-25-2026.pdf">FCC authorizes SpaceX constellation of orbital data centers</a></h3><p class="entry-meta">Nov 25, 2026</p><p>The FCC authorized SpaceX to deploy up to one million orbital compute modules in its Starmind constellation. The agency says the system will process data for use on Earth and permits backup radiofrequency links for telemetry, tracking, and command.</p></article>
-  </div></section>
+
+  <section class="band band--hero">
+    <div class="rail">
+      <p class="label">AI / Tech<br>Morning brief</p>
+      <p class="rail-note">Regenerated every morning. Every line cites its source; failed fetches are shown, never guessed.</p>
+    </div>
+    <div class="col">
+      <h1 class="display">Daily&nbsp;Brief.</h1>
+      <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
+      <p class="deck mono">Friday · Nov 27, 2026 · 6:00 AM ET</p>
+      <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
+           Omit this <p> entirely on a normal run. -->
+    </div>
+  </section>
+
+  <section class="band" id="rundown">
+    <div class="rail">
+      <h2 class="label label--section">Rundown</h2>
+      <p class="rail-note">Three to five top stories, synthesized across the sections below.</p>
+    </div>
+    <div class="col">
+      <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
+           numbered cite link to the item's URL in the sections below. -->
+      <ol class="rundown-list">
+        <li><span class="rundown-head">HN rallied around a first-person account of using coding agents to make home infrastructure easier to change and maintain.</span> <span class="rundown-why">The thread paired enthusiasm for faster experimentation with concrete reminders about exposing self-hosted services safely.</span><a class="cite" href="https://janlukas.blog/posts/ai-self-hosting">[1]</a></li>
+        <li><span class="rundown-head">An AMD-focused llama.cpp patch set reported sizable prefill and decode gains on one local setup.</span> <span class="rundown-why">It captures the appetite for hardware-specific inference work while raising the question of how speed changes affect output quality.</span><a class="cite" href="https://devnull.land/amd-specific-llama-cpp">[2]</a></li>
+        <li><span class="rundown-head">Kioxia and NVIDIA showed a rack-scale SSD experiment aimed at making more data accessible to GPUs.</span> <span class="rundown-why">The proof of concept points to storage as a possible extension layer when HBM cannot hold the working dataset.</span><a class="cite" href="https://www.kioxia.com/en-jp/business/news/2026/20261126-1.html">[3]</a></li>
+        <li><span class="rundown-head">Hugging Face published a reproducible tutorial for training communicating agents, with an explicit warning that a swarm is not inherently better than one agent.</span> <span class="rundown-why">That caveat makes the release useful for teams testing multi-agent designs.</span><a class="cite" href="https://huggingface.co/blog/training-swarms">[4]</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FILL: one <section class="band" id="..."> per source, in this order:
+       Developer Pulse, OpenAI, Anthropic, Claude Blog, AI Zeitgeist.
+       rail-note states the item count (e.g. "4 items" or "Nothing new in the last 24h").
+       Developer Pulse items may include a quoted reaction after the summary:
+       <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
+  <section class="band" id="developer-pulse">
+    <div class="rail">
+      <h2 class="label label--section">Developer Pulse</h2>
+      <p class="rail-note">4 items</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://janlukas.blog/posts/ai-self-hosting">AI made self-hosting fun again</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 720 points · 355 comments · <a href="https://news.ycombinator.com/item?id=50660180">HN thread</a></p><p>Jan-Lukas Else describes using coding agents against Git-managed Docker Compose files, scripts, and configuration to lower the effort of trying services and automating upkeep. The post credits that reduced friction with making NixOS and a custom bootable server image practical projects again.</p><blockquote class="reaction">“Everything behind a VPN. I don’t even have SSH open these days.” <span class="who">— randypewick on <a href="https://news.ycombinator.com/item?id=50660180">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://devnull.land/amd-specific-llama-cpp">AMD-specific fork of llama.cpp</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 364 points · 87 comments · <a href="https://news.ycombinator.com/item?id=50657265">HN thread</a></p><p>A report on llama-cpp-rdna-boosts recommends its small, AMD-specific patch set over broader inference forks. On the author’s eGPU setup, prefill rose from roughly 700 to 1,300 tokens per second and generation from roughly 35 to 55 tokens per second.</p><blockquote class="reaction">“There have definitely been cases of significant regression of output quality.” <span class="who">— exyi on <a href="https://news.ycombinator.com/item?id=50657265">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://construct22.com/">The group chat where your AI talks behind your back</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 269 points · 107 comments · <a href="https://news.ycombinator.com/item?id=50663595">HN thread</a></p><p>Construct22 offers a one-line prompt that asks an assistant to invent a WhatsApp-style group chat in which AI models gossip about the user from remembered context. The page frames the result as fiction and includes an anonymized example, while HN treated it as a well-executed prompt experiment.</p><blockquote class="reaction">“This is just too damn funny; thanks, made my day.” <span class="who">— davydm on <a href="https://news.ycombinator.com/item?id=50663595">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/">AI agents now control part of DeepMind’s compute for Gemini experiments</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 54 points · 27 comments · <a href="https://news.ycombinator.com/item?id=50661218">HN thread</a></p><p>The Decoder reports that Google DeepMind lets agents run some experiments for upcoming Gemini models, while research leader Koray Kavukcuoglu says the lab remains far from full recursive self-improvement. The report says DeepMind leaves the agents’ internal thought streams untrained so humans can review them before action.</p></article>
+    </div>
+  </section>
+
+  <section class="band" id="openai">
+    <div class="rail">
+      <h2 class="label label--section">OpenAI</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="anthropic">
+    <div class="rail">
+      <h2 class="label label--section">Anthropic</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="claude-blog">
+    <div class="rail">
+      <h2 class="label label--section">Claude Blog</h2>
+      <p class="rail-note">Nothing new in the last 24h</p>
+    </div>
+    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
+  </section>
+
+  <section class="band" id="ai-zeitgeist">
+    <div class="rail">
+      <h2 class="label label--section">AI Zeitgeist</h2>
+      <p class="rail-note">3 items from the web sweep</p>
+    </div>
+    <div class="col">
+      <article class="entry"><h3 class="entry-title"><a href="https://www.kioxia.com/en-jp/business/news/2026/20261126-1.html">Kioxia and NVIDIA test SSD-backed expansion of effective GPU memory</a></h3><p class="entry-meta">Nov 26, 2026</p><p>Kioxia and NVIDIA announced a proof of concept using NVIDIA SCADA software and 144 Kioxia NVMe SSDs on a GB200 NVL72 system. The configuration supplies about 1.1 PB of raw flash capacity and is intended to make datasets beyond HBM capacity accessible to GPU processing.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://huggingface.co/blog/training-swarms">Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems</a></h3><p class="entry-meta">Nov 26, 2026</p><p>Hugging Face published a reproducible TRL walkthrough in which four agents share one small model and communicate on a checkable task. It reports training success rising from 6.6% to 82.3% over 75 updates, while cautioning that communication does not automatically improve on a single agent.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/Tencent/AngelSpec">Tencent’s AngelSpec framework documents DFly speculative decoding</a></h3><p class="entry-meta">Nov 26, 2026</p><p>Tencent’s AngelSpec repository is the released training framework behind DFly-style speculative decoders, which combine shared KV context with per-layer fusion. Coverage of the Nov. 26 DFly2 release points to an open release of weights, training code, and a technical report for sparse long-context models.</p></article>
+    </div>
+  </section>
+
 </main>
-<footer class="footer"><p>Generated 2026-11-26 05:40 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p><p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p></footer>
+
+<footer class="footer">
+  <!-- FILL: generation timestamp -->
+  <p>Generated 2026-11-27 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
+</footer>
+
 </body>
 </html>

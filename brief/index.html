@@ -99,7 +99,7 @@
     <div class="col">
       <h1 class="display">Daily&nbsp;Brief.</h1>
       <!-- FILL: weekday, month day, year, time, e.g. "Sunday · Aug 9, 2026 · 6:00 AM ET" -->
-      <p class="deck mono">Friday · Nov 27, 2026 · 6:00 AM ET</p>
+      <p class="deck mono">Saturday · Nov 28, 2026 · 6:00 AM ET</p>
       <!-- FILL, OPTIONAL: only if a source-wide problem occurred (e.g. egress blocked).
            Omit this <p> entirely on a normal run. -->
     </div>
@@ -114,10 +114,10 @@
       <!-- FILL: 3-5 top stories. Each: one-line headline, muted why-it-matters,
            numbered cite link to the item's URL in the sections below. -->
       <ol class="rundown-list">
-        <li><span class="rundown-head">HN rallied around a first-person account of using coding agents to make home infrastructure easier to change and maintain.</span> <span class="rundown-why">The thread paired enthusiasm for faster experimentation with concrete reminders about exposing self-hosted services safely.</span><a class="cite" href="https://janlukas.blog/posts/ai-self-hosting">[1]</a></li>
-        <li><span class="rundown-head">An AMD-focused llama.cpp patch set reported sizable prefill and decode gains on one local setup.</span> <span class="rundown-why">It captures the appetite for hardware-specific inference work while raising the question of how speed changes affect output quality.</span><a class="cite" href="https://devnull.land/amd-specific-llama-cpp">[2]</a></li>
-        <li><span class="rundown-head">Kioxia and NVIDIA showed a rack-scale SSD experiment aimed at making more data accessible to GPUs.</span> <span class="rundown-why">The proof of concept points to storage as a possible extension layer when HBM cannot hold the working dataset.</span><a class="cite" href="https://www.kioxia.com/en-jp/business/news/2026/20261126-1.html">[3]</a></li>
-        <li><span class="rundown-head">Hugging Face published a reproducible tutorial for training communicating agents, with an explicit warning that a swarm is not inherently better than one agent.</span> <span class="rundown-why">That caveat makes the release useful for teams testing multi-agent designs.</span><a class="cite" href="https://huggingface.co/blog/training-swarms">[4]</a></li>
+        <li><span class="rundown-head">Google says DeepCrossAttention can make transformer training reach comparable quality up to three times faster.</span> <span class="rundown-why">The architecture changes residual connections into learned routing across earlier layers.</span><a class="cite" href="https://research.google/blog/supercharging-transformer-residual-connections/">[1]</a></li>
+        <li><span class="rundown-head">Moonshot’s Kimi for Science program offers selected researchers up to $20,000 in API credits.</span> <span class="rundown-why">The program puts a concrete token budget behind its pitch for AI-assisted research.</span><a class="cite" href="https://www.kimi.ai/news/kimi-for-science-program">[2]</a></li>
+        <li><span class="rundown-head">OpenAI counterclaimed against Apple in their consumer-hardware trade-secrets dispute.</span> <span class="rundown-why">The case has become a two-sided fight over device information and supplier relationships.</span><a class="cite" href="https://www.theguardian.com/technology/2026/nov/27/openai-countersues-apple-trade-secrets">[3]</a></li>
+        <li><span class="rundown-head">A UK parliamentary committee asked Anthropic for the unredacted METR report on AI R&amp;D acceleration.</span> <span class="rundown-why">It brings the public disclosure of frontier-lab evaluation work into the policy spotlight.</span><a class="cite" href="https://committees.parliament.uk/publications/56062/standard/pdf/">[4]</a></li>
       </ol>
     </div>
   </section>
@@ -128,25 +128,16 @@
        Developer Pulse items may include a quoted reaction after the summary:
        <blockquote class="reaction">"quote text" <span class="who">&mdash; username on <a href="hn-thread-url">HN</a></span></blockquote> -->
   <section class="band" id="developer-pulse">
-    <div class="rail">
-      <h2 class="label label--section">Developer Pulse</h2>
-      <p class="rail-note">4 items</p>
-    </div>
+    <div class="rail"><h2 class="label label--section">Developer Pulse</h2><p class="rail-note">4 items</p></div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://janlukas.blog/posts/ai-self-hosting">AI made self-hosting fun again</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 720 points · 355 comments · <a href="https://news.ycombinator.com/item?id=50660180">HN thread</a></p><p>Jan-Lukas Else describes using coding agents against Git-managed Docker Compose files, scripts, and configuration to lower the effort of trying services and automating upkeep. The post credits that reduced friction with making NixOS and a custom bootable server image practical projects again.</p><blockquote class="reaction">“Everything behind a VPN. I don’t even have SSH open these days.” <span class="who">— randypewick on <a href="https://news.ycombinator.com/item?id=50660180">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://devnull.land/amd-specific-llama-cpp">AMD-specific fork of llama.cpp</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 364 points · 87 comments · <a href="https://news.ycombinator.com/item?id=50657265">HN thread</a></p><p>A report on llama-cpp-rdna-boosts recommends its small, AMD-specific patch set over broader inference forks. On the author’s eGPU setup, prefill rose from roughly 700 to 1,300 tokens per second and generation from roughly 35 to 55 tokens per second.</p><blockquote class="reaction">“There have definitely been cases of significant regression of output quality.” <span class="who">— exyi on <a href="https://news.ycombinator.com/item?id=50657265">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://construct22.com/">The group chat where your AI talks behind your back</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 269 points · 107 comments · <a href="https://news.ycombinator.com/item?id=50663595">HN thread</a></p><p>Construct22 offers a one-line prompt that asks an assistant to invent a WhatsApp-style group chat in which AI models gossip about the user from remembered context. The page frames the result as fiction and includes an anonymized example, while HN treated it as a well-executed prompt experiment.</p><blockquote class="reaction">“This is just too damn funny; thanks, made my day.” <span class="who">— davydm on <a href="https://news.ycombinator.com/item?id=50663595">HN</a></span></blockquote></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/">AI agents now control part of DeepMind’s compute for Gemini experiments</a></h3><p class="entry-meta">HN thread posted Nov 26, 2026 · 54 points · 27 comments · <a href="https://news.ycombinator.com/item?id=50661218">HN thread</a></p><p>The Decoder reports that Google DeepMind lets agents run some experiments for upcoming Gemini models, while research leader Koray Kavukcuoglu says the lab remains far from full recursive self-improvement. The report says DeepMind leaves the agents’ internal thought streams untrained so humans can review them before action.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://research.google/blog/supercharging-transformer-residual-connections/">Google’s DeepCrossAttention achieves comparable model quality up to 3× faster</a></h3><p class="entry-meta">HN thread posted Nov 27, 2026 · 410 points · 157 comments · <a href="https://news.ycombinator.com/item?id=50672565">HN thread</a></p><p>Google describes DeepCrossAttention as a transformer architecture that uses learned, depth-wise cross-attention to combine earlier-layer outputs instead of simply adding them. It says the method can reach comparable quality up to three times faster with a negligible parameter increase.</p><blockquote class="reaction">“I think messing with the shape and dimensions of models midway through training has a lot of promise.” <span class="who">— londons_explore on <a href="https://news.ycombinator.com/item?id=50672565">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.kimi.ai/news/kimi-for-science-program">Kimi for Science: More scientific ideas, made possible</a></h3><p class="entry-meta">HN thread posted Nov 27, 2026 · 186 points · 157 comments · <a href="https://news.ycombinator.com/item?id=50665920">HN thread</a></p><p>Moonshot AI’s program invites research applicants to its first cohort by Dec. 8. Selected applicants can receive up to $20,000 in Kimi API credits—about 7 billion tokens—with the allocation tied to research needs and review outcomes.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://github.com/skeeto/prospero">Prospero: bloat-free, native AI coding harness with ImGui</a></h3><p class="entry-meta">HN thread posted Nov 27, 2026 · 77 points · 29 comments · <a href="https://news.ycombinator.com/item?id=50671275">HN thread</a></p><p>Prospero is a single native executable for Windows, macOS, and Linux that connects to OpenAI-compatible and Anthropic APIs. Its maintainer says agents can develop software unattended and that the same program can run headless or remotely over SSH.</p><blockquote class="reaction">“You don’t need to drag a whole Chromium browser along just to wrap a text API.” <span class="who">— SwtCyber on <a href="https://news.ycombinator.com/item?id=50671275">HN</a></span></blockquote></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/">Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10</a></h3><p class="entry-meta">HN thread posted Nov 27, 2026 · 57 points · 13 comments · <a href="https://news.ycombinator.com/item?id=50670443">HN thread</a></p><p>A detailed tuning writeup reports 101 tokens/sec for one request and 195.7 aggregate tokens/sec across four requests on a GB10, while retaining a 131,072-token context. The author attributes the gains to vLLM settings, speculative decoding, CUDA graphs, and kernel work.</p><blockquote class="reaction">“Thank you for providing the aggregate throughput for concurrent requests.” <span class="who">— supermatt on <a href="https://news.ycombinator.com/item?id=50670443">HN</a></span></blockquote></article>
     </div>
   </section>
 
-  <section class="band" id="openai">
-    <div class="rail">
-      <h2 class="label label--section">OpenAI</h2>
-      <p class="rail-note">Nothing new in the last 24h</p>
-    </div>
-    <div class="col"><p class="empty">Nothing new in the last 24h.</p></div>
-  </section>
+  <section class="band" id="openai"><div class="rail"><h2 class="label label--section">OpenAI</h2><p class="rail-note">Nothing new in the last 24h</p></div><div class="col"><p class="empty">Nothing new in the last 24h.</p></div></section>
 
   <section class="band" id="anthropic">
     <div class="rail">
@@ -165,14 +156,11 @@
   </section>
 
   <section class="band" id="ai-zeitgeist">
-    <div class="rail">
-      <h2 class="label label--section">AI Zeitgeist</h2>
-      <p class="rail-note">3 items from the web sweep</p>
-    </div>
+    <div class="rail"><h2 class="label label--section">AI Zeitgeist</h2><p class="rail-note">3 items from the web sweep</p></div>
     <div class="col">
-      <article class="entry"><h3 class="entry-title"><a href="https://www.kioxia.com/en-jp/business/news/2026/20261126-1.html">Kioxia and NVIDIA test SSD-backed expansion of effective GPU memory</a></h3><p class="entry-meta">Nov 26, 2026</p><p>Kioxia and NVIDIA announced a proof of concept using NVIDIA SCADA software and 144 Kioxia NVMe SSDs on a GB200 NVL72 system. The configuration supplies about 1.1 PB of raw flash capacity and is intended to make datasets beyond HBM capacity accessible to GPU processing.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://huggingface.co/blog/training-swarms">Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems</a></h3><p class="entry-meta">Nov 26, 2026</p><p>Hugging Face published a reproducible TRL walkthrough in which four agents share one small model and communicate on a checkable task. It reports training success rising from 6.6% to 82.3% over 75 updates, while cautioning that communication does not automatically improve on a single agent.</p></article>
-      <article class="entry"><h3 class="entry-title"><a href="https://github.com/Tencent/AngelSpec">Tencent’s AngelSpec framework documents DFly speculative decoding</a></h3><p class="entry-meta">Nov 26, 2026</p><p>Tencent’s AngelSpec repository is the released training framework behind DFly-style speculative decoders, which combine shared KV context with per-layer fusion. Coverage of the Nov. 26 DFly2 release points to an open release of weights, training code, and a technical report for sparse long-context models.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://www.theguardian.com/technology/2026/nov/27/openai-countersues-apple-trade-secrets">OpenAI countersues Apple over alleged trade-secret theft</a></h3><p class="entry-meta">Nov 27, 2026</p><p>OpenAI filed counterclaims against Apple, alleging that Apple obtained its trade secrets and pressured shared suppliers. Apple called the counterclaims a distraction from its earlier lawsuit against OpenAI and former Apple employees.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://committees.parliament.uk/publications/56062/standard/pdf/">UK committee asks Anthropic for an unredacted METR report</a></h3><p class="entry-meta">Nov 27, 2026</p><p>The UK Parliament’s Business, Innovation and Science and Technology Committee requested the full version of METR’s report on AI research and development acceleration at Anthropic. Its letter asks both for the omitted material and an explanation of the redactions.</p></article>
+      <article class="entry"><h3 class="entry-title"><a href="https://ca.finance.yahoo.com/news/nvidia-blackwell-chips-turn-china-114546617.html/">Nvidia Blackwell chips reportedly turn up at a Shanghai site</a></h3><p class="entry-meta">Nov 27, 2026</p><p>Bloomberg reported that Chinese firms installed Blackwell hardware at a Shanghai data center linked to Alice Huang. The report says the site is also connected to entities under U.S. scrutiny over concerns about chip smuggling.</p></article>
     </div>
   </section>
 
@@ -180,7 +168,7 @@
 
 <footer class="footer">
   <!-- FILL: generation timestamp -->
-  <p>Generated 2026-11-27 05:43 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
+  <p>Generated 2026-11-28 05:44 EST &middot; Every summary cites its source, fetch failures are shown, never guessed</p>
   <p class="disclaimer"><a href="https://github.com/tacolopo/daily-brief">Edit sources</a></p>
 </footer>
 
